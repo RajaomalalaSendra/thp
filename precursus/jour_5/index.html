@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.css">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <h1 class="navbar-brand">THE HACKING PROJECT</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/thp">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/thp/features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/thp/about">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      <div class="container">
+    <div class="card">
+  <div class="card-header">
+    <h4 class="text-center"> Programme jour par jour</h4>
+  </div>
+  <div class="card-body">
+    <div class="text-center">
+    <a href="/precursus/1">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-terminal"></i>&nbsp;&nbsp;&nbsp;Lun
+      </button>
+</a>    <a href="/precursus/2">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-code"></i>&nbsp;&nbsp;&nbsp;Mar
+      </button>
+</a>    <a href="/precursus/3">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-desktop"></i>&nbsp;&nbsp;&nbsp;Mer
+      </button>
+</a>    <a href="/precursus/4">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+      <i class="fa fa-folder-open"></i>&nbsp;&nbsp;&nbsp;Jeu
+      </button>
+</a>    <a href="/precursus/5">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+      <i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Ven
+      </button>
+</a>    </div>
+  </div>
+</div>
+
+    <script>
+$('div.star-rating').on('click',function(event) {
+  let starNumber = $('div.star-rating').find('i.fa-star').length
+  let text = $('div#rating-description')[0]
+    if (starNumber == 0) {
+      text.innerHTML = "La dernière fois que j'ai touché à un clavier c'était celui du minitel de papa"
+    }
+    else if (starNumber == 1) {
+      text.innerHTML = "J'ai déja touché à HTML et CSS"
+    }
+    else if (starNumber == 2) {
+      text.innerHTML = "J'ai déja vu un peu de JavaScript"
+    }
+    else if (starNumber == 3) {
+      text.innerHTML = "J'ai fait des études d'ingénieur"
+    }
+    else if (starNumber == 4) {
+      text.innerHTML = "J'ai fait une piscine de code"
+    }
+    else if (starNumber == 5) {
+      text.innerHTML = "Je suis déja developpeur et je veux apprendre Ruby"
+    }
+    return
+})
+</script>
+
+    <div class="precourse-body">
+       <div class="card">
+    <div class="card-header">
+        <h2 class="text-center">Vendredi</h2>
+        <h3 class="text-center">Découverte de Ruby, de la programmation - bis</h3>
+        <p>Vendredi tu vas aller plus loin en faisant des programmes en Ruby, qui te donneront un bagage plus conséquent en terme de variables, array, boucles.</p>
+    </div>
+  </div>
+
+
+
+<div class="card">
+  <div class="card-header" style="border-top: 3px solid #5E66E5">
+    <h1>Déroulé</h1>
+    <a class="heading-elements-toggle">
+    <i class="la la-ellipsis-v font-medium-3"></i>
+    </a>
+    <div class="heading-elements">
+      <ul class="list-inline mb-0">
+        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+      </ul>
+    </div> 
+  </div>
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <div class="tab-pane active" id="home1" role="tabpanel">
+      	<h2>1. Présentations</h2>
+      	<p>Tu vas continuer les exercices. Nous te donnons une liste d'exercices, puis nous te donnerons l'exercice final : la pyramide. Une fois que tu auras fait la pyramide, tu seras éligible pour rentrer à la formation The Hacking Project, et aller plus en profondeur dans l'univers du code.</p>
+
+				<h2>2. Les exercices</h2>
+				<p>Voici ce qui va se passer pour cet exercice : pour chaque sous-partie, nous allons te demander de créer un programme, et de soit répondre à des questions, soit de le faire marcher.</p>
+
+				<p>Nous te conseillons de tout mettre dans un joli repo Git, afin que tu t'entraines avec le programme de versionning.</p>
+
+
+        <h3>2.1. Un programme qui calcule des ages</h3>
+        <p>Écris un programme <code>exo_10.rb</code> qui demande l'année de naissance à l'utilisateur, et qui va ressortir l'age que l'utilisateur a eu en 2017.</p>
+
+        <h3>2.2. Un programme qui répète</h3>
+        <p>Écris un programme <code>exo_11.rb</code> qui demande un nombre à l'utilisateur, puis qui écrira autant de fois "Salut, ça farte ?"</p>
+
+        <h3>2.3. Compter</h3>
+        <p>Écris un programme <code>exo_12.rb</code> qui demande un nombre à l'utilisateur, puis qui comptera jusqu'à ce nombre.</p>
+
+        <h3>2.4. Afficher les années</h3>
+        <p>Écris un programme <code>exo_13.rb</code> qui demande l'année de naissance d'un utilisateur, et qui va ressortir chaque année depuis son année de naissance jusqu'à 2018.</p>
+
+        <h3>2.5. Compte à rebours</h3>
+        <p>Écris un programme <code>exo_14.rb</code> qui demande un nombre à l'utilisateur, puis qui affiche un compte à rebours à partir de ce nombre, jusqu'à 0.</p>
+
+        <h3>2.6. Afficher tous les âges</h3>
+        <p>Écris un programme <code>exo_15.rb</code> qui demande l'année de naissance d'un utilisateur et qui va afficher chaque année depuis son année de naissance jusqu'en 2017. Pour chaque année affichée, le programme devra annoncer l'age que l'utilisateur a eu cette année.</p>
+
+        <h3>2.7. Virer les années</h3>
+        <p>Le programme <code>exo_15.rb</code> est cool, mais on peut l'améliorer. Écris un programme <code>exo_16.rb</code> qui va demander l'age de l'utilisateur, et qui, pour chaque âge, dira "Il y a X ans, tu avais Y ans".</p>
+
+        <h3>2.8. Annoncer l'age, option BG</h3>
+        <p>Notre programme <code>exo_16.rb</code> est devenu beau gosse. Écris un programme <code>exo_17.rb</code> qui va faire la même chose, sauf que si X et Y sont égaux, il dira "Il y a n ans, tu avais la moitié de l'age que tu as aujourd'hui".</p>
+
+        <h3>2.9. Une liste d'email</h3>
+        <p>Écris un programme <code>exo_18.rb</code> qui va créer une liste de 50 faux emails et les stocker dans une array. Voici le format que devront avoir les faux emails :</p>
+        <pre><code class="language-ruby">"jean.dupont.01@email.fr"
+"jean.dupont.02@email.fr"
+etc..</code></pre>
+        <h3>2.10. Afficher les bons emails</h3>
+        <p>Prends le programme <code>exo_18.rb</code> et créé un programme <code>exo_19.rb</code> qui va reprendre l'array des emails créés, et n'afficher que les emails avec un nombre pair.</p>
+        <pre><code class="language-ruby">"jean.dupont.02@email.fr"
+"jean.dupont.04@email.fr"
+etc..</code></pre>
+
+        <h3>2.11. La pyramide</h3>
+        <p>Construis un programme <code>exo_20.rb</code> qui va demander à l'utilisateur un nombre entre 1 et 25 et qui va sortir une pyramide à descendre de tant d'étages que ce nombre. Voici un exemple :</p>
+        <pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+#
+##
+###
+####
+#####</code></pre>
+
+        <h3>2.12. La pyramide, dans l'autre sens</h3>
+        <p>Reprends ton programme <code>exo_20.rb</code> et fais un programme <code>pyramide.rb</code> qui montera au lieu de descendre : </p>
+        <pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+    #
+   ##
+  ###
+ ####
+#####</code></pre>
+
+        <p>Bien que légèrement différent dans l'énoncé, ce programme est bien plus dur que le <code>exo_20.rb</code>, donc c'est normal de devoir réfléchir à comment le faire 😎</p>
+
+        <p>Ce programme est celui qui valide le préparcours attendu à The Hacking Project. À partir de là, nous considérons que tu es suffisamment motivé pour faire la formation. Si tu as réussi à le faire, bienvenue au club 🎉</p>
+
+        <h2>3. Rendu attendu</h2>
+        <p>Le rendu attendu est un repository GitHub qui contient tous les exercices de ces deux derniers jours, dont bien entendu les pyramides.</p>
+
+        <h2>4. Pour aller plus loin</h2>
+
+        <h3>4.1. La pyramide, avec une boucle de champions</h3>
+        <p>Pour cet exercice, nous allons te demander de reprendre la pyramide de l'exercice <code>2.11</code> et de le faire avec une boucle <code>while</code>.</p>
+        <p>Tu ne sais pas ce que c'est qu'une boucle while ? Cela tombe bien nous avons pensé à toi et voici <a href="https://zestedesavoir.com/tutoriels/634/une-introduction-a-ruby/497_les-bases/5050_les-boucles/#1-14483_la-boucle-while" target="_blank">une ressource qui explique ceci</a>.</p>
+
+        <h3>4.2. Pyramide de champions, avec une boucle de champions</h3>
+        <p>Maintenant, dernier programme, la pyramide de mario des champions. Nous allons te demander de faire la pyramide de Mario avec une boucle while, dans le sens de l'exercice <code>2.12</code>.</p>
+
+
+        <h2>What else ? The Hacking Project - Code</h2>
+        <p>Tu as vu une bonne base de l'informatique, et tu es maintenant prêt à affronter ce monde avec moins d'appréhension. Cependant, il faut encore un chemin avant de pouvoir prétendre à un poste de dév, ou "parler développeur". Pour ceci, tu peux faire The Hacking Project - Code !</p>
+
+        <p>Voici un aperçu des activités qui t'attendent à The Hacking Project - Code :</p>
+        <ul>
+          <li>Faire un algorithme de trading de cryptomonnaies</li>
+          <li>Faire des sites avec des bases de données, par exemple une copie d'Eventbrite</li>
+          <li>Faire des landing pages de sites pour la pitcher au plus grand nombre</li>
+          <li>Faire un lecteur d'emails en AJAX</li>
+          <li>Faire une boutique en ligne de type e-commerce</li>
+        </ul>
+
+        <p>Si tu veux apprendre le code plus en détails, viens faire notre formation ! Tu peux retrouver le lien pour t'inscrire <a class="text-primary" href="/inscription/paiement">ici</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>
