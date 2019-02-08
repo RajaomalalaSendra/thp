@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":3,"applicationTime":176,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="PWTKEuEXgsZMuz8PlWJmUQ3zrGcxYnA9GYWXmIqo2m6yGbBWGLicW1vBrOqDJ/foPU7QbwcRr6uUPIGI1SVE3A==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Jouer avec des excels</h2>
+      <h4 class="text-center">Programmation Orientée Objet</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Programmation Orientée Objet
+                <i class="fa fa-space-shuttle text-danger"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Jouer avec des excels</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/3/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:240px;" data-toggle="tooltip" data-placement="top" title="Jouer avec des excels" href="/dashboard/weeks/3/days/2?locale=fr">
+                                    Mar
+                                        <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/3/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/3/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/3/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Un dossier Ruby bien rangé</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Quand on fait de la programmation, il faut un dossier bien rangé, des programmes qui appellent les bons. Ainsi les gens qui débarquent dans ton dossier ne seront pas perdus. Dans cette ressource nous allons voir comment bien ranger un dossier.</p>
+
+<p>Arriver dans un repo où y'a des fichiers partout et où c'est le bordel, cela ne fait jamais plaisir : la personne ne comprend rien, et il faut passer plus de temps à expliquer son programme qu'à le modifier. Ainsi, Ruby a une convention qui permet d'organiser la structure d'un dossier Ruby.</p>
+
+
+<h2>2. Historique</h2>
+<p>Étant donné que dans la POO il y a des milliers de fichiers dans tous les sens, on a rapidement commencé à tout bien ranger.</p>
+
+<h2>3. La ressource</h2>
+
+
+
+<h3>3.1. Structure de dossier conventionnelle</h3>
+
+<p>Imaginons que tu veuilles faire un programme qui scrappe des données et qui les enregistre sur un fichier CSV. Voyons la structure suivante :</p>
+
+<pre><code class="language-shell">scrapper
+│
+├── .gitignore
+├── README.md
+├── Gemfile
+├── Gemfile.lock
+├── data.csv
+└── scrap.rb</code></pre>
+
+
+<p>En soi, elle est à peu près lisible, mais elle partira dans le grand n'importe quoi dès que tu veux ajouter des fonctionnalités (et donc des classes, et donc des fichiers) dans ton application. Et nous n'avons même pas mis les fichiers de test, indispensables pour toute application moderne. Ainsi, nous allons te montrer une structure bien plus organisée. Aucune surprise pour toi, c'est celle qu'on utilise jusque-là : </p>
+
+
+<pre><code class="language-shell">mon_projet
+├── lib
+│   └── scrapper.rb
+├── db
+│   └── thing.csv
+├── spec
+│   ├── spec_helper.rb
+│   └── scrapper_spec.rb
+├── app.rb
+├── README.md
+├── Gemfile
+├── Gemfile.lock
+├── Autres fichiers (.env, .gitignore)
+└── .rspec</code></pre>
+
+
+
+<p>L'objectif est d'avoir juste à faire <code>$ bundle install</code> et <code>$ ruby app.rb</code> quand on arrive dans le dossier, pour faire tourner l'application. Chaque fichier doit avoir une fonction unique et précise, représentée par une classe. Ainsi, notre fichier <code>scrapper.rb</code> doit coder la classe <code>Scrapper</code>, qui a pour fonction de récupérer des données. Ainsi, il suffit d'appeler <code>Scrapper.new.perform</code> dans notre fichier <code>app.rb</code> pour que tout fonctionne.</p>
+
+<p>Cette convention est beaucoup plus lisible, et permet de bien comprendre ce que fait l'application.</p>
+
+<h3>3.2. Quelques réglages</h3>
+<p>Afin de faire marcher le dossier, il y a bien entendu quelques réglages à faire. Déjà, il faut brancher le Bundler au fichier <code>app.rb</code> : </p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require</code></pre>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+        <p>Ajouter ces deux lignes en tout début de programme <code>app.rb</code> : </p>        
+        <pre><code class="language-ruby">require 'bundler'
+Bundler.require</code></pre>
+        <p>Permet de dire à Ruby "hey, fais un require sur toutes les gems de mon Gemfile STP, comme ça, ça m'évitera de les appeler tous les deux fichiers". Une commande très pratique pour éviter des longues listes de <code>require</code> en haut de chaque classe. Seul un bon vieux <code>$ bundle install</code> suffira dans le terminal.</p>
+        <p>=> Grâce à ces deux lignes en en-tête du fichier à exécuter (<code>ruby app.rb</code>), les require de gems deviennent inutiles. Il suffit que ton Gemfile soit bien complété.</p>
+    </div>
+  </div>
+</div>
+
+
+<p>Ensuite, il faut mettre les bons require au bon endroit pour que les fichiers s'appellent entre eux. On pourrait mettre des lignes comme celles-ci :</p>
+
+<pre><code class="language-ruby">require 'lib/my_folder/file'
+require 'lib/scrapper'
+etc</code></pre>
+
+<p>Mais cette technique manque un chouïa d'élégance, on peut dire facilement à Ruby "hey, tout ce qui est dans le dossier ou dans un sous-dossier de <code>lib</code>, mets-les dans le PATH comme ça j'aurai juste besoin de faire <code>require 'NomDeClass'</code> sans me taper tout le chemin-dossier du fichier". <br>
+C'est possible avec la ligne : <code>$:.unshift File.expand_path("./../lib", __FILE__)</code>. Tu peux en lire plus sur cette méthode <a href="https://stackoverflow.com/questions/4474918/file-expand-path-gemfile-file-how-does-this-work-where-is-the-fil"> dans la première réponse ici</a>. Ainsi, les lignes de require vont ressembler à ceci :</p>
+
+<pre><code class="language-ruby">$:.unshift File.expand_path("./../lib", __FILE__)
+require 'scrapper' #plus besoin de préciser le path exact</code></pre>
+
+<p>Et puis enfin, tu as juste à appeler la classe qui t'intéresse avec <code>MyClass.new.perform</code>. Ainsi, ton fichier <code>app.rb</code> va ressembler à ceci :</p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require
+
+$:.unshift File.expand_path("./../lib", __FILE__)
+require 'scrapper'
+
+MyClass.new.perform</code></pre>
+
+<p>Et là, tu as un dossier qui ressemble à quelque chose pour ton application.</p>
+
+
+<h3>3.3. Et si mon app fait plusieurs choses à la fois ?</h3>
+<p>C'est une excellente question. Prenons l'exemple d'une application qui récupère des e-mails, qui les enregistre, et qui envoie des e-mails à partir d'un fichier CSV. Tu n'as peut-être pas envie que ton application fasse tout à la fois quand tu exécutes le fichier <code>app.rb</code>, ainsi, ce fichier va te servir de chef d'orchestre, et alterner entre les différents services de ton application. L'application tournera en boucle (jusqu'à ce que l'utilisateur fasse <code>CTRL</code> + <code>C</code>) et appellera les bonnes classes en fonction des inputs de l'utilisateur.</p>
+
+<p>Par exemple, l'application à son démarrage, va appeler la classe <code>Index</code>, qui a pour but de demander ce que l'utilisateur veut faire. En fonction de son input, elle appellera la bonne classe (<code>Scrapper</code>, <code>EmailSender</code>, etc), puis elle affichera la classe <code>Done</code>, qui dira "Hey, c'est terminé !". Et elle demandera à l'utilisateur ce qu'il veut faire.</p>
+
+<p>Les classes <code>Index</code> et <code>Done</code> sont des classes qui ont pour but unique d’interagir avec l'utilisateur en lui donnant une interface visuelle. Par convention, nous appelons ces classes des <b>views</b>, qui seront rangées dans un dossier du même nom. Ainsi, notre dossier ressemblera à ceci :</p>
+
+
+<pre><code class="language-shell">mon_projet
+├── lib
+│   ├── app
+│   │   ├── scrapper.rb
+│   │   └── email_sender.rb
+│   └── views
+│       ├── done.rb
+│       └── index.rb
+├── db
+│   └── thing.csv
+├── spec
+│   ├── spec_helper.rb
+│   └── scrapper_spec.rb
+├── app.rb
+├── README.md
+├── Gemfile
+├── Gemfile.lock
+├── Autres fichiers (.env, .gitignore)
+└── .rspec</code></pre>
+
+
+<p>L'avantage de ce type de structure est que tes programmes sont rangés dans des dossiers qui indiquent déjà leur utilité : base de donnée ? Générateur de vue pour l'utilisateur ? Classe apportant une fonction précise ?<br>
+Souviens-toi qu'il est préférable d'avoir 100 fichiers qui font 5 lignes mais rangés de façon structurée, qu'un seul fichier avec 500 lignes.</p>
+
+<p>Nous verrons tout ceci plus en détails lors du cours sur le MVC, un modèle d'architecture logicielle très connu et sur lequel se base Rails.</p>
+
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Voici un bon exemple d'architecture logicielle Ruby :</p>
+
+<pre><code class="language-shell">mon_projet
+├── lib
+│   ├── app
+│   │   ├── scrapper.rb
+│   │   └── email_sender.rb
+│   └── views
+│       ├── done.rb
+│       └── index.rb
+├── db
+│   └── thing.csv
+├── spec
+│   ├── spec_helper.rb
+│   └── scrapper_spec.rb
+├── app.rb
+├── README.md
+├── Gemfile
+├── Gemfile.lock
+├── Autres fichiers (.env, .gitignore)
+└── .rspec</code></pre>
+
+<p>Une telle application doit pouvoir se lancer en faisant seulement <code>$ ruby app.rb</code></p>
+<p>Les lignes suivantes dans app.rb vont te permettre d'éviter les require de gem : </p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require</code></pre>
+
+<p>Les lignes suivantes dans app.rb vont te permettre d'appeler facilement les autres fichiers de classe</p>
+<pre><code class="language-ruby">$:.unshift File.expand_path("./../lib", __FILE__)
+require 'app/fichier_1'
+require 'views/fichier_2'</code></pre>
+
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>Pas besoin pour le moment.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Enregistrer ses données dans un fichier qui gère les tableaux</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Prenons l'exemple de ton scrappeur : à chaque fois que tu le lances, ce dernier n'enregistre pas les données quelque part, et ces dernières sont perdues à tout jamais lorsque tu fermes ton terminal. Et si l'on t'apprenait à enregistrer des données dans un fichier ?</p>
+
+<p>Dans cette ressource nous allons te montrer trois formats très cools pour le stockage de données :</p>
+
+<ul>
+  <li>le format JSON, très répandu sur le Web,</li>
+  <li>les fichier Google Spreadsheet, pour t'aider à t'automatiser des tâches en conjugant Ruby et Spreadsheet,</li>
+  <li>le format CSV, très connu aussi pour les données.</li>
+</ul>
+
+<h2>2. Historique</h2>
+<p>Heu..</p>
+
+
+<h2>3. La ressource</h2>
+<h3>3.1. JSON</h3>
+<p>Le format JSON est un format de fichier qui permet de sauvegarder, pour réutiliser plus tard, des données telles que des hash, ou des arrays. JSON a l'avantage d'être lisible par un humain, et par tout langage de programmation. <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">W3Schools a fait un rapide récap</a> à ce sujet</p>
+
+<p>Découvre comment lire un fichier JSON avec <a href="https://www.tutorialspoint.com/json/json_ruby_example.htm" target="_blank" >ce tutoriel sympathique</a>. Enfin, <a href="https://stackoverflow.com/a/5507535/8564105" target="_blank" >cette réponse</a> mentionne comment écrire un fichier JSON à partir d'un objet Ruby.</p>
+
+<h3>3.2. Google Spreadsheet</h3>
+
+<p>Commence par découvrir la <a href="https://github.com/gimite/google-drive-ruby" target="_blank">gem google_drive</a> de Ruby. Puis essaie de suivre la partie <i>How to use</i>, notamment la sous-partie <a href="https://github.com/gimite/google-drive-ruby#example-to-readwrite-spreadsheets" target="_blank">Example to read/write spreadsheets</a>, pour faire marcher ton premier fichier spreadsheet.</p>
+
+<p>La première fois que l'on se branche à l'API de Google Drive, on se butte au fait qu'elle n'est pas simple à gérer. Heureusement, les gens de la gem ont alimenté leur doc avec <a href="https://github.com/gimite/google-drive-ruby/blob/master/doc/authorization.md" target="_blank">un tutoriel sur comment se brancher à l'API de Google Drive</a>. Suis-le donc 😉</p>
+
+<h3>3.3. CSV</h3>
+<p>CSV signifie "Comma-Separated Values" ou "Valeur Séparées par une Virgule". Ce format est très populaire pour représenter des tableaux : chaque ligne du CSV est une ligne de tableau, et chaque contenue d'une colonne est séparé par une virgule. Au final, un fichier CSV ressemble à ceci :</p>
+
+<pre><code class="language-csv">1,chocolate,brown
+2,bacon,pink
+3,apple,red
+4,banana,yellow
+5,almonds,brown</code></pre>
+<p>Ici les 3 colonnes pourraient avoir pour titre "Line number", "Food" et "Color". </p>
+
+<p>RubyGuides ont fait <a href="https://www.rubyguides.com/2018/10/parse-csv-ruby/" target="_blank">un chouette tutoriel</a> qui t'explique comment interagir avec un fichier CSV. Comme tu peux le voir, CSV est intégré à Ruby, tu peux donc <a href="https://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html" target="_blank">lire la doc</a> qui te donnera toutes les méthodes pour jouer avec des CSV.</p>
+
+<h2>4. Points importants à retenir</h2>
+<p>Tu as vu trois façons de sauvegarder des tableaux de façon pérenne :</p>
+
+<ul>
+  <li>JSON</li>
+  <li>Google Spreadsheet</li>
+  <li>CSV</li>
+</ul>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Avec Ruby les possibilités sont énormes, mais déjà c'est pas mal là. On verra les bases de données (qui ne sont que des gros tableaux finalement) la semaine prochaine.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Sauvegarder des données en masse</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Ensemble, nous allons sauvegarder tout un tas de données dans une base sous la forme d'une spreadsheet, d'un CSV ou d'un JSON. Tous les programmes du jour devront être faits en POO : tout doit être contenu dans des classes, 1 classe par fichier. Finis les petits programmes faits à la va-vite.</p>
+
+
+
+<h2>2. Le projet</h2>
+<p>Note pour les tests : aujourd'hui exceptionnellement pas de test ☺</p>
+<p>Le projet du jour a pour but d'enregistrer dans 3 formats différents les e-mails du Val d'Oise (tu te rappelles bien sûr de ce projet, hein ?). Pour ce faire, reprends le programme que tu avais fait précédemment et mets dans une belle classe. Bien entendu (et cela vaudra pour TOUS les projets à venir), ton programme sera inclus dans un dossier bien structuré.</p>
+<p>A chaque format, tu vas créer une méthode spécifique pour enregistrer le résultat de ton scrappeur.</p>
+
+<h3>2.1. Enregistrer dans un JSON</h3>
+<p>Tu voudrais éviter de faire tourner ton scrappeur à chaque fois que tu reboots ton ordi : il faut en sauvegarder les données ! JSON étant un format standard, tu décides de le faire sous un fichier <code>emails.JSON</code>.</p>
+<p>Créé une méthode <code>save_as_JSON</code> qui prend le résultat de ton scrapper et enregistre dans ton ordi les emails du Val d'Oise. Si tu as enregistré le résultat de ton scrapping au format suivant : <code>{"ABLEIGES"=&gt;"mairie.ableiges95@wanadoo.fr", "AINCOURT"=&gt;"mairie.aincourt@wanadoo.fr", etc }</code>, il te faut passer sur chaque couple clé-valeur du hash. À chaque passage, tu vas ajouter du contenu dans ton fichier JSON.</p>
+
+<p>On te laisse utiliser les ressources du jour pour produire un joli JSON.</p>
+
+
+<h3>2.2. Google Spreadsheet</h3>
+
+<p>À présent, c'est le CEO de Get-Email Corp qui voudrait que tu puisses lui envoyer tes résultats par e-mail. Cependant, ce dernier est un peu old school : il ne comprend pas comment obtenir la liste d’e-mails à partir d'un fichier <em>scrapping.rb</em>, ne pige rien au format JSON et refuse de suivre The Hacking Project. Comme le client est roi, la seule façon de lui fournir ces e-mails est de le faire via un fichier Google Spreadsheet. Ta mission est donc de trouver un moyen de faire un fichier Google Spreadsheet qui contienne en <em>colonne A</em> les noms des villes, et en <em>colonne B</em> les e-mails des dites mairies.</p>
+
+<p>Nous te conseillons de travailler sur un fichier spreadsheet que tu vas créer pour l'occasion. <a href="https://github.com/gimite/google-drive-ruby#example-to-readwrite-spreadsheets" target="_blank" class="text-primary">Ces quelques lignes de code</a> t'indiquent comment ouvrir un spreadsheet à partir de Ruby.</p>
+
+<p>Tout ce travail de sauvegarde se fera via une méthode <code>save_as_spreadsheet</code></p>
+
+<h3>2.2. Enregistrer dans un CSV</h3>
+
+<p>Une fois le résultat livré à Get-Email Corp, tu te sens l'âme d'un Julien Assange et tu veux balancer le fichier sur jeux-video.com. La communauté t'incite fortement à le faire en CSV (et toi, t'es très sensible à ce que la communauté veut).</p>
+
+<p>Enregistre maintenant les données dans un CSV grâce à une méthode <code>save_as_csv</code></p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>Un dossier qui scrappe les mairies et qui les enregistre dans les trois types vus aujourd'hui. La structure devrait ressembler à ceci :</p>
+
+<pre><code class="language-shell">mon_projet
+├── lib
+│   ├── app
+│   │   └── scrapper.rb
+├── db
+│   └── emails.csv
+│   └── emails.json
+├── spec
+│   ├── spec_helper.rb
+│   └── scrapper_spec.rb
+├── app.rb
+├── README.md
+├── Gemfile
+├── Gemfile.lock
+├── Autres fichiers (.env, .gitignore)
+└── .rspec</code></pre>
+
+<p>Tu peux rajouter un petit menu si tu veux pour laisser le choix du format-cible à l'utilisateur.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

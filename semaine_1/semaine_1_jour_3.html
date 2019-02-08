@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":4,"applicationTime":148,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="1e2Plcu9geadQI9JrpgafeRLDoOuHX23gAtJN61VzztakPXRMhKfe4o6HKy43YvE1PZyi5huoiENsl8n8thRiQ==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Bootstrap, belles pages</h2>
+      <h4 class="text-center">Introduction au Code</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Introduction au Code
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Bootstrap, belles pages</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/1/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/1/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:360px;" data-toggle="tooltip" data-placement="top" title="Bootstrap, belles pages" href="/dashboard/weeks/1/days/3?locale=fr">
+                                    Mer
+                                        <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/1/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/1/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Faire des pages jolies grâce à Bootstrap</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Maintenant que tu as quelques bases en CSS, nous allons te donner un joli coup de pouce pour que les pages que tu vas designer soient vraiment jolies. Ce sera l'objet de cette ressource qui va te montrer le principe du design par composant, indispensable quand on fait du web.</p>
+
+<p>Dans un premier temps, nous allons te présenter les frameworks CSS qui te permettront d'ajouter à ton site un fichier CSS <b>déjà fait</b>: le top pour te prémâcher le travail de mise en page. Par conséquent, autant prendre le cas de Bootstrap, le framework CSS le plus populaire. Ensuite, tu vas voir le principe de l'Atomic Design, qui te permettra de constituer des pages avec un design bien chiadé avec très peu de travail et juste des copier-coller astucieux 👌. Enfin, nous finirons par voir comment ajouter une surcouche à Bootstrap pour donner un peu de pep’s à ton site.</p>
+
+<p>À la fin de cette ressource, tu devrais être capable de mettre en page facilement une page web afin de faire en quelques minutes des sites pas trop dégueu, et une landing page de start-up.</p>
+
+
+<h2>2. Historique</h2>
+<p>Bootstrap a été créé par Twitter en 2011 et est devenu en un an le projet le plus populaire sur GitHub. Aujourd'hui Bootstrap reste le framework le plus populaire du web : c'est un peu à cause de lui si beaucoup de sites se ressemblent !</p>
+
+<h2>3. La ressource</h2>
+<h3>3.1. Introduction à Bootstrap et aux frameworks</h3>
+<h4>3.1.1. Les frameworks</h4>
+
+<p>Quand tu vas sur un site internet bien foutu, c'est bien si ce dernier a une certaine cohérence dans son interface utilisateur (User Interface ou UI). Par exemple Airbnb utilise le même design de boutons pour tout le site. Comme ils sont malins, ils ont créé une classe <code>my_button</code> qu'ils vont appeler sur tous les éléments <code>&lt;button></code> de l'application. En plus, tu peux voir qu'il y a des éléments que l'on peut retrouver sur tout le site. Par exemple, la police est la même quasiment partout (c'est <a href="https://lineto.com/The+Fonts/Font+Categories/Text+Fonts/Circular/" target="_blank">Circular</a>), et les alignements des colonnes sont identiques entre sections qui n'ont pourtant rien à voir. </p>
+
+
+<img src="https://i.imgur.com/VFNJsJs.png" class="img-fluid">
+
+<p><i>(Dans l'image ci-dessus, tu peux voir que les 4 colonnes de footers sont parfaitement alignées avec les 4 colonnes de cartes de logements. Tu dois bien t'imaginer que de faire ça avec des <code>margin-left</code> est un enfer </i>😉<i>)</i></p>
+
+<p>À Airbnb, on est pas stupides, ils ont prévu un énorme fichier CSS qui s'occupe de faire toute la mise en forme et le design des composants du site. Comme il est réutilisé sur chaque page, on peut parler de framework CSS: imagine un énorme fichier CSS qui s'occupe de transformer tes <code>&lt;button></code> en <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">quelque chose de présentable</a>, ou alors qui change les couleurs de base (stop le <a href="http://www.html-color-names.com/magenta.php" target="_blank">magenta</a> de HTML). Ou encore des options de mise en page pour dire à ta div "hey, décompose ces 4 éléments en 4 colonnes de tailles égales, centrées". Et bien c'est ça un framework CSS !</p>
+
+<p>Si Airbnb ont codé leur framework en interne, il existe une multitude de gens hyper sympa qui vont te proposer des équivalents gratuits, open source, et pas moches. Les 3 principaux frameworks CSS, très utilisés en front, sont :</p>
+
+<ul>
+  <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, le plus populaire. Ce fut celui de Twitter quand il a été créé</li>
+  <li><a href="https://foundation.zurb.com/" target="_blank">Foundation</a>, plus minimaliste</li>
+  <li><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a>, plus récent</li>
+</ul>
+
+<p>Nous allons travailler sur Bootstrap car c'est le plus célèbre et il existe moult customisations pour rendre ton site vraiment joli. Maintenant nous allons voir comment l'installer, et s'en servir.</p>
+
+
+<h4>3.1.2. Bootstrap</h4>
+<p>Tu peux aller sur <a href="https://getbootstrap.com/" target="_blank">le site de Bootstrap</a> et commencer à le parcourir. Ensuite, nous t'invitons à regarder <a href="https://www.youtube.com/watch?v=1xx6ED25jIo" target="_blank">la vidéo</a> de WebAcappellaTuto qui introduit Bootstrap.</p>
+
+<p>Pour installer Bootstrap, tu peux aller sur la page <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank">Get Started</a> qui explique comment installer Bootstrap facilement. Perso, j'utilise la partie <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template" target="_blank">Starter Template</a> qui te donnera tout ce qu'il faut pour installer Bootstrap en 10 secondes.</p>
+
+<p>Il est à noter que Bootstrap utilise aussi des composants qui font appel à du JavaScript, d'où l'ajout de JavaScript dans l'installation du framework. Même si tu es pas très bon en JS (pour le moment), c'est assez simple d'utilisation.</p>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Comme tu as pu le voir dans la vidéo ou le lien <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template" target="_blank">Starter Template</a>, il y a plusieurs façons d'intégrer les fichiers CSS/JS de Bootstrap. Tu peux soit faire comme dans la vidéo : les télécharger et les appeler dans ton fichier HTML. Ou alors tu peux faire la technique recommandée : celle des CDN. Un Content Delivery Network permet de charger les fichiers Bootstrap via des serveurs dédiés où ils sont déposés. En gros, au lieu d'appeler le fichier Bootstrap dans ton dossier, il va l'appeler sur <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" target="_blank">cette adresse</a>, qui a des serveurs plus robustes que les tiens, et qui fera charger la page plus rapidement. En plus d'être extrêmement simple à faire, c'est plus rapide. Les CDN sont donc la technique à privilégier pour installer Bootstrap.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Ils sont un peu simples tes boutons. Comment je fais pour avoir un site aussi stylé que Airbnb ?</b></p>
+      <p>Tkt jeune padawan. Nous entrons dans le design par composants, donc nous allons voir d'abord comment utiliser les composants qui représentent une majeure partie du design web. Puis une fois que tu vois comment te servir d'un composant, nous allons voir comment faire des mises en pages facilement, pour avoir des pages minimalistes, mais robustes et fonctionnelles.</p>
+      <p>Pour ces deux éléments, Bootstrap brille et te sera d'un immense secours. Une fois que tu as composé des pages bien mises en forme, qui utilisent des composants bien appelés, nous allons voir comment transformer <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">ceci</a> en <a href="https://preview.webpixels.io/boomerang-v3.6.1/documentation/components/buttons.html" target="_blank">ceci</a>.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h3>3.2. Mise en page avec Bootstrap</h3>
+<p>Maintenant que nous avons installé Bootstrap, comment faire de la mise en page pour avoir une page par exemple comme l'image ci-dessous ?</p>
+
+<img src="https://i.imgur.com/QxA3JL3.png" class="img-fluid"><br>
+
+<p>C'est plutôt très simple avec Bootstrap. Le framework utilise un système astucieux de <a href="https://getbootstrap.com/docs/4.1/layout/grid" target="_blank">grilles</a>. Et voici <a href="https://www.youtube.com/watch?v=qmPmwdshCMw" target="_blank">une vidéo</a> d’ Academind qui explique le principe des grilles pour te mettre dans le bain en douceur.</p>
+
+<h3>3.3. Un peu de pratique</h3>
+<h4>3.3.1. Mise en place d'une page simple</h4>
+<p>Faisons ensemble une petite page test ! Le site de Bootstrap propose <a href="https://getbootstrap.com/docs/4.1/examples/" target="_blank">plein d'exemples</a> de pages classiques que l'on retrouve à gauche à droite, et nous allons en faire une ensemble : <a href="https://getbootstrap.com/docs/4.1/examples/pricing/" target="_blank">la page pricing</a> ! En plus d'apprendre à être le champion du prix, tu sauras faire un layout simple.</p>
+
+<p>Commence par créer un petit dossier de test, puis créé ton fichier <code>index.html</code>, dans lequel tu vas mettre le <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template" target="_blank">Starter Template</a>. Tu as Bootstrap de prêt sur une page, c'est cool: maintenant on va insérer la page de pricing.</p>
+
+<p>Va donc sur cette <a href="https://getbootstrap.com/docs/4.1/examples/pricing/" target="_blank">la page pricing</a> et explore le code source. Tu peux constater que cette page a un header assez simple, et appelle deux fichiers CSS : le fichier de Bootstrap (classico), puis un fichier <a href="https://getbootstrap.com/docs/4.1/examples/pricing/pricing.css" target="_blank">pricing.css</a>. Ce fichier ajuste les tailles de certaines divs. Il n'est donc pas vraiment utile : on peut le virer.</p>
+
+<p>Maintenant, il faut juste récupérer le contenu du body (hormis les fichiers de JavaScript qui sont déjà dans notre fichier), puis mettre ce contenu dans le body de ta page html. Sauvegarde, recharge-la, TADAM ! Elle devrait ressembler à ceci : </p>
+
+<div class="imgwrapper">
+  <img src="https://i.imgur.com/DP3lnip.png" class="img-fluid">
+</div>
+<br>
+
+<p>Et bien super ! Maintenant, afin de t’entraîner, on va te demander de jouer avec certains éléments</p>
+
+<h4>3.3.2. Quelques éléments à insérer</h4>
+<p>Tout d'abord, je n'aime pas la navbar actuelle. Change-la pour <a href="https://getbootstrap.com/docs/4.1/components/navbar/#supported-content" target="_blank">la première navbar</a> de la documentation de la page de documentation sur les navbars.</p>
+
+<p>Ensuite, j'aimerais bien ajouter une <a href="https://getbootstrap.com/docs/4.1/components/progress" target="_blank">barre de progrès</a>. Ajoute, juste au-dessus des trois cartes de prix, une <a href="https://getbootstrap.com/docs/4.1/components/progress/#striped" target="_blank">barre de progrès à rayures</a>, remplie aux deux tiers. Mets-la en couleur <code>success</code></p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Bootstrap a un concept de code couleur assez astucieux. En gros, pour les composants de base, la plupart des sites utilisent 6 couleurs :</p>
+      <ul>
+        <li><span class="text-primary">PRIMARY</span> : la couleur principale de ton application.</li>
+        <li><span class="text-secondary">SECONDARY</span> : la couleur secondaire. En général c'est gris.</li>
+        <li><span class="text-success">SUCCESS</span> : la couleur des opérations à succès (un texte qui te dit "Bravo tu as bien créé ton compte client" pas ex).Généralement c'est vert.</li>
+        <li><span class="text-danger">DANGER</span> : la couleur des opérations dangereuses (détruire son compte par ex). Généralement c'est rouge.</li>
+        <li><span class="text-warning">WARNING</span> : la couleur des warnings (un texte indiquant que le panier va bientôt expirer par exemple). Généralement c'est orange.</li>
+        <li><span class="text-info">INFO</span> : la couleur pour annoncer une info. Généralement c'est une sorte de bleu.</li>
+      </ul>
+      <p>Tu peux voir les couleurs de Bootstrap <a href="https://getbootstrap.com/docs/4.1/utilities/colors/" target="_blank">sur cette page</a>. Pour les appeler, tu les rentres en fin de nom de classe. Par exemple pour avoir un bouton qui a la couleur success, tu lui donnes la classe <code>btn-success</code>, comme indiqué <a href="https://getbootstrap.com/docs/4.1/components/buttons/" target="_blank">dans la doc</a> ; ou si tu veux que ton texte soit primary, tu lui donnes la classe <code>text-primary</code>.</p>
+    </div>
+  </div>
+</div>
+
+<h3>3.5. Atomic Design</h3>
+<h4>3.5.1. Introduction</h4>
+<p>Quand tu vas sur un site, tu peux remarquer que beaucoup d'éléments reviennent souvent. Par exemple, tous les sites ont des <a href="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/admin-dashboardUi/html/form-elements.html" target="_blank">formulaires</a>, ou encore ces <a href="https://uxpowered.com/products/appwork/v120/html-demo/ui_badges.html" target="_blank">petits badges</a> qui te disent combien de notifications tu as.</p>
+
+<p>Bienvenue dans l'univers magique du composant web, où tous les sites utilisent les mêmes composants. Le gros point fort de cette technique, c'est qu'il suffit de gérer une vingtaine de composants qui s'occuperont de la majorité de ton site internet. Et à partir de ces composants, tu pourras créer facilement des sections pour ton site, comme le montre ce dessin exemple de <a href="https://medium.com/scribe/comment-concevoir-un-syst%C3%A8me-de-composants-en-atomic-design-770b910f4f32" target="_blank">Audrey Hack</a> : </p>
+
+<img src="https://i.imgur.com/J5WHIMK.jpg" class="img-fluid"><br>
+
+<p>Pour passer des composants à des sections plus complexes, je t'invite à regarder <a href="https://www.youtube.com/watch?v=8EuZD6Hsbxk" target="_blank">cette vidéo</a> de Bitovi qui explique le principe de l'Atomic Design. Puis je t'invite à lire <a href="https://medium.com/@audreyhacq/l-atomic-design-une-m%C3%A9thode-de-co-creation-prometteuse-bd9d5fc2b2ad" target="_blank">ce super article</a> d’Audrey Hacq qui explique le principe de l'Atomic Design.</p>
+
+
+<p>En gros, il existe plein de composants basiques (boutons, formulaires, etc) qui peuvent s'ajouter pour former des sections de pages (formulaire d'inscription, header, etc). Puis ces sections se superposent et forment une page internet. On va illustrer avec quelques exemples.</p>
+
+<h4>3.5.2. Les atomes</h4>
+<p>Les atomes sont les composants de base. Ça peut être un bouton, un icône, ou un champ de formulaire. C'est avec eux que tu vas faire tout ton site. Tu peux voir une liste des composants de base sur <a href="https://getbootstrap.com/docs/4.1/components/alerts/" target="_blank">le site de Bootstrap</a>. Voici un exemple, un bouton :</p>
+
+<a href="#" class="btn btn-lg btn-outline-primary">Sign up for free</a><br><br>
+
+
+
+<h4>3.5.3. Les molécules</h4>
+<p>Les molécules sont des assemblages d’atomes (composants) qui forment des composants d’interface simples. Cela peut être une card de prix, un formulaire, ou encore une navbar. Voici un exemple de molécule faite avec l'atome ci-haut :</p>
+
+<div class="card-deck mb-3 text-center">
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary text-center">
+      <div class="card-body">
+        <h4 class="card-title">Free</h4>
+        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>10 users included</li>
+          <li>2 GB of storage</li>
+          <li>Email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="#" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>3.5.4. Les organismes</h4>
+<p>Les organismes sont des assemblages de molécules qui forment une partie de la page finale de ton site. Cela peut être un formulaire d'inscription, une section "produits suggérés", ou encore une sidebar. Voici un exemple d'organisme fait avec la molécule précédente :</p>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Pricing</h1>
+  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+</div>
+
+
+<div class="card-deck mb-3 text-center">
+
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary text-center">
+      <div class="card-body">
+        <h4 class="card-title">Free</h4>
+        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>10 users included</li>
+          <li>2 GB of storage</li>
+          <li>Email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="#" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary text-center">
+      <div class="card-body">
+        <h4 class="card-title">Pro</h4>
+        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="#" class="btn btn-lg btn-block btn-primary">Get started</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary text-center">
+      <div class="card-body">
+        <h4 class="card-title">Pro</h4>
+        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>15 GB of storage</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+          <a href="#" class="btn btn-lg btn-block btn-primary">Contact us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>3.5.5. Les templates</h4>
+<p>C'est la page finale. Par exemple la page d'inscription, ou bien la page pricing. <a href="https://getbootstrap.com/docs/4.1/examples/pricing/" target="_blank">Voici un exemple</a> de page template, fait avec l'organisme vu plus haut.</p>
+
+<h4>3.5.6. Penser composants</h4>
+<p>Comme tu peux le voir, la pensée par composants et l'Atomic Design permet de décomposer rapidement une page web, et penser ta page non pas comme un livre moche des années 90, mais comme un assemblage d'éléments qui claquent pour donner une vraie page qui a de la gueule.</p>
+<p> Comme tout framework, Bootstrap a tous les composants classiques, que tu peux voir dans <a href="https://getbootstrap.com/docs/4.1/components/" target="_blank">la page des composants</a>. Tu peux jeter un œil sur leurs exemples de <a href="https://getbootstrap.com/docs/4.1/components/card/" target="_blank">cards</a>, ou ceux de <a href="https://getbootstrap.com/docs/4.1/components/navbar/" target="_blank">navbars</a>. Ces composants sont la base du design web classique, et à partir de maintenant tu devras réfléchir avec eux.</p>
+
+<p>Pour avoir plein d'exemples de molécules et d'organismes, je t'invite à voir <a href="https://getbootstrap.com/docs/4.0/examples/" target="_blank">la page d'exemples</a> de Bootstrap ou encore <a href="https://www.w3schools.com/bootstrap/bootstrap_templates.asp" target="_blank">la page de templates</a> de W3Schools. Mon conseil est de ne pas te prendre la tête pour tes projets THP codés sur 1 demi-journée: réutilise ces super exemples pour tes pages. Tu auras ainsi des bonnes structures et faire (en quelques copier-coller à peine) des sites qui en jettent. Tes correcteurs apprécieront !</p>
+
+<p>Depuis que j'utilise Bootstrap, je n'ai plus de fichier <code>style.css</code>. En effet, grâce aux classes Bootstrap qui s'occupent de tout faire pour moi, je n'ai plus besoin de modifier les composants, ou faire de la mise en page. Bootstrap s'occupe de tout cela pour moi ! Et si j'ai envie de faire un truc précis, je m'arrange pour m'adapter au composant actuel. Cela donne plus de cohérence à mon site internet, m'évite de faire du CSS tout moche, et cela m'évite de devoir réinventer la roue en design. <b>Aussi, nous allons te demander de faire de même jusqu'à la semaine de HTML/CSS</b>.</p>
+
+
+
+<h3>3.6. Ajouter une surcouche de Bootstrap pour tout déchirer</h3>
+<p>Bootstrap de base est bien pour faire des applications basiques, mais avouons-le, le design de base de Bootstrap reste assez limité. Et il y a plein d'organismes qui sont durs à réaliser sans toucher au CSS. Pour pallier à ce double problème, nous allons te donner des ressources qui vont ajouter un joli coup de boost à tes applications Bootstrap.</p>
+
+<h4>3.6.1. Petite surcouche simple d'utilisation</h4>
+<p>Il existe un site qui propose une multitude de légères modifications à Bootstrap. Le principe de grille, composants, div reste le même, mais ils changent les couleurs, polices, forme des composants pour que ton site soit un peu moins "standardisé". Ça s'appelle <a href="https://bootswatch.com/" target="_blank">Bootswatch</a>, et tu peux jeter un œil sur les différents "thèmes" qu'ils proposent, et les installer facilement. Perso j'aime bien <a href="https://bootswatch.com/flatly/" target="_blank">Flatly</a>.</p>
+<p> Petit entraînement : installe ce thème sur ta page de pricing.</p>
+
+
+<h4>3.6.2. Vrais thèmes de pros</h4>
+<p>Bootstrap est excellent pour les atomes et la mise en page. Mais au niveau des molécules et organismes, il en manque quand même quelques-uns (la page d'exemples est un peu limitée). Je pense par exemple à une sidebar pour un dashboard, ou alors une fiche produit simple. Le principe du design atomique est d'avoir plein de molécules et organismes que tu as juste à réutiliser dans le bon contexte, donc ce serait cool d'avoir plus d'exemples de pages toutes faites.</p>
+
+
+<p>Pour ça, il existe des thèmes (<a href="https://themes.getbootstrap.com/">Bootstrap fait payer les siens</a>) que tu peux ajouter à ton projet : il s'agit d'un ensemble de fichiers CSS qui vont te donner plein d'organismes et de pages d'exemples pour t'amuser. Par exemple tu peux avoir un organisme de <a href="http://themes.getbootstrap.com/preview/?theme_id=4231&show_new=" target="_blank">témoignages</a> ou bien un organisme de <a href="https://keenthemes.com/keen/preview/demo2/" target="_blank">état d'un projet</a>. L'autre avantage des thèmes est que ces derniers vont généralement modifier le design de base des composants Bootstrap : parfait pour faire un site original !</p>
+
+<p>Voici deux sites sympa pour gratter des thèmes gratuits : <a href="https://startbootstrap.com/" target="_blank">StartBootstrap</a> recense quelques thèmes gratuits pas trop moches, par exemple <a href="https://blackrockdigital.github.io/startbootstrap-sb-admin/" target="_blank">un dashboard admin simple</a>, ou bien <a href="https://blackrockdigital.github.io/startbootstrap-grayscale/" target="_blank">un petit one-pager efficace</a>. <a href="https://templatemag.com/bootstrap-templates/" target="_blank">TemplateMag</a> est aussi pas mal pour avoir des thèmes gratuits.</p>
+
+<p>Cependant, si l'univers du code est en général très open source avec plein de produits gratuits, il y a un domaine où c'est dur de faire sans payer : c'est celui des thèmes et template en front. Déjà en matière de design y a pas photo : tu peux comparer la qualité des formulaires entre <a href="https://templatemag.com/demo/templates/Dashio/form_component.html" target="_blank">ce thème</a> (gratuit) et <a href="https://keenthemes.com/keen/preview/demo2/components/forms/controls/base.html" target="_blank">ce thème</a> (payant). Et j'ai pris le thème gratuit qui est (de très loin) celui le plus populaire sur TemplateMag. Enfin, en termes d'organismes, un thème payant aura 100 fois plus de pages exemples qu'un thème gratuit (souvent one-pager). Encore une fois, il n'y a pas photo entre <a href="https://blackrockdigital.github.io/startbootstrap-creative/" target="_blank">ce thème</a> (gratuit) et <a href="http://themes.getbootstrap.com/preview/?theme_id=5348&show_new=" target="_blank">ce thème</a> (payant). Quitte à installer un thème pour avoir plus de pages exemples et un design plus chiadé, autant ne pas le faire à moitié et prendre un thème payant.</p>
+
+<p>Voici deux sites pour les thèmes payants. Déjà, le site officiel Bootstrap propose <a href="https://themes.getbootstrap.com/" target="_blank">des thèmes</a> jolis, complets, et compatibles comme il faut avec Bootstrap. Le site <a href="https://wrapbootstrap.com/" target="_blank">WrapBootstrap</a> propose aussi pas mal de thèmes Bootstrap pas trop chers et complets.</p>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Si THP n'a pas le droit d'acheter des thèmes Bootstrap et de vous les filer, nous ne pouvons rien faire si une bande d'une cinquantaine de moussaillons décide d'acheter un thème à 50 $ et de se le partager via WeTransfer ou autre.</p>
+      <p>Pour le moment vous n’en avez pas besoin, mais dans le futur... très sûrement 😎.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Les frameworks CSS, c'est le bien. Grâce aux frameworks, tu n'as plus besoin de fichier <code>style.css</code>. Bootstrap est cool, et installer Bootstrap est aussi simple qu'un copier-coller du <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template" target="_blank">Starter Template</a>.</p>
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>Lis la doc de Bootstrap pour voir ses possibilités ;) Aussi, si tu aimes bien l'univers du design, tu peux lire <a href="http://atomicdesign.bradfrost.com/" target="_blank">l'article de Brad Frost</a> à propos de l'atomic design.</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Les super outils quand on fait du front</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Dans cette ressource, nous allons te donner les bonnes astuces pour réussir à faire un joli site, et ne pas passer pour un pignouf quand tu parleras de front à un expert dans le sujet. Voici la liste des sujets qu'on va aborder :</p>
+
+<ul>
+  <li>Les icônes => Font Awesome</li>
+  <li>Les photos => Pexels / Unsplash</li>
+  <li>Les polices => Google Fonts</li>
+</ul>
+
+
+<h2>2. Historique</h2>
+<p>Heu..</p>
+
+<h2>3. La ressource</h2>
+<h3>3.1. Les icônes avec Font Awesome</h3>
+<p>Quand tu vas sur des sites, ces derniers utilisent pour la grande majorité des petites icônes faciles à retenir pour représenter des actions et aiguiller l'utilisateur. Par exemple <a href="https://fontawesome.com/icons/arrow-right?style=solid">une flèche</a> ou bien <a href="https://fontawesome.com/icons/search?style=solid" target="_blank">une loupe</a> (pour symboliser une recherche) ou encore tous les icônes sur la gauche dans le menu de ton <a href="https://www.thehackingproject.org/dashboard/">dashboard THP</a>. Comme tu as pu le voir lors du projet Google, c'est un peu fastidieux d'insérer chaque icône à la main avec une image. En plus, en général ils peuvent changer de couleur et s'agrandir sans perdre en qualité. Bref, comment faire 🤔??</p>
+
+<p>La solution réside dans l'utilisation d'une bibliothèque d'icônes que l'on pourra appeler facilement avec des balises : <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> propose exactement ceci. Pour l'importer tu mets <a href="https://fontawesome.com/start" target="_blank">le CDN</a> (comme Bootstrap) dans ton header, puis tu as juste à <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">rechercher une icône</a> sur leur site, et l'insérer dans ton body avec l'élément <code>&lt;i class="fas *fa-search*">&lt;/i></code> (où *fa-search* est remplacé par le nom de l'icône), et à toi la gloire !</p>
+
+<p>Comme d'habitude sur le front, W3Schools a un <a href="https://www.w3schools.com/icons/default.asp" target="_blank">super tutoriel</a> sur le sujet. Ils parlent d'autres bibliothèques, comme <a href="https://material.io/tools/icons" target="_blank">les icônes de Google</a>.</p>
+
+<h3>3.2. Les photos qui claquent</h3>
+<p>Des fois, tu auras besoin de mettre sur ton site des "stock photos", c’est-à-dire des photos libres de droit qui permettent d'aérer ton texte. Pour ceci, tu vas devoir les rechercher et les mettre dans ton site. Le souci, c'est que passer par Google Images te donnera <a href="https://goo.gl/images/BgtD2w" target="_blank">des résultats</a> qui font tiép', et ton site ressemblera plus à une mauvaise présentation PowerPoint de consultant en devenir qu'au prochain Airbnb qui va révolutionner le monde.</p>
+
+<p>On t'offre la solution sur un plateau d'argent : <a href="https://www.pexels.com/" target="_blank">Pexels</a> et <a href="https://unsplash.com/" target="_blank">Unsplash</a>. Ces sites permettent de chercher dans une base de données de photos qui sont aux standards modernes : tons pastels, haut contraste, décors qui font rêver, aspect <i>naturel</i>. Bref, leurs photos sont tellement belles qu'on se sentirait dans un film de Hoyte van Hoytema et plus devant une bande de 5 personnes avec des sourires tellement forcés qu'on les croirait constipées.</p>
+
+
+<h3>3.3. Les polices de caractère avec Google Fonts</h3>
+<p>Des fois, on a envie de changer la police de caractère de son site. La ressource de référence pour ça, c'est <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>, le site de Google qui recense les polices gratos et sympa. Comment s'en servir ? Tu recherches la ou les polices qui t'intéressent (par exemple <a href="https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat" target="_blank">Montserrat</a>), tu les ajoutes en cliquant sur le "+" ("Select this font"), puis l'encart en bas à droite ("x Family selected") te permet de récupèrer la ligne de code à mettre dans le head (en l'occurrence <code>&lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"></code>).</p>
+<p>Tu n'as plus qu'à appeler la police dans ton fichier CSS et le tour est joué ! (Google est au top : l'encart "Family selected" te donne même la syntaxe exacte à utiliser) Dans notre cas : <code>font-family: 'Montserrat', sans-serif;</code></p>
+
+<p>Si jamais tu n'y connais rien en design et polices, la super corsaire Sandrine a fait <a href="https://drive.google.com/file/d/1e18XN6br79cb8kP_v4Qw18k4LBD0nczS/view?usp=sharing" target="_blank">un petit guide</a> du design, très bien quand on débute. De plus, <a href="https://www.typewolf.com/" target="_blank">TypeWolf</a> référence chaque jour des sites web avec les plus belles polices du moment. Avec ceci tu seras armé pour avoir un site bien policé ! 👮</p>
+
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Pour ajouter des super icônes à ton site, va sur <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>. Pour récupérer des jolies photos, direction <a href="https://www.pexels.com/" target="_blank">Pexels</a> et <a href="https://unsplash.com/" target="_blank">Unsplash</a>. Pour ajouter des polices facilement à ton site go sur <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>Y'a déjà pas mal d'infos, on ne va pas pousser plus loin 😉. => Maintenant, il faut pratiquer un max !</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Faire une belle Landing Page</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Dans ce projet, nous allons te demander d'utiliser les compétences que tu as acquises en matière de design pour réaliser la page d'accueil du site de tes rêves. Tu vas donc faire une Landing Page pour une startup révolutionnaire.</p>
+
+
+
+<h2>2. Le projet</h2>
+<h3>2.1. Une Landing Page</h3>
+<p>Une Landing Page est en général, une page très simple qui accueille les personnes curieuses de savoir ce que ta start-up fait. Son objectif est de faire en sorte que les visiteurs soient convertis et finissent par utiliser ton produit.</p>
+
+<p>Si des termes comme Call-To-Action, conversion, value proposition ne te sont pas super familiers, tu peux lire <a href="https://blog.wishpond.com/post/85728832826/what-is-a-landing-page" target="_blank">cet article</a> qui t'expliquera le concept de Landing Page pour les marketeux, et <a href="https://www.youtube.com/watch?v=ixa_fiF1Dqs" target="_blank">cette vidéo de Oussama Ammar</a> donnera en 30mn une intro au design de Landing Page.</p>
+
+<p>Dans ce projet, nous allons te donner une idée de startup, puis nous allons te demander de réaliser la Landing Page de cette startup. Nous te demanderons de faire deux landing pages (LP) :</p>
+
+<ul>
+  <li>Une LP qui utilise Bootstrap, sans thème, sans CSS</li>
+  <li>Une LP qui utilise un thème de Bootsrap, pour te mâcher le travail</li>
+</ul>
+
+<h4>2.1.1. Changer le monde</h4>
+<p>Votre projet de moteur de recherche pour les internets a fait un carton auprès de votre client. Avec ton équipe, tu te dis que les gens ne comprennent pas très bien le produit et tu voudrais réaliser une Landing Page pour les gens qui viennent depuis Google Ads.</p>
+
+<p>Oui, tu as bien compris, après avoir fait la page d'accueil de Google, tu vas faire une Landing Page qui devra vendre leur concept de moteur de recherche au plus grand nombre. Pour le design, nous allons te demander de reprendre un format universellement reconnu.</p>
+
+
+<h4>2.1.2. Design</h4>
+<p>Le web a tellement de conventions que les Landing Pages ont toutes le même format. David Ellis s'est moqué de ce design universel dans <a href="http://www.novolume.co.uk/blog/all-websites-look-the-same/" target="_blank">un article</a> resté célèbre. Ainsi, pour l'exercice, nous allons te demander d'adapter ce design mondialement connu à Google. Génial, non ?</p>
+
+<img src="https://i.imgur.com/iqOnLUE.png" class="img-fluid"><br>
+
+<p>Dans la section suivante, nous allons revenir sur chaque élément du design de la page. Si des termes te semblent barbares, n'hésite pas à rechercher ce qu'ils veulent dire. Ces termes sont généralement très utilisés dans le monde du numérique et les connaître te sera indispensable pour une future carrière liée au web.</p>
+
+
+<h5>2.1.2.1. Navbar</h5>
+<p>Tout commence par le header. À gauche le nom de la startup (indice : c'est Google), à droite des liens vers des pages trop cools :</p>
+
+<ul>
+  <li>La page Wikipédia de Google</li>
+  <li>La page d'accueil de Google</li>
+</ul>
+
+
+<h5>2.1.2.2. Carousel</h5>
+<p>Le carousel, c'est <i>has been</i>, mais ton client a insisté pour l'avoir. C'est pas grave, puisque grâce à Pexels, tu es le champion des images stylées: trouve 3 images. Ensuite, Bootstrap propose un carousel déjà fonctionnel, à toi de l'appliquer à tes 3 photos ! Pense bien à mettre au centre le bouton de call-to-action (CTA) qui doit rediriger vers la page d'accueil de Google.</p>
+
+<h5>2.1.2.3. Paragraphe de présentation</h5>
+<p>200 caractères pour pitcher au mieux Google, sauras-tu le faire ?</p>
+
+<h5>2.1.2.4. Trois colonnes</h5>
+<p>Chaque colonne aura :</p>
+<ul>
+  <li>Une icône, trouvée sur FontAwesome par exemple</li>
+  <li>Un adjectif qui démontre la qualité de service de Google (rapide ? respectueux de la vie privée ? gratuit ? autre ?)</li>
+  <li>50 caractères qui justifient cet adjectif</li>
+</ul>
+
+
+<h5>2.1.2.5. Footer</h5>
+<p>Un message simple du genre <code>Made with ♥ in Mountain View</code></p>
+
+<h3>2.2. V1.0 avec Bootstrap simple</h3>
+<p>Pour cette première version de la Landing Page, nous allons te demander d'utiliser Bootstrap simple (interdiction d'utiliser un fichier CSS autre que Bootstrap). Tu devras jongler entre les différentes pages d'exemple de Bootstrap puis construire la landing page avec tous les éléments demandés.</p>
+
+<p>Le but est de t'apprendre à créer une page simple mais fonctionnelle et avec un rendu professionnel. <a href="https://getbootstrap.com/docs/4.0/examples/album/" target="_blank">Cette page exemple</a> sur le site de Bootstrap est sans CSS, mais avec un résultat qui pourrait presque prétendre à un site professionnel.</p>
+
+<h3>2.3. V2.0 avec un thème</h3>
+<p>Maintenant que tu sais manipuler le Bootstrap de base, nous allons te demander de lui ajouter une surcouche pour réaliser la Landing Page. Tu peux utiliser un thème de ton choix en allant sur le site de ton choix. La condition unique est que tu manipules ce thème pour que la partie <code>2.1.2.</code> soit respectée.</p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>Deux dossiers GitHub avec dans chacun une des Landing Pages demandées et le lien vers leur version en ligne (GitHub Pages).</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

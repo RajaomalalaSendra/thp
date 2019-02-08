@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1CFgZaDkBDR1EVHRUKXRM=","queueTime":6,"applicationTime":95,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Préparcours: Jour 1 | The Hacking Project</title>
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Préparcours: Jour 1">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MdrWVnTHLfWyu2wrgLSrtgzLp3d2pPJ71u+7Nm7r/CG+p6wSjWgzaKXB/86W8ToPPHbbf0DXLe1bVq0mMWZikw==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+ data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/precursus/new">
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Rendre le préparcours</span>
+</a>            </li>
+            <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Les ressources</span>
+
+</a>                <ul class="menu-content">
+                    <li><a href="/precursus/1">Lundi</a></li>
+                    <li><a href="/precursus/2">Mardi</a></li>
+                    <li><a href="/precursus/3">Mercredi</a></li>
+                    <li><a href="/precursus/4">Jeudi</a></li>
+                    <li><a href="/precursus/5">Vendredi</a></li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+      <div class="navigation-background"></div>
+  </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      <div class="container">
+    <div class="card">
+  <div class="card-header">
+    <h4 class="text-center"> Programme jour par jour</h4>
+  </div>
+  <div class="card-body">
+    <div class="text-center">
+    <a href="/precursus/1">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-terminal"></i>&nbsp;&nbsp;&nbsp;Lun
+      </button>
+</a>    <a href="/precursus/2">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-code"></i>&nbsp;&nbsp;&nbsp;Mar
+      </button>
+</a>    <a href="/precursus/3">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+        <i class="fa fa-desktop"></i>&nbsp;&nbsp;&nbsp;Mer
+      </button>
+</a>    <a href="/precursus/4">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+      <i class="fa fa-folder-open"></i>&nbsp;&nbsp;&nbsp;Jeu
+      </button>
+</a>    <a href="/precursus/5">
+      <button class="btn btn-primary btn-outline-primary btn-lg mr-4">
+      <i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Ven
+      </button>
+</a>    </div>
+  </div>
+</div>
+
+    <script>
+$('div.star-rating').on('click',function(event) {
+  let starNumber = $('div.star-rating').find('i.fa-star').length
+  let text = $('div#rating-description')[0]
+    if (starNumber == 0) {
+      text.innerHTML = "La dernière fois que j'ai touché à un clavier c'était celui du minitel de papa"
+    }
+    else if (starNumber == 1) {
+      text.innerHTML = "J'ai déja touché à HTML et CSS"
+    }
+    else if (starNumber == 2) {
+      text.innerHTML = "J'ai déja vu un peu de JavaScript"
+    }
+    else if (starNumber == 3) {
+      text.innerHTML = "J'ai fait des études d'ingénieur"
+    }
+    else if (starNumber == 4) {
+      text.innerHTML = "J'ai fait une piscine de code"
+    }
+    else if (starNumber == 5) {
+      text.innerHTML = "Je suis déja developpeur et je veux apprendre Ruby"
+    }
+    return
+})
+</script>
+
+    <div class="precourse-body">
+     <div class="card">
+  <div class="card-header">
+    <h2 class="text-center">Lundi</h2>
+    <h3 class="text-center">Le terminal, et Git</h3>
+  </div>
+  <div class="card-body">
+    <p>Le terminal, le fameux écran noir qui fait peur à tout le monde en dehors du monde du développement. Et bien aujourd'hui, nous allons démystifier cet écran noir, et te montrer comment s'en servir. Puis nous allons te montrer Git et GitHub, deux fantastiques outils pour gérer des projets.</p>
+    <p>À la fin de la journée, tu comprendras enfin ce que font les développeurs derrière leur écran noir, et comment ils travaillent.</p>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" style="border-top: 3px solid #5E66E5">
+    <h1>Ressources</h1>
+    <a class="heading-elements-toggle">
+    <i class="la la-ellipsis-v font-medium-3"></i>
+    </a>
+    <div class="heading-elements">
+      <ul class="list-inline mb-0">
+        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+      </ul>
+    </div> 
+  </div>
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <div class="tab-pane active" id="home1" role="tabpanel">
+        <h2>1. Le terminal</h2>
+
+        <h3>1.1. Introduction</h3>
+        <p>Dans cette ressource, tu vas découvrir les bases du terminal, un outil très puissant qui permet de "parler" à son ordinateur. Nous allons voir les bases : comment intéragir avec le terminal, comment jouer avec ses premiers fichiers, et bien d'autres.</p>
+
+        <h4>1.1.1. Ce que tu apprendre dans cette ressource</h4>
+        <p>Voici la liste des questions auxquelles tu vas pouvoir répondre avec cette ressource :</p>
+        <ul>
+          <li>Qu'est-ce que le terminal ?</li>
+          <li>Que veut dire GUI et CLI ?</li>
+          <li>Comment lancer un terminal ?</li>
+          <li>Comment exécuter ses premières fonctions avec un terminal ?</li>
+          <li>Pourquoi la notion de géographie est très importante dans un terminal ?</li>
+          <li>Qu'est-ce que VIM et comment s'en servir ?</li>
+        </ul>
+
+
+
+        <h3>1.2. Historique</h3>
+        <p>Le terminal est ce que l'on appelle plus communément un <i>interpréteur de commande</i> (ou command-line interpreter (CLI) en anglais), est un outil qui permet d'interpréter les commandes qu'un utilisateur tape au clavier dans l'interface en ligne de commande.</p>
+
+        <p>À la base, les ordinateurs tournaient sans interface graphique, donc les utilisateurs passaient exclusivement par les CLI. Avec l'arrivée des systèmes d'exploitation graphiques (Windows, Apple, Linux), le CLI n'a pas perdu en popularité, puisqu'il permet de faire des tâches extrêmement précises.</p>
+
+        <p>En gros, c'est une version texte de l'explorateur de fichiers : on peut ouvrir des dossiers, créer des fichiers, les lancer, les renommer, installer des programmes, et bien d'autres choses. On dit que c'est une <b>CLI</b> (Command Line Interface), comparée à la <b>GUI</b> (Graphical User Interface) de l'explorateur normal. Tout est fait via clavier, donc pas besoin de souris dans le terminal.</p>
+
+        <h3>1.3. Le terminal</h3>
+
+        <h4>1.3.1. Qu'est-ce que le terminal ?</h4>
+        <p>Le terminal est un outil intimidant aux premiers abords, mais au final se révèle pas compliqué. J'ai réalisé une vidéo qui explique le terminal :</p>
+
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/myz_6xrDwR4"></iframe>
+        </div><br><br>
+
+        <h4>1.3.2. Comment le lancer ?</h4>
+        <p>Sur Linux : <code>CTRL</code> + <code>ALT</code> + <code>T</code><br>
+          Sur macOS : <code>CMD</code> + <code>SPACE</code>, puis écrire <code>Terminal</code> (ou iTerm), Enter.
+        </p>
+
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+              <p class="card-text">Si tu utilises Linux, passe ton terminal en anglais. Quand ce dernier te renverra une erreur, c'est bien mieux qu'elle soit en anglais. L'anglais et la langue d'internet, donc la majorité des gens qui ont eu ton problème vont le poster en anglais. Et ainsi tu auras 100 fois plus de résultats sur Google que si tu postais ton erreur en français.</p>
+            </div>
+          </div>
+        </div>
+
+        <h4>1.3.3. Premières fonctions ?</h4>
+        <p>Pour faire marcher le terminal, rien de plus simple : il suffit de rentrer le texte correspondant à la fonction et cela s'exécutera. Par exemple si dans l'explorateur en GUI il suffit de double cliquer sur <code>mon_fichier.txt</code> pour l'ouvrir, il faudra faire dans le terminal <code>open mon_fichier.txt</code> (sur macOS) ou <code>xdg-open mon_fichier.txt</code> (sur Linux) pour l'ouvrir avec le terminal. On va tester avec notre première fonction :</p>
+        <pre><code class="language-bash">$ echo "Hello world !"</code></pre>
+        <p><i>(je commence toutes les commande du terminal avec un <code>$</code>, c'est une convention, et c'est plus facile à reconnaitre comme ceci)</i></p>
+        <p>Si tu exécutes cette commande le terminal devrait te renvoyer <code>Hello world !</code> (cette phrase est <a href="https://fr.wikipedia.org/wiki/Hello_world" target="_blank">un grand classique de la programmation</a>). Et là, tu viens d'exécuter ta première commande de terminal 🎉<br>
+        Maintenant nous allons voir les premières commandes de base.</p>
+
+        <h5>1.3.3.1. PWD</h5>
+        <p><code>pwd</code> est l'acronyme de Print Working Directory, une commande qui affiche le dossier dans lequel tu es actuellement.</p>
+        <pre><code class="language-bash">$ pwd</code></pre>
+        <p>Pour moi, <code>pwd</code> me renvoie :</p>
+        <pre><code class="language-bash">/Users/felix</code></pre>
+        <p>C'est comme dans l'explorateur en GUI, quand tu double-cliques sur <code>felix</code>, il te déplace dans le dossier <code>felix</code> qui est dans le dossier <code>Users</code>.</p>
+
+
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+              <p class="card-text"><code>pwd</code> est généralement la première commande que l'on tappe quand on arrive dans le terminal de quelqu'un : c'est idéal pour s'y retrouver ✌️</p>
+            </div>
+          </div>
+        </div>
+
+        <h5>1.3.3.2. LS</h5>
+        <p><code>ls</code> est le diminutif pour <i>list</i>, cette fonction affiche les fichiers et dossiers qu'il y a dans mon dossier actuel.</p>
+        <pre><code class="language-bash">$ ls</code></pre>
+        <p>Pour moi, <code>ls</code> me renvoie :</p>
+        <pre><code class="language-bash">Applications/   Dropbox/     Music/       Desktop/
+  Pictures/     Documents/    Library/     Public/
+  Downloads/    Movies/</code></pre>
+        <p>Dans le terminal, nous pouvons donner des options aux fonctions, en faisant <code>$ fonction -option</code>. Par exemple, je peux faire <code>ls -a</code>, ce qui a pour effet d'afficher aussi les fichiers commençant par un <code>.</code> (fichiers de devs en général), ou je peux faire <code>ls -l</code> pour afficher la liste au format long. Et je peux même combiner les deux en faisant <code>ls -al</code> pour afficher aussi les fichiers commençant par un <code>.</code>, tout au format long.</p>
+
+
+        <h5>1.3.3.3. MAN</h5>
+        <p><code>man</code> est le diminutif de <i>manual</i>. Man lance un programme qui permet de lire la manuel d'une fonction précise. Pratique pour savoir toutes ses spécificités. Pour s'en servir il suffit de tapper : <code>man fonction</code>. Par exemple pour afficher le manuel de ls, je dois taper :</p>
+        <pre><code class="language-bash">$ man ls</code></pre>
+        <p>Ce qui m'ouvrira son manuel, qui je peux quitter à tout moment en tapant <code>q</code>.</p>
+
+        <h4>1.3.4. Où sommes-nous ?</h4>
+        <p>Une notion <b>fondamentale</b> pour le terminal : la notion de géographie. Comme dans l'explorateur en GUI, on se déplace de dossiers en dossiers dans le terminal. Si jamais tu veux ouvrir un fichier en tappant <code>open file.txt</code> (sur macOS) ou <code>xdg-open file.txt</code> (sur Linux) et que tu ne te trouves pas dans le bon dossier, le terminal te renverra une erreur. Un peu comme si tu essayais de double-cliquer sur file.txt dans le mauvais dossier : impossible car il n'y est pas.</p>
+        <p>Tu vas devoir te déplacer donc de dossiers en dossiers pour ouvrir et intéragir avec les bons fichiers.</p>
+
+        <h4>1.3.5. CD</h4>
+        <p><code>cd</code> est l'acronyme de <i>Change Directory</i>, qui te permet de naviguer entre dossiers. L'équivalent d'un double-clic sur un dossier en quelque sorte 😁</p>
+        <pre><code class="language-bash">$ cd nomdudossier</code></pre>
+        <p>Tu te déplaceras dans le dossier nommé <code>nomdudossier</code> (s'il existe dans le dossier dans lequel tu te trouves).</p>
+
+        <p>Tu peux aussi te déplacer vers le dossier parent en faisant <code>$ cd ..</code></p>
+
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+              <p class="card-text">Utiliser la touche <code>TAB</code> permet de faire de l'autocompletion, très pratique pour cette méthode. Aussi, faire <code>cd</code> + [ESPACE] + <code>TAB</code> + <code>TAB</code> affiche les dossiers disponibles.</p>
+            </div>
+          </div>
+        </div>
+
+        <h4>1.3.6. Autres fonctions</h4>
+        <h5>1.3.6.1. Créer un fichier</h5>
+        <p>En tapant :</p>
+        <pre><code class="language-bash">$ touch nomdufichier</code></pre>
+        <p>Cela aura pour effet de créer un fichier qui s'appelle <i>nomdufichier</i></p>
+
+        <h5>1.3.6.2. Copier</h5>
+        <p>Pour copier un fichier ou un dossier d'un endroit à un autre, il suffit de rentrer :</p>
+        <pre><code class="language-bash">$ cp fichier_à_copier lieu_de_destination</code></pre>
+
+        <h5>1.3.6.3. Déplacer</h5>
+        <p>Pour déplacer (couper) un fichier ou un dossier d'un endroit à un autre, il suffit de rentrer :</p>
+        <pre><code class="language-bash">mv [fichier_à_déplacer] [lieu_de_destination]</code></pre>
+
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+              <p class="card-text"><code>mv</code> est très pratique pour renommer un fichier. Imaginons que tu as créé un fichier "hello.rv" au lieu de "hello.rb". Oups, malheur. Heureusement, faire <code>$ mv hello.rv hello.rb</code> résoud ceci en quelques coups de clavier !</p>
+            </div>
+          </div>
+        </div>
+
+        <h5>1.3.6.4. Remove</h5>
+        <p>Supprimer un fichier :</p>
+        <pre><code class="language-bash">$ rm nomdufichier</code></pre>
+        <p>Il est possible d'effacer un dossier ainsi que son contenu en ajoutant la récursion en option : </p>
+        <pre><code class="language-bash">$ rm -r nomdudossier</code></pre>
+
+        <div class="card box-shadow-0 border-success">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">📚 INSTANT CULTURE GÉ</h4>
+              <p class="card-text"><code>rm</code> est à l'origine d'une blague vieille comme le monde. En effet, ajouter l'option <code>-f</code> permet de forcer la suppression d'un fichier, même s'il est important pour l'ordinateur, et finir par <code>/</code> ou <code>*</code> dit à votre ordinateur de prendre absolument tous les fichiers. Ainsi, si tu tapes <code>$ rm -rf /</code> ou <code>$ rm -rf *</code> dans ton terminal, tu dis à ce dernier de tout prendre et de tout effacer, en forçant. Et figure toi que <code>rm</code> est très rapide, et donc effacera l'intégralité de ton ordinateur en quelques secondes à peine. <b>À ne jamais jamais jamais faire</b> donc.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <h5>1.3.6.5. Vim</h5>
+        <p>Vim est un des éditeurs de texte les plus respectés au monde. Comme il passe uniquement par le terminal, il se marie extrêmement bien avec cet outil. Et comme vim utilise exclusivement le clavier, ses raccourcis permettent d'aller extrêmement vite, pour qui ose grimper la très dure courbe d'apprentissage (quelques semaines à plein temps). De ce fait, je te montrerai vim pour ta culture générale, mais te demanderai de passer par un autre éditeur de texte 😉</p>
+        <pre><code class="language-bash">$ vim nomdufichier</code></pre>
+        <p>Permet d'ouvrir vim sur le fichier <i>nomdufichier</i> et de l'éditer. Pour quitter vim, il faut rentrer <code>:q!</code>.</p>
+
+        <h4>1.3.7. Autres astuces</h4>
+        <p><code>CTRL</code> + <code>C</code> annule la fonction en cours. Pratique quand on a une boucle infinie.</p>
+        <p>La casse est très importante, idem pour les espaces.</p>
+        <p>Il y a des raccourcis pratiques, par exemple <code>CTRL</code> + <code>U</code> efface la ligne en cours.</p>
+        <p>Les touches du haut et du bas permettent de naviguer dans l'historique des commandes. Très pratique pour par exemple re-éxécuter une commande que tu viens de faire.</p>
+
+
+
+
+        <h3>1.4. Les points importants</h3>
+        <p>Voici les points à retenir de la ressource :</p>
+        <ul>
+          <li>Pour lancer le terminal sur Linux : <code>CTRL</code> + <code>ALT</code> + <code>T</code> ; pour le lancer sur macOS : <code>CMD</code> + <code>SPACE</code>, puis écrire <code>Terminal</code> (ou iTerm), Enter.</li>
+          <li><code>man</code> est le manuel est permet de lancer la manuel des fonctions</li>
+          <li><code>pwd</code> affiche le dossier dans lequel tu es actuellement.</li>
+          <li><code>ls</code> est une commande qui affiche les fichiers et dossiers qu'il y a dans mon dossier actuel</li>
+          <li>la notion de géographie est fondamentale : le terminal n'arrivera pas à ouvrir les fichiers s'il ne se trouve pas dans le bon dossier</li>
+          <li><code>cd</code> permet de changer de dossier</li>
+          <li><code>touch</code> permet de créer un fichier</li>
+          <li><code>cp</code> permet de copier un fichier</li>
+          <li><code>mv</code> permet de déplacer un fichier ou un dossier</li>
+          <li><code>rm</code> permet de supprimer un fichier</li>
+        </ul>
+
+        <h3>1.5. Aller plus loin</h3>
+        <p>Voici un excellent <a href="https://www.vikingcodeschool.com/web-development-basics/a-command-line-crash-course" target="_blank">cours express</a> pour avoir quelques base sur le terminal. Il est un peu similaire au mien, mais aborde d'autres sujets intéressants tels que le PATH.</p>
+
+        <p>Viking Code School ont aussi fait un <a href="https://www.vikingcodeschool.com/web-development-basics/a-command-line-crash-course" target="_blank">cours sur le pimp de terminal</a> pour avoir plein de couleurs de BGs sur le tien.</p>
+
+        <p>Michael Hartl a fait une célèbre introduction au terminal nommée <a href="https://www.learnenough.com/command-line-tutorial" target="_blank">Learn Enough Command Line to Be Dangerous</a>. Cette ressource permet d'aller assez loin en détails dans le terminal.</p>
+
+        <p>Pour ceux qui veulent découvrir Vim, voici <a href="https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85" target="_blank">une marche à suivre</a> pour être champion de Vim rapidement.</p>
+
+
+
+        <h2>2. Git et GitHub</h2>
+        <h3>2.1. Introduction</h3>
+        <p>Ce cours t'introduira à Git et Github, deux fantastiques outils qui permettent de faire des sauvegardes efficaces d'un projet, et de travailler à plusieurs sur le même dossier.</p>
+
+        <p>Dans cette leçon, nous allons te montrer comment installer Git, comment s'en servir, et comment le faire marcher. Pour ceci, nous allons nous aider de l'excellent <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github" target="_blank">cours</a> sur OpenClassrooms de Marc Gauthier, sur Git et GitHub.</p>
+
+
+        <h4>2.1.1. Ce que tu vas apprendre dans cette ressource</h4>
+
+
+        <h3>2.2. Historique</h3>
+        <p>Git est un outil de versionning de code, c'est à dire que c'est une commande qui permet de faire des sauvegardes, avec commentaires d'un projet. Ainsi, il est facile de revenir d'une version de sauvegarde à l'autre, et c'est même optimisé pour les projets où tout le monde travaille sur le même fichier !</p>
+        <p>En gros, c'est la même chose quand vous faîtes une grosse présentation PPT. Vous faites tellement de modifications dessus que vous vous retrouvez à la fin avec le nom "VF_avec_retours_Jean01_final.ppt". Le versionning vous permet d'avoir toutes les versions sauvegardées, et de revenir à celles que vous voulez à tout moment, et de nous éviter ces tracas.</p>
+        <p>Voilà à quoi Git sert : à mieux gérer ses versions entre les fichiers d'un projet (bonus : Git marche pour tous les fichiers d'un dossier concerné, donc c'est encore plus puissant que <code>CTRL</code> + <code>S</code>). Et GitHub permet de mettre en ligne ton projet, comme ça vous pourrez travailler facilement en équipe dessus.</p>
+
+        <p>Pour information, Git a été créé en 2005 par Linus Torvald, qui a (entre autres) créé le système d'exploitation Linux.</p>
+
+        <h3>2.3. Le cours</h3>
+        <h4>2.3.1. Installer Git</h4>
+        <p>Avant de pouvoir se servir de Git, il faut l'installer. Cela tombe bien, il y a un <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/installer-git" target="_blank">chapitre éponyme</a> dans le cours sur OC.</p>
+
+        <h4>2.3.2. Première introduction à Git</h4>
+        <p>J'ai fait une petite vidéo d'introduction à Git, que tu pourras retrouver ci-bas :</p>
+
+
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ggaMadCKjko"></iframe>
+        </div><br><br>
+
+        <p>Ensuite, tu peux suivre le cours de Marc Gauthier jusqu'à la partie <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/recuperer-des-modifications" target="_blank">Récupérez des modifications</a>. Nous verrons dans la formation THP comment faire les branches et autres joyeusetés 😇</p>
+
+
+
+
+
+        <h3>2.4. Points importants à retenir</h3>
+        <h4>2.4.1. Les commandes pratiques</h4>
+        <p>Voici un récap des commandes de base :</p>
+        <ul>
+          <li><code>$ git init</code> : il faut TOUJOURS commencer par initialiser git avec cette commande. Avec cette commande, le répertoire courant est considéré comme un repository git</li>
+          <li><code>$ git add [fichier]</code> : ajoute aux sauvegardes le fichier mentionné. <b>Protip</b> : si tu as plusieurs fichiers à ajouter, tu peux utiliser <code>$ git add .</code> qui ajoute au repository tous les fichiers du dossier</li>
+          <li><code>$ git commit -m [commentaire]</code> : créé un commit (commit = sauvegarde suivie d'un commentaire).</li>
+          <li><code>$ git status</code> : te dit le status actuel de git.</li>
+        </ul>
+
+
+        <h4>2.4.2. Lire l'historique</h4>
+        <p><code>$ git log</code> : permet de voir l'historique et de voir tous les commits. Les commits sont rangés avec :</p>
+        <ul>
+          <li>SHA : liste de chiffres et lettres qui indentifient de façon unique le commit.</li>
+          <li>Auteur</li>
+          <li>Date</li>
+          <li>Message donné durant le commit : avec ce message, tu vas comprendre ce que faisait le commit. C'est pour cela qu'il est important d'avoir un bon nom.</li>
+        </ul>
+        <p>Pour quitter le log, il faut appuyer sur <code>Q</code>.</p>
+
+
+        <h4>2.4.3. Se positionner sur un commit donné</h4>
+        <p>Imaginons que veut vérifier un truc sur un vieux commit. On va utiliser la commande <code>$ git checkout</code>, utilisée comme ceci : </p>
+        <ul>
+          <li><code>$ git checkout 45581cebdd2cae494f80f44010af9e4a86c9b8fa</code> : on dit à git de se positionner sur ce sha précis.</li>
+          <li><code>$ git checkout master</code> : une fois que l'on a fini de se balader, il faut revenir à la version présente de notre repository avec cette commande</li>
+        </ul>
+
+
+        <div class="card box-shadow-0 border-danger">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+              <p class="card-text"><code>$ git checkout</code> ne marche que si tu n'as pas de modification non sauvegardée. Si tu es entre deux commits, git checkout ne marchera pas. Du coup il te faudra soit faire une sauvegarde (== faire un commit), soit effacer tout pour revenir au commit d'avant.</p>
+              <p><code>$ git checkout</code> n'est pas une commande pour revenir en arrière et faire des modifications sur les anciens commits. Si tu fais ça, tu vas te retrouver avec une erreur qui a donné lieu à <a href="https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin" target="_blank">l'un des threads</a> les plus célèbres de Stack Overflow. Pour tout effacer et revenir en arrière, le chapitre suivant sera là pour toi.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <h4>2.4.4. Revenir en arrière</h4>
+        <p>J'ai fait des trucs, mais cela ne me convient pas. Comment revenir sur en arrière ? (inspiré par <a href="https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit/4114122#4114122" target="_blank">cette excellente</a> réponse de Stack Overflow)</p>
+        <h5>2.4.4.1. Effacer pour revenir au commit d'avant</h5>
+        <p>La fonction <code>$ git reset --hard</code> permet de revenir au commit précédent, en effaçant tout. C'est une commande pratique quand on veut essayer de nouvelles choses à la volée, puis de revenir en arrière comme si de rien n'était ✌️</p>
+
+
+        <h5>2.4.4.2. Tout effacer et revenir à un ancien commit</h5>
+        <p>On peut faire ceci avec : <code>$ git reset --hard 45581cebdd2cae494f80f44010af9e4a86c9b8fa</code>, avec <i>45581c</i> le SHA sur lequel tu veux revenir.</p>
+
+
+        <h3>2.5. Pour aller plus loin</h3>
+        <p>Au vu des apologies que l'on lui donne, le <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github" target="_blank">cours de OpenClassrooms</a> sur Git est un très bon point pour aller plus loin. Il explique notamment la notion de branches et de fusions.</p>
+
+        <p>Aussi, voici <a href="https://www.vikingcodeschool.com/web-development-basics/getting-to-know-git" target="_blank">un cours</a> sur Git de la Viking Code School. Il explique bien les bases de Git et est une bonne alternative au notre.</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header" style="border-top: 3px solid #FF4081">
+    <h1>Projets</h1>
+    <a class="heading-elements-toggle">
+    <i class="la la-ellipsis-v font-medium-3"></i>
+    </a>
+    <div class="heading-elements">
+      <ul class="list-inline mb-0">
+        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+      </ul>
+    </div> 
+  </div>
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <div class="tab-pane active" id="home1" role="tabpanel">
+
+        <h3>1. Introduction</h3>
+        <p>Ce projet te permettra de mettre en avant  ce que tu as vu sur le terminal, Git, et Github. C'est un projet assez simple, mais qui te permettra de te faire découvrir l'univers du code avant de passer à la suite. Il sera pas à pas, c'est à dire que nous allons t'accompagner lors de ce projet.</p>
+
+        <p>Dans ce premier projet, tu vas créer ton premier repository le mettre en ligne sur GitHub, et intéragir avec à partir de ton ordinateur. Oh yeah !</p>
+
+        <h3>2. Le contenu du projet</h3>
+
+
+        <h4>2.1. Créer le repo sur GitHub</h4>
+        <p>Si ce n'est pas fait, va créer un compte sur <a href="https://github.com/" target="_blank">GitHub</a>, puis va créer un nouveau repository.</p>
+
+        <p>Au moment de la création, GitHub te demandera :</p>
+        <ul>
+          <li>le <i>Repository name</i> : donne-lui un nom du genre <code>git-thp</code></li>
+          <li>une <i>description</i>, optionnelle : laisse-la vide</li>
+          <li>s'il sera public ou privé : public (sauf si tu as envie d'upgrade ton compte et le rendre privé)</li>
+          <li>si tu veux <i>initialize with a README</i> : non, nous allons l'ajouter à la main</li>
+        </ul>
+
+        <div class="card box-shadow-0 border-success">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">📚 INSTANT CULTURE GÉ</h4>
+              <p class="card-text">Un README est un fichier que l'on retrouve toujours dans un repository Git. Il permet à une personne qui débarque sur le projet de mieux le comprendre, de voir comment il marche, d'avoir une documentation exhaustive. Par exemple, tu peux voir <a href="https://github.com/facebook/react" target="_blank">ici</a> la page de React JS, un framework de JavaScript, avec son README qui explique ce que fait React JS. Dans ce premier dossier, le README sera juste un texte pour dire que c'est un projet d'introduction à GitHub, Git, et le terminal.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Une fois ceci fait, tu devrais arriver à une page incompréhensible comme celle-ci : </p>
+        <div class="imgwrapper">
+          <img src="/assets/git-1-e32560080d19aaf7a421d18f47f411d64ff940ccece7dbe06e48252337c0ea2b.jpg" class="img-fluid">
+        </div>
+        <br><br>
+        <p>Cette page te dit juste que ton repository est prêt, mais vide et prêt à être couplé à un dossier sur ton ordinateur. Nous allons donc prendre ce repo, puis le mettre sur ton ordinateur.</p>
+
+        <p>Comme tu es le propriétaire de ce repo, tu as juste à le cloner, et tu pourras travailler dessus facilement. Avec ton terminal, positionne-toi dans un dossier qui contiendra les projets de THP, puis créé le dossier de ce premier projet avec <code>mkdir</code>. Va à l'intérieur avec la commande <code>cd</code>.</p>
+
+        <p>Une fois à l'intérieur, te voici prêt à cloner ton repo vide. Pour ceci, tu peux utiliser la fameuse commande <code>git clone</code> : </p>
+        <pre><code class="language-bash">$ git clone https://github.com/ton_username/le_nom_de_ton_repo</code></pre>
+
+        <p>Et voilà, tu as ton premier dossier, lié à un repo GitHub. À partir de là, tu pourras faire des commits, et <i>push</i> ces commits sur le repo GitHub.</p>
+
+        <h4>2.2. Travailler sur le projet depuis ton ordinateur</h4>
+        <p>Bon tu as ton dossier, et si l'on lui donnait un peu de pep's ? Il est vide, on va commencer par faire un README pour expliquer ce que notre dossier fait.</p><br>
+
+      
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+              <h6>Mais dis-donc Jamy, pourquoi je ne dois pas faire <code>git init</code>, qui est en théorie LA première commande à faire dans tout nouveau repo ?</h6>
+              <p>Excellente question chef, on voit que tu suis ! Git init sert à dire à ton ordinateur "hey bro, ici je vais avoir un dossier qui sera git, donc je vais faire des sauvegardes fréquentes", mais comme tu as fait un clone, ton ordinateur sait déjà que c'est un dossier git. Donc pas besoin de faire git init.</p>
+            </div>
+          </div>
+        </div>
+
+      
+
+
+        <h5>2.2.1. Création du premier fichier</h5>
+
+        <p>Avec la commande <code>touch</code>, crée un nouveau fichier qui s'appelle <code>README.md</code>. Ouvre-le avec <code>open</code> (sur macOS) ou <code>xdg-open</code> (sur Linux), ce qui devrait lancer un éditeur de texte bidon (on verra demain comment installer des éditeurs de texte de grand BGs pour faire du code de BG), écris-y les lignes suivantes : </p>
+        <pre><code class="language-bash">Ceci est mon tout premier repo GitHub, waow !</code></pre>
+
+        <h5>2.2.2. Ajout du premier fichier</h5>
+
+
+        <p>Si tu fais la commande <code>git status</code>, ton ordinateur devrait te dire un truc du genre : "hey ! je suis sur la branche master, sur le premier commit, et j'ai remarqué qu'il y a un nouveau fichier qui s'appelle README.md. Ce fichier n'est pas répertorié dans le dossier git quand tu fais des sauvegardes, donc fais git add si tu as envie que je le prenne en compte lors de ton prochain commit !". Trop cool, on va donc ajouter ce fichier avec git add.</p>
+
+        <h5>2.2.3. Premier commit</h5>
+
+        <p>Une fois que tu as ajouté ton fichier avec git add, tu peux refaire git status, et tu auras un écran similaire, mais différent. Là, ton ordinateur te dire "hey ! Je suis sur la branche master, sur le premier commit, et tu as au moins un fichier ajouté au dossier git qui est différent au précédent commit, si tu fais un commit, ce fichier sera sauvegardé !". Je te laisse faire ton premier commit avec la commande git commit. Comme commentaire, nous te conseillons "Ajout du README", qui est explicite.</p>
+
+        <p>Si tu fais <code>$ git log</code>, tu pourras voir l'historique de tes différents commits. Si tu as bien fait le commit précédent, tu devrais le voir affiché dans ton historique.</p>
+
+
+        <div class="card box-shadow-0 border-success">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+              <p>Là tu dois te demander la différence entre add, création de fichier, commit, et c'est vrai que l'on s'y perd. Nous allons prendre une analogie : imagine que ton projet représente une soirée, et chaque fichier correspond à une personne présente à la soirée. Git te sert de capturer des photos de la soirée, et de savoir précisément qui tu vas prendre en photo.</p>
+
+              <h6>Les gens sur la photo</h6>
+              <p>Des fois des personnes vont arriver dans la soirée (création de fichier), mais il faut dire à ton ordinateur que tu veux les prendre en photo, tu vas donc utiliser git add pour choisir qui tu vas prendre en photo. Des fois certains fichiers ne seront pas prêts pour la photo, ils seront différents par rapport à la dernière photo, mais tu ne veux pas les capturer. Quand tu feras git status, ils seront <i>untracked</i>, mais tu veux les laisser tels quels et ajouter d'autres fichiers avec git add.</p>
+
+              <h6>Prendre la photo</h6>
+              <p>Une fois que ton cadre est prêt et tu as bien les personnes que tu veux prendre en photo, tu peux faire git commit pour prendre la photo, avec un joli commentaire "la bande à féfé".</p>
+              <p>Tu pourras prendre une autre photo avec d'autres fichiers en faisant git add, et git commit.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <h4>2.3. Mettre ton projet en ligne</h4>
+        <p>Maintenant que tu as fait ton premier commit, nous allons mettre tout ceci en ligne, et admirer le travail bien fait.</p>
+
+        <p>Pour ceci, rentre la commande <code>$ git push origin master</code>, et Git devrait te le mettre en ligne. Si tu vas sur la page de ton projet du genre : https://github.com/ton_username/le_nom_de_ton_repo, tu devrais avoir le dossier à jour, avec un super README.md !</p>
+
+        <div class="card box-shadow-0 border-info">
+          <div class="card-content collapse show">
+            <div class="card-body">
+              <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+              <h6>Mais dis-donc Jamy, tu me perds, ça veut quoi "Git push origin master" ?</h6>
+              <p>Cette commande utilise 4 mots que nous allons décortiquer :</p>
+              <ul>
+                <li><code>git</code> : tu utilises le programme git de ton terminal. Jusqu'ici, tout va bien</li>
+                <li><code>push</code> : tu fais un <i>push</i>, c'est à dire que tu vas pousser ton projet..</li>
+                <li><code>origin</code> : .. à la <a href="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-git/#depot-distant" target="_blank">remote</a> <i>origin</i> de ton projet. En faisant git clone, tu as mis ta remote origin par défaut au dossier GitHub, mais tu aurais pu push vers ta remote <i>genesis</i>, ou ta remote <i>my_super_name_cool</i>. Tu peux voir tes remotes en faisant <code>$ git remote -v</code>.</li>
+                <li><code>master</code> : sur la branche master</li>
+              </ul>
+              <p>Ainsi, si tu avais fait <code>$ git push heroku other_branch</code>, tu aurais fait un git push dans ton remote <i>heroku</i> sur la branche <i>other_branch</i>.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <h4>2.4. Ajouter un fichier</h4>
+        <p>Maintenant, ajoute un nouveau fichier nommé <code>kikou.txt</code>, ajoute-le à ton repository, fais un commit, puis push le tout sur ton remote origin. Confirme que cela a été fait en allant sur ton repo GitHub et en actualisant.</p>
+
+        <h4>2.5. Apprécier le travail bien fait</h4>
+        <p>Pfiou, c'était un beau projet ! Et bien figure toi que tu viens de finir ta première journée d'introduction au code, dans laquelle tu auras vu de belles choses :</p>
+        <ul>
+          <li>Le terminal, et comment s'en servir</li>
+          <li>Comment gérer son projet comme un pro avec Git</li>
+          <li>Mettre son projet en ligne avec GitHub</li>
+        </ul>
+        <p>Demain nous allons te montrer les bases de HTML/CSS, puis nous allons te demander de mettre en ligne un site, pour que la terre entière le voit. Trop cool ! Évidemment, le code de ton site sera géré comme un pro grâce à Git et GitHub.</p>
+
+        <h4>2.6. Le shell-enge</h4>
+        <p>La meilleure façon d'apprendre, c'est par la pratique. Si jamais tu veux aller plus loins dans le monde du développement, il te faudra manipuler le terminal à la perfection. Ainsi, pour t'aider à t'améliorer, nous allons te demander de faire le <i>shell-enge</i>.</p>
+        <p>Pendant toute cette semaine, toutes les actions de ton ordinateurs devront être faite avec le terminal, et aucune avec l'explorateur habituel. Par exemple si tu dois bouger un fichier d'un dossier à un autre, tu devras le faire avec le terminal.</p>
+
+        <p>Au début cela peut paraitre assez inutile, puisque tu vas prendre pas mal de temps pour chaque action, mais c'est une chose remarquable pour apprendre très rapidement à se servir du terminal. Je t'invite à faire plein de recherches Google pour connaitre les fonctions qui remplacent les fonctions de base de ton explorateur.</p>
+
+
+        <h3>3. Pour aller plus loin</h3>
+        <p>Cette partie est optionnelle, mais te permettra d'approfondir ton niveau des projets du jour.</p>
+
+        <p>Pour aller plus loin, nous allons te demander de refaire le projet ci-haut depuis le début, en ne lisant pas la marche à suivre décrite plus haut. Voici ce que tu devras faire :</p>
+        <ul>
+          <li>Créé un repository sur Github, puis importe-le sur ton ordinateur</li>
+          <li>Crée un fichier README.md puis commit et push le sur GitHub</li>
+          <li>Créé un fichier kikou.txt puis commit et push le sur GitHub</li>
+        </ul>
+
+        <H3>4. Rendu attendu</H3>
+        <p>À la fin de la journée, tu devras avoir :</p>
+        <ul>
+          <li>Un repository GitHub dans lequel tu as deux fichiers : un fichier <code>README.md</code> et un fichier <code>kikou.txt</code></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

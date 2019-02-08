@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":4,"applicationTime":137,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MNGmZmNoaaGBmiLueMbhruG+QsriwBPZIjPmEXecUZm/rNwimsd3PJbgsQtug3AX0QM+wtSzzE+vivABKBHPKw==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Introductions et début</h2>
+      <h4 class="text-center">Introduction au Code</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Introduction au Code
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Introductions et début</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                            <li>
+                                <a class="selected" style="left:120px;" data-toggle="tooltip" data-placement="top" title="Introductions et début" href="/dashboard/weeks/1/days/1?locale=fr">
+                                    Lun
+                                        <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/1/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/1/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/1/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/1/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Faire les introductions</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Apprendre à se connaître, c'est très important. Ainsi tu vas consacrer toute la matinée avec ton équipe pour faire des petits jeux entre vous. Cela peut faire "colonie de vacances", mais crois-moi tu serais bien content de connaitre tes co-moussaillons les moments durs de la formation ❤</p>
+
+<p>Voici une liste des jeux que tu devras faire avec ton équipe :</p>
+<ul class="ul-normal">
+	<li>Un jeu d'introduction en répondant à des questions en fonction de couleurs</li>
+	<li>Un jeu où vous devrez créer une histoire farfelue</li>
+	<li>Un jeu où vous allez devoir répondre à des questions sur vous et vous trouver des points communs</li>
+	<li>Enfin, un jeu où tu diras sur toi 2 vérités, 1 mensonge, et les membres de ton équipe devront savoir quel est le mensonge</li>
+</ul>
+
+
+<h2>2. Ce qu'il faut faire</h2>
+<p>Un ordinateur par équipe ! Tous les jeux sont sur <a href="http://thp-jeux.herokuapp.com/" target="_blank">un site que l'on a créé pour l'occasion</a>. Enregistrez-vous sur le site, et les liens arriveront sur le Slack ce matin.</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Git / Github</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Tu as vu Git et Github lors de la semaine 0, ce qui t'a permis de faire tes premiers commit et uploader en ligne tes premiers repo. C'est super, mais j'imagine que cet univers reste encore un peu flou et que tu ne te sens pas encore à l'aise avec Git et GitHub. Et bien voilà tout l'intérêt de cette ressource, qui va te redonner des bases solides sur lesquelles tu vas pouvoir construire une chouette formation.</p>
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 PETITS RAPPELS</h4>
+      <p class="card-text"><b>Le dictionnaire de Git</b></p>
+      <p><b>Un repo</b> = repository = un dossier sur ton ordinateur qui contient du code. <br>
+      <b>Un commit</b> = une sauvegarde d'un dossier (ou repo) via Git. sauve tout le code  contient tout le code de tous fichiers du dossier tel que écrit au moment de la sauvegarde.</p>
+      <p class="card-text"><b>Quelle différence entre Git et GitHub?</b></p>
+      <p><b>Git</b> est un programme installé sur ton ordinateur. Il permet de générer des sauvegardes (commits) de l'état de ton code et de garder ces sauvegardes pour y revenir plus tard, si besoin</p>
+      <p><b>GitHub</b> par contre est un site web tiers fournissant un service pour héberger en ligne (dans le clooooud comme on dit) tes sauvegardes (ou commits) Git. Ca permet d'avoir une version de secours si ton ordi brûle et surtout ça facilite le partage de code entre 2 personnes sur 2 ordis. A noter qu'il existe d'autres sites concurrents faisant plus ou moins la même chose (GitLab notamment)</p>
+    </div>
+  </div>
+</div>
+
+<p>Dans cette ressource nous allons te montrer pourquoi sauvegarder ton code via Git est mieux qu'un simple <code>CTRL</code> + <code>S</code> sur ton éditeur de code. Tu verras comment faire les opérations suivantes :</p>
+
+<ul>
+  <li>Comment initialiser Git sur un repo pour que ce dernier fasse de belles sauvegardes</li>
+  <li>Comment faire un commit de ton repo à un instant T, en y ajoutant un commentaire</li>
+  <li>Comment regarder l'état du repo, là où tu en es, ce qui a changé depuis ton dernier commit</li>
+  <li>Comment regarder les différences que tu as apportées à tel fichier par rapport au dernier commit</li>
+  <li>Comment voir l'historique des sauvegardes (ou commits) qui ont été faites dans ton projet</li>
+  <li>Comment revenir en arrière à telle sauvegarde (ou commit) afin soit de juste voir un ancien état pour comparer ou carrément repartir sur une ancienne base</li>
+  <li>Comment lier ton projet Git à des sites externes avec tes remotes</li>
+</ul>
+
+
+<p>Tu t'es déjà servi d'une majorité de ces commandes, mais c'est important de revenir dessus afin de s'assurer que tu as bien compris Git. Cet outil est <u>indispensable</u> quand on fait de la programmation et bien le comprendre te permettra d'être à l'aise pour cet outil que l'on considérera comme acquis au long de la formation.</p>
+
+<p>Cette ressource abordera une base solide pour travailler seul sur Git et GitHub. Elle est très dense et se veut exhaustive, donc tu auras peut-être un peu mal à la tête en la lisant. Cependant, j'y ai mis plein d'exemples et tu pourras retrouver un récapitulatif des commandes en fin de ressource. L'objectif est que tu comprennes l'importance de Git, que tu aies un aperçu des commandes qui vont te servir, et que tu gardes cette ressource dans un favori pour plus tard.</p>
+
+<h2>2. Historique</h2>
+<p>Git est un logiciel créé par Linus Torvalds (le fondateur de Linux) en 2005. C'est un logiciel de gestion de versions, c’est-à-dire que l'équivalent d'une fonction de sauvegarde très poussée qui permet de revenir facilement en arrière, de travailler à plusieurs, ou de prendre en photo l'état d'un projet.</p>
+
+<h2>3. La ressource</h2>
+<p>Pour cette ressource, nous allons l'illustrer avec une présentation "corporate" : un PowerPoint sur le bilan annuel de Big_Corpo_Food, un grand groupe spécialisé dans l'agroalimentaire. Comme tu es cool et branché, tu vas faire cette présentation en <a href="https://revealjs.com/#/" target="_blank">HTML / CSS</a>. Ton n+1 aime cet esprit de hackeur, mais cette présentation devra faire des aller-retours entre ton n+5, le designer, ton collègue qui veut jeter un œil, Jean-Michel de la compta. Même le facteur aura son mot à dire ! Bref, de grands moments de sauvegardes partout, de points récap’, de commentaires inutiles dans tous les sens, de franglais et acronymes dont même Google ignorait l'existence, mais gérés d'une main de fer grâce à git 🙏</p>
+
+<h3>3.1. Introduction à git</h3>
+<p>Comme vu plus haut, git est un outil qui permet de faire du contrôle de version, c’est-à-dire une fonction sauvegarde d'un dossier, où chaque sauvegarde est accompagnée d'un commentaire. Cela permet de travailler très facilement à plusieurs sur un projet, et cela te permet à toi d'éviter d'avoir des fichiers comme <code>ProjetFinal_versionfinale_03_xretours.pptx</code> (avec un outil de sauvegarde puissant, revenir en arrière est aussi simple qu'une commande git).</p>
+
+<p>Git fonctionne comme toute application sur ton terminal : il te suffit de rentrer <code>$ git ta_commande</code> et cela fera l'effet de la commande désirée. Par exemple si tu tapes <code>$ git --version</code>, ton ordinateur ressortira la version de git que tu utilises.</p>
+
+<h3>3.2. Initialisation d'un repository</h3>
+<p>Avant de pouvoir dire à Git "hey sauvegarde mon dossier à l'instant T", il faut dire à Git "hey ce dossier sera un dossier que tu vas gérer". Pour ceci, il faut rentrer la commande suivante :</p>
+
+<pre><code class="language-bash">$ git init</code></pre>
+
+<p>Si tu fais <code>$ ls -a</code> tu pourras voir qu'un dossier <code>.git/</code> a été créé. Tu n'as pas besoin de toucher à ce dossier, mais sache que c'est là dedans que git va récupérer les infos dont il a besoin pour bien gérer ton dossier de projet.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Des fois, surtout quand on débute, on a tendance à faire <code>$ git init</code> un peu à la va-vite dans des dossiers qui n'ont rien à voir avec un projet. Il m'est arrivé de voir des dossiers <code>.git/</code> dans <code>home/</code>, qui est le dossier racine de ton ordinateur. Attention à bien utiliser <code>$ git init</code> dans ton dossier de projet. Dans le doute, la commande <code>$ pwd</code> te sera d'une grande utilité pour savoir où tu te trouves.</p>
+    </div>
+  </div>
+</div>
+
+<p>Pour notre superbe présentation, cette dernière serait dans un dossier simple contenant le code HTML / CSS à mettre en ligne. On ferait <code>$ git init</code> dans le dossier <code>BilanAnnuelBigCorpoFood/</code> pour le démarrer.</p>
+
+<h3>3.3. Effectuer une sauvegarde</h3>
+<p>Ah, c'est la commande importante. Celle de la sauvegarde. À partir de maintenant nous allons utiliser son vrai terme : commit. Le mot sauvegarde était bien pour que tu puisses imaginer ce que cela veut dire, mais en vrai dans git nous parlons de commit.</p>
+
+<h4>3.3.1. Qu'est-ce qu'un commit ?</h4>
+<p>Un commit est une sauvegarde à l'instant T de ton projet, dans lequel tu as mis un commentaire qui explique la sauvegarde ("retours de Christine sur les KPIs de janvier", "correction d'une faute de grammaire slide 6", etc).</p>
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <p class="card-text">Tu peux voir un commit comme une métaphore d'une photographie de mariage : tu choisis qui tu vas photographier, puis tu prends ces personnes en photo.</p>
+    </div>
+  </div>
+</div>
+
+<p>Dans un commit tu vas dire à Git quels fichiers tu aimerais photographier, puis tu vas exécuter ton commit. Nous allons voir les commandes pour ceci.</p>
+
+<h4>3.3.2. Comment faire un commit ?</h4>
+<p>Pour faire un commit, tu vas d'abord ajouter les fichiers que tu voudrais sauvegarder avec <code>git add nom_fichier</code>, puis tu vas les sauvegarder avec <code>git commit -m "message de commit"</code>. C'est aussi simple que cela.</p>
+
+<p>Prenons l'exemple de notre présentation trop cool. Chantal du marketing t'a dit d'ajouter trois diapositives à la fin dans lesquelles il faut mentionner que Big_Corpo_Food compte "externaliser les workshops risque pour lutter contre les deadlines qui vont switcher". Tu n'es pas trop sûr de ce que ça veut dire, mais tu crées ces trois diapositives nommées <code>15.html</code>, <code>16.html</code> et <code>17.html</code>, dans lesquelles tu balances des phrases trouvées sur <a href="http://pipotronic.com/" target="_blank">Pipotronic</a>. Pour faire un commit et lui montrer ce travail tu feras :</p>
+
+<pre><code class="language-bash">$ git add 15.html
+$ git add 16.html
+$ git add 17.html
+$ git commit -m "ajout de trois slides selon les retours de Chantal"</code></pre>
+
+<p>Et voilà, Chantal aura une belle version que tu pourras présenter sans crainte d'avoir perdu ce que tu as fait avant.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">La commande <code>$ git add .</code> permet d'ajouter tous les fichiers à ton futur commit. Cependant, cette commande est à utiliser que si c'est pertinent de faire un commit avec tous les fichiers.</p>
+      <p>Prenons l'exemple de notre présentation. Pendant que tu étais en train de faire la diapositive <code>16.html</code>, tu reçois un e-mail avec "URGENT" dans l'objet, où Jean-Michel te dit qu'il faut changer ASAP la diapo <code>3.html</code> pour qu'elle soit moins "touchy". Tu le fais et tu veux lui envoyer ton travail. Or, si tu fais <code>$ git add .</code>, et après <code>git commit</code>, tu feras un commit qui prendra les diapos <code>15.html</code> et <code>16.html</code>, qui n'ont rien à voir avec la demande de Jean-Michel. Ainsi, pour faire un commit proprement, tu feras :</p>
+      <pre><code class="language-bash">$ git add 3.html
+$ git commit -m "slide 3 moins touchy selon les retours de Jean-Michel"</code></pre>
+    <p>Cette technique de pro permettra d'avoir des commit bien rangés 👍</p>
+    </div>
+  </div>
+</div>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">L'univers du code est anglais, les commits c'est la même. De manière générale, il est convenu de mettre de l'anglais dans les messages de commits. C'est une convention.</p>
+      <p>Le bon côté est que cela t'évitera un entre-deux foireux en mettant les franglais bizarres de tes collègues de Big_Corpo_Food 😉</p>
+    </div>
+  </div>
+</div>
+
+
+<h4>3.3.3. Petite explication sur les commandes git add et git commit</h4>
+<p>Afin que tu connaisses bien tes futures commandes préférées, nous allons te montrer comment elles marchent :</p>
+
+<h5>3.3.3.1. Git add</h5>
+<p><code>git add nom_fichier</code> ajoute ton fichier à ce que va être commit. Il faut toujours préciser quoi ajouter sinon ton ordinateur ne saura pas quel fichier ajouter :</p>
+<pre><code class="language-bash">$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?</code></pre>
+
+<h5>3.3.3.2. git commit</h5>
+<p><code>git commit</code> effectue un commit, dans lequel il y aura un message de commit qui explique ce que tu as commit. En faisant <code>$ git commit</code>, ton terminal va ouvrir un éditeur de texte dans lequel tu peux faire un message très long qui prend plusieurs lignes. Nous sommes un peu malins et on va tout faire en une ligne en mettant la commande <code>-m</code>. Ainsi, ton commit se fera avec :</p>
+
+<pre><code class="language-bash">$ git commit -m "ton message"</code></pre>
+
+<p>Et voilà pourquoi on utilise le fameux <code>-m</code>. Attention si tu fais un commit alors qu'aucun fichier n'a été ajouté avec <code>git add</code>, ton ordinateur t'enverra chier. La commande d'après te sera donc très utile pour savoir où tu en es.</p>
+
+
+<h3>3.4. Voir l'état de nos fichiers à sauvegarder</h3>
+<p>Cette commande sera celle que l'on utilise le plus. Comme dirait ce bon vieux dicton : "dans le doute, fais <code>$ git status</code>". <code>git status</code> est une commande qui permet de te dire :</p>
+
+<ul>
+  <li>les fichiers qui sont différents par rapport au dernier commit, et qui n'ont pas été ajoutés avec <code>git add</code></li>
+  <li>les fichiers qui sont différents par rapport au dernier commit, et qui ont été ajoutés avec <code>git add</code> (donc qui seront pris en compte dans le prochain commit)</li>
+</ul>
+
+<p>Pour chacun de ces cas, <code>git status</code> te dira aussi si le fichier vient d'être créé, ou si le fichier était déjà là au dernier commit et tu as juste affaire à une modification.</p> 
+
+<p>En gros il compare ton travail actuel avec le dernier commit, et te dit l'état des fichiers.</p>
+
+<p>Prenons l'exemple de notre présentation. Tu viens de finir la troisième diapo de Chantal, mais tu ne sais pas trop où tu en es : est-ce que tu as fais "add" sur <code>16.html</code> ? En plus avec les remarques de Jean-Michel, c'est un peu le doute. Mais tu te souviens du super dicton de Félix, donc tu rentres la fameuse commande :</p>
+
+<pre><code class="language-bash">$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file>..." to unstage)
+
+  new file:   15.html
+  new file:   16.html
+
+Changes not staged for commit:
+  (use "git add &lt;file>..." to update what will be committed)
+  (use "git checkout -- &lt;file>..." to discard changes in working directory)
+
+  new file:   17.html
+  modified:   3.html
+
+</code></pre>
+
+<p>Super, tu peux voir que les fichiers <code>15.html</code> et <code>16.html</code> ont bien été "add", et que <code>17.html</code> et <code>3.html</code> ne sont pas "add" pour ton futur commit. Le fichier <code>3.html</code> doit correspondre à la demande de Jean-Michel. On va s'occuper de la demande de Chantal avant vérifier le fichier <code>3.html</code>. Pour "add" le fichier <code>17.html</code> on va faire la commande <code>$ git add 17.html</code>. Si tu fais <code>$ git status</code> à ce moment-là, tu devrais avoir :</p>
+
+<pre><code class="language-bash">$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file>..." to unstage)
+
+  new file:   15.html
+  new file:   16.html
+  new file:   17.html
+
+Changes not staged for commit:
+  (use "git add &lt;file>..." to update what will be committed)
+  (use "git checkout -- &lt;file>..." to discard changes in working directory)
+
+  modified:   3.html
+
+</code></pre>
+
+<p>C'est exactement ce que tu recherches : les trois fichiers sont ajoutés, prêts à être commit. Et bien faisons le fameux commit :</p>
+
+<pre><code class="language-bash">$ git commit -m "3 slides added following advices from Chantale"</code></pre>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">On ne le répétera jamais assez, mais la commande <code>git status</code> est vraiment super pratique et te donnera en quelques lignes l'état de ton dossier Git. Utilise-la, abuses-en. Elle sera ta meilleure amie 👨‍🏫</p>
+    </div>
+  </div>
+</div>
+
+
+<h3>3.5. Comparer un fichier avec son ancienne version</h3>
+<p>Des fois, tu as envie de voir quelles sont les modifications que tu as apportées à un fichier avant de le commit. Prenons l'exemple précédent, du fichier <code>3.html</code>, qui, selon <code>git status</code> est différent par rapport au dernier commit. Tu es pourtant sûr d'avoir envoyé la bonne version à Jean-Michel. Tu aimerais bien voir les différences avec le dernier commit. Ainsi tu peux utiliser la commande <code>git diff</code> qui donne les lignes différentes entre le fichier modifié et le fichier au moment du commit précédent.</p>
+
+<pre><code class="language-bash">$ git diff
+==> affiche toutes les modifications de tous les fichiers entre les commits</code></pre>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Tu peux faire <code>$ git diff nom_fichier</code> pour avoir git diff limité seulement à ce fichier 👻</p>
+    </div>
+  </div>
+</div>
+
+<p>En l’occurrence, pour notre fichier <code>3.html</code> tu as pu voir que la modification est due à une correction d'une faute de grammaire. Tu avais écrit "il fallait que je forwarde" au lieu de "il fallait que je forwardasse". Grave faute d'accord de l'imparfait du subjonctif du verbe "forwarder" que tu as corrigée, mais oublié de commit. Avec un petit <code>git add</code> et <code>git commit</code> voici ta faute réparée. Parfait.</p>
+
+
+<h3>3.6. Regarder l'historique des versions</h3>
+<p>Imaginons que tu aies envie de voir l'historique des commits. Après tout, que serait un outil de gestion de sauvegarde si l'on ne pouvait pas aller en arrière ? La commande <code>git log</code> est là pour t'aider 👌</p>
+
+<pre><code class="language-bash">$ git log
+commit df31a99ba2980d31c6e84179d35a557dd59c10c2
+Author: pseudo <email>
+Date:   la_date
+
+    3 slides added following advices from Chantal
+
+commit 100d6f07dbf4cfb9103b3819e64432186750a1a2
+Author: pseudo <email>
+Date:   la_date
+
+    grammar mistake for a verb
+</code></pre>
+
+<p>Tu peux voir la liste des commits, avec les informations importantes :</p>
+
+<ul>
+  <li>Qui l'a commité</li>
+  <li>Quand a-t-il été commité</li>
+  <li>Pourquoi ? (avec le message)</li>
+  <li>Qu'est-ce qui a été commité ? (grâce au code bizarre)</li>
+</ul>
+
+<p>Le code <code>100d6f07dbf4cfb9103b3819e64432186750a1a2</code> est le SHA du commit. C'est son identifiant unique. Tu peux facilement revenir en arrière avec ceci.</p>
+
+<h3>3.7. Revenir en arrière</h3>
+<p>Il y a deux façons de revenir en arrière :</p>
+
+<ul>
+  <li>La première est à titre purement indicatif, et te servira juste pour regarder un état précédent</li>
+  <li>La seconde est un retour définitif en mode "je veux revenir à tel endroit pour retravailler à partir de là"</li>
+</ul>
+
+<h4>3.7.1. Retour en arrière à titre purement indicatif</h4>
+<p>Imaginons que Jean-Michel, pas très sûr de lui, te demande s'il peut vérifier son ancienne diapo <code>3.html</code> pour voir ce qu'il y avait avant dedans. Dans un format classique en mode corpo, tu aurais eu un fichier <code>présentationfinale_sansretoursjeanmi.pptx</code>, mais fini les bêtises, avec git tu as juste à faire :</p>
+
+<pre><code class="language-bash">$ git checkout SHA</code></pre>
+
+<p>(en remplaçant "SHA" par le code que tu as eu lors du <code>git log</code>)</p>
+
+<p>Ainsi, tu peux naviguer dans l'ancienne version pour consulter les fichiers à cet instant T. Aussi simple que cela. Pour revenir à la version actuelle tu n'as qu'à faire :</p>
+
+<pre><code class="language-bash">$ git checkout master</code></pre>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Cette commande n'est pas à utiliser si jamais tu veux faire des modifications sur un fichier. Si jamais tu fais cela, tu vas avoir une erreur qui va te faire atterrir <a href="" target="_blank">sur l'un des threads les plus célèbres</a> de Stack Overflow. Si jamais tu veux revenir en arrière pour faire des modifications, il te faudra passer à la section suivante</p>
+    </div>
+  </div>
+</div>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text"><code>git checkout</code> ne marche que si tu n'as pas de modifications non sauvegardées. Si tu es entre deux commits, git checkout te renverra cette erreur :</p> 
+      <pre><code class="language-bash">$ git checkout 100d6f07dbf4cfb9103b3819e64432186750a1a2           
+error: Your local changes to the following files would be overwritten by checkout:
+  3.html
+Please commit your changes or stash them before you switch branches.
+Aborting</code></pre>
+
+      <p>Par conséquent, il te faudra soit faire une sauvegarde (== faire un commit), soit effacer tout pour revenir au commit d'avant, soit stash tes modifications. Je vais montrer ces commandes plus en détails plus tard tkt.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<h4>3.7.2. Revenir en arrière définitivement</h4>
+<p>Imaginons que Christine ne valide pas l'idée de Jean-Michel, et te demande de la supprimer. Tu peux revenir en arrière définitivement avec la commande <code>git reset</code> qui s'utilise comme ceci :</p>
+
+<pre><code class="language-bash">$ git reset --hard SHA</code></pre>
+
+<p>(en remplaçant "SHA" par le code que tu as eu lors du <code>git log</code>)</p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">La commande <code>git reset</code> est aussi très pratique pour effacer son travail actuel et revenir au commit précédent. Par exemple : tu es en train de travailler sur la diapo de Jean-Michel, mais en plein milieu tu te dis que l'approche que tu as faite n'est pas bonne et tu as envie d'effacer tout ce que tu as fait jusqu'à présent. Plutôt que de faire <code>CTRL</code> + <code>Z</code> plein de fois, tu peux rentrer la commande suivante :</p>
+      <pre><code class="language-bash">$ git reset --hard</code></pre>
+      <p>Et hop tu reviens à ton dernier commit. Très pratique pour tester des concepts à la volée, ou bien te rendre compte que tu n'as pas envie de commit les changements que tu viens de faire.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<h3>3.8. Sauvegarde provisoire de son travail</h3>
+<p>Des fois tu seras en train de travailler sur une fonctionnalité qui prend du temps, et tu auras envie de bouger ailleurs, par exemple vers un commit précédent, ou une autre branche (on verra le système de branches plus tard). Si jamais tu fais <code>git checkout</code> alors que tu as du travail non committé, Git t'enverra chier en disant "Your local changes to the following files would be overwritten by checkout. Please commit your changes or stash them before you switch branches". Nous allons voir la commande <code>git stash</code> qui permet de faire une sauvegarde provisoire.</p>
+
+<p>Par exemple, tu es en train de travailler sur la diapo de Jean-Michel. Sauf qu'en plein milieu de ton travail, tu aimerais bien vérifier un truc sur un ancien commit. Le souci, c'est que tu ne peux pas faire <code>git checkout SHA</code> sinon Git va t'envoyer bouler. Et tu ne peux pas faire de commit car ton travail n'est pas prêt. Cependant, tu peux faire <code>$ git stash</code> et Git s'occupera pour toi de mettre de côté les fichiers, comme ça tu peux facilement te balader d'un commit à l'autre avec <code>git commit</code></p>
+
+<p>Et une fois que tu es de retour sur le bon commit, tu as juste à faire <code>$ git stash pop</code> pour récupérer ton travail. Aussi simple que cela.</p>
+
+
+<h3>3.9. Gérer les remotes</h3>
+<p>Nous entrons dans la dernière partie de cette longue ressource : les remotes. Qu'est-ce qu'un remote ? C'est une version à distance de ton repo git. Tu peux facilement faire local -> remote ou remote -> local avec git.</p>
+
+<p>Avec <code>git remote</code>, tu peux facilement ajouter des remotes, voir la liste des remotes, enlever des remotes.</p>
+
+<p>Il existe plusieurs types de remote :</p>
+
+<ul>
+  <li>GitHub, qui te permet d'avoir un repository à distance sur lequel tu peux travailler. C'est extrêmement pratique et ce sera notre façon principale de travailler pour cette session</li>
+  <li>Heroku, qui te permet d'envoyer le code d'une application rails pour qu'il la transforme en serveur</li>
+  <li>GitLab, qui est un peu comme GitHub</li>
+  <li>Et bien d'autres</li>
+</ul>
+
+<p>Chaque remote aura un nom. Ce nom peut être par exemple "other_github", "origin", "heroku", ou "jetaime". Par convention, le repo en ligne principal s'appelle "origin". C'est d'ailleurs pour cela que tu ajoutes bien souvent ton repo github avec <code>$ git remote add origin ton_url</code> : avec cette commande, tu ajoutes une remote nommée origin qui n'a autre que l'url "ton_url".</p>
+
+<p>Pour voir toutes les remotes associées à ton dossier git, tu peux faire : <code>$ git remote -v</code></p>
+
+<h3>3.10. Jouer avec les remotes</h3>
+<p>Avec Git, c'est facile de faire  local -> remote ou remote -> local : les commandes <code>git pull</code> et <code>git push</code> vont faire cela.</p>
+
+<h4>3.10.1. git push</h4>
+<p>La commande <code>git push</code> va pousser ton code local vers une remote de ton choix. Elle s'utilise de la manière suivante : <code>$ git push nom_remote nom_branche</code>. Ainsi, si tu veux push ta branche "master" vers la remote "origin" tu feras :</p>
+
+<pre><code class="language-bash">$ git push origin master</code></pre>
+
+<p>Ou alors si tu veux push ta branche "other_branch" vers la remote "heroku" tu feras :</p>
+
+<pre><code class="language-bash">$ git push heroku other_branch</code></pre>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Jamy je suis perdu : c'est quoi une branche ?</b></p>
+      <p>Ce n'est pas l'objet du cours, mais je vais faire un petit aparté à ce sujet. Une branche, grosso modo, est une bifurcation de ton projet sur laquelle tu vas travailler de manière indépendante. Cette fonctionnalité très pratique permet de travailler sur une version parallèle de ton projet, et de la re-fusionner plus tard, quand tu seras content des modifications que tu as apportés. Pour le moment tu fais des commits sur Master, mais la plupart des fonctionnalités te demanderont de travailler sur une branche, pour éviter de faire des commits sur Master, et de proposer à tes utilisateurs une fonctionnalité non terminée.</p>
+      <img src="https://i.imgur.com/fKP7zaP.png" class="img-fluid">
+      <p>Prenons l'exemple de la présentation. Marie, l'experte en design voudrait retravailler les couleurs de la présentation, ce qui va prendre plusieurs jours de meetings intenses sur la psychologie du rouge. Pour ceci, tu voudrais créer une branche nommée <code>new_design</code> sur laquelle vous allez faire plusieurs commits, envoyer des échantillons au reste de l'équipe. Quand vous serez content, vous n'aurez qu'à fusionner la branche <code>new_design</code> avec la branche <code>master</code> et à vous la gloire.</p>
+      <p>Pour le moment, nous n'allons pas voir les branches. Sache juste qu'il existe un système de branches, et que tu vas travailler sur branche principale nommée <code>master</code>.</p>
+    </div>
+  </div>
+</div>
+
+
+<h4>3.10.11. git pull</h4>
+<p>La commande <code>git pull</code> est le contraire de <code>git push</code> : elle prend le code de la remote de ton choix et remplace le code en local. Elle s'utilise de la manière suivante : <code>$ git pull nom_remote nom_branche</code>. Ainsi, si tu veux pull ta branche "master" depuis la remote "origin" tu feras :</p>
+
+<pre><code class="language-bash">$ git pull origin master</code></pre>
+
+
+<h3>3.11. Messages d'erreur</h3>
+<p>On ne va pas se leurrer, Git au début ce n'est pas facile, comme tu as pu voir durant la semaine 0. Avant de te précipiter et de maudire ton ordinateur, nous allons annoncer quelque chose : c'est normal d'avoir des erreurs, surtout au début. C'est arrivé à TOUT le monde, surtout ceux qui sont à l'aise aujourd'hui ❤ Le but c'est de ne pas désespérer, et de résoudre tes soucis. Comme tout développeur est passé par ce chemin, les réponses aux problèmes classiques pullulent sur Stack Overflow. Copie-colle ton message d'erreur, lis les réponses, essaie de comprendre, et résous ton erreur.</p>
+
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <p class="card-text">Prenons l'exemple d'une erreur que j'ai eue à mes débuts sur git. J'avais un repo git en local que j'avais déjà lié à une remote <code>origin</code> qui était un repo GitHub. Je n'étais pas content de mon repo GitHub, donc je l'ai supprimé et ai recréé un repo GitHub. Puis j'ai voulu lier mon repo local à ce nouveau repo GitHub. Pour ceci, une commande : <code>$ git remote add origin url_du_repo</code>. Sauf que :</p>
+      <pre><<code class="language-bash">$ git remote add origin url_repo
+fatal: remote origin already exists.</code></pre>
+      <p>Fatal. En général les erreurs sont en mode "error bug", mais là c'est fatal. C'est que ça doit être grave, non ? Non. Une recherche Google du message d'erreur et tu pourras trouver que <a href="https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository" target="_blank">c'est juste un problème de remote origin qui existe déjà</a>.</p>
+      <p>Bref, les erreurs tu en auras. La clé de succès de The Hacking Project est ta capacité à bien les analyser, et faire les bonnes recherches Google qui vont résoudre ton problème</p>
+    </div>
+  </div>
+</div>
+
+
+<h2>4. Points importants à retenir</h2>
+<p>La ressource est extrêmement dense et ton cerveau doit exploser. Voici un récap’ des commandes vues aujourd'hui. Elles constituent le kit de démarrage du moussaillon de THP :</p>
+
+<ul>
+  <li><code>$ git init</code> permet d'initialiser un répo git en local</li>
+  <li><code>$ git add nom_fichier</code> permet d'ajouter nom_fichier à ton futur commit</li>
+  <li><code>$ git commit -m "message_commit"</code> permet de faire un commit avec pour message message_commit</li>
+  <li><code>$ git status</code> permet d'afficher l'état de tes fichiers par rapport au commit que tu es en train de réaliser (⚠ commande très pratique, à faire tout le temps)</li>
+  <li><code>$ git diff nom_fichier</code> permet d'afficher les modifications de nom_fichier entre le dernier commit et le fichier actuel</li>
+  <li><code>$ git log</code> permet d'afficher l'historique des commits</li>
+  <li><code>$ git checkout SHA</code> permet de revenir en mode lecture uniquement au commit SHA</li>
+  <li><code>$ git checkout master</code> permet de revenir au commit actuel</li>
+  <li><code>$ git reset --hard SHA</code> permet de tout effacer pour revenir au commit SHA</li>
+  <li><code>$ git reset --hard</code> permet de tout effacer pour revenir au dernier commit</li>
+  <li><code>$ git stash</code> permet de sauvegarder provisoirement son travail sans le commit</li>
+  <li><code>$ git stash pop</code> permet de récupérer un travail précédemment sauvegardé avec <code>git stash</code></li>
+  <li><code>$ git remote -v</code> permet de voir les différentes remotes de ton repo git</li>
+  <li><code>$ git remote add nom_remote url_remote</code> permet d'ajouter la remote url_remote à la liste de tes remotes. Cette remote aura le nom nom_remote (par convention, la remote principale où il y a le code s'appelle origin)</li>
+  <li><code>$ git push nom_remote nom_branche</code> permet de pousser ta branche nom_branche vers ta remote nom_remote</li>
+  <li><code>$ git pull nom_remote nom_branche</code> permet de récupérer ta branche nom_branche de ta remote nom_remote</li>
+</ul>
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>Te voici solidement armé pour faire du Git en mode solo. Nous verrons plus tard comment travailler en équipe via Git. En attendant, tu peux sauvegarder cette ressource dans un coin car tu y reviendras souvent 😉</p>
+
+<p>Voici quelques ressources en plus si tu veux aller plus loin sur Git :</p>
+
+<ul>
+  <li>Jonathan Boyer de la chaîne Grafikart a fait <a href="https://www.grafikart.fr/formations/git" target="_blank">un cours assez complet</a> sur Git. En général ce qu'il fait c'est vraiment très cool donc n'hésite pas à jeter un œil à son site.</li>
+  <li>Marc Gauthier a fait <a href="https://openclassrooms.com/fr/courses/2342361-gerez-votre-code-avec-git-et-github" target="_blank">un cours assez complet</a> sur Git et GitHub, hébergé sur OpenClassrooms.</li>
+  <li>La <a href="https://git-scm.com/docs" target="_blank">documentation officielle</a> de Git permet de connaître toutes les commandes et ses options. Par exemple tu peux voir les options de <a href="https://git-scm.com/docs/git-remote" target="_blank">git remote</a>.</li>
+</ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Projet en équipe : faire un projet sur Github</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Bienvenue dans le premier projet de The Hacking Project ! C'est une petite mise en bouche qui te demandera de collaborer avec ton équipe sur un repository GitHub. Aucune difficulté technique à prévoir. Mais la maîtrise de git n'est pas facile et elle est indispensable. Ne t'en fais pas, au début ce sera dur, mais ça viendra.</p>
+
+<img src="https://imgs.xkcd.com/comics/git.png" class="img-fluid">
+<br>
+<p>Le projet consiste à recréer ce fameux PowerPoint de Big_Corpo_Food, en travaillant à plusieurs dessus. Chacun des membres de ton équipe va mettre en ligne une des diapositives, et vous aurez tout ceci dans un beau repo GitHub qui claque.</p>
+
+
+<h2>2. Le projet</h2>
+
+<h3>2.1. Présentation</h3>
+<p>Toi et ton groupe ếtes envoyés pour une mission de conseil chez Big_Corpo_Food, une grande entreprise dans le secteur de l'agroalimentaire. Vous devez réaliser une présentation qui va préconiser un nombre de recommandations égale au nombre de personnes dans ton groupe. Comme vous êtes cools, cette présentation sera faite au format HTML/CSS avec la structure suivante :</p>
+
+<pre><code class="language-bash">PrezBigCorpoFood
+├── 1.html
+├── 2.html
+├── 3.html
+├── 4.html
+├── 5.html
+└── 6.html</code></pre>
+
+<p><i>(j'ai pris un exemple avec 6 diapos)</i></p>
+
+<p>Chacun des fichiers sera simple, vous mettrez un <code>&lt;h1></code> qui sortira une phrase trouvée sur <a href="http://pipotronic.com/" target="_blank">Pipotronic</a>. Si vous êtes chauds, vous pouvez ajouter <a href="https://www.google.fr/search?biw=2048&bih=1073&tbm=isch&sa=1&ei=LFwBXOuBBNCalwTinIrIDw&q=corporate+stock+picture&oq=corporate+stock+picture&gs_l=img.3...67446.67446..67867...0.0..0.58.58.1......1....1..gws-wiz-img._OVsn0rNNiA#imgrc=_" target="_blank">une petite image corpo</a> (perso j'adore <a href="https://goo.gl/images/tkKP94" target="_blank">celle là</a>), mais ne vous prenez pas la tête sur la gueule des fichiers : non seulement votre manager s'en fout, mais en plus le but de l'exercice est de maîtriser GitHub. On verra comment faire des belles pages web demain 😉</p>
+
+<h3>2.2. Github</h3>
+<p>L'un(e) d'entre vous doit créer un repository Github, et tous vous ajouter en tant que contributeurs.</p>
+
+<h3>2.2. Fichiers</h3>
+<p>Puis chacun d'entre vous va ensuite créer un fichier HTML intitulé <code>ton_super_nombre.html</code>, qui devra afficher la recommandation de la personne. Enfin, chacun va push son fichier, afin qu'il apparaisse sur le repository Github.</p>
+
+<p>Petites règles :</p>
+<ul>
+  <li>Seule la personne concernée devra faire son fichier. Les autres pourront l'aider à le faire, mais ne pourront pas push à sa place</li>
+  <li>Évidemment, il est interdit d'utiliser l'interface graphique de Github pour mettre en ligne ses fichiers 😉</li>
+</ul>
+
+
+<p>Cet exercice est bien plus complexe qu'il n'en a l'air, donc ce sera la première occasion de s'entraider dans votre groupe !</p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>Un dossier GitHub avec autant de fichiers que de membres dans ton équipe, et chacun des membres de ton équipe ayant fait au moins un push.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Installfest</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <!-- ZONE INTRODUCTION -->
+
+<h2>1. Introduction</h2>
+
+<p>Moussaillons, il est temps de rentrer dans le vif du sujet et de vous lancer dans l'Installfest. Vous allez à travers ce projet découvrir comment installer les librairies et les composants nécessaires au bon déroulement de la formation que vous suivrez pendant ces 3 mois. Ainsi, étape par étape, vous allez munir votre ordinateur de plusieurs choses : Ruby, Ruby on Rails, Git et Heroku dans un premier temps.</p>
+
+<div class="card box-shadow-0 border-success">
+    <div class="card-content collapse show">
+      <div class="card-body">
+        <h4 class="card-title">📚 INSTANT CULTURE GÉ</h4>
+        <p class="card-text">L'Installfest est, à l'origine, un projet de documentation open-source permettant aux débutants d'acquérir les librairies, programmes et composants de base d'un langage de programmation. Dans notre cas, cette Installfest vous permettra de vous lancer dans Ruby on Rails avec les bons outils. Nous nous sommes d'ailleurs inspirés du <a href="http://installfest.railsbridge.org/installfest/" target="_blank">RailsBridge Installfest</a> pour le nôtre ! (à ne pas suivre, il est obsolète)</p>
+      </div>
+    </div>
+</div>
+
+<!-- FIN ZONE INTRODUCTION -->
+
+<!-- ZONE PREPARATIONS -->
+
+<h2>2. La ressource</h2>
+
+<h3>2.1. Les préparations</h3>
+<h3>2.2.1. Conditions requises</h3>
+<p>Pour mener à bien ce projet, tu auras besoin de certains pré-requis qui, normalement, ne devraient pas te poser de problème.</p>
+<ul>
+    <li><b>Un Ordinateur</b>, c'est l'outil principal de ce projet et de tous vos futurs projets, c'est très important d'en avoir un, on ne sait toujours pas compiler du code sur papier.</li>
+    <li><b>Linux</b> (la distribution de votre choix) ou <b>MacOS</b> : il faudra un OS à coeur Unix pour ceci.</li>
+    <li><b>Github</b> et <b>Heroku</b>, si vous possédez déjà des comptes sur ces deux plateformes de service, pensez à vous munir de vos identifiants.</li>
+    <li><b>Une connexion internet</b> : car il faudra télécharger des applications !</li>
+</ul>
+
+<h3>2.2.2. DON'T PANIC !</h3>
+<p>Si jamais vous avez l'impression d'être bloqué ou confronté à un problème lors de cette Installfest, surtout ne lâchez rien. N'hésitez pas à faire des recherches Google liées aux messages d'erreur, à questionner les membres de votre groupe voire à poser vos questions sur le Slack. Chacun des outils requis dans ce projet est indispensable afin de n'avoir aucun problème pour la suite de la formation ! Il y aura beaucoup d'étapes, et les instructions pourraient sembler être écrites dans une langue étrangère, mais : <b>DON'T PANIC</b> !</p>
+
+<h3>2.2.3. Vue d'ensemble</h3>
+<p>Voici une liste des outils que vous allez installer. Au cours du projet, il vous sera expliqué à quoi sert chacun d'entre eux et comment les utiliser.</p>
+<ul>
+    <li><b>Ruby</b>, c'est le langage de programmation que nous utiliserons durant toute la formation.</li>
+    <li><b>Ruby on Rails</b>, c'est un framework utilisé par Ruby pour créer des applications Web. C'est un outil à la fois puissant et complexe, nous en reparlerons en détail plus tard.</li>
+    <li><b>Github</b>, c'est une plateforme qui vous permet de sauvegarder vos repository Git en ligne afin d'y accéder depuis n'importe quel ordinateur.</li>
+    <li><b>Heroku</b>, c'est une plateforme qui sert de serveur d'applications, qui héberge votre application en ligne. Cela vous permet d'accéder à votre application et d'interagir avec celle-ci à partir de n'importe quel navigateur.</li>
+</ul>
+
+<!-- FIN ZONE PREPARATIONS -->
+
+
+<!-- ZONE OS BREAKER -->
+
+<h3>2.5. Installfest</h3>
+
+<h4>Linux, ou macOS ?</h4>
+
+<p>Les installations vont se dérouler différemment en fonction de l'OS que tu utilises :</p>
+
+<ul>
+	<li>Si tu utilises macOS, rendez-vous à la partie <code>2.5.1.</code></li>
+	<li>Si tu utilises Linux, rendez-vous à la partie <code>2.5.2.</code></li>
+</ul>
+
+
+<!-- FIN ZONE OS BREAKER-->
+
+<!-- ZONE MAC -->
+
+<h4>2.5.1. MacOS</h4>
+
+<h5>2.5.1.1. Vérification de la version de MacOS</h5>
+<ul>
+    <li>Clique sur la Pomme en haut à gauche de ton écran</li>
+    <li>Sélectionne <code>À propos de ce Mac</code></li>
+    <li>Dans la popup qui s'ouvre, en dessous de MacOS X, un nombre te donne la version de ton OS :
+    <ul>
+        <li>10.13 correspond à High Sierra.</li>
+        <li>10.12 correspond à Sierra.</li>
+        <li>10.11 correspond à El Capitan.</li>
+        <li>10.10 correspond à Yosemite.</li>
+        <li>10.9 correspond à Mavericks.</li>
+        <li>10.8 correspond à Mountain Lion.</li>
+        <li>10.7 correspond à Lion.</li>
+        <li>10.6 correspond à Snow Leopard.</li>
+        <li>10.5 correspond à Leopard.</li>
+        <li>10.4 correspond à Tiger.</li>
+        <li>10.3 correspond à Panther.</li>
+    </ul></li>
+<li>Garde de côté ta version de MacOS</li>
+<li>Jette un oeil du côté du processeur également</li>
+    <ul>
+        <li>Si ça finit par Intel Core i7, Intel Core i5, Intel Core i3, ou Intel Core m3 tu peux continuer !</li>
+        <li>Si ça finit par Intel Core 2 Duo, tu peux continuer !</li>
+        <li>Si ça finit par Intel Core Duo ou quelque chose d'autre, je te conseille vivement de ne pas procéder à la suite de l'installfest et de te procurer un ordinateur légèrement plus récent.</li>
+    </ul>
+</ul>
+
+<div class="card box-shadow-0 border-info">
+    <div class="card-content collapse show">
+        <div class="card-body">
+            <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+            <p class="card-text">Vous vous souvenez de votre version de MacOS ? Si vous êtes en High Sierra/Sierra/El Capitan/Yosemite/Mavericks/Mountain Lion/Lion/Snow Leopard, c'est génial, vous allez pouvoir jouer avec Ruby !<br>
+Si vous êtes sur une version inférieure à Snow Leopard, je vous conseille vivement de mettre à jour votre système ou de vous procurer un ordinateur plus récent. Bien entendu, vous pouvez installer Ruby, Rails et tous les outils demandés sur des OS inférieurs à Snow Leopard, mais vous vous lancez sur une route semée de problèmes compliqués à résoudre, même avec d'intenses recherches Google.</p>
+        </div>
+    </div>
+</div>
+
+<h5>2.5.1.2. Télécharger iTerm2 (si ce n'est pas déjà fait !)</h5>
+<p>iTerm2 est un émulateur de terminal très puissant offrant des raccourcis et une gestion de profil de qualité exemplaire. C'est un outil presque obligatoire pour les programmeurs sous macOS.</p>
+<p>Suivez ce <a href="https://www.iterm2.com/" target="_blank">lien</a>, et utilisez iTerm2 comme terminal par défaut.</p>
+
+<h5>2.5.1.3. Installer un compilateur</h5>
+
+<p>Tape <code>$ gcc --version</code></p> dans ton terminal pour vérifier que tu n'as pas déjà GCC. Le terminal devrait retourner quelque chose comme : 
+<pre><code class="language-bash">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 6.0 (clang-600.0.54) (based on LLVM 3.5svn)
+Target: x86_64-apple-darwin14.0.0
+Thread model: posix</code></pre>
+
+<p>Si tu vois quelque chose à propos de Darwin et LLVM, c'est que tu peux continuer et passer cette section. Sinon, suis les étapes ci-dessous et relance cette commande à la fin !</p>
+
+<p>Si tu es sur <b>Mavericks</b>, <b>Yosemite</b>, <b>El Captain</b>, <b>Sierra</b> ou <b>High Sierra</b> :</p>
+<ul>
+	<li><b>OPTION 1 :</b> Pour installer les outils nécessaires au compilateur il faut que tu lances cette commande sur ton terminal <code>$ xcode-select --install</code>. Ensuite clic sur Installer, une fois que c'est fait, exécute la commande <code>$ gcc --version</code> et compare ton résultat au résultat ci-dessus.</li>
+	<li><b>OPTION 2 :</b> Tu peux visiter la page de téléchargement de Apple Developer en suivant ce <a href="https://developer.apple.com/downloads" target="_blank">lien</a>. Cette option demande d'avoir un compte Apple Developer.</li>
+</ul>
+
+<p>Si tu es sur <b>Lion</b> ou <b>Mountain Lion</b> :</p>
+<ul>
+	<li>Ouvre l'AppStore de ton Mac et cherche Xcode. Installe-le, lance-le, puis va dans le menu des préférences, recherche l'onglet <code>Téléchargements</code> puis installe les Outils de Ligne de Commande ou Command Line Tools.</li>
+	<li>Vérifie avec la commande <code>$ gcc --version</code> que ton résultat correspond à celui ci-dessus.</li>
+</ul>
+
+
+<p>Si tu es sur <b>Snow Leopard</b> :</p>
+<ul>
+	<li>Je t'invite à rechercher sur Google.</li>
+</ul>
+
+<p>Yes, vous avez installé votre compilateur, vous pouvez passer à la section suivante !</p>
+
+<h5>2.5.1.4. Homebrew</h5>
+<p>Brew est un logiciel qui permet de télécharger et gérer extrêmement facilement les applications de ton terminal. Une sorte d'App Store dans ton terminal en quelque sorte. C'est un <u>indispensable</u> de tout MacBook.</p>
+
+<p>Pour vérifier si tu as déjà installé Brew, lance la commande <code>$ brew -v</code>. S'il est installé, tu devrais avoir quelque chose comme ça :</p>
+<pre><code class="language-bash">$ brew -v
+Homebrew 1.1.13-19-g55c02ae77
+Homebrew/homebrew-core (git revision 4075; last commit 2017-04-18)</code></pre>
+
+<p>Sinon, il te faudra l'installer. Pour ce faire, je t'invite à visiter ce <a href="https://brew.sh/index_fr" target="_blank">lien</a> qui contient en plus du tuto d'installation une doc très complète et intéressante sur le fonctionnement de Brew. Suis bien les indications correspondant à ta version ! Lance la commande ci-dessus pour vérifier que tout est bon.</p>
+
+<h5>2.5.1.5. Git</h5>
+<p>En théorie, Git est déjà installé sur ton ordi, vérifie ceci en rentrant la commande <code>$ git --version</code> qui devrait te retourner quelque chose comme :</p>
+<pre><code class="language-bash">$ git --version
+git version 2.x.x</code></pre>
+
+<p>Pour installer <code>Git</code> utilise la commande <code>$ brew install git</code>. Patiente jusqu'à la fin de l'installation et utilise la commande ci-dessus pour vérifier.</p>
+
+<h5>2.5.1.6. RVM, Ruby Version Manager</h5>
+<p>Voici maintenant une étape importante dans l'installation : nous allons installer un manager. Un manager permet de changer facilement d'une version ruby à l'autre, en utilisant des gems (une sorte d'extension de ruby) pour chaque version spécifique. Tu peux ainsi passer facilement de ruby 2.2.3 à ruby 1.9.0. Il est <u>indispensable</u> d'utiliser un manager de ruby pour s'en servir efficacement. À The Hacking Project, nous passons par <a href="https://rvm.io/" target="_blank">RVM</a>.</p>
+
+<p>Première étape et pas des moindres pour le bon fonctionnement de Ruby, il te faut installer RVM. Pour installer RVM lance la commande <code>$ curl -L get.rvm.io | bash -s stable</code>.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Si tu fais face à cette erreur lors de l'installation de RVM : <b>GPG signature verification failed</b>, lance dans ton terminal la commande :
+<pre><code class="language-bash">$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</code></pre>
+			<p>(<code>gpg</code> ou <code>gpg2</code>, tout dépend de l'erreur obtenue plus haut)</p>
+			<p>Les clés GPG sécurisent l'installation des packages. Si la commande ne fonctionne pas, je t'invite à rechercher sur Google comment installer <code>gpg</code>.</p>
+    </div>
+  </div>
+</div>
+
+
+<p>Nous allons maintenant verifier que RVM fonctionne correctement, lance <code>$ type rvm | head -1</code>, ce qui devrait donner le résultat suivant :</p>
+<pre><code class="language-bash">$ type rvm | head -1
+rvm is a function</code></pre>
+
+<p>Et le test avec <code>$ rvm -v</code>, devrait te renvoyer :</p>
+<pre><code class="language-bash">$ rvm -v
+rvm 1.x.x (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]</code></pre>
+
+<p>Pour finir l'installation de RVM, lance la commande <code>$ rvm autolibs homebrew</code> qui permettra à RVM d'utiliser Homebrew.</p>
+
+<h5>2.5.1.7. Ruby</h5>
+<p>Nous allons installer la version ruby de THP via RVM. Pour la formation, nous utiliserons la version 2.5.1. Pour installer cette version, rentre dans ton terminal :</p>
+<pre><code class="language-bash">$ rvm install 2.5.1</code></pre>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Si RVM te sort une erreur type <b>autoreconf was not found in the PATH</b>, lance la commande <code>$ brew install automake</code> puis relance la commande <code>$ rvm install 2.5.1</code></p>
+    </div>
+  </div>
+</div>
+
+<p>Une fois ruby téléchargé (cela peut prendre un peu de temps en fonction de ta connexion et de ton ordi), nous allons dire à RVM de l'utiliser. Lance la commande <code>$ rvm use 2.5.1</code> ainsi que la commande <code>$ rvm --default use 2.5.1</code></p>
+
+
+<p>Bravo tu as installé Ruby et défini son utilisation sur la version 2.5.1 ! Vérifie que tout est bon en lançant la commande <code>$ ruby -v</code> :</p>
+
+<pre><code class="language-bash">$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]</code></pre>
+
+
+<h5>2.5.1.8. Rails</h5>
+<p>Maintenant que nous avons RVM et la bonne version de ruby, on va installer rails 🙌dans sa version 5.2.1. Pour ceci rien de plus simple, il faut rentrer la commande : <code>$ gem install rails -v 5.2.1.</code>. Pour vérifier que cela fonctionne bien, la commande <code>$ rails -v</code> devrait te retourner la ligne suivante :</p>
+
+<pre><code class="language-bash">$ rails -v
+Rails 5.2.1</code></pre>
+
+<h5>2.5.1.9. Vérification</h5>
+<p>Bravo, tu as réussi déjà une grosse partie de l'installfest ! Tu peux être fier de toi ! Mais ce n'est pas encore fini. Une dernière verification est nécessaire pour être sûr que tout a bien été installé.</p>
+
+<p>Pour vérifier que git est bien installé :</p>
+
+<p>Lance la commande <code></code></p>
+<pre><code class="language-bash">$ git --version 
+git version 2.x.x</code></pre>
+
+
+<p>Pour vérifier que ruby est bien installé, via RVM : </p>
+<pre><code class="language-bash">$ which ruby
+/Users/ton_prénom/.rvm/rubies/ruby-2.5.1/bin/ruby</code></pre>
+
+<p>Enfin, pour vérifier que rails est bien installé :</p>
+
+<p>Lance la commande <code></code></p>
+<pre><code class="language-bash">$ which rails 
+/Users/ton_prénom/.rvm/gems/ruby-2.5.1/bin/rails</code></pre>
+
+<p>Si toutes ces lignes sont bonnes, c'est au top ! Sinon il te faudra refaire cette partie !</p>
+
+<h5>2.5.1.10. Au top, la suite</h5>
+<p>Si tout est bon, tu peux passer à la suite : saute la section Linux pour aller à la configuration GitHub.</p>
+
+
+<!-- FIN ZONE MAC -->
+
+
+
+<!-- ZONE LINUX -->
+
+<h4>2.5.2. LINUX</h4>
+
+<h5>2.5.2.1 Installer les packages et les librairies</h5>
+<p>Avant de commencer, on va installer plein de petites librairies et packages pour installer ruby, rails & co... Rentre la ligne de commande suivante :</p>
+
+<pre><code class="language-bash">$ sudo apt-get install autoconf automake bison build-essential curl git-core libapr1 libaprutil1 libc6-dev libltdl-dev libsqlite3-0 libsqlite3-dev libssl-dev libtool libxml2-dev libxslt-dev libxslt1-dev libyaml-dev ncurses-dev nodejs openssl sqlite3 zlib1g zlib1g-dev libreadline7</code></pre>
+
+
+<h5>2.5.2.2 Git</h5>
+<p>En théorie, Git est déjà installé sur ton ordi. Vérifie ceci en rentrant la commande <code>$ git --version</code> qui devrait te retourner quelque chose comme :</p>
+
+<pre><code class="language-bash">$ git --version
+git version 2.x.x</code></pre>
+
+<p>Pour installer <code>Git</code> utilise la commande <code>$ sudo apt-get install git</code>. Patiente jusqu'à la fin de l'installation puis utilise la commande ci-dessus pour vérifier.</p>
+
+
+<h5>2.5.2.3 RVM, Ruby Version Manager</h5>
+<p>Voici maintenant une étape importante dans l'installation : nous allons installer un manager. Un manager permet de changer facilement d'une version ruby à l'autre, en utilisant des gems (une sorte d'extension de ruby) pour chaque version spécifique. Tu peux ainsi passer facilement de ruby 2.2.3 à ruby 1.9.0. Il est <u>indispensable</u> d'utiliser un manager de ruby pour s'en servir efficacement. À The Hacking Project, nous passons par <a href="https://rvm.io/" target="_blank">RVM</a>.</p>
+
+<p>Première étape et pas des moindres pour le bon fonctionnement de Ruby, il te faut installer RVM. Lance donc la commande <code>$ curl -L get.rvm.io | bash -s stable</code>.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Si tu fais face à cette erreur lors de l'installation de RVM : <b>GPG signature verification failed</b>, lance dans ton terminal la commande :
+<pre><code class="language-bash">$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</code></pre>
+			<p>(<code>gpg</code> ou <code>gpg2</code>, tout dépend de l'erreur obtenue plus haut)</p>
+			<p>Les clés GPG sécurisent l'installation des packages. Si la commande ne fonctionne pas, je t'invite à rechercher sur Google comment installer <code>gpg</code>.</p>
+    </div>
+  </div>
+</div>
+
+
+<p>Nous allons maintenant vérifier que RVM fonctionne correctement. Lance <code>$ type rvm | head -1</code>, ce qui devrait donner le résultat suivant :</p>
+
+<pre><code class="language-bash">$ type rvm | head -1
+rvm is a function</code></pre>
+
+<p>La commande <code>$ rvm -v</code> devrait renvoyer :</p>
+
+<pre><code class="language-bash">$ rvm -v
+rvm 1.x.x (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]</code></pre>
+
+
+
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Pour que RVM marche convenablement, il faut bien dire à ton terminal en mode "login shell". Ouvre les préférences de ton terminal, l'onglet "Title and Command" et clique sur "Run command as login shell", comme dans la photo ci-dessous :</p>
+      <img src="https://i.imgur.com/QV9lObZ.png" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+
+
+<h5>2.5.2.4 Ruby</h5>
+<p>Nous allons installer la version ruby de THP via RVM. Pour la formation, nous utiliserons la version 2.5.1. Pour l'installer, rentre dans ton terminal :</p>
+<pre><code class="language-bash">$ rvm install 2.5.1</code></pre>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Si RVM te sort une erreur type <b>autoreconf was not found in the PATH</b>, lance la commande <code>$ sudo apt-get install automake</code> puis relance <code>$ rvm install 2.5.1</code></p>
+    </div>
+  </div>
+</div>
+
+<p>Une fois ruby téléchargé (cela peut prendre un peu de temps en fonction de ta connexion et de ton ordi), nous allons dire à RVM de l'utiliser. Lance la commande <code>$ rvm use 2.5.1</code> ainsi que la commande <code>$ rvm --default use 2.5.1</code></p>
+
+
+<p>Bravo tu as installé Ruby et défini son utilisation sur la version 2.5.1 ! Vérifie que tout est bon en lançant la commande <code>$ ruby -v</code> :</p>
+
+<pre><code class="language-bash">$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]</code></pre>
+
+
+
+
+<h5>2.5.2.5 Rails</h5>
+<p>Maintenant que nous avons RVM et la bonne version de ruby, on va installer rails dans sa version 5.2.1 🙌.<br>
+Pour ceci rien de plus simple, lance la commande : <code>$ gem install rails -v 5.2.1.</code>. Pour vérifier que cela fonctionne bien, fais <code>$ rails -v</code> qui devrait te retourner :</p>
+
+<pre><code class="language-bash">$ rails -v
+Rails 5.2.1</code></pre>
+
+
+<h5>2.5.2.6. Au top, la suite</h5>
+<p>Si tout est bon, tu peux passer à la suite : la configuration GitHub.</p>
+
+
+<!-- FIN ZONE LINUX -->
+
+
+
+
+<!-- ZONE CONFIG GIT -->
+
+<h4>2.5.3. Configurer Github</h4>
+<p>Pour t'éviter d'entrer toutes les deux minutes sur GitHub le handle et le mot de passe du compte lié 🙏, cette section va t'aider à configurer votre installation Git et la lier à votre compte Github. Nous procéderons également à l'activation de SSH pour sécuriser et faciliter l'accès à vos repository Git !</p>
+
+<p>Pour commencer la configuration de Git, nous devons le lier à votre compte Github, pour ce faire il sera nécessaire de lancer quelques commandes. Avant de commencer, vérifiez que vous possédez un compte github, munissez-vous de vos identifiants et c'est parti.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Afin d'éviter tout problème de correspondance, il faut veiller à utiliser la même adresse email pour GitHub, Heroku, Git et SSH.</p>
+    </div>
+  </div>
+</div>
+
+
+<p>Dans ton terminal lance la commande :
+<pre><code class="language-bash">$ git config --global user.name "Ecris ton nom ici, en gardant les quotes"</code></pre>
+
+<p>Puis la commande :</p> 
+<pre><code class="language-bash">$ git config --global user.email "Ecris ton email ici, en gardant les quotes"</code></pre>
+
+<p>Pour vérifier que git a bien pris en compte tes modifications lance la commande <code>$ git config --get user.name</code> puis <code>$ git config --get user.email</code>. Si les résultats correspondent à ce que tu as indiqué avec les commandes précédentes tout est bon !</p>
+
+<p>Nous allons désormais configurer GitHub en SSH. Une clé SSH, c'est comme un mot de passe. Elle permettra l'identification de votre identité et de votre ordinateur lorsque votre ordinateur souhaitera communiquer avec d'autres ordinateurs. Avant de commencer, vérifie que tu ne possèdes pas déjà une clé SSH, avec la commande <code>$ ls ~/.ssh/id_rsa</code> : </p>
+
+<pre><code class="language-bash">$ ls ~/.ssh/id_rsa
+/Users/ton_prénom/.ssh/id_rsa</code></pre>
+
+
+<p>Si tu n'obtiens pas ce résultat mais plutôt quelque chose comme <b>No such file or directory</b>, ca signifie que tu n'as pas de clé SSH. Pas de souci, nous allons en créer une ! Lance la commande <code>$ ssh-keygen -C ton_email@ton_email.com -t rsa</code><br>
+Une passphrase vous sera alors demandée. La passphrase est très importante : lorsque vous utiliserez SSH pour clone des repos sur Github, elle vous sera demandée à chaque fois, pareil pour push. Elle fonctionne comme un mot de passe, utilisez quelque chose de long et complexe pour sécuriser l'accès.</p>
+
+<pre><code class="language-bash">$ ssh-keygen -C ton_email@ton_email.com -t rsa 
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/ton_prénom/.ssh/id_rsa):
+Created directory '/Users/ton_prénom/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/ton_prénom/.ssh/id_rsa.
+Your public key has been saved in /Users/ton_prénom/.ssh/id_rsa.pub.
+The key fingerprint is:
+88:54:ab:77:fe:5c:c3:7s:14:37:28:8c:1d:ef:2a:8d ton_email@ton_email.com</code></pre>
+
+
+<p>Votre nouvelle clé SSH publique a été ajoutée à votre <code>.ssh/</code>, vous pouvez l'afficher en faisant <code>$ cat ~/.ssh/id_rsa.pub</code>. Vous pouvez également afficher votre clé privée en faisant <code>$ cat ~/.ssh/id_rsa</code>, ne partagez jamais ce fichier.</p>
+
+<p>Ajoutez maintenant votre clé à votre agent de connexion en faisant <code>$ ssh-add ~/.ssh/id_rsa</code></p>
+
+<pre><code class="language-bash">$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /Users/ton_prénom/.ssh/id_rsa:
+Identity added: /Users/ton_prénom/.ssh/id_rsa (/Users/ton_prénom/.ssh/id_rsa)"</code></pre>
+
+
+<p>Si vous obtenez une erreur du type <b>Could not open a connection to your authentication agent</b> lancez la commande <code>$ eval `ssh-agent`</code>.</p>
+
+<p>Félicitations vous avez configuré SSH !</p>
+
+<p>Nous allons maintenant lier votre compte Github et vos clés SSH. Pour commencer, lancez la commande :
+<ul>
+	<li>si vous êtes sur macOS : <code>$ pbcopy < ~/.ssh/id_rsa.pub</code></li>
+	<li>si vous êtes sur Linux : <code>$ sudo apt-get install xclip</code> puis <code>xclip -sel clip < ~/.ssh/id_rsa.pub</code></li>
+</ul>
+
+<p>Cette commande ajoutera dans votre clipboard votre clé SSH, vous pourrez ainsi coller celle-ci lors de la prochaine étape.</p>
+
+
+<p>Pour configurer Github avec votre clé SSH, vous aurez besoin de vous rendre dans les paramètres de votre profil. Une fois fait, sélectionnez <i>SSH and GPG Keys</i> puis <i>New SSH key</i>, donnez un nom à votre clé puis collez votre clé SSH préalablement copiée avec la commande ci-dessus dans la zone prévue à cet effet. Cliquez ensuite sur <i>Add SSH key</i>. Confirmez en entrant votre mot de passe Github.</p>
+
+<p>Pour confirmer l'authentification SSH lancez la commande <code>$ ssh -T git@github.com</code> dans votre terminal :</p>
+<pre><code class="language-bash">$ ssh -T git@github.com
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?</code></pre>
+
+<p>Tapez <code>yes</code> dans votre terminal.</p>
+
+<pre><code class="language-bash">Hi username! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+
+<p>Si <code>username</code> est votre username, vous avez configuré Github avec l'authentification SSH !</p>
+<!-- FIN ZONE CONFIG GIT -->
+
+
+
+
+<!-- ZONE HEROKU -->
+
+<h4>2.5.4. Heroku</h4>
+
+<p>Heroku est le service que nous utiliserons pour publier nos applications sur le Web. Posséder un compte et préparer la configuration requise est donc très important ! <br>
+Pour commencer, enregistrez-vous sur ce <a href="http://heroku.com" target="_blank">lien</a> en utilisant la même adresse mail que vous avez utilisée pour configurer SSH et votre compte github. Validez votre compté et authentifiez-vous avant de passer à la suite.</p>
+
+<p>Installez le client Heroku en suivant la doc disponible sur ce <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">lien</a>. Vérifiez que le CLI a été bien installé en utilisant la commande <code>$ heroku version</code>.</p>
+
+<pre><code class="language-bash">$ heroku version
+heroku /7.18.9 darwin-x64 node-v11.1.0</code></pre>
+
+<p>Ajoutez votre clé SSH à Heroku en exécutant la commande suivante <code>$ heroku keys:add</code>. Il vous sera probablement demandé de rentrer vos identifiants heroku, remplissez donc les champs demandés et voilà. Heroku est configuré en SSH !</p>
+<!-- FIN ZONE HEROKU -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":1,"applicationTime":158,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Ex3mIeh+nvTA0wFYJCIuvOp3rVqNY+LT/k31/t76ls+cYJxlEdGAadepkr0yZ78F2srRUrsQPUVz9OPugXcIfQ==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Validations &amp; Conceptions de BDD</h2>
+      <h4 class="text-center">Initiation à Rails</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Initiation à Rails
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Validations &amp; Conceptions de BDD</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/4/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/4/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/4/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/4/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+    <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:600px;" data-toggle="tooltip" data-placement="top" title="Validations &amp; Conceptions de BDD" href="/dashboard/weeks/4/days/5?locale=fr">
+                                    Ven
+                                        <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : PostgreSQL</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>SQLite3 est comme son nom l'indique, léger. C'est bien pour faire des choses faciles en développement, mais on est rapidement limités par ses capacités. De plus, Heroku, le service leader de l'hébergement web, que nous allons utiliser pour nos applications en production, utilise uniquement PostgreSQL. Des bonnes galères de concordance à venir donc. Voici donc un tuto pour installer pg sur sa bécane et le faire marcher pour tes prochaines applications rails.</p>
+
+<h2>2. Historique</h2>
+<p>PostgreSQL est un système de gestion de base de données relationnelles créé en 1996.</p>
+
+
+<h2>3. La ressource</h2>
+<p>Cette ressource sera séparée en deux parties : la première concerne ceux qui sont sur macOS, la seconde concerne ceux qui sont sur Linux.</p>
+
+<h3>3.1. macOS</h3>
+
+<h4>3.1.1 - Prérequis</h4>
+<p>En théorie, tous les outils sont déjà pré-installés. Dans le cas contraire, voici la liste des applications/librairies/gems requises avant l'installation de PG :</p>
+
+<ul>
+	<li>Xcode : librairies Apple pour accéder au développement sur macOS</li>
+	<li>Homebrew : équivalent à wget sur linux mais sur macOS</li>
+	<li>RVM et Ruby dans leurs dernières versions</li>
+	<li>Git</li>
+</ul>
+
+<p>Dans le cas où ces outils ne seraient pas installés, je vous invite à suivre le fabuleux tuto <a href="http://installfest.railsbridge.org/installfest/" target="_blank">Installfest</a> du RailsBridge :</p>
+
+<h4>3.1.2 - Mise à jour</h4>
+
+Pour cela, tapez dans votre terminal la ligne de commande suivante :
+
+<pre><code class="language-shell">$ brew update && brew doctor</code></pre>
+
+<p>La première commande permet de mettre à jour tous les composants installés via homebrew sur l'ordinateur. La deuxième permet de s'assurer qu'aucun élément n'est défaillant. Si quelque chose cloche avec cette dernière commande, le terminal vous proposera une solution de ré-installation/désinstallation des éléments défaillants.</p>
+
+<h4>3.1.3 - Installation de la gem PG :</h4>
+
+<p>Lancez l'installation de la gem PG avec la commande suivante :</p>
+
+<pre><code class="language-shell">$ brew install postgresql</code></pre>
+
+<p>L'installation est assez longue mais ne devrait causer aucun soucis. Une fois l'installation effectuée, veuillez initialiser le fonctionnement de la gem</p>
+
+<pre><code class="language-shell">$ brew services start postgresql</code></pre>
+
+<p>On va ensuite initialiser la base de donnée</p>
+<pre><code class="language-shell">$ initdb /usr/local/var/postgres -E utf8</code></pre>
+
+<p>Par défaut, Postgre crée un user avec le nom admin et le mot de passe de ton mac. Si ce n'est pas le cas, la ligne de commande suivante devrait faire l'affaire. </p>
+<pre><code class="language-shell">$ createuser -s postgres</code></pre>
+
+
+<h3>3.2. Linux</h3>
+<h4>3.2.1. Installation de PG :</h4>
+
+<p>Il faut commencer par ce petit téléchargement des familles :</p>
+<pre><code class="language-shell">$ sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list"</code></pre>
+
+<p>ensuite :</p>
+
+<pre><code class="language-shell">$ wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -</code></pre>
+
+<p>Puis, mettons à jour la liste des paquets :</p>
+<pre><code class="language-shell">$ sudo apt-get update</code></pre>
+
+<p>Et un peu de mise à niveau des paquets installés :</p>
+<pre><code class="language-shell">$ sudo apt-get upgrade</code></pre>
+
+<p>Maintenant nous pouvons installer proprement Postgresql 9.5</p>
+<pre><code class="language-shell">$ sudo apt-get install postgresql-common</code></pre>
+<pre><code class="language-shell">$ sudo apt-get install postgresql-9.5 libpq-dev</code></pre>
+
+<p>Ça y est, postgresql est installé. Il nous suffit juste d’ajouter un nouveau rôle (à vrai dire c’est vous). Sachez que c’est Postgres qui joue le rôle par défaut une fois postgresql installé. Donc pour créer un nouveau rôle, on tape la commande suivante dans le terminal :</p>
+
+<pre><code class="language-shell">$ sudo -u postgres createuser --interactive</code></pre>
+
+<p>Du coup le drapeau --interactive vous demande les informations nécessaires . A la place de nom, donnez lui le nom que vous utilisez lors de connexion sur votre ordi et c’est tout !</p>
+
+<h3>3.3. Utiliser PostreSQL pour ses app rails</h3>
+<h4>3.3.1. Rails new</h4>
+<p>Ca y est tu as PostgreSQL, oh yeah ! Maintenant, il te faudra dire à rails quand tu créés une application d'utiliser Postgre et non pas SQLite3 :</p>
+
+<pre><code class="language-shell">$ rails new -d postgresql nomdetasuperappli</code></pre>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Un petit alias pour que <code>$ rails new</code> ajoute le <code>-d postgresql</code> me semble être une bonne idée 😉</p>
+    </div>
+  </div>
+</div>
+
+<p>Ensuite tu vas dans le dossier de ton app rails et tu lances ton <code>bundle install</code>. Il faudra bien veiller à créer sa base de données PostgreSQL à chaque fois : </p>
+
+<pre><code class="language-shell">rails db:create</code></pre>
+
+<h4>3.3.2. database.yml</h4>
+<p>Si tu vas dans le fichier <code>config/database.yml</code>, tu peux voir comment paramétrer sa base de données. Des fois, il se peut qu'il t'envoie chier à cause de paramètres mal placés dans ce fichier. Comme le <code>username</code> ou le <code>password</code>. Ou alors des fois ce nom de base de données étant déjà utilisé par une autre app, il se peut qu'il te dise que le nom est déjà utilisé.</p>
+
+<h4>3.3.3. Jette-moi cette merde que je ne saurais voir</h4>
+<p>Maintenant que tu as Postgre installé, tu peux jeter à la poubelle SQLiteBDViewer, ou tout autre truc bidon du genre qui traite SQLite.</p>
+
+<p>Si jamais tu tiens à visualiser ta base de données, il te faut un truc intégré dans rails, car la moitié de la base est gérée dans le models (les relations sont écrites dans les models par exemples), et donc un simple <a href="https://wiki.postgresql.org/wiki/GUI_Database_Design_Tools" target="_blank">Postegre vizualizer</a> ne suffira pas et t'induira en erreur.</p>
+
+<p>Passe du côté des gems qui vont gérer cela, même si personnellement je ne m'en sers jamais. Une recherche GitHub avec les bons mots clés devrait t'aider.</p>
+
+<h4>3.3.4. Fix d'un petit bug</h4>
+
+<p>Attention, la partie ci-dessous est uniquement destinée à résoudre une erreur. Ne la suivez pas si vous arrivez à créer une app rails avec une base de données sous Postgre sans problème.</p>
+<p>A la fin, si vous obtenez une erreur comme ceci, ne vous inquiétez pas:</p>
+
+<pre><code class="language-shell">Gem files will remain installed in /tmp/bundler20180511-4403-1u0yofgpg-0.21.0/gems/pg-0.21.0 for inspection.
+Results logged to /tmp/bundler20180511-4403-1u0yofgpg-0.21.0/extensions/x86_64-linux/2.3.0/pg-
+0.21.0/gem_make.out
+An error occurred while installing pg (0.21.0), and Bundler cannot continue.
+Make sure that "gem install pg -v '0.21.0'" succeeds before bundling.</code></pre>
+
+<p>Essayons de résoudre ce problème tout de suite, en installant la gem pg :</p>
+
+<pre><code class="language-shell">$ sudo gem install pg</code></pre>
+
+<p>Du coup vous tombez peut-être sur cette erreur, mais ne vous en faites pas c’est normal :</p>
+
+<pre><code class="language-shell">Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+current directory: /tmp/bundler20180511-4403-1u0yofgpg-0.21.0/gems/pg-0.21.0/ext
+/usr/bin/ruby2.3 -r ./siteconf20180511-4403-8bp9td.rb extconf.rb --with-pgconfig=/
+Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config
+mkmf.rb can t find header files for ruby at /usr/lib/ruby/include/ruby.h
+extconf failed, exit code 1</code></pre>
+
+<p>c’est parce que le mkmf.rb fait parti du package ruby. Ce fichier contient les fichiers d’entêtes nécessaires
+aux bibliothèques d’extensions pour ruby, donc on va installer ruby-dev :</p>
+
+<pre><code class="language-shell">$ sudo apt-get install ruby-dev</code></pre>
+
+<p>Maintenant ,nous installons sans aucun soucis la gem pg</p>
+
+<pre><code class="language-shell">$ sudo gem install pg</code></pre>
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Y'a quelques manipulations à faire dans PG pour le faire, mais c'est un process jouable.</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Dans les fameux railscasts, tu peux retrouver <a href="https://www.youtube.com/watch?v=UpEQQ8mVpwY" target="_blank">un petit tuto</a> explicatif pour manipuler PG (la vidéo est vieille, il se peut que certains éléments ne soient plus d'actualité).</p>
+
+
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Models robustes</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Un des principes fondamentaux de Rails est le fameux <b>"Fat model, skinny controller"</b>. En français, cette phrase pourrait se traduire par : <b>"mets un max de code dans ton model, un minimum dans tes controllers"</b>. Et l'équivalent en proverbe chinois serait "avec des models robustes, le sage peut emmener son app jusqu'à la lune argentée".</p>
+
+<p>Un model robuste ne veut pas dire une base de données pensée et modélisée à la perfection. Ceci s'acquiert avec l'expérience. Même nous à THP notre base de données est perfectible ! Non un model robuste, c'est un model qui fait un maximum de tâches :</p>
+
+<ol>
+  <li><b>Il préserve la BDD en empêchant de sauvegarder des instances dont les attributs ne sont pas propres</b> (e-mail vide, code postal à 15 chiffres, téléphone contenant des lettres, etc.). Exemple : une méthode tente de créer en BDD un utilisateur sans e-mail ? Elle se fait recaler par le model !</li>
+  <li><b>Il définit des méthodes d'instance qui donne accès à des informations non disponibles en BDD pourtant très utiles</b>. Exemple : tes <code>appointments</code> disposent des informations <code>start_date</code> et <code>duration</code> ? Le model peut définir une méthode <code>end_date</code> qui calcule l'heure de fin !</li>
+  <li><b>Il effectue des actions qui doivent être coordonnées à une action en BDD</b>. Exemple : un utilisateur vient de s'inscrire sur ton application ? Le model lui envoie un e-mail de bienvenue !</li>
+</ol>
+
+<p>Bref, quand tu as des models robustes et bien faits, tout le reste de ton application va glisser tout seul. À partir de là tu auras juste à appeler les bonnes méthodes de tes controllers, et puis c'est tout !</p>
+
+<h2>2. Historique</h2>
+<p>"Fat model, skinny controller" a été posé comme principe de base de Rails.</p>
+
+<h2>3. La ressource</h2>
+<p>Nous allons voir trois éléments importants dans cette ressource, liés aux 3 types de tâches que doit mener un bon model :</p>
+<ol>
+  <li><b>Les validations</b>, ou comment dire "impossible de créer cette entrée si telle condition n'est pas remplie" ;</li>
+  <li><b>Les méthodes d'instance</b>, ou comment dire "rends cette méthode exécutable sur toute instance de mon model" ;</li>
+  <li><b>Les callbacks</b>, ou comment dire "après la sauvegarde en BDD de mon instance, fais donc ceci stp".</li>
+</ol>
+
+<h3>3.1. Les validations</h3>
+<p>Les validations permettent de vérifier certains éléments avant de pouvoir enregistrer ou modifier en BDD une instance de ton modèle. Par exemple : il est impossible de créer un utilisateur si ce dernier n'a pas renseigné d'adresse e-mail.</p>
+<p>Nous allons voir ci-après plusieurs types de validations possibles.</p>
+
+<h4>3.1.1. Valider la présence d'un attribut</h4>
+<p>Tu as pu le voir hier : si tu ne mets pas <code>optional: true</code> dans une relation belongs_to de model, ton instance ne peut pas être sauvée en BDD tant qu'elle n'est pas liée à l'objet auquel elle belongs. Eh bien figure-toi qu'il est possible de mettre en place le même genre de sécurité sur n'importe quel attribut de l'instance (pas que ceux en belongs_to) !</p>
+
+<p>Prenons l'exemple de l’e-mail : il faut qu'il soit <b>impossible</b> de créer un utilisateur en base sans e-mail. Pas de négociation à ce sujet : c'est l'identifiant principal de ton utilisateur et sans lui, l'utilisateur n'est rien. Eh bien avec les lignes suivantes, en haut du model <code>User</code>, c'est possible de l'imposer :</p>
+
+<pre><code class="language-ruby">class User < ApplicationRecord
+  validates :email, presence: true
+end</code></pre>
+
+<p>Cette ligne dit : "dans le model <code>User</code>, je valide la sauvegarde en BDD d'une instance à condition que l’e-mail (<code>validates :email</code>) soit non <i>nil</i> (<code>presence: true</code>)". Bien entendu, tout ça n'a de sens que si <code>email</code> est un attribut de la classe <code>User</code> (il faut une colonne <code>email</code> dans ta table <code>users</code> 😉 ).</p>
+
+<p>Faisons le test rapidement dans une app Rails créée à la volée avec un model <code>User</code> et une table <code>users</code> contenant un e-mail (je te laisse faire tout ça !). Pense bien à rajouter la ligne du <code>validates</code> dans le model <code>User</code>.<br>
+Maintenant, amuse-toi à créer un utilisateur en console sans e-mail : tu devrais pouvoir récupérer une erreur. Voici ce que ça doit donner :</p>
+
+<pre><code class="language-ruby">2.5.1 :002 > u = User.create
+   (0.2ms)  SAVEPOINT active_record_1
+   (0.1ms)  ROLLBACK TO SAVEPOINT active_record_1
+ => #&lt;User id: nil, timestamps: nil, email: nil> 
+
+2.5.1 :003 > u.errors
+ => #&lt;ActiveModel::Errors:0x00007f63541910e0 @base=#&lt;User id: nil, timestamps: nil, email: nil>, @messages={:email=>["can't be blank"]}, @details={:email=>[{:error=>:blank}]}> 
+
+2.5.1 :004 > u.email = "bonjour@bonjour.com"
+ => "bonjour@bonjour.com" 
+
+2.5.1 :005 > u.save
+   (0.2ms)  SAVEPOINT active_record_1
+  User Create (9.1ms)  INSERT INTO "users" ("email") VALUES (?)  [["email", "bonjour@bonjour.com"]]
+   (0.3ms)  RELEASE SAVEPOINT active_record_1
+ => true </code></pre>
+
+<p>Quand il essaie de créer l'utilisateur, comme il n'a pas d’e-mail, Rails refuse l'inscription en BDD (<code>ROLLBACK</code>) et rajoute à l'instance une erreur. Au top !</p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Dis donc Jamy, pourquoi risquer de créer des "errors" ? Quel intérêt d'être aussi rigide ? Il suffit de ne pas s'amuser à faire des utilisateurs sans e-mails et hop problème réglé !</b><br>
+      C'est une très mauvaise idée pour deux raisons :</p>
+      <ul>
+        <li>La première est que si tu ne fais pas ça, il y aura forcément des éléments de ta base qui vont passer entre les mailles du filet. Lorsque tu voudras leur envoyer un e-mail avec <code>SendEmail(user.email)</code>, l'app va planter et te sortir un joli "cannot send_email sur nil:NilClass" bien casse-couille. Ça tu ne le veux pas : ça t'obligerait à repasser sur TOUTE ta BDD pour la laver des user sans e-mail. Et ça peut être long. Et on te parle en connaissance de cause.</li>
+        <li>La seconde est que tu as envie de décharger au maximum le controller de ce genre de vérification. On y reviendra plus tard, mais 1) ça réduit les risques de bugs du controller et 2) il devient plus lisible car plus court.</li>
+      </ul>
+      <p>Au final, il est important de ne pas polluer ta BDD avec des entrées incomplètes. Si tu laisses faire ça, la qualité de ta BDD décroît au fil du temps jusqu'à atteindre le stade ultime de la putréfaction. Et là, il reste plus qu'à la jeter au compost (qu'elle contribue au moins au cycle de la vie).</p>
+    </div>
+  </div>
+</div>
+
+<h4>3.1.2. Valider l'unicité d'un attribut</h4>
+<p>Restons sur les e-mails : tu n'as pas envie que deux utilisateurs puissent s'inscrire avec le même email (sinon tu vas les confondre, ils vont reset leurs mots de passe entre eux, etc.). Pour ceci, rien de plus simple :</p>
+
+<pre><code class="language-ruby">class User < ApplicationRecord
+  validates :email, uniqueness: true
+end</code></pre>
+
+<p>Hop, impossible de créer un utilisateur en BDD si l’e-mail est déjà pris par une entrée de la BDD.</p>
+
+<h4>3.1.3. Format</h4>
+<p>Encore un exemple applicable aux e-mails ! Pour le moment, si l'on fait <code>validates :email, uniqueness: true, presence: true</code>, il est possible pour un utilisateur de s'enregistrer avec l'email <code>"coucou123"</code>, ce qui n'est pas un e-mail valide. On peut rajouter une validation de format à cet attribut :</p>
+
+<pre><code class="language-ruby">class User < ApplicationRecord
+  validates :email,
+    presence: true,
+    uniqueness: true,
+    format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
+end</code></pre>
+
+<p>Par contre, pour coder ce genre validation, il faut savoir écrire en <a href="https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re">regex</a> (prononcez [Raig' - Ex]).</p>
+
+
+<h4>3.1.4. Longueur</h4>
+<p>Des fois, tu veux imposer un certain nombre de caractères. Par exemple tu veux que ton mot de passe fasse 6 caractères minimum, ou que le <code>title</code> de ton article n'en fasse pas plus de 140. Tu peux valider la length de tes attributs :</p>
+
+<pre><code class="language-ruby">class Person < ApplicationRecord
+  validates :name, length: { minimum: 2 }
+  validates :bio, length: { maximum: 500 }
+  validates :password, length: { in: 6..20 }
+  validates :registration_number, length: { is: 6 }
+end</code></pre>
+
+
+
+<h4>3.1.5. Et bien d'autres</h4>
+<p>Il existe plein d'autres validations que tu peux trouver dans <a href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank">la doc de Rails</a>.</p>
+
+<h4>3.1.6. La philosophie derrière les validations</h4>
+<p>Rails n'est pas un langage fait pour emmerder le développeur, bien au contraire ! Cette rigueur te permettra de décharger un maximum tes controllers. <br>
+Exemple : imaginons que tu veuilles coder une méthode <code>create_user</code> dans ton controller. Avec un model bien fait et complet, elle se résumera à un petit <code>User.create(params)</code> (params étant un hash qui contient tous les attributs du nouveau User) et puis c'est tout ! Pas besoin d'une méthode à rallonge du genre :</p>
+
+<pre><code class="language-ruby">def create_user
+  user = User.new(params)
+  if params[:first_name].empty?
+    puts "Erreur, pas possible de créer un utilisateur sans prénom"
+  elsif params[:email].unique?
+    puts "Email déjà pris"
+  elsif user.save?
+    puts "Utilisateur bien créé !"
+  end
+end</code></pre>
+
+<p>L'objectif est de vider au max le controller. <br>
+A noter qu'il y aura aussi des impacts dans tes views : celles-ci vont contenir les messages d'erreur liés à tes validations. Un exemple ci-dessous dans la barre rouge, en haut de fenêtre :</p>
+
+<img src="https://i.imgur.com/Wh52PT6.png" class="img-fluid"><br>
+
+<p>Ca, ça se fait très facilement avec les fameuses <a href="https://getbootstrap.com/docs/4.2/components/alerts/" target="_blank">alertes</a> de Bootstrap 😉</p>
+
+<h3>3.2. Les méthodes d'instance</h3>
+<p>Prenons l'exemple d'une session The Hacking Project. Chaque <code>Session</code> a une <code>start_date</code> et est liée à un objet <code>Course</code> dont l'attribut <code>weeks</code> indique le nombre de semaine que dure la formation. Les cyniques diront que les objets <code>Course</code> sont toujours les mêmes à chaque session (on n'a qu'un seul cours sur 11 semaines) mais qui sait si un jour on aura pas 12 cursus différents ? 😉 <br>
+Bref, on voudrait pouvoir utiliser la date de fin dans notre code. Il n'est pas pertinent d'en faire une colonne de la table <code>sessions</code> car c'est une information redondante : si on a la <code>start_date</code> et la durée (via <code>course.weeks</code>), on peut la calculer. La solution ? Créer une méthode d'instance dans <code>Session</code> qui permet de la calculer et la retourner quand nécessaire ! </p>
+
+<p>Avec les lignes ci-dessous, on va pouvoir exécuter des <code>.end_date</code> sur nos objets <code>Session</code>. On aura alors aussi bien accès à <code>ma_session.start_date</code> (un attribut) qu'à <code>ma_session.end_date</code> (une méthode d'instance) :</p>
+
+<pre><code class="language-ruby">class Session < ApplicationController
+
+  def end_date
+    self.start_date + (self.course.weeks.count * 7).day
+  end
+
+end</code></pre>
+
+<p> Au final, les méthodes d'instance vont te permettre de récupérer des infos dont tu as souvent besoin mais qui ne sont pas inscrites en BDD. Autre exemple si tu veux pouvoir vérifier facilement qu'une <code>Session</code> a commencé avec un <code>ma_session.is_started</code> qui renvoie <code>true / false</code> :</p>
+
+<pre><code class="language-ruby">class Session < ApplicationController
+  def is_started
+    self.start_date < Time.now
+  end
+end</code></pre>
+
+<p>Certes, tu pourrais écrire cette ligne <code>ma_session.start_date < Time.now</code> dans tes controllers à chaque fois que nécessaire. Mais 1) c'est pas très DRY, 2) c'est pas très Ruby et 3) <code>ma_session.is_started</code> ça se comprend juste en le lisant non ? BAM.</p>
+
+<h3>3.3. Les callbacks</h3>
+<p>Dernier élément pour cette introduction aux models propres : les callbacks. <br>
+Un callback est une action que tu souhaites réaliser à un instant précis lorsque tu appelles ton model. Voici un exemple de moment où tu peux appeler les callbacks :</p>
+
+<ul>
+  <li>Juste AVANT la sauvegarde en BDD d'une instance de ton model ;</li>
+  <li>Juste APRES la sauvegarde en BDD d'une instance de ton model ;</li>
+  <li>Juste APRES la mise à jour en BDD d'une instance de ton model ;</li>
+  <li>Bref, y'en a d'autres.</li>
+</ul>
+
+<p>Prenons l'exemple d'un e-mail de bienvenue que tu aimerais bien envoyer à la création de ton utilisateur. Tu pourrais mettre dans ton controller :</p>
+
+<pre><code class="language-ruby">def create_user
+  user = User.create(form_params)
+  user.send_welcome_email
+end</code></pre>
+
+<p>Encore une fois, ce n'est pas au controller de faire ceci. Pourquoi ? Car l'action est intimement liée à la sauvegarde en BDD et donc au taff du model : autant qu'il le prenne en charge. Sans compter que plusieurs controllers pourraient avoir à créer des <code>User</code> : il faudrait alors à chaque fois rajouter cette ligne d'envoi d'e-mail et là, c'est plus DRY du tout. <br>
+On va donc implémenter un callback <code>after_create</code> pour envoyer un email de bienvenue à chaque sauvegarde en BDD d'un utilisateur :</p>
+
+<pre><code class="language-ruby">class User < ActiveRecord
+  after_create :send_welcome_email
+
+  def send_welcome_email
+    # le code qui envoit l'email
+  end
+
+end</code></pre>
+
+<p><a href="https://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks">La documentation de Rails</a> te liste tout un tas d'autres Callbacks qui devraient te permettre de gérer tous les cas possibles.</p>
+
+
+
+<h2>4. Points importants à retenir</h2>
+
+<p><b>Fat model, skinny controllers</b>. Avec des models robustes, ta BDD reste propre longtemps, tes controllers sont plus simples et plus lisibles et ton code ne se répète pas (il est DRY). Bref, tu construis avec eux les bases d'une application Rails qui va durer dans le temps et qui sera facilement maintenable par une tierce personne. À partir de là, tu seras le champion du framework !</p>
+
+<p>Et pour des models solides, voici 3 outils :</p>
+
+<ul>
+  <li>Les validations (<code>presence</code>, <code>uniqueness</code>, <code>format</code>, <code>length</code>, etc.)</li>
+  <li>Les méthodes d'instance (à définir directement dans le model)</li>
+  <li>Les callbacks (<code>after_create</code>, <code>before_save</code>, <code>before_validation</code>, etc.)</li>
+</ul>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Comme d'habitude, la doc est complète et contient tout ce que tu dois savoir. <a href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank">Voici le chapitre sur les validations</a>, et <a href="https://guides.rubyonrails.org/active_record_callbacks.html" target="_blank">voici celui sur les callbacks</a>.</p>
+
+<p>Si jamais (c'est assez rare, mais cela arrive) tu veux faire des <a href="https://guides.rubyonrails.org/active_record_validations.html#validates-with" target="_blank">validations personnalisées</a>, c'est possible grâce à la classe <code>Validator</code>. Prenons l'exemple de THP, qui peut générer un certificat personnalisé à chaque corsaire (prouvant qu'il a suivi une session). Bien entendu, la page pour générer ce certificat n'est accessible qu'aux corsaires (le blocage est au niveau de l'accès au views), mais on n'est jamais à l'abri d'un petit bug. Nous avons donc codé dans le model le fait qu'il était impossible de créer un certificat si la session de l'utilisateur concerné n'est pas finie. Ainsi, on rajoute une sécurité en BDD : pas de mauvaise surprise !</p>
+
+<p>Bref, n'hésite pas à lire la doc et faire des recherches StackOverflow pour connaître les bonnes pratiques à ce sujet !</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Tester ses models avec Rspec</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Dans cette ressource, nous allons te montrer comment installer Rspec sur Rails et comment bien tester tes models avec.</p>
+
+<p>Nous verrons aussi quelques gem indispensables quand on fait du tests en Rails :</p>
+<ul>
+  <li><a href="https://github.com/thoughtbot/factory_bot_rails" target="_blank">factory_bot</a></li>
+  <li><a href="https://github.com/thoughtbot/shoulda-matchers" target="_blank">shoulda_matcher</a></li>
+  <li><a href="https://github.com/stympy/faker" target="_blank">Faker</a></li>
+  <li><a href="https://github.com/mattsears/nyan-cat-formatter" target="_blank">nyan-cat-formatter</a></li>
+</ul>
+
+<h2>2. Historique</h2>
+<p>Ruby est un langage de programmation où la communauté est très bienveillante, mais qui ne rigole pas avec la rigueur dans le code. Ils aiment bien :</p>
+
+<ul>
+  <li>Les documentations bien écrites</li>
+  <li>Le code bien testé</li>
+</ul>
+
+<p>Il va sans dire que toute startup qui se respecte teste son application dans les moindres recoins. Afin de continuer ton apprentissage à la philosophie du test, nous allons te montrer comment tester ses models.</p>
+
+<p>Sache d'ailleurs que quand nous avons demandé aux CTOs d'entreprises en Ruby les compétences importantes que les postulants n'avaient pas forcément, tous nous répondaient que les gens n'ont pas la culture tests. Ces ressources et la rigueur que l'on demande sont donc un vrai plus pour tes futures rencontres avec des personnes techniques.</p>
+
+<h2>3. La ressource</h2>
+<h3>3.1. Rspec-rails</h3>
+<p>Nous allons voir comment rspec dans ton application pour voir que tout marche bien. Commence par créer une app rails nommée <code>testing_my_blog</code>.</p>
+
+<h4>3.1.1. La gem rspec</h4>
+<p>Si tu ouvres ton fichier <code>Gemfile</code>, tu peux voir que Rails utilise quelques gems. Un détails attire ton attention :</p>
+
+<pre><code class="language-ruby">group :development, :test do
+    # quelques gems
+end
+
+group :development do
+  # quelques gems
+end
+
+group :test do
+  # quelques gems
+end</code></pre>
+
+<p>Détails important : Rails sait reconnaitre trois environnements :</p>
+
+<ul>
+  <li><b>Développement</b> : c'est quand tu développes ton application sur ton ordinateur</li>
+  <li><b>Test</b> : c'est quand tu lances tes tests</li>
+  <li><b>Production</b> : c'est quand ton application est en ligne</li>
+</ul>
+
+<p>Pourquoi ? Pour plusieurs raisons.</p>
+
+<p>La première est que cela permet de manipuler très facilement certaines fonctionnalités sensibles. Prenons l'exemple de <a href="https://stripe.com/" target="_blank">Stripe</a>, un super service qui permet de faire des paiements en carte bleue. Tu veux pouvoir tester la fonctionnalité "acheter un ordinateur" de ton super futur site en ligne. Le souci est que tu n'as pas vraiment envie de débourser 3000€ pour tester si une page web marche bien. Stripe sont sympas et ont prévu le coup : ils peuvent te donner des "fausses" clés d'APIs où tu peux faire toute sorte de paiement dessus. Tout ce que tu auras besoin de faire est de brancher telles clés d'APIs pour l'environnement de développement (les "fausses" où tu peux rentrer une CB factice), et telles clés d'APIs pour l'environnement de production (les vraies, qui te font gagner un maxx de blé 🤑🤑).</p>
+
+<p>La seconde est que tu peux jouer avec les environnements de travail assez facilement. Par exemple il est assez dur de tester le projet du bot Twitter car tu n'as pas envie que ce dernier spamme la Terre entière lors d'une simple commande <code>$ rspec</code>. Ainsi, grâce à la gestion des environnements, tu peux spécifier que les actions pour envoyer des emails font juste une simulation d'email pour les tests et le développement, et envoient des vrais emails avec ton compte <code>bonjour@tonsite.com</code> pour la production.</p>
+
+<p>C'est pareil pour les gems ! Certaines gems ne concerneront que la production, d'autres ne concerneront que le test & le développement. Rspec fait partie de ces gems.</p>
+
+<p>Bref, tout cela pour dire que tu dois <a href="https://github.com/rspec/rspec-rails#installation" target="_blank">mettre rspec-rails</a> dans le groupe de développement et de test. Une fois que tu as fait cela, <code>$ bundle install</code>. Maintenant, nous pouvons installer rspec :</p>
+
+<pre><code class="language-shell">$ rails g rspec:install
+Running via Spring preloader in process 24305
+  create  .rspec
+  create  spec
+  create  spec/spec_helper.rb
+  create  spec/rails_helper.rb</code></pre>
+
+<p>Notre ami rspec devrait avoir installé les bons fichiers dans le bon dossier. Voici ce qu'il a fait :</p>
+
+<ul>
+  <li>Il a créé le fichier <code>.rspec</code>. Tu le connais en théorie donc tout va bien</li>
+  <li>Il a créé le dossier <code>spec/</code>. Idem, nous sommes en sentiers connus</li>
+  <li>Il a créé le fichier <code>spec/spec_helper.rb</code>. Si ta mémoire est bonne, c'est un fichier de configuration que tu n'as jamais eu à modifier jusqu'à présent. Top.</li>
+  <li>Il a créé le fichier <code>spec/rails_helper.rb</code> : bon c'est un nouveau fichier, mais tu dois te dire que cela doit être encore un fichier de configuration</li>
+</ul>
+
+<p>Tous tes tests seront dans le dossier <code>spec/</code>, bien rangés dans des fichiers qui seront bien rangés dans des dossiers. Par exemple, un fichier de tests pour ton model des utilisateurs sera <code>spec/models/user_spec.rb</code>. Bref, nous sommes en territoire plutôt connu.</p>
+
+<h4>3.1.2. Les fichiers de configuration</h4>
+<p>Voici les quelques fichiers de configuration que tu seras amenés à modifier de temps en temps :</p>
+
+<ul>
+  <li><code>spec/spec_helper.rb</code> : ce sont les configurations qui ne dépendent pas de Rails (par exemple les specs pour les classes dans le dossier <code>lib/</code>)</li>
+  <li><code>spec/rails_helper.rb</code> : ce sont les configurations qui dépendent de Rails</li>
+  <li><code>config/database.yml</code> : précise à Rails quelle base de données utiliser dans quel environnement. D'ailleurs tu viens de remarquer que la base de données de test est différente de celle de développement. Ainsi, tu peux faire des tests avec des créations de model à gogo sans pouillaver ta base de données de dev. Plutôt cool.</li>
+</ul>
+
+<p>Ne t'en fais pas. Ces fichiers ne sont pas ultra compréhensibles, mais la majorité du temps la manipulation sera de "remplacer telle ligne dans tel fichier par cette ligne : <code>nouvelle ligne kikou</code>", donc tu ne seras jamais vraiment perdu.</p>
+
+
+
+<h4>3.1.3. Écrire ton premier test</h4>
+<p>Passons à l'action ! Un fichier de test de model sera toujours dans le dossier <code>spec/models/</code> et aura comme nom <code>ton_model_spec.rb</code>. Voici à quoi il va ressembler : </p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe TonModel, type: :model do
+
+  # plein de tests trop cools ici
+
+end</code></pre>
+
+<p>Et puis c'est tout. Tu n'auras plus qu'à lancer tes tests en faisant :</p>
+
+<pre><code class="language-shell">$ rspec</code></pre>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Est-ce que tu te souviens de cette commande :</p>
+      <pre><code class="language-shell">$ rails generate model TonModel attribut_1:type attribut_2:type</code></pre>
+      <p>Si ta mémoire est bonne, cette commande créé le fichier de migration et le fichier de model pour <code>TonModel</code>. Mais ce que tu ne savais pas c'est que cette commande créé AUSSI le fichier de tests <code>spec/models/ton_model_spec.rb</code>. Plutôt cool non ? Il y aura juste une ligne <code>pending "add some examples to (or delete) #{__FILE__}"</code> que tu peux enlever.</p>
+    </div>
+  </div>
+</div>
+
+
+<h4>3.1.4. Petit exercice</h4>
+<p>Trève de blabla, on va te faire bosser ! Crée un fichier <code>spec/models/user_spec.rb</code> qui contient le code suivant :</p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe User, type: :model do
+
+  before(:each) do 
+    @user = User.create(first_name: "John", last_name: "Doe", username: "johndoe")
+  end
+
+  context "validation" do
+
+    it "is valid with valid attributes" do
+      expect(@user).to be_a(User)
+      expect(@user).to be_valid
+    end
+
+    describe "#first_name" do
+      it "should not be valid without first_name" do
+        bad_user = User.create(last_name: "Doe")
+        expect(bad_user).not_to be_valid
+        # test très sympa qui permet de vérifier que la fameuse formule user.errors retourne bien un hash qui contient une erreur concernant le first_name. 
+        expect(bad_user.errors.include?(:first_name)).to eq(true)
+      end
+    end
+
+    describe "#last_name" do
+      it "should not be valid without last_name" do
+        bad_user = User.create(first_name: "John")
+        expect(bad_user).not_to be_valid
+        expect(bad_user.errors.include?(:last_name)).to eq(true)
+      end
+    end
+
+    describe "#username" do
+      it "should not be lower that 3 characters" do
+        invalid_user = User.create(first_name: "John", last_name: "Doe", username: "aa")
+        expect(invalid_user).not_to be_valid
+        expect(invalid_user.errors.include?(:username)).to eq(true)
+      end
+    end
+
+  end
+
+  context "associations" do
+
+    describe "books" do
+      it "should have_many books" do
+        book = Book.create(user: @user)
+        expect(@user.books.include?(book)).to eq(true)
+      end
+    end
+
+  end
+
+
+
+  context "public instance methods" do
+
+    describe "#full_name" do
+
+      it "should return a string" do
+        expect(@user.full_name).to be_a(String)
+      end
+
+      it "should return the full name" do
+        user_1 = User.create(first_name: "John", last_name: "Doe", username: "johndoe")
+        expect(user_1.full_name).to eq("John Doe")
+        user_2 = User.create(first_name: "Jean-Michel", last_name: "Durant", username: "kikou_du_75")
+        expect(user_2.full_name).to eq("Jean-Michel Durant")
+      end
+    end
+
+  end
+
+end</code></pre>
+
+<p>Lis ces tests, essaie de les comprendre, puis arrange-toi pour faire réussir ces tests.</p>
+
+<h4>3.1.5. Qu'est-ce que l'on teste dans nos models ? 🤔</h4>
+<p>Voici ce qu'il faut tester pour avoir un model solide :</p>
+
+<ul>
+  <li>Réussir la création d'un model</li>
+  <li>Tester les validations des attributs :
+  <ul>
+  <li>Tester la validation de présence des attributs qui demandent la présence</li>
+  <li>Tester la validation de l'unicité d'un attribut pour les attributs qui demandent l'unicité</li>
+  <li>Etc</li>
+  </ul></li>
+  <li>Tester les associations</li>
+  <li>Tester les callbacks</li>
+  <li>Tester les méthodes d'instance</li>
+  <li>Tester les méthodes de classe</li>
+</ul>
+
+<p>Avec ceci tu es plutôt bien. Puisque c'est toi, voici un modèle de test de models :</p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe TonModel, type: :model do
+
+  before(:each) do 
+  # en général, tu as envie de créer une nouvelle instance
+  end
+
+
+
+  context "validations" do
+
+    it "is valid with valid attributes" do
+      # création qui est valide
+    end
+
+    describe "#some_attribute" do
+      # teste cet attribut, en fonction de la validation que tu lui as donnée
+    end
+
+  end
+
+  context "associations" do
+
+    describe "some association" do
+      # teste cette association
+    end
+
+  end
+
+  context "callbacks" do
+
+    describe "some callbacks" do
+      # teste ce callback
+    end
+
+  end
+
+  context "public instance methods" do
+
+    describe "#some_method" do
+      # teste cette méthode
+    end
+
+  end
+
+  context "public class methods" do
+
+    describe "self.some_method" do
+      # teste cette méthode
+    end
+
+  end
+
+end</code></pre>
+  
+  
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Dis-donc Jamy, quelle est la différence entre <code>context</code> et <code>describe</code> ?</b><br>
+      Dans l'exécution du code absolument aucune ✌ Dans sa compréhension il y a une petite subtilité :</p>
+      <ul>
+        <li><code>context</code> concerne les groupes de test haut niveau (le groupe des "méthodes d'instance")</li>
+        <li><code>describe</code> concerne les groupes de test bas niveau (le groupe des tests pour la méthode <code>#full_name</code>)</li>
+      </ul>
+      <p>Pas obligé de mettre plusieurs tests dans un groupe, les <code>describe</code> et <code>context</code> servent juste à avoir du code facilement lisible.</p>
+    </div>
+  </div>
+</div>
+
+
+<p>Si tu as peur de la quantité d'informations concernant les tests, sache que nous allons voir au fur et à mesure de nos trois semaines de Rails comment bien tester ses models. Inspire-toi des exemples que j'ai postés, et ne t'en fais pas : tu auras la bonne méthodologie au fur et à mesure. Je me souviens avoir été dans le même désarroi que toi devant tous ces tests "mais comment faisons-nous pour tester la validation d'un model ?".</p>
+
+<h4>3.1.6. Quelques bonnes pratiques pour les tests</h4>
+<p>Voici quelques astuces pour être le champion du test.</p>
+
+<h5>3.1.6.1. Au revoir les bugs avec byebug !</h5>
+<p>Utilise la gem ByeBug présente par défaut dans Rails pour assister la résolution des bugs que tu rencontrera éventuellement. À l'usage elle se présente comme un terminal de la même manière que la fonction PRY qui a été abordée plus tôt dans la formation. Si tu veux savoir comment l'utiliser, n'hésite pas à suivre <a href="https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5" target="_blank">ce tutoriel</a>.</p>
+
+<p>Petite galère de test ? Mets donc la ligne <code>byebug</code> entre les lignes qui ne marchent pas et à toi la gloire 🎓</p>
+
+
+<h5>3.1.6.2. before</h5>
+<p>À Ruby, on aime bien le code DRY. Et écrire <code>user = User.create</code> à tous les tests, ce n'est pas incroyable. Comme tu as pu le voir plus haut, tu peux faire <code>before(:each) do</code> qui va exécuter cette ligne avant le début de chaque test. C'est extrêmement pratique pour avoir la majorité des créations de models dans un endroit. Tu peux faire <code>before(:each)</code>, <code>before(:all)</code> (on te laisse deviner la différence entre les deux), et même mettre le <code>before(:each)</code> dans un <code>context</code>/<code>describe</code> pour qu'ils ne concernent qu'un groupe de tests.</p>
+
+
+
+<h3>3.2. Quelques gems indispensables quand on développe en rails</h3>
+<p>Maintenant que tu commences à comprendre comment faire des tests en Rails, nous allons te donner quelques gems qui te permettent de faire de meilleurs tests. Cette partie de ressource n'est pas obligatoire pour aujourd'hui si tu n'es pas à l'aise sur les tests. Reviens-y quand tu seras un peu plus confortable sur les tests, installe ces gems. Bref, elles sont là à titre d'indication pour un futur serein.</p>
+
+<h4>3.2.1. factory_bot</h4>
+<h5>3.2.1.1. C'est quoi ?</h5>
+<p>Si tu ne devais retenir qu'une seule gem pour tester une application Rails, c'est bien entendu <a href="https://github.com/thoughtbot/factory_bot_rails" target="_blank">factory_bot</a> de ThoughtBot.</p>
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">📚 INSTANT CULTURE GÉ</h4>
+      <p class="card-text"><a href="https://thoughtbot.com/" target="_blank">ThoughtBot</a> est un cabinet de conseil dans le design de produit. Ils sont très connus pour être contributeurs très actifs dans la communauté Ruby/Rails et <a href="https://github.com/thoughtbot" target="_blank">sortent des gems</a> considérées comme indispensables pour tout développeur Rails. Ils ont de nombreuses ressources de bonnes pratiques pour s'améliorer dans la propreté de son code, ont récemment rendu gratuit <a href="https://robots.thoughtbot.com/announcing-upcase-is-free" target="_blank">leurs cours en ligne</a> (qui fracassent), ont été ma bible pour <a href="https://www.youtube.com/watch?v=_NUO4JEtkDw" target="_blank">apprendre à utiliser Vim proprement</a>, ont <a href="https://www.youtube.com/channel/UCUR1pFG_3XoZn3JNKjulqZg" target="_blank">une chaîne Youtube remplie de super contenu</a>. Ils rendent même disponibles en ligne gratuitement <a href="https://thoughtbot.com/playbook" target="_blank">leur méthodologie</a> de design produit et leur rigueur de travail.</p>
+      <p>Bref, si tu cites ThoughtBot en modèle de code, tu marqueras pas mal de points en entretien 😉</p>
+    </div>
+  </div>
+</div>
+
+<p>Tu as pu voir dans les tests mis plus haut, ce n'est pas pratique de devoir passer son temps à créer des utilisateurs pour tester ton application. C'est toujours la même ligne, et c'est hyper relou de devoir la changer dès que tu mets un nouvel attribut dans ton model. Factory_bot est là pour toi.</p>
+
+<p>Cette gem te permet de créer très facilement des models factices en mode "à la chaîne de l'usine du coin" que tu pourras appeler très facilement dans tes tests. Ainsi, ton code sera plus DRY et toute la création d'utilisateurs pour tes tests se fera dans un seul fichier.</p>
+
+<h5>3.2.1.2. Comment l'installer ?</h5>
+<p>L'installation de Factory_bot se fait en deux étapes.</p>
+
+<p>La première étape est la mention de la gem dans ton groupe de test et de développement : <code>gem 'factory_bot_rails'</code>, puis après le bundle install, la gem gem est installée dans ton application.</p>
+
+<p>La deuxième étape consiste à dire à rspec "hey bro, peux tu utiliser factory_bot au lieu <a href="https://guides.rubyonrails.org/testing.html#the-low-down-on-fixtures">du système de fixtures</a> stp ?". Pour ceci tu vas devoir aller dans le fichier <code>spec/rails_helper.rb</code> puis observer les lignes suivantes (vers ligne 38) :</p>
+
+<pre><code class="language-ruby">  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"</code></pre>
+
+<p>Mets en commentaire la ligne non commentée puis ajoute juste après la ligne suivante :</p>
+
+<pre><code class="language-ruby">  config.include FactoryBot::Syntax::Methods</code></pre>
+
+<p>Et voilà, factory_bot est prête à être utilisée !</p>
+
+<h5>3.2.1.2. Ma première usine !</h5>
+<p>Factory_bot va fonctionner comme ceci :</p>
+
+<ul>
+  <li>Dans le dossier <code>spec/factories/</code>, tu mettras tous les fichiers de factory</li>
+  <li>Un fichier par model</li>
+  <li>Dans le fichier tu vas dire "je veux créer un utilisateur avec tel ou tel attribut"</li>
+  <li>Tu vas appeler ta factory dans tes tests</li>
+  <li>Ainsi, si jamais tu ajoutes l'attribut <code>password</code> dans ton utilisateur et que le password est obligatoire, tu as juste à changer le fichier de la factory !</li>
+</ul>
+
+<p>Créons donc notre première usine. Elle va concerner les utilisateurs et se trouvera dans le fichier <code>spec/factories/users.rb</code> (le nom de fichier est la classe en snake_case au pluriel) :</p>
+
+<pre><code class="language-ruby">FactoryBot.define do
+  factory :user do
+    first_name { "John" }
+    last_name { "Doe" }
+    username { "johndoe" }    
+  end
+end</code></pre>
+
+<p>Ta factory est définie, tu peux l'appeler comme tu veux dans n'importe fichier de test en faisant :</p>
+
+<pre><code class="language-ruby">user = FactoryBot.create(:user)</code></pre>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Tu peux générer un fichier de factory facilement avec :</p>
+      <pre><code class="language-shell">$ rails generate factory_bot:model TonModel</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<h5>3.2.1.3. Quelques astuces pour factory_bot</h5>
+
+<p>Tu peux facilement mettre du Ruby à la volée dans la création de tes factories. Prenons l'exemple d'une factory d'un Book, qui belongs_to user. Pour faire l'association simplement, tu peux écrire :</p>
+
+<pre><code class="language-ruby">FactoryBot.define do
+  factory :book do
+    user { FactoryBot.create(:user) }  
+  end
+end</code></pre>
+
+
+<p>Tu peux aussi modifier à la volée les attributs de tes factories lors de leur création. Prenons l'exemple d'une factory ou tu veux changer le prénom et le nom de l'utilisateur par rapport à la factory que tu as définie :</p>
+
+<pre><code class="language-ruby">it "should belongs_to user" do
+  user = FactoryBot.create(:user, first_name: "Jean")
+  book = FactoryBot.create(:book, user: user)
+  expect(user.books.include?(book)).to eq(true)
+end</code></pre>
+
+<p>Si jamais tu ne veux pas sauvegarder ta factory en base (par exemple pour tester qu'une factory n'est pas valide), fais <code>build</code> et non pas <code>create</code> : </p>
+
+<pre><code class="language-ruby">describe "#username" do
+  it "should not be lower that 3 characters" do
+    invalid_user = FactoryBot.build(:user, username: "aa")
+    expect(invalid_user).not_to be_valid
+    expect(invalid_user.errors.include?(:username)).to eq(true)
+  end
+end</code></pre>
+
+<p>Dans le cas où tu as besoin de créer des factories à la volée et que tu veux garder un index (dans le cas où tu tombes sur un attribut unique), tu peux utiliser la méthode <code>sequence</code> pour insérer un attribut dynamique. L'exemple ci-dessous permettrait de créer des articles qui aurait comme <code>title</code> : "Title n°1" (et ainsi de suite), avec le même concept pour les <code>content</code> :</p>
+
+<pre><code class="language-ruby">FactoryBot.define do
+  factory :article do
+    sequence(:title) { |n| "Title n°#{index}"  }
+    sequence(:content) { |n| Content n°#{index}  }
+  end
+end</code></pre>
+
+
+<p>Dernier détail, tu peux faire plusieurs factories pour tes models, comme tu peux le voir <a href="https://github.com/brennovich/cheat-ruby-sheets/blob/master/factory_bot.md#trait" target="_blank">ici</a>.</p>
+
+<p>Bref, ThoughtBot ont prévu <a href="https://github.com/brennovich/cheat-ruby-sheets/blob/master/factory_bot.md" target="_blank">une petite cheat sheet</a> avec plein d'exemples, tu peux y jeter un oeil !</p>
+
+<h4>3.2.2. shoulda_matchers</h4>
+<p>Si tu devais retenir que deux gems, la seconde serait sans équivoque <a href="https://github.com/thoughtbot/shoulda-matchers" target="_blank">shoulda_matcher</a> de ThoughtBot. Cette gem va rendre tes tests de models aussi simples qu'un copier coller. En gros, la gem va te remplacer :</p>
+
+<pre><code class="language-ruby">it "should have_many books" do
+  book = FactoryBot.create(:book)
+  book.update(user: @user)
+  expect(@user.books.include?(book)).to eq(true)
+end</code></pre>
+
+<p>en :</p>
+
+<pre><code class="language-ruby">it "should have_many books" do
+  expect(FactoryBot.create(:user)).to have_many(:books)
+end</code></pre>
+
+<p>Hyper stylé, non ? Et tu peux même le faire en une ligne en faisant :</p>
+
+<pre><code class="language-ruby">it { expect(FactoryBot.create(:user)).to have_many(:books) }</code></pre>
+
+<p>BAM ! Moins de temps à se prendre la tête sur les tests = plus de temps à faire la fête !</p>
+
+<h5>3.2.2.1. Installer shoulda_matchers</h5>
+
+<p>Pour commencer, il faut mettre la gem (et une autre gem qui va aider pour les controllers) dans le groupe de tests :</p>
+
+<pre><code class="language-ruby">group :test do
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing' # If you are using Rails 5.x
+end</code></pre>
+
+<p>Un petit bundle install, puis tu vas devoir ajouter dans le fichier <code>spec/rails_helper.rb</code> les lignes suivantes :</p>
+
+<pre><code class="language-ruby">Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end</code></pre>
+
+<p>Tu peux mettre ces lignes tout à la fin du programme sans soucis.</p>
+
+<h5>3.2.2.2. Utilisation</h5>
+<p>Maintenant tu peux t'éclater avec la gem et remplacer tous ces tests fastidieux avec des lignes simples. Par exemple, pour les lignes de tests que je t'ai données en <code>3.1.4.</code>, ces dernièes ressembleraient à ceci avec factory_bot et shoulda_matchers :</p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe User, type: :model do
+
+  before(:each) do 
+    @user = FactoryBot.create(:user)    
+  end
+
+  it "has a valid factory" do
+    # teste toujours tes factories pour voir si elles sont valides
+    expect(build(:user)).to be_valid
+  end
+
+  context "validation" do
+
+    it "is valid with valid attributes" do
+      expect(@user).to be_a(User)
+    end
+
+    describe "#first_name" do
+      it { expect(@user).to validate_presence_of(:first_name) }
+    end
+
+    describe "#last_name" do
+      it { expect(@user).to validate_presence_of(:last_name) }
+    end
+
+    describe "#username" do
+      it { expect(@user).to validate_length_of(:username).is_at_least(3) }
+    end
+
+  end
+
+  context "associations" do
+
+    describe "books" do
+      it { expect(@user).to have_many(:books) }
+    end
+
+  end
+
+  context "public instance methods" do
+
+    describe "#full_name" do
+
+      it "should return a string" do
+        expect(@user.full_name).to be_a(String)
+      end
+
+      it "should return the full name" do
+        expect(@user.full_name).to eq("John Doe")
+        user_2 = create(:user, first_name: "Jean-Michel", last_name: "Durant")
+        expect(user_2.full_name).to eq("Jean-Michel Durant")
+      end
+    end
+
+  end
+
+end</code></pre>
+
+<p>Cool, non ? Dans <a href="http://matchers.shoulda.io/docs/v3.1.1/" target="_blank">la doc</a>, tu pourras trouver les exemples de types de tests que tu peux faire.</p>
+
+
+<h4>3.2.3. Faker</h4>
+<p><a href="https://github.com/stympy/faker" target="_blank">Faker</a> est cool, mais tu savais que tu pouvais l'utiliser aussi pour tes tests, pour créer des models avec des noms trop fake ? Génial, non ? Pour ceci, il faut mettre la gem dans le dossier de tests et développement, faire le bundle install, et puis c'est tout ! Par exemple pour créer une jolie factory avec Faker, tu ferais :</p>
+
+<pre><code class="language-ruby">FactoryBot.define do
+  factory :user do
+    first_name { Faker::Name.first_name }
+    last_name { Faker::Name.last_name }
+    email { Faker::Internet.email }
+    username { Faker::Internet.username }
+  end
+end</code></pre>
+
+<p>Et hop, tu peux avoir des models avec des noms bien fakés !</p>
+
+<h4>3.2.4. Nyan cat</h4>
+<p>Tu savais que pour faire tourner tes tests tu pouvais avoir un <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4" target="_blank">Nyan Cat</a> ? Si. Grâce à la gem <a href="https://github.com/mattsears/nyan-cat-formatter" target="_blank">nyan-cat-formatter</a> ce sera le bonheur quand tu vas faire tourner tes tests. Pour le faire marcher, rien de plus simple, ajoute la gem nyan-cat-formatter dans le groupe de tests de ton Gemfile, bundle install, puis il te faudra mettre la ligne suivante dans ton fichier <code>.rspec</code> : </p>
+
+<pre><code class="language-ruby">--format NyanCatFormatter</code></pre>
+
+<p>Aussi simple que ça !</p>
+
+<h2>4. Points importants à retenir</h2>
+<p>La ressource fut très dense, nous allons donc tenter de la résumer.</p>
+
+<p>Rspec est un élément indispensable de toute application Rails, et les tests de models sont extrêmement importants. Tous tes tests seront dans le dossier <code>spec/</code>, bien rangés dans des fichiers qui seront bien rangés dans des dossiers. Par exemple, un fichier de tests pour ton model des utilisateurs sera <code>spec/models/user_spec.rb</code>.</p>
+
+
+<p>Nous t'avons montré 4 gems pour réussir tes tests :</p>
+
+<ul>
+  <li><a href="https://github.com/thoughtbot/factory_bot_rails" target="_blank">factory_bot</a> permet de créer à la volée des instances de tes models</li>
+  <li><a href="https://github.com/thoughtbot/shoulda-matchers" target="_blank">shoulda_matcher</a> permet de tester tes associations et validations en une ligne</li>
+  <li><a href="https://github.com/stympy/faker" target="_blank">Faker</a> permet de créer des faux noms pour ses models</li>
+  <li><a href="https://github.com/mattsears/nyan-cat-formatter" target="_blank">nyan-cat-formatter</a> permet d'avoir Nyan Cat qui danse lorsque tu exécutes ta suite de tests</li>
+</ul>
+
+<p>Maintenant voici une marche à suivre détaillée pour faire les installations des gems et de Rspec sur ton application :</p>
+
+<ul>
+  <li>D'abord, ouvre ton Gemfile et mets-y les gems suivantes
+  <ul>
+    <li><code>rspec-rails</code>, <code>factory_bot_rails</code>, et <code>faker</code> dans le groupe de développement & de test</li>
+    <li><code>shoulda-matchers</code>, <code>rails-controller-testing</code> et <code>nyan-cat-formatter</code> dans le groupe de tests</li>
+  </ul></li>
+  <li>Un petit <code>$ bundle install</code> des familles</li>
+  <li>Installe Rspec avec <code>$ rails g rspec:install</code></li>
+  <li>Dans le fichier <code>rails_helper</code> :
+  <ul>
+    <li>Mets la ligne <code>config.fixture_path = "#{::Rails.root}/spec/fixtures"</code> en commentaire et ajoute à la suite la ligne qui fait marcher FactoryBot :</li>
+    <pre><code class="language-ruby">  config.include FactoryBot::Syntax::Methods</code></pre>
+    <li>Ajoute tout à la fin du fichier les lignes qui font marcher shoulda_matcher :</li>
+    <pre><code class="language-ruby">Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end</code></pre>
+  </ul></li>
+  <li>Enfin, dans ton fichier <code>.rspec</code>, mets-y la ligne qui appelle nyan-cat-formatter :</li>
+  <pre><code class="language-ruby">--format NyanCatFormatter</code></pre>
+  <li>Ton application est prêt à être utilisée pour les tests !</li>
+</ul>
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>La ressource dépasse largement les attentes que nous avons à votre sujet. Déjà, si tu comprends comment marchent des tests de models, pourquoi en faire et que tu fais 2-3 tests par model avec Rspec en utilisant FactoryBot et shoulda_matchers, c'est bien. Si tu fais une suite intégrale de tests de models pour chaque model, nous serons très fiers de toi.</p>
+
+<p>Cependant, tu peux aller regarder <a href="https://www.grafikart.fr/tutoriels/rspec-unit-test-879" target="_blank">la vidéo</a> de Jonathan de Grafikart au sujet de Rspec. Comme d'habitude, il va très rapidement très loin, mais il a des petites astuces qui pourront t'aider.</p>
+ 
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Airbnb</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>C'est parti ! Voici enfin un projet concret où tu vas réaliser une vraie base de données robuste. Pour l'occasion, nous allons te demander de refaire une application bien connue du monde des startups : Airbnb. Oui, aujourd'hui, après même pas 4 semaines d'apprentissage au code tu vas refaire le back-end de Airbnb.</p>
+
+<p>Pour le projet du jour, nous allons te donner simplement le pitch de l'application. À partir de ça, tu feras le design de la base de données tout seul comme un grand, puis tu rendras tes models robustes en mettant des validations. Puis, comme tu as envie d'avoir un backend aussi durable qu'un diamant, nous te demanderons de mettre quelques tests qui solidifierons tout cela.</p>
+
+<p>Nous sommes très fiers de te proposer un projet aussi concret aussi rapidement et nous espérons que tu vas prendre autant de plaisir à le faire que nous en le rédigeant.</p>
+
+
+<h2>2. Le projet</h2>
+<h3>2.1. Présentation</h3>
+<p>Nous sommes en 2007, tu habites dans une grande ville et galère à payer ton loyer. Tu remarques qu'il y a une super conférence sur Internet Explorer 6 pas loin de chez toi. Tu es passionné de web donc pour rien au monde tu ne manquerais cet événement. Cependant, tu constates avec ta coloc que tous les hôtels du coin sont pleins. Et là vous vous dites "on devrait faire un site où les particuliers peuvent proposer une chambre dans leur piaule moyennant un peu d'argent." <br>
+L'idée est bonne, mais vous êtes pas les premiers à y penser. Pour la transformer en idée du siècle, il faut l'implémenter comme un chef. Et le point de départ, avant de coder les views, c'est de modéliser la base de données. Hop, une feuille, un stylo et des surligneurs !</p>
+
+<h3>2.2. L'application</h3>
+<p>Ci-dessous tu trouveras quelques parcours utilisateurs sur l'application. Ils te renseigneront sur les models à définir, leurs attributs et les relations entre eux.</p>
+
+<ul>
+  <li>Un utilisateur va arriver sur la page d'accueil du site qui présente les villes dans lesquelles le site opère. Pas de notion de pays dans cette première version qui sera consacrée uniquement à la France.</li>
+  <li>Quand tu vas sur la page d'une ville, tu pourras voir les différents logements que cette ville propose.</li>
+  <li>Pour chaque logement, tu peux avoir des informations précises sur :
+  <ul>
+    <li>Le nombre de lits disponibles
+    <li>Le prix par nuit</li>
+    <ul>
+      <li>Note : pour cette première version, un logement sera forcément loué en entier : il ne peut accepter qu'une seule réservation par nuit. Si jamais ta startup cartonne, tu développeras une fonctionnalité qui permettra de louer un logement à plusieurs personnes différentes par nuit, en fonction du nombre de lits pris.</li>
+    </ul></li>
+    <li>Une description</li>
+    <li>Est-ce qu'il a le wifi ?</li>
+  </ul></li>
+  <li>Une personne peut effectuer une réservation facilement sur le site, en payant le coût de la réservation. Une réservation a une date de début, une date de fin, et une durée.
+  <ul>
+    <li>Dans cette version du site, nous allons faire comme si toutes les réservations étaient instantanées, c’est-à-dire qu'une réservation sera automatiquement validée quand elle sera payée.</li>
+    <li>Il est bien entendu impossible d'effectuer une réservation sur un logement si ce dernier a déjà une réservation sur tout ou une partie de la période qu'on cherche à réserver.</li>
+  </ul></li>
+  <li>Un utilisateur doit renseigner ses informations basiques : une adresse e-mail, un numéro de téléphone, une description de profil.
+  <ul>
+    <li>Nous n'allons pas gérer la notion de mot de passe pour le moment.</li>
+  </ul></li>
+  <li>Un logement est administré par un utilisateur. Dès qu'une réservation est passée dessus, les utilisateurs deviennent des invités.</li>
+  <li>Un logement a un petit mot d'accueil réservé aux invités. C'est généralement un texte écrit pour donner quelques détails sur la réservation.</li>
+  <li>On ne va pas encore coder la fonctionnalité de messages privés entre utilisateurs.</li>
+</ul>
+
+<p>Avec ces informations, tu devrais être capable de modéliser la base de données de l'application. En avant ! <br>
+Une fois ce premier jet de fait, nous allons te proposer notre version de la base de données afin de te guider dans les migrations et créations de models. N'hésite pas à comparer notre version et celle à laquelle tu étais arrivé sur papier/tableau/ERD.</p>
+
+<p>⚠️ Il est important que tu prennes au sérieux la partie modélisation sur papier : si tu ne te casses pas un peu la tête dessus, tu ne progresseras pas. Pour ton projet final THP (et encore plus pour ta vie future de dev) il n'y aura pas de correction à suivre. Et si tu ne t’es jamais entraîné avant, tu vas être à la ramasse.</p>
+
+
+<h3>2.3. La base de données en détails</h3>
+<p>Voici notre version de la BDD de cette V0 d'AirBnb. Cela ne correspond en rien à une correction, car il y a plusieurs façons d'arriver à un même résultat, sans forcément qu'une soit supérieure à l'autre. Mais cela va te donner une idée et surtout nous permettre de te guider.</p>
+
+<p>⚠️ Avant de coder, lis toute la partie 2.3. Tu passeras à la mise en œuvre en 2.4.</p>
+
+
+<p>Personnellement, j'aurais vu 4 models :</p>
+<ul>
+  <li>un model <code>User</code>, qui représente nos utilisateurs</li>
+  <li>un model <code>Listing</code>, qui représente les logements disponibles (<code>Accommodation</code> aurait été pas mal non plus comme nom) </li>
+  <li>un model <code>City</code>, qui représente les villes desservies par l'application</li>
+  <li>un model <code>Reservation</code>, qui représente les séjours</li>
+</ul>
+
+
+<h4>2.3.1. Model <code>User</code></h4>
+<p>Pour les utilisateurs, c'est plutôt simple. Ils ont les attributs de base :</p>
+<ul>
+  <li><code>email</code> : un string. Sa présence est obligatoire, il doit être unique et répondre au regex d'un email</li>
+  <li><code>phone_number</code> : un string (ce n'est pas un integer) qui doit répondre à ce regex : <code>format: { with: /\A(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})\z/, message: "please enter a valid french number" }</code>. On peut rendre le numéro de téléphone obligatoire uniquement pour la création d'une réservation, mais en termes de code c'est pas ultra pratique, donc nous allons rendre le numéro de téléphone obligatoire tout court.</li>
+  <li><code>description</code> : un <code>text</code></li>
+</ul>
+
+<p>Un utilisateur peut avoir plusieurs réservations: il devient alors un "invité" (guest). <br>
+Un utilisateur peut être administrateur de plusieurs listings.</p>
+
+<h4>2.3.2. Model <code>City</code></h4>
+<p>Une ville a des attributs très simples :</p>
+<ul>
+  <li>Un <code>name</code>, qui est le nom de la ville. Sa présence est obligatoire.</li>
+  <li>Un <code>zip_code</code> qui est le code postal. Ce sera un <code>string</code> au format suivant : <code>format: { with: /\A(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}\z/, message: "please enter a valid french zip code" }</code>. Sa présence est obligatoire et il est unique.</li>
+</ul>
+
+<p>Une ville peut avoir plusieurs listings.</p>
+
+
+<h4>2.3.3. Model <code>Listing</code></h4>
+<p>Voici les attributs du listing :</p>
+
+<ul>
+  <li>Un <code>available_beds</code>, qui est un <code>integer</code>. Il doit être strictement positif, et est obligatoire</li>
+  <li>Un <code>price</code> qui est un <code>integer</code>. Le prix correspondra au nombre d'euros qu'il faudra débourser pour rester une nuit. Dans cette application révolutionnaire, nous ne faisons pas que des prix entiers (pas de centimes). Il doit être strictement positif et est obligatoire.</li>
+  <li>Une <code>description</code> qui est un <code>text</code>. Elle doit faire au moins 140 caractères de long et est obligatoire.</li>
+  <li>Un <code>boolean</code> au nom de <code>has_wifi</code> qui permet de vérifier que le listing ait bien le wifi.</li>
+  <li>Un <code>welcome_message</code> qui est un <code>text</code>. Sa présence est obligatoire.</li>
+</ul>
+
+<p>Un listing a un administrateur (qui est un utilisateur). <br>
+Un listing a plusieurs réservations. <br>
+Un listing appartient à une ville.</p>
+
+
+
+<h4>2.3.4. Model <code>Reservation</code></h4>
+<p>Voici les attributs de la réservation :</p>
+
+<ul>
+  <li>Une <code>start_date</code> qui est un <code>datetime</code></li>
+  <li>Une <code>end_date</code> qui est un <code>datetime</code>. Il est impossible que la <code>end_date</code> soit avant la <code>start_date</code> (pour ceci, j'ai trouvé <a href="https://stackoverflow.com/questions/6401374/rails-validation-method-comparing-two-fields" target="_blank">ce thread</a> sur Stack overflow 😉)</li>
+</ul>
+
+<p>Pour connaître la durée d'une réservation, ce sera une méthode d'instance qui fait la différence entre la <code>end_date</code> et la <code>start_date</code>. Je te conseille de t'aider de <a href="https://railsware.com/blog/2014/04/01/time-comparison-in-ruby/" target="_blank">cet article sur Stack Overflow</a></p>
+
+<p>Une réservation est associée à un guest (qui est un utilisateur) et un listing.</p>
+
+<p>Enfin, il te faudra faire en sorte qu'il soit impossible de faire une réservation sur un événement si ce dernier est déjà pris. Pour ceci voici quelques astuces :</p>
+
+<ul>
+  <li>Il faut mettre en place une validation custom bien entendu.</li>
+  <li>Il faudra que tu passes sur chaque réservation d'un listing et que tu vérifies que aucune ne tombe au moment de la réservation que tu veux valider.</li>
+  <li>Faire <code>reservation.end_date < other_reservation.start_date && blabla</code> n'est pas ultra lisible. Rails aime bien les méthodes DRY comme cette méthode d'instance pour le model <code>Listing</code> :</li>
+  <pre><code class="language-ruby">def overlaping_reservation?(datetime)
+  # vérifie dans toutes les réservations du listing s'il y a une réservation qui tombe sur le datetime en entrée
+end</code></pre>
+</ul>
+
+<h3>2.4. À vos claviers !</h3>
+<p>Tu vas pouvoir te lancer dans la création des models et la rédaction des migrations. Voici quelques conseils pour que tu réussisses le projet :</p>
+<ul>
+  <li>Procède model par model et branche bien les associations.</li>
+  <li>N'hésite pas à abuser des migrations, à <code>drop</code> ta base de données si tu foires tout, à faire des rollbacks. Bref joue avec tout cela</li>
+  <li>Vérifie tout en console avant de considérer qu'un model et ses associations sont ok.</li>
+  <li>La méthode de validation <code>overlaping_reservation?</code> est de loin la partie la plus complexe. Garde la pour la fin.</li>
+  <li>Quand tu es content d'un model, écris deux tests sur les deux fonctionnalités les plus critiques. Nous n'attendons pas à ce que tu écrives les tests pour tout, cela viendra avec l'expérience 😊.</li>
+</ul>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Mais sérieusement, on doit vraiment se taper des tests ?</b></p>
+      <p>C'est dans le backend qu'on peut voir la puissance et la pertinence des tests. Par exemple la méthode <code>overlaping_reservation?</code> va être très souvent utilisée, et tu ne <u>dois pas</u> te tromper en la codant. Si, par un bug quelconque, un utilisateur réussi à créer une réservation en même temps qu'une autre sur le même logement, crois-moi que tu aurais eu bien l'air d'un con en appelant ton client pour lui dire qu'en fait ses vacances de rêve en Bretagne tombent à l'eau car "il y a eu un bug et le logement est déjà loué à cette date" 😅.</p>
+      <p>Voici donc tout l'intérêt des tests que tu vas implémenter sur cette méthode <code>overlaping_reservation?</code> : ils vont tester à chaque mise à jour de ton code que la méthode n'est pas cassée. <br>
+      Sans oublier que, pour que ton code soit lisible, il te faudra plein de méthodes d'instance comme celle-ci. Donc dans l'idéal, il faudra, à chaque fois, des tests pour éviter les mauvaises surprises.</p>
+      <p>Au final, un backend ET robuste ET testé va t'éviter tout tracas. Notamment si un petit développeur stagiaire venait à changer la petite méthode <code>overlaping_reservation?</code> de rien du tout et qu'elle ne fonctionne plus (Bouh le stagiaire 👺!).</p>
+    </div>
+  </div>
+</div>
+
+<p>Pense bien sûr à faire un petit seed qui va :</p>
+
+<ul>
+  <li>Détruire ta base actuelle</li>
+  <li>Créer 20 utilisateurs</li>
+  <li>Créer 10 villes</li>
+  <li>Créer 50 listings</li>
+  <li>Pour chaque listing   
+  <ul>
+    <li>Créer 5 réservations dans le passé</li>
+    <li>Créer 5 réservations dans le futur</li>
+  </ul></li>
+</ul>
+
+<p>Puisque c'est toi, permets-moi de te proposer un repo qui contient les bases de l'application. Il y a toute la stack de tests d'installée (youpi !), ainsi que la factories bien écrites pour que tu n'aies plus qu'à faire <code>user = FactoryBot.create(:user)</code> (oh yeah !). Et puisque c'est toi, j'ai même mis les fichiers de tests en mode "à remplir". Bref, un joli prémâchage du travail pour que tu n'aies qu'à t'amuser avec le reste. <a href="https://github.com/felhix/airbnb-raw-project" target="_blank">Voici le dossier</a></p>
+
+<h3>2.5. Et après ?</h3>
+<p>Maintenant que tu as fait une base de données à toute épreuve, il te sera très simple d'ajouter les views et les controllers qui feront tourner le tout. On appellera les bonnes méthodes dans des controllers, elles redirigeront vers les bonnes vues et les clients seront séduits !</p>
+
+<p>La semaine prochaine, nous verrons comment faire ce branchement pour que tu puisses afficher en HTML le contenu de ta BDD, par exemple :</p>
+
+<ul>
+  <li>La page d'accueil affichera l'index de toutes les villes disponibles (<code>City.all</code>)</li>
+  <li>Tu pourras cliquer sur la page d'une ville pour voir les logements dans la ville (<code>selected_city.listings</code>)</li>
+  <li>Sur la page d'un logement, tu verras les détails du logement (<code>selected_listing.description</code>).</li>
+  <li>Tu pourras payer et créer des réservations (<code>Reservation.create</code>)</li>
+  <li>Une fois la réservation faite, l'utilisateur sera redirigé vers la page de la réservation, dans laquelle il verra le fameux mot de bienvenue</li>
+  <li>etc.</li>
+</ul>
+
+<p>Puis, lors de la 3ème semaine de Rails, nous verrons des fonctionnalités avancées comme le paiement, ou l'ajout de photos des logements, etc.</p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>Un dossier qui répond au cahier des charges cité ci-haut. 2 tests par model.</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":5,"applicationTime":212,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="qXK2FP+ZtP7mwOBqhPXGTg8UnGYSLYNyqxCOrK9G2IcmD8xQBjaqY/G6c4+SsFf3P6ngbiReXOQmqZi88MtGNQ==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Mettre son site en ligne 🚀 et formulaire</h2>
+      <h4 class="text-center">Rails intermédiaire</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Rails intermédiaire
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Mettre son site en ligne 🚀 et formulaire</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/5/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:240px;" data-toggle="tooltip" data-placement="top" title="Mettre son site en ligne 🚀 et formulaire" href="/dashboard/weeks/5/days/2?locale=fr">
+                                    Mar
+                                        <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/5/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/5/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/5/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Déployer un site rails en ligne</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Tes applications rails fracassent. Mais avoue que tu aimerais bien les mettre en ligne pour faire profiter la terre entière de tes super projets. Tkt, on a prévu le coup, et on va te présenter un superbe outil pour mettre en ligne très facilement tes applications : Heroku.</p>
+
+<p>En quelques lignes de commande (et un peu de paramétrage), tu pourras faire profiter à ta grand-mère des sites que tu vas faire. Much 🔥</p>
+
+<h2>2. Historique</h2>
+<p>Il existe plusieurs façons de gérer des applications. La première, est celle que tu as vue jusqu'à présent : utiliser un service qui s'occupe de tout pour toi. Ce sont les SaaS (Software as a Service). Aujourd'hui nous allons voir la seconde : développer soi-même ses applications, puis les héberger sur une PaaS (Plateform as a Service). Les PaaS s'occupent de préparer tous les serveurs pour toi, et tu as juste à pousser le code, et elles s'occupent de compiler l'application, et de la faire tourner pour toi.</p>
+
+<p>La dernière solution est pour les personnes qui gèrent en réseau : les IaaS (Infrastrucure as a Service). Les IaaS te filent de l'espace serveur, de la bande passante, et à toi de te démerder et de paramétrer tout cela. Nous ne verrons pas comment brancher tes applications rails vers des IaaS car ce n'est pas le but de la formation.</p>
+
+
+<img src="https://i.imgur.com/4mO87l8.png" class="img-fluid">
+
+
+<p>Plus tu vas bas dans ce schéma, plus tu as le contrôle dans ce que tu fais. Mais aussi plus tu as de paramétrages à faire. Un peu comme Sinatra et Rails. Dans Sinatra on a plus de contrôle, mais il faut tout paramétrer.</p>
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <p class="card-text">Prenons l'exemple d'une entreprise que tu connais bien : The Hacking Project. The Hacking Project développe une plateforme où les moussaillons peuvent suivre des cours et mettre à jour leur projets. On peut dire que c'est une SaaS (c'est pas ultra vrai, mais c'est pour l'exemple). The Hacking Project héberge son code chez Heroku, qui est une PaaS. THP a juste à envoyer le code de son application à Heroku, qui s'occupera de le faire tourner sur sa plateforme de serveurs.</p>
+      <p>Enfin, Heroku utilise Amazon Web Services qui est une IaaS. Heroku loue de l'espace serveur à AWS, dans lequel il va brancher des serveurs sous Linux, qui s'occupent de faire tourner le code que les SaaS leur envoient.</p>
+    </div>
+  </div>
+</div>
+
+<p>Heroku est un service de PaaS qui a été créé en 2007. 3 ans après leur création, ils ont été rachetés par SalesForce pour 212M$. C'est l'un des services d'hébergement de code les plus populaires. Ils ont un tarif très sympa : ils te proposent d'héberger gratuitement 100 applications, et tu ne paieras que si ton application cartonne et que tu dois pimp tes serveurs (genre 10 balles par mois, ce qui est très peu cher).</p>
+
+<h2>3. La ressource</h2>
+<p>Apprendre à mettre en production est une sacrée étape dans la vie de développeur web. C'est le moment où "ça passe ou ça casse". Le fameux écran d'erreur d'Heroku qui fait des ravages chez les moussaillons te demandera de débugger des choses dans ton app. Mais à la fin, elle sera en ligne, et c'est ce qui compte. Car, comme dirait notre mentor Guillaume "mais ça marchait sur mon ordinateur n'est pas une excuse" : en tant que moussaillon, tu te fous de savoir que le site The Hacking Project marche sur mon ordinateur ; tout le monde veut un site qui marche bien sur thehackingproject.org !</p>
+
+<h3>3.1. Installer Heroku</h3>
+<p>C'est assez ultra simple. Tu vas créer un compte Heroku, installer Heroku pour le faire marcher depuis ton terminal, te connecter, et puis c'est tout ! Pour ceci, je t'invite à suivre <a href="http://installfest.railsbridge.org/installfest/create_a_heroku_account">la partie de l'installation de Heroku</a> sur le RailsBridgeInstallfest, et tu auras installé Heroku.</p>
+
+<p>⚠️ Attention utilise le même mail que tu as utilisé pour git, GitHub et SSH ! ⚠️</p>
+
+
+<h3>3.2. Mettre en ligne son application sur Heroku</h3>
+<p>Heroku a une configuration différente de ton ordinateur. Pour faire marcher Heroku, il faut juste paramétrer notre application Rails pour qu'elle soit compatible avec le service. Heureusement, c'est juste quelques réglages à faire. Voici une marche à suivre assez simple pour mettre un site en production.</p>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Pour éviter les galères en fin de projet "mais heuuuu le site il ne veut pas push sur heroku 😢", il est recommandé de TOUJOURS commencer son app par la configuration Heroku, puis de push une première fois, et de voir si ça marche en ligne. Si ça marche, tu peux commencer ton site. Si ça ne marche pas, fais marcher le truc, et au pire, relance l'app (c'est plus facile quand tu viens à peine de commencer que quand tu as 36 modèles à gérer).</p>
+    </div>
+  </div>
+</div>
+
+<h4>3.2.1. La base de données</h4>
+<h5>3.2.1.1. SQLite3</h5>
+<p>L'un des classiques bug quand les gens veulent push sur heroku est la non concordance entre SQLite3 et PG. Quand tu fais <code>$ rails new</code> (sans utiliser Postgre), de base rails te sort une application en SQLite3. Si tu ouvres ton Gemfile, tu pourras retrouver ces lignes là :
+
+<pre><code class="language-ruby"># Use sqlite3 as the database for Active Record
+gem 'sqlite3'</code></pre>
+<p>Ceci veut dire : "pour ma base de données, utilise SQLite3 stp merci". Puis lignes 36 -> 42 tu auras ceci :</p>
+
+<pre><code class="language-ruby">group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
+end</code></pre>
+
+<p>Ceci veut dire : tout ce qui est entre ces lignes seront des gems que j'utilise pour le développement et le test. En gros, tout sauf la production. C'est peut être un peu complexe pour le moment, mais sache une chose, cela veut dire que la ligne 12 n'étant pas dans un <code>group</code> spécifique, et bien nous disons à notre application rails "pour ma base de données, utilise SQLite3 stp merci, en développement, en test <b>et en production</b>".</p>
+
+<p>Le soucis est que Heroku n'utilise pas SQLite3 en production, et dès que tu mentionneras SQLite3 en production, il t'enverra chier. Il faut donc virer cette ligne 12, puis dire que l'on ne se sert de SQLite3 qu'en développement et en test, puis pour la production, on va utiliser l'outil de base de données de heroku : PostGreSQL. Pour ceci, rien de plus simple : 
+Remplace les lignes 8 et 9 :</p>
+
+<pre><code class="language-ruby"># Use sqlite3 as the database for Active Record
+gem 'sqlite3'</code></pre>
+<p>et remplace la par :</p>
+<pre><code class="language-ruby">group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '>= 0.18'
+end</code></pre>
+
+<p>Et voilà. Tu utilises SQLite3 en Developpement, en Test ; et tu utilises PostgreSQL en production. Comme Heroku.</p>
+
+<p>Maintenant que l'on a un gemfile compatible on va installer le bundle : <code>bundle install --without production</code> Pourquoi le <code>--without production</code> ? Parce que sinon le bundle va installer nos gems de production, qui ne nous concernent pas. Il risque de planter si PostGreSQL n'est pas installé sur ton ordi et le pg du groupe de production fera de la 💩</p>
+
+
+<h5>3.2.1.2. PostgreSQL</h5>
+<p>Si tu es un moussaillon assidû et que tu as bien PG de branché, et que tes rails new font du <code>rails new -d postgresql</code>, et bien rien à changer, ton app est prête à partir chez Heroku (tu peux voir dans ton Gemfile que pg a remplacé SQLite3).</p>
+
+<h4>3.2.2. git push heroku master</h4>
+<p>Une fois que ta base de données est paramétrée, tu n'as plus qu'à push ton application sur Heroku.</p>
+
+<h5>3.2.2.1. Créer ton application</h5>
+<p>Avant de push, tu vas créer ton application sur Heroku :</p>
+<pre><code class="language-bash">$ heroku create</code></pre>
+<p>Ce qui aura pour effet de créer une application sur Heroku, et la lier à ton application</p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">De base, ton application aura un nom de genre <code>pacific-turkey-4983849</code>. Mais tu peux la changer en un truc plus sympa (à condition que ce ne soit pas pris) du genre <code>nom-de-ton-app</code> avec la ligne suivante :</p>
+      <pre><code class="language-bash">$ heroku create nom-de-ton-app</code></pre>
+      <p>Et tu peux changer le nom de ton app existante avec :</p>
+      <pre><code class="language-bash">heroku apps:rename nouveau-nom-de-ton-app</code></pre>
+    </div>
+  </div>
+</div>
+
+<h5>3.2.2.2. Mettre ton app en prod</h5>
+<p>Et voilà, LA partie importante. Avant de faire le push, on va voir un truc ensemble. Fais donc :</p>
+<pre><code class="language-bash">$ git remote --v</code></pre>
+
+<p>Il devrait te renvoyer un truc du genre :</p>
+<pre><code class="language-bash">heroku https://git.heroku.com/nom-de-ton-app.git (fetch)
+heroku  https://git.heroku.com/nom-de-ton-app.git (push)
+origin  git@github.com:username/repo.git (fetch)
+origin  git@github.com:username/repo.git (push)</code></pre>
+
+<p>Si tu n'es pas trop en galère sur git, tu devrais comprendre qu'en créant ton application, tu as branché une nouvelle remote à git. En plus de pouvoir push ton joli travail sur Origin (donc GitHub), tu peux le push sur la remote Heroku. Et bien testons cela :</p>
+
+<pre><code class="language-bash">$ git push heroku master</code></pre>
+
+<p>Là tu devrais avoir un script assez long, qui peut balancer quelques warnings, mais qui à la fin devrait dire un truc du genre : </p>
+
+<pre><code class="language-bash">remote: -----> Compressing...
+remote:        Done: 48M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://nom-de-ton-app.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/nom-de-ton-app.git
+ * [new branch]      master -> master</code></pre>
+
+
+<p>Et voilà, tu as ton application en production sur Heroku. Tu peux aller sur son url et t'amuser avec (à condition qu'elle ne soit pas vide 😉)</p>
+
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Alerte générale, cette erreur est un grand classique de Heroku. Alloue un bout de cerveau disponible et <b>enregistre cette information</b>.</p>
+      <p>Si ton application a une base de données, et qu'il faut faire une migration, il <b>te faudra dire à heroku de migrer</b>, après avoir push. Si tu ne le fais pas, l'application va te péter à la gueule. Pour ceci, rentre la commande :</p>
+      <pre><code class="language-ruby">$ heroku run rails db:migrate</code></pre>
+      <p>(C'est comme en local sur ta machine, mais en production).</p>
+    </div>
+  </div>
+</div>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE (bis)</h4>
+      <p class="card-text">Celle-là tu la verras plus tard, mais sache que pour l'asset pipeline, il faudra aussi rentrer une manip pour éviter que Heroku t'explose à la gueule.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Si jamais tu tombes sur une erreur, ou bien si tu tombes sur ceci :</p>
+      <div class="text-center">
+        <img class="img-fluid" src="https://i.imgur.com/e74hIFn.png?1" alt="PaaS">
+      </div>
+      <br>
+      <p>🙏Pour l'amour de dieu, utilise Google et ton bon sens, avant de te précipiter sur #help 🙏</p>
+    </div>
+  </div>
+</div>
+
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Heroku te permet d'héberger ton app sur des serveurs à eux. Les serveurs font tourner postgresql donc il te faudra changer certains paramètres en base de données si tu utilises encore SQLite3.</p>
+
+<p>Voici un petit flow pour push une app sur Heroku :</p>
+<pre><code class="language-bash">$ rails new myapp
+$ cd myapp
+$ heroku create un-nom-trop-cool
+#Je change le Gemfile pour la BDD si je suis en SQLite3
+$ bundle install
+$ git add .
+$ git commit -m "First commit and pushing to Heroku"
+$ git push heroku master
+$ heroku run rails db:migrate #optionnel si tu as une migration à migrer</code></pre>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Pour ceux qui veulent aller plus loin et connaître les paramétrages, voici comment mettre en ligne un site sur Heroku, version BG. Tout d'abord, <a href="https://devcenter.heroku.com/articles/getting-started-with-rails5" target="_blank">la doc de Heroku</a> fait le pas à pas pour bien mettre en ligne un site avec Heroku. Tu peux aussi aller sur <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/deployment" target="_blank">l'article de la mise en production</a> fait par The Odin Project.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Les conventions REST et CRUD appliquées aux Routes et Controllers</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Cette semaine, tu plonges à fond dans l'univers de Rails et au passage, tu vas créer de nombreuses applications : d'ici 10 jours, tu seras très étonné de ce que tu arrives déjà à produire. Aussi, on va prendre <b>dès maintenant les bonnes habitudes en appliquant les conventions et les bonnes pratiques qui feront de toi un VRAI rubyiste et non plus simplement une "personne qui écrit du Ruby"</b>. À travers cette ressource, je vais t'apprendre à organiser ton app Rails pour qu'elle soit <i>100 % approved by tech</i> : les routes vont suivre les conventions et les controllers auront une structure efficace et standard.</p>
+
+<p>Il ne s'agit pas là de faire de toi un puriste par simple envie de se conformer à la communauté Ruby. Les pratiques que je vais te détailler là vont te permettre de développer des applications complexes avec des routes nombreuses, dynamiques et imbriquées, des controllers variés, hébergeant chacun moult méthodes, des views en-veux-tu-en-voilà… Et le tout sans t'y perdre car cela va suivre une construction logique qui aidera tout le monde à s'y retrouver : toi, comme tes collègues !</p>
+
+<p>Rails est basé sur <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">REST (representational state transfer)</a>, qui est un style d'architecture logicielle très courant sur le web. En suivant l'archi REST, on va mettre en place des opérations de type CRUD. T'y comprends rien ? T'inquiètes, on va t'expliquer.</p>
+
+<h2>2. Historique</h2>
+<p>Le modèle REST a été créé en 2000 par un certain Roy Fielding, dans sa thèse d'étudiant (la classe non ? Il est devenu quoi toi ton dernier mémoire étudiant ? 🥴 ) </p>
+
+<p>Pour simplifier, le REST établi la règle suivante: "en général, il y a 7 choses que l'on veut faire, sur Internet, quand on manipule une ressource". Une ressource, c'est généralement un élément de ta BDD par exemple la ressource potin, de The Gossip Project. Si tu es en mode REST, il y a donc 7 requêtes (ou demandes) que l'utilisateur doit pouvoir envoyer à ton serveur :</p>
+<ol>
+  <li><b>Afficher toutes les ressources</b> = <code>GET</code> tous les potins (l'<code>index</code> des potins donc)</li>
+  <li><b>Afficher une des ressources</b> = <code>GET</code> juste un potin (<code>show</code> ton potin)</li>
+  <li><b>Afficher la page de création d'une ressource</b> = <code>GET</code> la page avec le formulaire de création d'un nouveau potin (un <code>new</code> potin donc)</li>
+  <li><b>Envoyer les informations pour créer une ressource</b> = <code>POST</code> les données du formulaire de création du potin (<code>create</code> ton potin)</li>
+  <li><b>Afficher la page de modification d'une ressource</b> = <code>GET</code> la page avec le formulaire d'édition d'un potin existant (<code>edit</code> ton potin)</li>
+  <li><b>Envoyer les informations pour éditer une ressource</b> = <code>PUT</code> ou <code>PATCH</code> les données du formulaire de mise à jour du potin (<code>update</code> ton potin)</li>
+  <li><b>Supprimer une ressource</b> = <code>DELETE</code> un potin spécifique (<code>destroy</code> le potin)</li>
+</ol>
+
+<p>Et puis c'est tout ! À partir de là on peut construire plein d'applications web, et si tu y réfléchi bien, un tas de sites que tu utilises chaque jour sont aussi basés sur le REST (remplace, dans la liste ci-dessus, "potin" par "post Facebook" ou "Story Instagram" ou "Vidéo Youtube"). Nous allons voir comment implémenter ça en Rails.</p>
+
+<h2>3. La ressource</h2>
+<h3>3.1. À la base de tout : le CRUD</h3>
+<p>Plus haut nous avons vu les 7 méthodes du REST. Et bien si on réfléchit, on peut les réunir en 4 catégories qui correspondent au fameux CRUD dont on parle depuis des lustres :</p>
+
+<ul>
+  <li><b>CREATE</b> : regroupe l'affichage du formulaire de création (méthode <code>#new</code>) et son traitement + sauvegarde en base de la ressource (méthode <code>#create</code>).</li>
+  <li><b>READ</b> : regroupe l'affichage d'une ressource précise (méthode <code>#show</code>) et l'affichage de toutes les ressources en base (méthode <code>#index</code>).</li>
+  <li><b>UPDATE</b> : regroupe l'affichage du formulaire d'édition (méthode <code>#edit</code>) et son traitement + mise à jour en base de la ressource (méthode <code>#update</code>).</li>
+  <li><b>DESTROY</b> : c'est la destruction en base d'une ressource (méthode <code>#destroy</code>). C'est la seule catégorie où il n'y a qu'une méthode.</li>
+</ul>
+
+<p>S'il y a une chose à retenir, c'est que <b>toute route sur Rails correspond à une requête du REST, et que derrière, cette route va pointer vers une action du CRUD, pour la ressource qui la concerne. Cette action s'effectuera au sein d'une méthode de controller puis renverra vers une view correspondante.</b> <br>
+En d'autres termes, les routes suivent la convention REST (7 requêtes possibles) et pointent vers des controllers qui établissent une action du CRUD avec des méthodes ayant des noms fixés par convention : <code>#new</code>, <code>#create</code>, <code>#show</code>, <code>#index</code>, <code>#edit</code>, <code>#update</code> et <code>#destroy</code>.</p>
+
+<p>OK, pour le moment, tu as du mal à imaginer que la page "qui montre juste la photo de mon utilisateur" soit une méthode de CRUD (ce n'est pas <code>show</code>, puisque cette méthode est déjà prise par la page profil 🤔), mais nous allons te donner plein d'exemples plus loin. Avec un peu d'entraînement, "penser REST" te permettra de structurer tes applications avec une facilité déconcertante.</p>
+
+<h3>3.2. Les routes</h3>
+<h4>3.2.1. Les routes, à la main et en détails</h4>
+<p>Nous allons continuer avec l'exemple de nos chers potins. <br>
+Nous venons donc de t'expliquer que les routes, en Rails, suivent la convention REST qui défini 7 requêtes différentes possibles. Voici donc à quoi ressembleraient nos routes Rails associées à la ressource potin (liée à un model <code>Gossip</code> et à un controller <code>gossips</code> qui gère les actions) :</p>
+<pre><code class="language-ruby">get "/gossips", to: "gossips#index"
+get "/gossips/:id", to: "gossips#show"
+get "/gossips/new", to: "gossips#new"
+post "/gossips", to: "gossips#create"  # reçoit de l'info d'un formulaire donc verbe POST
+get "/gossips/:id/edit", to: "gossips#edit"
+put "/gossips/:id", to: "gossips#update" # reçoit de l'info d'un formulaire donc verbe PUT
+delete "/gossips/:id", to: "gossips#destroy" # une requête un peu spéciale pour supprimer donc verbe DELETE</code></pre>
+
+<p>Tout cela sont des conventions en Rails : les URLs ressembleront à cela, les verbes HTTP leurs seront associés de cette façon et les méthodes de controller seront toujours nommées ainsi.</p>
+
+<p>Comme tu peux le voir, en Rails, REST et CRUD sont donc imbriqués comme ceci :</p>
+<ul>
+  <li><b>CREATE</b><ul>
+    <li>get <code>/gossips/new</code> affichera un formulaire de création de potin. Ce formulaire va envoyer un POST à la route…</li>
+    <li>…post <code>/gossips</code> qui ira à la méthode <code>#create</code> de ton controller dont le rôle est de sauvegarder le potin en BDD</li>
+  </ul></li>
+  <li><b>READ</b><ul>
+    <li>get <code>/gossips</code> affichera l'index des potins (= liste de tous les potins).</li>
+    <li>get <code>/gossips/:id</code> affichera la page de "profil" du potin.</li>
+  </ul></li>
+  <li><b>UPDATE</b><ul>
+    <li>get <code>/gossips/:id/edit</code> affichera un formulaire de mise à jour de potin. Ce formulaire va envoyer un PUT à la route…</li>
+    <li>…put <code>/gossips/:id</code> qui ira à la méthode <code>#update</code> de ton controlle dont le rôle est de modifier ton potin en BDD</li>
+  </ul></li>
+  <li><b>DESTROY</b><ul>
+    <li>delete <code>/gossips/:id</code> aura pour effet de supprimer ton potin en BDD</li>
+  </ul></li>
+</ul>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Jamy, c'est pas super intuitif, pourquoi le POST de création va à </b><code>/gossips</code><b> et non pas </b><code>/gossips/new</code><b> ?</b></p>
+      <p>C'est une convention. REST a parfois ses raisons que la raison ignore. Tu sais ce que l'on dit : Convention Over Configuration. Ne t'amuse pas à changer ces conventions au début, tu te le permettras avec un peu plus de bouteille 🍾 </p>
+      <p>Mais inutile d'apprendre ces routes par cœur : Rails a des super helper, avec les adresses en path. Tu vas apprendre à le laisser gérer tout ça automatiquement. 🏝 </p>
+    </div>
+  </div>
+</div>
+
+<h4>3.2.2. les routes, automatisées à la sauce Rails Way™</h4>
+<p>Bon, maintenant que je t'ai montré comment écrire les 7 types de routes qui suivent la convention, tu imagines bien que tu vas pas, à chaque nouvelle ressource ou nouveau controller, te taper de les écrire à la mano une à une ! Encore une fois, la puissance de Rails est là : il existe un moyen d'automatiser l'écriture des routes qui suivent la convention. <br>
+Pour cela, il suffit d'une seule ligne dans le fichier <code>routes.rb</code> :</p>
+
+<pre><code class="language-ruby">resources :gossips</code></pre>
+
+<p>Une fois cette ligne écrite, tu peux voir son résultat en faisant un petit <code>$ rails routes</code> : </p>
+<pre><code class="language-shell">                   Prefix Verb   URI Pattern                                                                              Controller#Action
+                  gossips GET    /gossips(.:format)                                                                       gossips#index
+                          POST   /gossips(.:format)                                                                       gossips#create
+               new_gossip GET    /gossips/new(.:format)                                                                   gossips#new
+              edit_gossip GET    /gossips/:id/edit(.:format)                                                              gossips#edit
+                   gossip GET    /gossips/:id(.:format)                                                                   gossips#show
+                          PATCH  /gossips/:id(.:format)                                                                   gossips#update
+                          PUT    /gossips/:id(.:format)                                                                   gossips#update
+                          DELETE /gossips/:id(.:format)                                                                   gossips#destroy</code></pre>
+
+<p>Et BIM. En une ligne dans <code>routes.rb</code>, tu as créé les 7 routes qui suivent la convention REST en l'appliquant à la table <code>gossips</code>. 👌</p>
+
+
+<p>Sache aussi que tu peux imbriquer les routes entre elles et faire ce que l'on appelle des <i>nested resources</i>. Cela permet de gérer, par exemple, un CRUD pour des commentaires qui sont liés à un gossip : tu veux pouvoir afficher la liste des commentaires<b> mais seulement ceux liés à un gossip donné</b>. Tu veux pouvoir créer un commentaire <b>en le liant à un gossip donné</b>. etc. <br>
+Cela nécessite, que pour chaque action CRUD sur un commentaire, que l'on sache de quel gossip (auquel le commentaire est lié) on parle.</p>
+<p> Pour faire ça, voici ce qu'il faut écrire :</p>
+<pre><code class="language-ruby">resources :gossips do
+  resources :comments
+end</code></pre>
+
+<p>Et voilà ce que cela ajoute dans <code>$ rails routes</code> :</p>
+<pre><code class="language-shell">                   Prefix Verb   URI Pattern                                                                              Controller#Action
+                          GET    /message/:user_entry(.:format)                                                           message#show
+          gossip_comments GET    /gossips/:gossip_id/comments(.:format)                                                   comments#index
+                          POST   /gossips/:gossip_id/comments(.:format)                                                   comments#create
+       new_gossip_comment GET    /gossips/:gossip_id/comments/new(.:format)                                               comments#new
+      edit_gossip_comment GET    /gossips/:gossip_id/comments/:id/edit(.:format)                                          comments#edit
+           gossip_comment GET    /gossips/:gossip_id/comments/:id(.:format)                                               comments#show
+                          PATCH  /gossips/:gossip_id/comments/:id(.:format)                                               comments#update
+                          PUT    /gossips/:gossip_id/comments/:id(.:format)                                               comments#update
+                          DELETE /gossips/:gossip_id/comments/:id(.:format)                                               comments#destroy
+</code></pre>
+<p>Tu remarques alors que les URL commencent toutes par <code>/gossips/:gossip_id/</code> pour définir le gossip sur lequel on travaille (identifié par l'id qu'on stocke dans la variable d'URL <code>:gossip_id</code>). Le reste de l'URL suit la convention : la variable <code>:id</code>, quand elle apparaît comme dans <code>/gossips/:gossip_id/comments/:id/edit</code>, correspond alors à l'id du commentaire dans la table <code>comments</code>. <br>
+Tu noteras ensuite que chaque route pointe vers le controller <code>comments</code> avec les méthodes conventionnelles (<code>create</code>, <code>new</code>, <code>destroy</code>, etc.).</p>
+
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Par défaut, <code>resources</code> va créer les 7 routes vers les 7 méthodes du CRUD. Or, parfois, tu n'auras pas besoin de toutes ces routes. Par exemple : les commentaires de potins, tu veux pouvoir les créer, mais tu n'as pas envie que les gens puissent les modifier, ou les voir individuellement. Autre exemple : tu refuses que les gens puissent supprimer les potins. <br>
+      Tu peux supprimer une route créée par <code>resources</code> avec un <code>except:</code> comme cela :</p>
+      <pre><code class="language-ruby">resources :gossips, except: [:destroy] </code></pre>
+      <p>Ou carrément restreindre les routes en faisant un petit <code>only:</code></p>
+      <pre><code class="language-ruby">resources :comments, only: [:new, :create, :index, :destroy]</code></pre>
+      <p>Tu peux utiliser <code>only:</code> ou <code>except:</code> comme cela t'arrange le mieux, et en précisant derrière le nom des méthodes concernées (<code>index</code>, <code>show</code>, <code>new</code>, <code>create</code>, <code>edit</code>, <code>update</code> ou <code>destroy</code>)</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE (bis)</h4>
+      <p class="card-text">Et c'est <b>là</b> que ma préconisation d'hier prend tout son sens : utilise <code>$ rails routes</code> souvent car c'est un précieux allié. <br>
+      Une fois que tu utilises la ligne <code>resources</code>, lire le fichier <code>routes.rb</code> ne suffit plus.</p>
+    </div>
+  </div>
+</div>
+
+
+<h3>3.3. Les controllers</h3>
+<h4>3.3.1. Leur contenu en CRUD</h4>
+<p>Pour être cohérent avec les routes que l'on a définies, les controllers devront contenir les méthodes du CRUD. Voici ce à quoi devrait ressembler un controller typique, en prenant l'exemple des potins :</p>
+
+<pre><code class="language-ruby">class GossipsController < ApplicationController
+
+  def index
+    # Méthode qui récupère tous les potins et les envoie à la view index (index.html.erb) pour affichage
+  end
+
+  def show
+    # Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
+  end
+
+  def new
+    # Méthode qui crée un potin vide et l'envoie une view qui affiche le formulaire pour 'le remplir' (new.html.erb)
+  end
+
+  def create
+    # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
+    # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
+    # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
+  end
+
+  def edit
+    # Méthode qui récupère le potin concerné et l'envoie à la view edit (edit.html.erb) pour affichage dans un formulaire d'édition
+  end
+
+  def update
+    # Méthode qui met à jour le potin à partir du contenu du formulaire de edit.html.erb, soumis par l'utilisateur
+    # pour info, le contenu de ce formulaire sera accessible dans le hash params
+    # Une fois la modification faite, on redirige généralement vers la méthode show (pour afficher le potin modifié)
+  end
+
+  def destroy
+    # Méthode qui récupère le potin concerné et le détruit en base
+    # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
+  end
+end</code></pre>
+
+<p>Et voilà. Avec ce template, tu vas pouvoir manipuler tes potins dans tous les sens !</p>
+
+
+<h4>3.3.2. Exemples de controllers et de méthodes</h4>
+<p>Pour illustrer un peu à quoi ressemblent les controllers d'une application web complexe, on va te décrire chaque controller et chaque méthode qui se cache derrière une page du site de THP. <br>
+  Au premier jour de THP, les routes étaient faites à la main à base de "get bidule / post truc". À présent, notre <code>routes.rb</code> est principalement constitué de lignes en <code>resources</code> : vachement plus simple à lire et à comprendre.</p>
+
+<h5>a) Premier exemple : la page actuelle</h5>
+<p>Tu es sur la page qui affiche le contenu (ressources/projets) d'un jour précis (controller <code>days</code>) : cette page correspond à la méthode <code>days#show</code>.</p>
+
+<h5>b) La page qui affiche les missions des moussaillons</h5>
+<p>On a un controller <code>assignments</code> et on veut afficher toutes les missions : c'est tout simplement un index avec <code>assignments#index</code>.</p>
+
+<h5>c) La page pour s'inscrire à une session</h5>
+<p>On cherche à créer un objet <code>Subscription</code> : c'est donc via la méthode <code>subscriptions#new</code> qui initialise le formulaire d'inscription.</p>
+
+<h5>d) La page qui affiche le programme de la session</h5>
+<p>Cette page affiche les semaines (controller <code>weeks</code>) du programme. Cela peut être assimilé à son index : <code>weeks#index</code>.</p>
+
+<h5>e) La page qui affiche le programme d'une semaine</h5>
+<p>Il y a plusieurs solutions pour afficher le contenu d'une semaine donnée. Soit on affiche l'index des jours de la dite semaine (méthode <code>index</code> du controller <code>days</code> sur une route imbriquée où la semaine en question est identifiée avec une variable <code>:week_id</code>), soit on affiche le contenu d'une semaine précise. Finalement, c'est sur cette dernière option que nous sommes partis : <code>weeks#show</code>. Mais les deux solutions se valaient.</p>
+
+<h5>f) La page dans notre dashboard admin (invisible pour vous) qui enlève un joker aux moussaillons qui font des bêtises</h5>
+<p>Aah, on commence à être dans les trucs plus sympas. Il ne nous semblait pas pertinent de considérer les jokers comme des objets à part entière et de faire un model <code>Joker</code> : on a préféré stocker le nombre de jokers dans une colonne "jokers" de la table <code>subscriptions</code>. Mais en soi, les jokers sont quand même des ressources et on a fait le choix de créer un controller <code>jokers</code> afin de pouvoir appeler la méthode <code>jokers#destroy</code>. En l'absence de model <code>Joker</code>, elle ne fera qu'un truc du genre <code>@subscription.remove_joker</code> qui soustrait 1 à la colonne "jokers".</p>
+
+<h5>g) La page dans notre dashboard admin (invisible pour vous) qui affiche un jour avec ses infos</h5>
+<p>Ce cas est intéressant, sachant que l'on utilise déjà <code>days#show</code> pour gérer l'affichage aux moussaillons et corsaire de chaque journée. Ici, on a dû créer un second controller <code>days</code> qui permet de gérer les actions spécifiques à la partie "admin" du site web (réservée à l'équipe de THP). <br>
+Pour faire ça, on a eu recours à une petite astuce de Rails, répondant au doux nom de <a href="https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing" target="_blank">namespace</a>. En gros, on utilisera toujours la méthode <code>days#show</code>, mais ce controller <code>days</code> sera situé dans un dossier différent et permet d'appeler un view différente. Au final, votre affichage de chaque journée et le nôtre sont différents 👌</p>
+
+<h5>h) Afficher un formulaire de contact</h5>
+<p>Tu vas créer un controller <code>messages</code> ou <code>contacts</code> et appeler la méthode <code>messages#new</code> ou bien <code>contacts#new</code>. Le nom du controller sera celui que tu trouves le plus pertinent.</p>
+
+<h5>i) Conclusion</h5>
+<p>Bref, j'espère qu'on a réussi à te convaincre que même un site web complexe comme THP (avec plein d'objets, une partie admin, des controllers partout, etc.) peut respecter les conventions REST et CRUD. J'irai même plus loin : ces conventions permettent d'avoir tout bien rangé, selon une logique facile à expliquer. <br>
+Des fois il y aura plusieurs options et là, soit tu te fies à ton expérience, soit (dans ton cas) il faut y réfléchir deux secondes. Prends le temps de te poser et réfléchir, avec les membres de ton groupe, sur les bons controllers avant de foncer tête baissée vers une architecture dans laquelle tu ne te sentiras pas à l'aise plus tard. Mais n'oublie jamais : <b>Rails a été conçu pour le REST, donc le framework est adapté quand on pense REST.</b></p>
+
+<p>Pour certaines pages, le REST n'est pas adapté : par exemple les routes statiques (afficher la politique de confidentialité, les témoignages, la FAQ). Dans ces cas-là, tu peux rédiger une route à la main sans passer par <code>resources</code> et sans respecter le REST. Mais il faut que ces cas soient <b>minoritaires</b> et qu'il n'y ait <b>vraiment pas d'autre solution</b>.</p>
+
+<h2>4. Points importants à retenir</h2>
+<p>Rails utilise le REST pour ses routes. Elles renvoient vers des controllers qui suivent les 7 méthodes du CRUD : <code>#new</code>, <code>#create</code>, <code>#show</code>, <code>#index</code>, <code>#edit</code>, <code>#update</code>, <code>#destroy</code>.</p>
+
+<p>Il est possible et très facile de faire des routes qui suivent le REST avec <code>resources</code>.</p>
+
+<p>Tu peux limiter le nombre de routes créées par <code>resources</code> avec only: ou except: et en précisant derrière le nom des méthodes concernées (index, show, new, create, edit, update ou destroy)</p>
+
+<p>Pour visualiser les routes de ton application, tapes <code>$ rails routes</code>. Pour cibler les routes d'un controller particulier, tapes <code>$ rails routes | grep gossips</code>.</p>
+
+<p> ⚠️ À partir de maintenant, nous te demanderons <b>obligatoirement</b> que tes routes suivent le REST, et que tes controllers aient les bons noms de méthodes CRUD. Tes routes devront alors utiliser quasi-exclusivement des lignes en <code>resources</code>.</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Devine ;) <br>
+  Pour changer, <a href="https://edgeguides.rubyonrails.org/routing.html">la doc</a> te donne tous les outils disponibles ainsi que les bonnes astuces.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Faire un formulaire en Rails</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Rails et les formulaires : une longue histoire d'amour née d'un mariage un peu obligé. En effet, comment faire l'impasse sur les formulaires (leur mise en page, leur fonctionnement) dans les applications web où l'utilisateur ne cesse de créer des entrées en BDD et de les modifier ensuite ? <br>
+Rails a plein de "helpers" pour nous aider à créer des formulaires, mais nous allons dans cette leçon voir comment faire pour créer un formulaire avec HTML. Une fois que tu as compris le fonctionnement d'un formulaire de base en HTML, tu pourras manipuler les autres techniques (form_tag, form_for ou encore simple_form), et tu comprendras l'intérêt de ces helpers.</p>
+
+<h2>2. Historique</h2>
+<p>Dis-toi bien que toute expérience utilisateur commence par un formulaire : celui d'inscription au site.</p>
+
+<h2>3. La ressource</h2>
+
+<h3>3.1. Les bases d'un formulaire</h3>
+<p>Un formulaire de base, en HTML, comporte plusieurs éléments indispensables :</p>
+<ul>
+  <li>Les balises <code>&lt;form></code> et <code>&lt;/form></code> pour marquer son début et sa fin</li>
+  <li>2 options à renseigner dans la balise <code>&lt;form></code> : l'option <code>action</code> pour identifier l'URL pointée et l'option <code>method</code> pour indiquer le verbe HTTP de l'envoi (POST, PUT, etc.)</li>
+  <li>Généralement un champ <code>&lt;input type="text"></code> pour obtenir la saisie de l'utilisateur</li>
+  <li>Obligatoirement un bouton d'envoi sous la forme <code>&lt;input type="submit"></code></li>
+</ul>
+
+<p>Ainsi, prenons l'exemple d'un formulaire qui enverrait un champ <code>nom_du_champ</code> (à compléter par l'utilisateur) à l'URL <code>url_de_l'action</code>, en faisant une méthode <code>POST</code> </p>
+<pre><code class="language-html">&lt;form action="url_de_l'action" method="POST">
+  &lt;input type="text" name="nom_du_champ">
+  &lt;input type="submit" value="Envoyer le formulaire">
+&lt;/form></code></pre>
+
+<p>Nos amis de W3 Schools <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">ont une doc très fournie</a> sur les formulaires, et tu peux jeter un œil sur les différents éléments qui peuvent entrer dans la composition d'un formulaire (radio_button, checkboxes, etc).</p>
+
+<h3>3.2. L'authenticity token</h3>
+<p>Une des forces de Rails est que le framework met automatiquement en place des sécurités sans qu'il ne soit nécessaire de s'en soucier. Ainsi, une forme de piratage fréquente sur Internet est l'utilisation de la <a href="https://fr.wikipedia.org/wiki/Cross-site_request_forgery">vulnérabilité CSRF</a> des sites web. En gros, le formulaire HTML de base ne marchera pas sur Rails, car ce n'est pas très secure : comment savoir si la requête émanant de ton ordi a bien été soumise par un formulaire web et pas par un script tournant, sans que tu ne le saches, sur ton ordi ? Pour s'en assurer, Rails demande systématiquement que les requêtes provenant de formulaires soient accompagnées d'un "authenticity token". Ne t'en fais pas, c'est plutôt simple à implémenter : il faut juste rajouter un champ caché dans ton formulaire. Pour cela, ajoute cela à ton formulaire :</p>
+<pre><code class="language-html">&lt;input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</code></pre>
+
+<p>Grâce au <code>type="hidden"</code>, cette ligne sera invisible pour l'utilisateur. Par contre, tu peux checker le code source de ta page : le <code>&lt;%= form_authenticity_token %></code> sera remplacé par un long string qui validera que la requête provient bien d'un formulaire web et que personne n'usurpe ton identité.</p>
+
+<h3>3.3. l'URL et le verbe du formulaire</h3>
+<p>Tout formulaire pointe vers une URL avec un verbe HTTP : quand il sera soumis par l'utilisateur, le formulaire va émettre une requête au serveur selon ces 2 paramètres. Du coup, tu l'as compris, il faut que l'URL et le verbe correspondent à une route de ton application Rails ! Cette route pointera ensuite vers une méthode d'un controller dont le rôle sera de faire quelque chose de malin avec le contenu du formulaire. <br>
+En résumé, voilà le cheminement complet :</p>
+<ol>
+  <li>Le formulaire s'affiche dans le navigateur, l'utilisateur le remplit et clique sur le bouton d'envoi ;</li>
+  <li>Le contenu du formulaire est envoyé sous forme de requête au serveur avec l'URL et l'action HTTP paramétrés ;</li>
+  <li>Le serveur va dans le routeur et regarde à quoi correspond ce couple URL-verbe HTTP ;</li>
+  <li>Il fait alors suivre l'information à la méthode du controller que le routeur pointe ;</li>
+  <li>La méthode s'exécute avec, à disposition, les informations contenues dans le formulaire.</li>
+</ol>
+
+<p>Donc il est important de ne pas te tromper sur la requête (URL + verbe HTTP) que tu paramètres dans le formulaire. En Rails, il est préférable que l'URL soit paramétrée via son path, de la façon suivante : <code>action= &lt;%= tonchemin_path %> </code>.</p>
+
+<p>Un exemple concret ? Le formulaire suivant : </p>
+<pre><code class="language-html">&lt;form action= &lt;%= gossips_path %> method="POST">
+  &lt;input type="text" name="gossip_text">
+  &lt;input type="submit" value="Valider">
+&lt;/form></code></pre>
+
+<p>Va pointer vers la route ci-dessous : </p>
+
+<pre><code class="language-shell">                   Prefix   Verb   URI Pattern                                                                         Controller#Action
+                    gossips   POST   /gossips(.:format)                                                                  gossips#create</code></pre>
+
+<p>Reste alors à coder ta méthode <code>#create</code> dans ton controller <code>gossips</code> pour qu'elle traite les données saisies par l'utilisateur. On va voir comment faire ça en utilisant <code>params</code>.</p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Ça existe les formulaires utilisant le verbe GET ?</b></p>
+      <p>Oui, en général c'est de la recherche. W3 Schools expliquent bien <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank" class="text-primary">la différence</a> entre les formulaires GET et POST.</p>
+    </div>
+  </div>
+</div>
+
+<h3>3.4. Tiens params, comme on s' retrouve…</h3>
+<p>Si tu vas dans la fenêtre de terminal quand tu soumets un formulaire, tu verras un truc du genre passer dans le serveur :</p>
+<pre><code class="language-shell">Parameters: {"authenticity_token"=>"L/fvdS8JQNvxOn1PIleAp9e2XEGSa42oBSU0uC68GFgXBPEvSTIh3X+zxis2vulcKzixTBWpGw+e/BxEePwliw==", "first_name"=>"Félix", "last_name"=>"Gaudé", "Envoyer"=>"Valider"}</code></pre>
+
+<p>C'est à nouveau <code>params</code>, le fameux hash qui contient les variables que l'on passe dans les URL dynamiques, tu te souviens ? En fait, <code>params</code> stocke aussi les informations envoyées par un formulaire. Et tout comme dans l'exemple des URLs dynamique, on peut extraire les informations de ce hash dans le controller. <br>
+Comme précédemment, fais des <code>puts params</code> dans la méthode de controller vers laquelle pointe ton formulaire : <code>params</code> va s'afficher dans ton terminal et tu sauras alors comment en extraire les valeurs. <br>
+Reprenons l'exemple précédent (je rajoute l'authenticity token pour qu'il marche) : </p>
+
+<pre><code class="language-html">&lt;form action= <%= gossips_path %> method="POST">
+      &lt;input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+      &lt;input type="text" name="gossip_text">
+      &lt;input type="submit" value="Valider">
+&lt;/form></code></pre>
+
+<p>À présent je vais dans la méthode vers laquelle il pointe (<code>#create</code> dans le controller<code>gossips</code>) et j'insère un petit <code>puts params</code> bien visible :</p>
+
+<pre><code class="language-ruby">class GossipsController < ApplicationController
+  def create
+    puts "$" * 60
+    puts "ceci est le contenu de params :"
+    puts params
+    puts "$" * 60
+  end
+end</code></pre>
+
+<p>En complétant le formulaire avec les mots "ceci est mon gossip" et en l'envoyant, je vais voir passer l'information suivante dans mon terminal :</p>
+
+<pre><code class="language-shell">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  ceci est le contenu de params :
+{"authenticity_token"=>"RF7BdFtqTr3bV3nbZHJZ9zWJfFSdj7I99PS4jPkPd0+nneoUZthLCpJROaUAQ4JX+B/epb3tQro2swZdnN96cA==", <br> "gossip_text"=>"ceci est mon gossip", "controller"=>"gossips", "action"=>"create"}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</code></pre>
+
+<p>Ainsi, on comprend que <code>params["gossip_text"]</code> contient la valeur saisie dans mon champ <code>&lt;input type="text" name="gossip_text"></code>. Il ne nous reste plus qu'à faire un petit <code>Gossip.create(params["gossip_text"])</code> pour que la méthode <code>create</code> enregistre en base le potin et son texte !</p>
+
+<p>PROTIP : au lieu de faire <code>params["gossip_text"]</code>, tu peux aussi faire <code>params[:gossip_text]</code></p>
+
+<h2>4. Points importants à retenir</h2>
+<p>Les formulaires de Rails peuvent être faits directement en HTML avec les balises <code>form</code> et <code>input</code>.</p>
+<p>Pour que le formulaire pointe vers la bonne route, il faut spécifier la bonne URL (dans <code>action</code>) et le bon verbe HTTP (dans <code>method</code>). Tape <code>$ rails routes</code> pour trouver les routes qui nécessitent un formulaire (celles en POST ou en PUT généralement).</p>
+<p>Les champs du formulaire sont ensuite disponibles dans le controller via le hash <code>params</code>. Fais un <code>puts params</code> pour confirmer son contenu puis utilise les valeurs de params dans ta méthode de controller. Par exemple via <code>params[:gossip_text]</code>.</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>W3Schools sont les champions en ce qui concerne le HTML, et ont une excellente doc sur les formulaires.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Tests de vues</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Tu as vu les tests dans Rails ainsi qu'une introduction dans les tests de models. Nous allons continuer cette introduction aux tests avec les tests unitaires des views. En gros nous allons tester que telle vue affiche bien tel élément.</p>
+
+<h2>2. Historique</h2>
+<p>Rails aime bien tout tester, donc bien entendu le rubyist ont très rapidement trouvé le moyen de tester que les éléments s'affichent bien.</p>
+
+<h2>3. La ressource</h2>
+<h3>3.1. Les tests de view</h3>
+<p>L'objectif d'un test de vue est de vérifier que les éléments que tu veux voir affichés soient affichés. Voici quelques exemples :</p>
+
+<ul>
+  <li>La page d'accueil de ton site Airbnb va afficher toutes les villes de ton application, elle doit donc afficher "Paris" à un moment ou un autre</li>
+  <li>Tu veux afficher la page profil d'un utilisateur avec ses informations basiques. Cette page devra afficher son adresse email ainsi que son prénom</li>
+  <li>Tu veux mettre dans toute ton application un header qui contient le lien de la page d'accueil de ton site. Tu as envie de vérifier si ce lien est bien présent dans tes views</li>
+  <li>Sur la page d'accueil, tu mentionnes tel mot. Il faut pouvoir vérifier que ce mot soit bien affiché</li>
+  <li>Tu fais une vue qui recense toutes les propositions de missions de tes étudiants. Imaginons que tu aies envie que le propriétaire d'une mission puisse la supprimer avec un bouton de suppresion. Il faut pouvoir tester que ce bouton n'apparaisse pas pour les personnes qui ne sont pas propriétaires de la mission</li>
+</ul>
+
+<p>Les tests de vue permettent de vérifier des éléments comme ceux vus plus haut. Un test de vue permet juste de construire le fichier html à partir du fichier erb, puis de vérifier si tel élément existe bien en HTML. Nous n'allons pas vérifier le CSS ni le javaScript. En gros, cela permet de voir que tes conditions dans tes vues sont bien respectées, et que les éléments s'affichent bien.</p>
+
+
+<h3>3.2. Brancher les tests de vue</h3>
+<p>Les tests de view se mettent dans le dossier <code>spec/views/</code>. Tout comme les views normales, tu vas mettre les tests de view bien rangés dans des dossiers correspondants :</p>
+
+<ul>
+  <li>Le test de la view index du controller statics se fera dans <code>spec/views/statics/index.html.erb_spec.rb</code></li>
+  <li>Le test de la view new du controller users se fera dans <code>spec/views/users/new.html.erb_spec.rb</code></li>
+  <li>Le test de la view show du controller cities se fera dans <code>spec/views/cities.html.erb_spec.rb</code></li>
+</ul>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Tu peux générer des tests en utilisant le <a href="https://relishapp.com/rspec/rspec-rails/v/3-8/docs/generators" target="_blank">générateur de tests de Rspec</a>. Par exemple, si tu veux créer le test pour index et new des utilisateurs, tu feras :</p>
+      <pre><code class="language-shell">$ rails g rspec:view users index new</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<p>Voici la base d'un fichier de test pour la vue index des cities (le fichier <code>spec/views/cities/index.html.erb_spec.rb</code>) :</p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe "cities/index.html.erb", type: :view do
+
+  context 'some context' do  
+    it 'should display something' do
+      # ton test
+    end
+  end
+
+  context 'other context' do  
+    it 'should display something' do
+      # ton test
+    end
+  end
+
+end</code></pre>
+
+
+<h3>3.3. Quelques exemples de test</h3>
+<p>Voici quelques exemples de tests.</p>
+
+
+<h4>3.3.1. Un test pour voir si tel mot est affiché</h4>
+<p>Prenons l'exemple d'un site qui doit te souhaiter la bienvenue sur sa page d'accueil. Voici à quoi ressemblerait le test qui vérifie que le mot "bienvenue" soit bien mentionné sur ta page :</p>
+
+<pre><code class="language-ruby">context 'it says welcome' do
+  it "displays 'welcome'" do
+    # génére la page
+    render
+
+    # le contenu "Bievenue" doit être dans la page
+    expect(rendered).to have_content 'Bienvenue'
+  end
+end</code></pre><br>
+
+<p>Nous devons générer la page, puis vérifier que tel mot existe. Pas besoin de plus 🤠</p>
+
+<h4>3.3.1. Un test pour vérifier que l'adresse email d'un utilisateur est bien affiché sur sa page profil</h4>
+<p>Prenons l'exemple de la page show de ton controller users. Tu as envie que cette page affiche l'email de l'utilisateur. Le soucis est que cette page utilise une variable d'instance, qui s'appelle <code>@user</code>. Les tests de views ne vont tester QUE les views, c'est à dire qu'ils vont charger la view sans faire appel au controller. Comme ta view utilise une variable d'instance, et que cette dernière est générée par ton controller, il te faudra la refaire dans ton test. L'avantage est qu'avec FactoryBot c'est très simple de générer une variable d'instance.</p>
+
+<p>Voici donc un test qui vérifie que l'email de l'utilisateur est bien mentionné dans la vue :</p>
+
+<pre><code class="language-ruby">context 'it says welcome' do
+  it "displays 'welcome'" do
+    # dit à la view que @user sera le build d'un utilisateur avec "lol@email.com" comme email
+    assign(:user, build(:user, email: "lol@email.com"))
+
+    # génère la vue (ceci doit être fait après avoir assigné la variable d'instance, pour qu'il puisse la trouver)
+    render
+    
+    # la vue rendered doit afficher l'email passé
+    expect(rendered).to match /lol@email.com/
+  end
+end</code></pre><br>
+
+<p>Nous devons assigner la variable d'instance, render la page, puis vérifier que le détail que nous avons défini existe bien.</p>
+
+
+
+
+<h4>3.3.2. Un test pour vérifier que la page index affiche bien tous les éléments</h4>
+<p>Tu peux assign un élément unique, mais des fois tu veux assign plusieurs éléments. Par exemple l'index des villes doit afficher tous les villes. Faisons un exemple qui vérifie que le zip_code d'une ville et le name d'une ville soient bien affichés :</p>
+
+<pre><code class="language-ruby">context 'when there are cities' do  
+  it 'displays the details' do
+    # déclare la variable cities, qui est une array contenant des villes
+    assign(:cities,
+      [
+        build(:city, name: "Bordeaux"),
+        build(:city, zip_code: "34000"),
+        build(:city),
+        build(:city)
+      ]
+    )
+
+    render
+
+    # vérifie que le name d'une des villes soit affiché
+    expect(rendered).to match /Bordeaux/
+
+    # vérifie que le zip_code d'une ville soit affiché
+    expect(rendered).to match /34000/
+  end
+end</code></pre><br>
+
+
+
+<h3>3.4. La philosophie des tests de vue</h3>
+<p>Les tests de vue sont très rapides. Ils permettent de montrer que tu as bien mis tel élément important dans la vue, ou que ton <code>user.first_name</code> s'affiche bien. Ils sont très pratiques dans les conditions de vue (par exemple un bouton pour supprimer la mission pour son créateur) et permettent de confirmer certains éléments très chiants à vérifier (imagine la galère pour nous de tester à la main la vue pour les corrections du matin).</p>
+
+<p>Les tests de vue vont juste vérifier le HTML généré par le fichier ERB à partir de variables que tu as définies dans le test. Ils ne vont pas vérifier le CSS, encore moins le JavaScript.</p>
+
+<h2>4. Points importants à retenir</h2>
+<p>Les tests de vue se font dans le dossier <code>spec/views/</code>. Les tests de vue sont simples : tu vérifies juste que tel mot est affiché, ou bien que tel élément de ta variable d'instance est affiché. Voici comment un test de vue se structure :</p>
+
+<pre><code class="language-ruby">require 'rails_helper'
+
+RSpec.describe "models/method.html.erb", type: :view do
+
+  context 'some context' do  
+    it 'should display something' do
+      assign(:ta_variable, some_factories)
+      render
+      expect(rendered).some_test
+    end
+  end
+
+end</code></pre>
+
+
+
+
+<h2>5. Pour aller plus loin</h2>
+<p><a href="https://relishapp.com/rspec/rspec-rails/v/3-8/docs/view-specs/view-spec" target="_blank">La documentation</a> a quelques exemples qui peuvent t'intéresser.</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Création d&#39;un potin</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Hello ! Aujourd'hui, on va rajouter une nouvelle fonctionnalité à The Gossip Project ! Tu vas reprendre le projet d'hier puis appliquer ce que tu as vu aujourd'hui :</p>
+<ul>
+  <li>Déjà, tu vas mettre le projet sur Heroku pour que toute la terre entière puisse commérer.</li>
+  <li>Ensuite tu vas mettre à disposition un formulaire pour créer des potins.</li>
+  <li>Enfin, tu vas faire des tests pour les views de ton application.</li>
+</ul>
+
+
+<h2>2. Le projet</h2>
+
+<h3>2.0. Bases de données ?</h3>
+<p>Tu te souviens de ce que tu avais vu sur les bases de données et les validations de models ? Eh bien nous allons voir si tu n'es pas trop rouillé à ce sujet 🔨 Rajoute, dans les models, des validations aux attributs importants (spoiler : quasi tous) de ton application.</p>
+
+<p>On va t'aider pour les validations du model des potins :</p>
+
+<ul>
+  <li>la présence du <code>title</code> est obligatoire, ce dernier ne peut pas faire moins de 3 caractères ni plus de 14 caractères</li>
+  <li>la présence du <code>content</code> est obligatoire</li>
+</ul>
+
+<p>Ajoutes quelques tests de models pour ne pas perdre la main.</p>
+
+<h3>2.1. En production !</h3>
+<p>Maintenant, on va mettre en ligne l'application que tu as codée hier. <br>
+Attention, on te prévient : la première fois qu'on met en ligne, ça peut piquer, car on se tape un max de problèmes. Impossible pour nous de lister ici tous les soucis que tu risques de rencontrer en chemin : il faut en passer par là pour te former à Heroku. <br>
+Nos conseils : </p>
+<ul>
+  <li>Vas-y pas à pas au début pour ne pas oublier une étape de base (genre de passer les migrations) ;</li>
+  <li>Lis bien les messages d'erreur, essaye de les comprendre et sinon utilise Google et StackOverflow ;</li>
+  <li>Évidemment, appuie-toi sur la communauté et appelle à l'aide sur Slack ;</li>
+  <li>Surtout ne te décourage jamais : on y arrive toujours à push sur Heroku au bout d'un moment !</li>
+</ul>
+
+<h3>2.2. Création de potin</h3>
+<p>Cette partie sera la plus longue de la journée, car pour la première fois nous allons te faire jouer avec les controllers de Rails. C'est pas trop tôt ! ♥</p>
+
+<p>À partir de la page d'accueil qui recense tous les potins, l'application va inviter l'utilisateur à enregistrer son propre potin. En cliquant sur un lien, il va se retrouver sur une page contenant un formulaire de création de potin. Ce formulaire va demander le titre du potin, ainsi que son contenu. Une fois soumis, le formulaire va enregistrer le potin en base et l'utilisateur va être redirigé vers la page d'accueil.</p>
+
+<p>Le principe de base est simple, mais nous allons le pimenter en te demandant d'implémenter quelques concepts nouveaux : le helper <code>form_tag</code> de Rails et les alertes.</p>
+
+
+<h4>2.2.1. Préparation des routes, du controller et de la view</h4>
+<p>Pour créer un potin, il est nécessaire d'avoir un controller <code>gossips</code> contenant les méthodes <code>#new</code> et <code>#create</code>. <br>
+Il faut également les routes (en mode REST) qui pointent vers ces 2 méthodes. <br>
+Pour finir, il te faut la view qui va afficher le formulaire : <code>gossips/new.html.erb</code>. À noter qu'il n'existe pas de view <code>create.html.erb</code> : la méthode <code>#create</code> renvoie vers l'index.</p>
+<p>Je te laisse mettre tout ça en place ! <br>
+⚠️ <b>Attention</b> ⚠️ on l'a déjà dit mais à partir de maintenant on ne veut que des routes en <code>resources</code> ! Pas de route écrite à la main 👋</b>
+
+<h4>2.2.2. Formulaire de création</h4>
+<p>Maintenant que tu as ta view, et tes méthodes de prêtes, nous allons te demander de faire le formulaire de création de potins dans la view <code>new.html.erb</code>. En Rails, nous pouvons voir 4 types principaux de formulaires :</p>
+
+<ul>
+  <li>Les formulaires HTML (on en a parlé dans la ressource)</li>
+  <li>Les <code>form_tag</code></li>
+  <li>Les <code>form_for</code></li>
+  <li>Les formulaires via la gem <a href="https://github.com/plataformatec/simple_form" target="_blank">simple_form</a></li>
+</ul>
+
+<p>Pour cet exercice, nous allons te demander d'utiliser <code>form_tag</code>, très adapté quand on débute. Nos amis de LaunchSchool ont fait <a href="https://launchschool.com/books/demystifying_rails/read/form_helpers#formtag" target="_blank" class="text-primary">un bon tuto</a> sur form_tag, et tu peux checker <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html#method-i-form_tag" target="_blank" class="text-primary">la doc de form_tag</a>.</p>
+
+<p>Ton formulaire doit demander le <code>title</code> ainsi que le <code>content</code> du potin que tu vas créer. Bien entendu, quand tu valides le formulaire, ce dernier doit partir à la méthode <code>#create</code> de ton controller de potins.</p>
+
+
+<h4>2.2.3. Controller</h4>
+<h5>2.2.3.1. def create</h5>
+<p>Maintenant que nous avons fait un formulaire qui demande ce que l'on veut récupérer, et qui l'envoie à la méthode <code>#create</code> de notre controller, il faut que ce dernier fasse son taff. Le résultat que l'on veut, en termes d'expérience utilisateur, est le suivant :</p>
+
+<ul>
+  <li>L'utilisateur est sur une magnifique page où il doit remplir un formulaire. Il le remplit et le soumet.</li>
+  <li>De là, 2 cas sont possibles:</li>
+  <ol>
+    <li><b>Si le contenu du formulaire est accepté</b> et que l'objet est bien créé en base, l'utilisateur est redirigé vers une nouvelle page HTML avec, en haut, un bandeau VERT disant un truc du genre "The super potin was succesfully saved !" (c'est ce qu'on appelle une alerte)</li>
+    <li><b>Si le contenu du formulaire est refusé</b> (objet non créé en base, car il manque un champ ou alors le contenu n'est pas valide, etc.), l'utilisateur retourne à nouveau sur la page du formulaire avec, en haut, un bandeau ROUGE disant un truc du genre "Error : you need to complete this field / the title must be at least 3 characters longue / etc." (c'est un autre type d'alerte)</li>
+  </ol>
+</ul>
+
+<p>Le boulot de ton controller est d'arriver à coordonner ceci. En gros, il va faire la chose suivante :</p>
+
+<ul>
+  <li>Il va récupérer les informations du formulaire et essayer d'en faire une instance de ton model et de la sauver.
+  <ul>
+    <li>le model va soit dire "tout va bien j'ai réussi à créer mon instance 👌"...</li>
+    <li>… ou alors il va dire "ROLLBACK" "hey ! les validations ne sont pas passées, je te renvoie une ou plusieurs erreurs"</li>
+  </ul></li>
+  <li>Si l'instance est sauvegardée en base de données, le controller va rediriger vers la page index.</li>
+  <li>Si le model n'arrive pas à sauvegarder ton instance, il va rester sur la page du formulaire pour que l'utilisateur ré-essaye de le remplir sans erreur.</li>
+</ul>
+
+<p>Pour la création d'une instance, <b>un controller ne fera jamais plus</b>. Rappelle-toi : Fat model Skinny controller. Son taf est de récupérer les informations, d'appeler les bons services, puis de faire les redirections.</p>
+
+<p>Bref, voici le squelette de la méthode <code>#create</code> :</p>
+
+<pre><code class="language-ruby">def create
+  @gossip = Gossip.new(xxx) # avec xxx qui sont les données obtenues à partir du formulaire
+
+  if @gossip.save # essaie de sauvegarder en base @gossip
+    # si ça marche, il redirige vers la page d'index du site
+  else
+    # sinon, il render la view new (qui est celle sur laquelle on est déjà)
+  end
+end</code></pre>
+
+<p>Pour info, ce squelette convient à environ 100 % des méthodes <code>#create</code> des controllers de Rails. N'essaie pas de sortir des clous de ce squelette, il y aurait 100 % de chance que ce soit faux 😉. Tout ce que tu veux mettre en plus devra aller dans le model.</p>
+
+<p>⚠️Pour le moment nous ne gérons pas l'authentification des utilisateurs. Or chaque potin doit avoir un auteur en base ! Pour palier à ça, nous allons faire une petite astuce : tu vas créer (en console) un utilisateur nommé <code>anonymous</code> puis faire en sorte que tous les potins créés dans la view <code>new</code> soient systématiquement associés à cet utilisateur.</p>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Dis donc Jamy, c'est quoi la différence entre <code>redirect_to</code> et <code>render</code> ? Pourquoi je fais l'un et pas l'autre ?</b><br>
+        <code>redirect_to</code> va passer par la route sélectionnée, donc ton app repart sur un controller, sa méthode, etc.  <br>
+        Par contre <code>render</code>, ne fait qu'afficher une view tout en gardant les variables disponibles (notamment <code>@gossip</code>). Et ça, ça te permet de faire dans ta view :</p>
+        <pre><code class="language-html">&lt;% if @gossip.errors.any? %>
+  &lt;p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :&lt;/p>
+  &lt;ul>
+    &lt;% @gossip.errors.full_messages.each do |message| %>
+      &lt;li>&lt;%= message %>&lt;/li>
+    &lt;% end %>
+  &lt;/ul>
+&lt;% end %></code></pre>
+        <p>Et cela affichera les erreurs que tu as si durement codées dans les validations de tes models 🙌</p>
+    </div>
+  </div>
+</div>
+
+<p><b>Et voilà, maintenant on t'invite à remplir le controller et coder ta méthode <code>create</code> pour qu'elle fonctionne</b>. <br> Pour le moment, n'affiche pas d'alerte de succès ou de réussite : on cherche juste à sauver en base puis renvoyer vers l'index en cas de succès ou recharger le formulaire en cas d'échec. <br>
+Nous te laissons délibérément avec peu d'information, pour que tu cherches un peu sur le net comment tout articuler.</p>
+
+<h5>2.2.3.2. Alerte générale</h5>
+<p>Comme décrit plus haut, les alertes permettent de donner à l'utilisateur l'information qu'un formulaire a été soumis avec succès (un objet a été sauvé en base) ou bien qu'il y a eu un souci (l'utilisateur doit revoir le formulaire).</p>
+
+
+<p>Commence donc par afficher dans les views des petits messages qui informe l'utilisateur du succès (ou non) de son formulaire.</p>
+<p>Une fois que tu as fait cela, essaye d'afficher les messages dans une <a href="https://getbootstrap.com/docs/4.2/components/alerts/" target="_blank">belle alerte Bootstrap</a>. Maintenant il n'y a plus de doute : l'utilisateur sait quand il a réussi (alerte VERTE) ou quand ça a raté (alerte ROUGE).</p>
+
+
+
+<h3>2.3. Tests de views</h3>
+<p>Maintenant ajoute un test pour la view de la page d'accueil, puis un test pour la view de la page de création de potin.</p>
+
+<h2>3. Rendu attendu</h2>
+<p>Une amélioration de The Gossip Project : on peut enfin créer un potin sans passer par le seed ni la console !</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

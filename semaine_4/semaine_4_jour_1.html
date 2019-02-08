@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":1,"applicationTime":150,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Bca1b3ikAglGnPc3uYrO6StwqTnlPA3WzzXMmSg7Zu+Ku88rgQsclFHmZNKvz19QG83VMdNP0kBCjNqJd7b4XQ==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Franck Sinatra</h2>
+      <h4 class="text-center">Initiation à Rails</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Initiation à Rails
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Franck Sinatra</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                            <li>
+                                <a class="selected" style="left:120px;" data-toggle="tooltip" data-placement="top" title="Franck Sinatra" href="/dashboard/weeks/4/days/1?locale=fr">
+                                    Lun
+                                        <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/4/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/4/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/4/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+    <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/4/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Sinatra</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h3>1. Introduction</h3>
+<p>Dans cette ressource, nous allons te montrer les bases de Sinatra, un framework Ruby conçu pour coder des applications web. C'est un framework plus bas-niveau (= faisant intervenir des processus et programmes moins élaborés) que Ruby on Rails et c'est parfait au début pour comprendre les rouages d'une application web. Par contre on ne l'utilisera pas longtemps car Sinatra montre vite ses limites quand on veut faire des applications plus complexes. </p>
+
+<p>Sinatra se présente tout simplement sous la forme d'une gem (tout comme Rails). Allez Sinatra, Fly me to the moon 🚀 !</p>
+
+
+<h3>2. Historique</h3>
+<p>Sinatra est une bibliothèque Ruby open source qui permet de faire des applications web. Elle a été créée en 2007 (donc deux ans après Rails) par un certain Blake Mizerany dans le but de créer des applications, en mode ultra minimal, sans effort. Sinatra ne suit pas le modèle MVC : il laisse les utilisateurs faire un choix d'architecture logicielle web.</p>
+
+<p>Et sinon : "oui". Sinatra est nommée ainsi à cause de Franck Sinatra 🎤 ☔</p>
+
+<h3>3. La ressource</h3>
+
+<p>On va construire ensemble une application ultra basique qui te permettra de découvrir le fonctionnement de Sinatra.</p>
+
+<p>Une grosse fonctionnalité de Sinatra est de <b>pouvoir lancer un serveur local (sur ton ordi) en Ruby</b>. Le rôle d'un serveur c'est, grosso modo, de recevoir des requêtes HTTP et de retourner en réponse des fichiers (HTML, CSS, JS, etc.). Par exemple si tu vas sur https://www.facebook.com/, le serveur de Facebook va faire "hey j'ai reçu une requête de type GET sur ma page portant l'URL '/'. Je vais donc renvoyer le code HTML et CSS qui correspond !".</p>
+
+<p>Pour info, certaines requêtes ne donnent pas lieu à l'envoi de fichiers HTML ou CSS. Par exemple si tu vas sur <a href="http://www.omdbapi.com/?t=pulp+fiction&apikey=5c030292" target="_blank">ce lien</a>, tu vas voir dans le code source que le site t'a renvoyé un JSON.</p>
+
+<p>Bref, quand tu vas sur facebook.com, une page s'affiche sur ton navigateur web, car il interprète les fichiers HTML/CSS obtenus. Si le site est statique (un blog de base par exemple), chaque visiteur reçoit les mêmes fichiers HTML/CSS (les mêmes articles du blog). Par contre si le site est dynamique, comme Facebook, la page affichée pour toi (qui est connecté à ton compte) sera différente de la mienne (si je suis connecté), ou de celle d'une personne non connectée. C'est parce que les serveurs de Facebook génèrent leurs réponses HTML / CSS de manière dynamique et en fonction de l'utilisateur qui navigue sur le site. <br>
+Avec Sinatra, tu vas pouvoir faire de même et générer des sites web dynamiques où la réponse HTML / CSS dépendra du code que tu vas écrire ! Allez, on se lance dans notre premier site web.</p>
+
+<h4>3.1 Hello World !</h4>
+<p>Tu vas lancer ton premier serveur et il aura pour rôle de faire une réponse statique : un message simple. Commence par créer un dossier <code>hello_world_sinatra</code> qui contiendra deux fichiers : un <code>Gemfile</code> et un fichier <code>app.rb</code>.</p>
+
+<h5>Gemfile</h5>
+<p>Le Gemfile va contenir notre version de Ruby habituelle, ainsi que <code>gem 'sinatra'</code>. Je te laisse faire le <code>bundle install</code>.</p>
+
+<h5>app.rb</h5>
+<p>Voici ce que va contenir le fichier <code>app.rb</code> : </p>
+<pre><code class="language-ruby">require 'sinatra'
+
+get '/hello' do
+  '&lt;h1>Hello world ! &lt;/h1>'
+end</code></pre>
+
+<h5>C'est prêt !</h5>
+<p>On t'avait prévenu : Sinatra c'est tout basique. 🤓 </p>
+<p>Pour tester ton programme, tu n'as qu'à exécuter ton programme <code>$ ruby app.rb</code>. Le terminal va balancer un message du style :</p>
+<pre><code class="language-bash">== Sinatra (v2.0.4) has taken the stage on 4567 for development with backup from Puma
+Puma starting in single mode…
+* Version 3.12.0 (ruby 2.5.1-p57), codename: Llamas in Pajamas
+* Min threads: 0, max threads: 16
+* Environment: development
+* Listening on tcp://localhost:4567
+Use Ctrl-C to stop</code></pre>
+
+<p>Prends le temps de le lire 2 secondes. En gros, ce qu'il faut comprendre c'est qu'il te dit "j'ai lancé Puma (un serveur), c'est cool", il t'informe qu'il écoute d'éventuelles requêtes HTTP sur le port <code>localhost:4567</code>, et que tu peux arrêter le serveur en faisant <code>Ctrl-C</code> (ne fais pas ça pour le moment). <br>
+On va aller voir ce que le serveur Puma nous répond si on va sur <a href="http://localhost:4567/hello" target="_blank">http://localhost:4567/hello</a> avec notre navigateur. Et là, SURPRISE, il t'affiche un gros "Hello world !" et si tu regardes le code source de la page, tu verras qu'il correspond exactement à <code>app.rb</code> et son code : <code>&lt;h1>Hello world !  &lt;/h1></code>.</p>
+
+<h5>Que s'est-il passé ?</h5>
+<p>C'est la magie de Sinatra : dès que tu l'exécutes, il lance un serveur qui va réagir en fonction du code que tu as écrit. Ainsi le serveur va tourner en local (sur ton ordi), et s'il voit passer une requête sur le port où il est en écoute (localhost:4567 dans notre cas), il exécute le code correspondant à cette requête et produit un fichier HTML en fonction. Là, notre code lui dit "si quelqu'un va à l'adresse <code>/hello</code> en GET, renvoie-lui ce code HTML : <code>&lt;h1>Hello world !  &lt;/h1></code>".</p>
+
+<h6>GET ?</h6>
+<p>Il existe <b>plusieurs types de requêtes HTTP</b>, et nous allons en voir deux aujourd'hui : GET et POST. Quand tu saisis l'adresse "www.facebook.com" dans ton navigateur web, c'est en fait un GET que tu lui demandes de faire. Tu dis au serveur de Facebook : "Voici une URL, maintenant balance-moi le contenu correspondant". <br>
+En revanche quand tu te login sur facebook.com, tu envoies plus qu'une simple URL. En effet, en te login, tu soumets un formulaire avec de l'info dedans : ton e-mail et ton mot de passe. Dans ce cas, c'est un POST où tu dis au serveur de Facebook : "voici les informations demandées, maintenant traite-les et balance-moi du contenu en retour".</p>
+
+<p>Pour faire simple, une requête GET c'est juste afficher le contenu d'une URL donnée. Une requête POST c'est envoyer le contenu d'un formulaire au serveur et obtenir une réponse en retour. <br>
+Pour schématiser, GET pourrait correspondre à <code>puts</code> et POST pourrait correspondre à <code>gets.chomp</code>.</p>
+
+<p>Pour notre exemple, si j'avais mis dans le code <code>post '/hello' do --- end </code>, cela voulait dire que si quelqu'un complétait un formulaire sur la page <code>/hello</code>, Sinatra aurait exécuté le code entre <code>do</code> et <code>end</code>. Et plus la partie en <code>get '/hello'</code>.</p>
+
+<h6>Les routes</h6>
+<p>Les routes sont les URL qui vont entraîner une réponse du serveur et donc une action. En écrivant <code>get '/hello' do ---- end</code>, tu as mis une route sur le GET de <code>/hello</code>. Cela indique au serveur : "si quelqu'un va sur <code>/hello</code>, voilà le code à exécuter". <br>
+Par contre, si tu vas sur une URL non prévue (exemple : <a href="http://localhost:4567/bonjour" target="_blank">http://localhost:4567/bonjour</a>), Sinatra va te renvoyer une page HTML qui dit "hey, y'a pas de route à cette adresse-là". En gros, comme tu ne lui as pas expliqué quoi faire si quelqu'un va sur <code>/bonjour</code>, il est perdu et renvoie une erreur.</p>
+
+<p>Maintenant on va s'amuser à paramétrer cette route <code>/bonjour</code> qui était jusque-là inconnue. Ajoute dans ton fichier <code>app.rb</code> le code suivant :</p>
+
+<pre><code class="language-ruby">get '/bonjour' do
+  '&lt;h1>Bonjour, monde !&lt;/h1>'
+end</code></pre>
+
+<p>Pour que cette nouvelle route soit prise en compte, il faut que tu coupes le serveur (CTRL-C) et relances <code>$ ruby app.rb</code>. Maintenant, retourne sur <a href="http://localhost:4567/bonjour" target="_blank">http://localhost:4567/bonjour</a> : Sinatra sait quoi faire et va t'afficher "Bonjour, monde !".</p>
+
+
+
+<h3>4. Pour aller plus loin</h3>
+<p>Bon, un programme statique qui affiche Hello world c'est vu, revu, classique. Ce que nous allons faire ensuite, c'est utiliser ces bases pour faire une application dynamique, qui interagit avec l'utilisateur. Nous allons ranger le programme dans un beau dossier bien ordonné et faire des requêtes POST qui traiteront de l'information.</p>
+
+<p>Voici <a href="http://sinatrarb.com/intro.html" target="_blank">la doc de la gem Sinatra</a>, que tu peux survoler si le cœur t'en dit.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Une application en Sinatra</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h3>1. Introduction</h3>
+<p>Maintenant que tu sais faire des applications en Ruby pur comme un grand, nous allons te proposer de faire une application en Sinatra pur comme un grand ! Ce sera l'occasion de te prouver à toi même que tu commences à faire de belles choses avec les notions que tu as.</p>
+
+<p>Aujourd'hui, nous allons te demander de faire The Gossip Project en Sinatra. Grosso modo, tu vas refaire l'application de la semaine dernière, mais dans les views, au lieu d'avoir <code>puts</code> et <code>gets.chomp</code>, tu auras du code HTML. Ainsi, et bien tu auras une application web toute belle qu'il ne resterait qu'à mettre en production sur un serveur 😇 Merveilleux, n'est-ce pas ?</p>
+
+<p>Pour ceux qui ont la mémoire courte, voici le pitch de The Gossip Project. <br>
+=> The Hacking Project est une chouette formation, où la communauté est reine. Il se passe plein de choses à Paris, Lyon, Montpellier, Bordeaux et c'est dur de connaitre tous les ragots. Nous allons donc créer une application où tout le monde va pouvoir ajouter des potins sur ses camarades moussaillons.</p>
+
+<p>Dans les grande lignes, voici les fonctionnalités principales de notre application web : </p>
+<ul>
+  <li>La page d'accueil du site affichera tous les potins que nous avons en base.</li>
+  <li>Cette page d'accueil donnera un lien pour un formulaire où quiconque pourra ajouter un potin en base.</li>
+  <li>Chaque potin aura une page dédiée.</li>
+</ul>
+
+<p>Cette application sera très bas-niveau, c'est à dire que nous allons quasiment tout faire à la main. Ca va t'obliger à réinventer la roue en organisant bien ton programme, on gérant toi-même la base de données, etc. Mais, après avoir passé du temps les mains dans le cambouis, tu seras armé pour dompter Rails où tout est automatisé (sauf le café).</p>
+
+<p>On va t'accompagner dans ce travail en mode "pas à pas" et à la fin, voilà ce que tu auras appris :</p>
+<ul>
+  <li>Utiliser un serveur ;</li>
+  <li>Lancer une application en Sinatra, et bien ranger le code en MVC ;</li>
+  <li>Définir des routes et endpoints dans ton application ;</li>
+  <li>Utiliser les views pour gérer plus facilement le HTML / CSS ;</li>
+  <li>Créer et avoir une base de données ;</li>
+  <li>Récupérer de l'information à partir de formulaires et la stocker en base de données.</li>
+</ul>
+
+<h3>2. Le projet</h3>
+<h4>2.1. Architecture et rangement</h4>
+<p>Dans ce chapitre, nous allons voir comment avoir un dossier Sinatra bien organisé. On insiste dessus mais il n'est jamais inutile de vous rafraîchir la mémoire : vous allez commencer à faire programmes complexes et longs, basés sur plusieurs gems et framework. Sans un rangement propre, une personne extérieur à votre cerveau ne pourra pas la comprendre rapidement et simplement. Même vous dans 3 mois vous vous y perdrez en revenant sur le projet. Donc on va investir sur l'avenir et appliquer les bonnes pratiques d'un développeur professionnel qui veut pouvoir travailler en équipe et produire du code maintenable à long terme. <br>
+On va donc partir sur un dossier bien rangé en architecture MVC, avec chaque fichier qui a un but unique, et des dossiers qui suivent la convention. C'est parti !</p>
+
+
+
+<h5>1.1. Création des premiers fichiers</h5>
+<p>Évidemment, pour commencer, nous allons créer un dossier <code>the_gossip_project</code> qui contiendra notre application. Comme pour l'application précédente, nous allons créer un fichier <code>Gemfile</code>, ainsi qu'un fichier <code>controller.rb</code>. <code>Gemfile</code> devra appeler la gem <code>sinatra</code> ainsi que notre version habituelle de Ruby. Le fichier <code>controller.rb</code> va nous permettre de finir la classe du controller sous le nom <code>ApplicationController</code>. Il doit contenir les lignes suivantes :</p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require
+
+class ApplicationController &lt; Sinatra::Base
+  get '/' do
+    "&lt;html>&lt;head>&lt;title>The Gossip Project&lt;/title>&lt;/head>&lt;body>&lt;h1>Mon super site de gossip !&lt;/h1>&lt;/body>&lt;/html>"
+  end
+
+  run! if app_file == $0
+end</code></pre>
+
+<p>Nous allons expliquer ces lignes de code, mais d'abord exécute l'application <code>controller.rb</code> après avoir fait l'installation du serveur. Si tu vas sur <a href="http://localhost:4567/" target="_blank">http://localhost:4567/</a>, cela devrait afficher un site avec le code source correspondant.</p>
+
+
+<h5>1.2. Les lignes du fichier controller.rb</h5>
+<p>Nous allons expliquer ces lignes unes à unes. En route : ⛵️</p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require</code></pre>
+
+<p>Tu connais déjà ces lignes : elles appellent le bundler et permettent de lire le Gemfile. Ainsi, pas besoin de mettre partout des <code>require 'gem'</code>.</p>
+
+<pre><code class="language-ruby">class ApplicationController &lt; Sinatra::Base
+  # blabla
+end</code></pre>
+<p>Dans cette partie, nous avons crée une classe <code>ApplicationController</code> qui hérite (<code><</code>) de la classe <code>Sinatra::Base</code>. L'héritage entre classe signifie que <code>ApplicationController</code> aura toutes les fonctionnalités que propose la classe <code>Sinatra::Base</code>. En gros cela donne à <code>ApplicationController</code> toutes les fonctionnalités de base de Sinatra.</p>
+
+<pre><code class="language-ruby">get '/' do
+  # blabla
+end</code></pre>
+<p>Ça on l'a déjà vu, cela dit "si quelqu'un va sur l'adresse '/', exécute ce code !"</p>
+
+<pre><code class="language-ruby">"&lt;html>&lt;head>&lt;title>The Gossip Project&lt;/title>&lt;/head>&lt;body>&lt;h1>Mon super site de gossip !&lt;/h1>&lt;/body>&lt;/html>"</code></pre>
+<p>Doit-on vraiment expliquer cette partie ? C'est le code HTML de la page à afficher, bien sûr.</p>
+
+<pre><code class="language-ruby">run! if app_file == $0</code></pre>
+<p>Cette ligne est assez mystérieuse pour toi, mais en gros, elle permet d'éxecuter le code de la classe sans avoir à écrire un <code>ApplicationController.new.perform</code> en bas du fichier. Si tu te rappelles bien, exécuter un fichier qui définit une classe (et c'est tout), et bien ça ne donne rien... Il faut forcément l'exécution d'une méthode en bas de la classe pour lancer la machine ! C'est ce que fait cette ligne.</p>
+
+<p>Voici donc à quoi ressemble notre dossier de projet :</p>
+
+<pre><code class="language-shell">the_gossip_project
+│
+├── .git, README, toussa
+├── Gemfile
+├── Gemfile.lock
+└── controller.rb</code></pre>
+
+
+<p>On poursuit le pas à pas pour étoffer un peu notre programme.</p>
+
+<h5>1.3. Un vrai fichier de serveur</h5>
+<p>Bon si tu relis le contenu de ton fichier <code>controller.rb</code>, tu devrais avoir le sentiment qu'il y a une verrue au milieu de ton code. C'est chelou ce <code>run! if app_file == $0</code> non? Maintenant que l'on sait que faire du code propre, c'est primordial, on voudrait bien pouvoir séparer le code qui défini nos classes/variables/méthodes du code qui ne sert qu'à l'exécuter. On va créer un fichier dont la mission est de lancer le serveur.</p>
+
+<h6>1.3.1. Rack</h6>
+<p>Il existe un standard qui s'appelle <a href="https://rack.github.io/" target="_blank">Rack</a> et qui lance des serveurs Ruby. C'est parfait et nous allons l'utiliser.</p>
+
+<h6>1.3.2. config.ru</h6>
+<p>Nous allons créer un fichier <code>config.ru</code> qui contient les informations nécessaires au lancement de notre serveur. Promis, son extension russe ne cache rien de louche : un fichier <code>.ru</code> est juste un fichier <i>rack up</i>, qui est un fichier Ruby.Crée donc un fichier <code>config.ru</code> et mets-y les lignes suivantes :</p>
+
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require
+
+require './controller'
+
+run ApplicationController</code></pre>
+
+<p>Les lignes sont plutôt explicites : on demande simplement au serveur d'exécuter le contenu de la classe <code>ApplicationController</code> 🎭.<br>
+Avant de lancer le serveur, enlèves les lignes de <code>controller.rb</code> qui sont en doublons avec <code>config.ru</code> : les lignes qui appellent le bundler ainsi que la ligne <code>run! if app_file == $0</code> qui ne sert plus à rien. <br>
+Haaaa. Notre fichier <code>controller.rb</code> est tout propre maintenant : il ne contient plus que les infos de la classe qu'on définit et ça, c'est cool 🤓</p>
+
+<h6>1.3.3. Rackup</h6>
+
+<p>Maintenant on va lancer le serveur. Exécute la commande <code>$ rackup</code>, ce qui devrait lancer le serveur. Si tu regardes les lignes s'affichant à l'exécution, tu verras que le port d'écoute à changer. Maintenant on est sur <a href="http://localhost:9292/" target="_blank">http://localhost:9292/</a> car Rackup se met par défaut sur le port <code>9292</code>, contrairement au port <code>4567</code> de Sinatra. <br>
+Comme c'est la convention de se mettre sur <code>4567</code> pour une app Sinatra et que nous sommes dans une app Sinatra, tu peux te brancher sur le port <code>4567</code> en faisant <code>$ rackup -p 4567</code> 😎</p>
+
+
+<h5>1.4. Construire l'architecture MVC</h5>
+<h6>1.4.1. Les views</h6>
+<p>Allez, on poursuit la clarification de notre architecture. La prochaine étape, quand on regarde le code de <code>controller.rb</code>, c'est de se dire "purée, c'est dégueu d'avoir du HTML sur une seule ligne et au milieu de mon code. Ca va être affreux le jour où j'ai des 10 pages différentes qui font 1000 lignes de HTML."<br>
+On va donc utiliser la fonctionnalité des views de Sinatra, et mettre notre HTML dans un fichier à part. Crée donc un dossier <code>views</code> avec dedans un premier fichier <code>index.erb</code>. Ce fichier va contenir le code HTML de la view <code>index</code> : c'est la view qui liste tous les gossip en base. Au passage, sache qu'un fichier <code>.erb</code> est un fichier HTML dans lequel tu peux y rajouter du Ruby. En mélangeant les deux langages, tu vas pouvoir afficher en HTML des trucs du genre <code>user.first_name</code>, ce qui est plutôt pratique pour dire "Bienvenue Félix" quand il se connectera à sa page profil 😘</p>
+
+<p>Bref, voici ce que le fichier <code>index.erb</code> doit contenir : </p>
+<pre><code class="language-ruby">&lt;html>
+  &lt;head>
+    &lt;title>The Gossip Project&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Mon super site de gossip, du dossier views !&lt;/h1>
+  &lt;/body>
+&lt;/html></code></pre>
+
+<p>Haaaaa (soulagement)....du HTML indenté ! C'est quand même plus agréable à lire qu'un gros blob sur une ligne non ? Bon maintenant on va faire pointer la bonne route de <code>controller.rb</code> vers ce fichier en disant "si quelqu'un va sur '/', affiche la view <code>index.erb</code>". <br>
+Dans le fichier <code>controller.rb</code>, voici comment tu dois modifier la route :</p>
+
+<pre><code class="language-ruby">get '/' do
+  erb :index
+end</code></pre>
+
+<p>Tout simplement ! Et si tu vas  <a href="http://localhost:4567/" target="_blank">sur la page d'accueil de ton serveur</a>, tu devrais avoir cette nouvelle page, qui dit qu'elle provient du dossier views.</p>
+
+<p>Là, certains diront <b>"Elle n'a pas changé 😢"</b></p>
+
+<p>Damnit ! En fait c'est tout bête, mais étant donné que tu as changé le fichier <code>controller.rb</code>, la modification ne sera pas prise en compte tant que le fichier <code>config.ru</code> tourne toujours (il ne recharge pas automatique la dernière version du fichier <code>controller.rb</code>). Il faut donc quitter le serveur et le redémarrer. <br>
+Ce n'est pas pratique. On va donc ajouter une surcouche à Rackup qui recharge automatiquement l'application en cas de modification. Cette surcouche est <a href="https://github.com/rtomayko/shotgun" target="_blank">une gem dénommée shotgun</a>. Comme d'hab,on l'ajoute dans le <code>Gemfile</code> en faisant <code>gem 'shotgun'</code>, puis, après avoir fait l'installation du bundle, on peut l'utiliser en passant la commande <code>$ shotgun -p 4567</code> dans le terminal. À toi le nouveau serveur qui déchire !</p>
+
+
+<h6>1.4.2. Une vraie arborescence</h6>
+<p>Allez, promis, ce sont les derniers changements avant de s'attaquer au coeur du code 😇. Notre application devrait ressembler à ceci pour le moment :</p>
+
+<pre><code class="language-shell">the_gossip_project/
+├── Gemfile
+├── Gemfile.lock
+├── controller.rb
+├── config.ru
+└── views
+    └── index.erb</code></pre>
+
+<p>C'est pas trop mal, mais ça ne respecte pas les standards que tu connais hein ? Tu l'as vu direct, il manque le dossier <code>lib</code> qui évite qu'on entasse tout à la racine comme des sagouins. Fais donc les changements nécessaires pour avoir l'arborescence suivante : </p>
+
+<pre><code class="language-shell">the_gossip_project/
+├── Gemfile
+├── Gemfile.lock
+├── config.ru
+└── lib
+    ├── views
+    │   └── index.erb
+    └── controller.rb</code></pre>
+
+<p>Ainsi, notre application suit mieux la convention MVC maintenant : ce sera plus pratique pour comprendre ce qu'elle fait. Dernier détail, pour la faire marcher, il faut dire à notre fichier <code>config.ru</code> de prendre en compte tous les fichiers dans le dossier <code>lib</code>. On va modifier deux lignes, et voici ce à quoi il devrait ressembler :</p>
+<pre><code class="language-ruby">require 'bundler'
+Bundler.require
+
+$:.unshift File.expand_path("./../lib", __FILE__)
+require 'controller'
+run ApplicationController</code></pre>
+
+<p>Si tu lances le serveur avec <code>$ shotgun -p 4567</code>, tout devrait fonctionner normalement. On a les bases pour une application solide, bien rangée. Maintenant on peut passer à la suite 💪.</p>
+
+
+
+
+
+
+
+<h4>2.2. Les premières views</h4>
+
+<h5>2.2.1. Index</h5>
+<p>Notre view index doit afficher la liste des gossips, ainsi qu'un lien pour créer un gossip. Pour le moment, notre base de données est vide donc on va se focaliser sur l'ajout d'un lien pour créer un nouveau gossip.</p>
+
+<p>Par convention, quand on veut créer une instance d'une classe (ici, un nouveau potin de la classe <code>Gossip</code>), on va sur un lien qui suit cette structure<code>/nom_classe_au_pluriel/new/</code>. Ainsi, pour créer un potin, nous voulons que ça se passe sur <code>gossips/new/</code>. <br>
+Enfin, sache que pour créer un lien qui pointe vers cette adresse, il te suffit d'ajouter un tag HTML selon ce modèle <code>&lt;a href="/gossips/new/">le texte du lien&lt;/a></code>. En effet, Sinatra est malin et comprendra qu'il faut renvoyer via l'URL complète <code>http://localhost:4567/gossips/new/</code>. Inutile de préciser le localhost donc. C'est même un très mauvaise idée car si tu décides de changer le port d'écoute du serveur (par exemple, tu oublies de mettre <code>-p 4567</code> et ça pointe vers <code>9292</code>), plus aucun lien ne marche sur ton site 😄.</p>
+
+<p>Tu vas coder une view <code>index</code> simple : souhaite donc la bienvenue à ton utilisateur, dis-lui que la liste des potins arrive bientôt, et qu'en attendant, il peut <a href="http://localhost:4567/gossips/new/" target="_blank">aller créer un nouveau potin</a>. Insère donc le lien pour qu'il aille sur <code>/gossips/new/</code>. <br>
+Si tu cliques sur ce lien, Sinatra devrait te renvoyer une erreur pour te dire qu'il n'y a pas de routes sur cette adresse. Et bien créons-la !</p>
+
+<h5>2.2.2. A new gossip !</h5>
+<h6>Les routes</h6>
+<p>Il faut donc commencer pas paramétrer la route pour que le serveur pointe vers la view <code>new_gossip.erb</code> quand on va sur <code>/gossips/new/</code>. Mets en place la route en suivant le modèle de ta première route et crée dans le dossier <code>views</code> un fichier <code>new_gossip.erb</code>. Puis fais pointer la route <code>/gossips/new/</code> vers cette nouvelle view depuis le controller.</p>
+
+<h6>La view</h6>
+<p>Pour cette view, nous allons insérer un <a href="https://www.w3schools.com/htmL/html_forms.asp" target="_blank">formulaire</a> ultra simple. Comme vu dans la ressource, un formulaire permet d'envoyer de l'information vers une adresse précise via une requête POST. Pour notre exemple, le formulaire devra envoyer le potin en POST à l'adresse <code>/gossips/new/</code>. Nous aimons bien faire réfléchir les moussaillons à THP, mais on va te guider encore un peu en te donnant le code de la page <code>new_gossip.erb</code> : </p>
+
+<pre><code class="language-ruby">&lt;html>
+  &lt;head>
+    &lt;title>Créer un potin&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Crée un potin !&lt;/h1>
+    &lt;p>Balance ton potin via le formulaire ci-dessous&lt;/p>
+    &lt;form action='/gossips/new/' method='POST'>
+      Balance ton blase : &lt;input type='text' name='gossip_author'/>&lt;br/>
+      Balance ton potin : &lt;input type='text' name='gossip_content'/>&lt;br/>
+      &lt;input type='submit'/>
+    &lt;/form>
+  &lt;/body>
+&lt;/html></code></pre>
+
+<p>Maintenant on va tester. Va sur <a href="http://localhost:4567/gossips/new/" target="_blank">la page de création de potin</a>, puis clique sur <code>submit</code>. Sinatra va t'envoyer bouler car tu n'as pas créé de route pour le POST de <code>/gossips/new/</code> alors même que tu as une route pour le GET de cette même URL. <br>
+Et oui, pour une même URL, l'action sera différente entre un GET et un POST. En GET, tu vas dire à Sinatra : "hey, si quelqu'un va sur /gossips/new/ envoie lui les view <code>new_gossip</code>", cependant en POST, ce sera plutôt un truc du genre "hey bro, récupère les informations du formulaire et convertis-les en une création de gossip dans ma base".</p>
+
+<p>Nous allons paramétrer donc cette route, puis nous irons créer un Gossip en base de donnée. Dans le fichier <code>controller.rb</code>, mets-donc la route suivante :</p>
+
+<pre><code class="language-ruby">post '/gossips/new/' do
+  puts "Ce programme ne fait rien pour le moment, on va donc afficher un message en console"
+end</code></pre>
+
+<p>Si tu soumets le formulaire le programme ne t'affiche plus d'erreur de route, mais te renvoie une page blanche (c'est normal, puisque on ne lui a pas dit d'afficher une view). Si tu regarde la fenêtre de ton serveur, tu vas voir la phrase <i>"Ce programme ne fait rien pour le moment, on va donc afficher un message en console"</i>. C'est super intéressant, car : <br>
+1️⃣ cela veut dire que ta route marche car le <code>puts</code> est bien exécuté. <br>
+2️⃣ tu aurais pu exécuter autre chose qu'un <code>puts</code>. N'importe quoi d'autre en fait : par exemple, tu pourrais insérer tout ton programme de scrapping de cryptomonnaies pour qu'il soit exécuté au <code>submit</code> du formulaire.🐧</p>
+
+<p>Bref, maintenant, ce serait bien de pouvoir créer un Gossip quand on soumet le formulaire. Nous allons donc créer une classe <code>Gossip</code>, puis la sauvergarder dans une base de données maison. Chouette !</p>
+
+
+<h4>2.3. La classe Gossip et la base de données</h4>
+<p>Dans ce chapitre, nous allons voir comment créer un Gossip et l'ajouter en base de données. En gros, nous voudrions avoir dans notre fichier <code>controller.rb</code> un truc du genre :</p>
+<pre><code class="language-ruby">post '/gossips/new/' do
+  Gossip.new(les_entrées_du_gossip).save
+end</code></pre>
+
+<p><code>Gossip.new(les_entrées_du_gossip)</code> crée la nouvelle instance de <code>Gossip</code>. Et en lui appliquant un <code>.save</code>, on veut qu'elle soit inscrite dans la base de donnée. Donc mettons ça en place ! 🤠</p>
+
+<h5>2.3.1. La classe Gossip</h5>
+<p>Nous allons créer une classe <code>Gossip</code> (qui ne sera rien d'autre que notre model). Elle aura une méthode <code>#save</code> qui enregistrera dans une base de données l'objet sur laquelle elle est appliquée. Comme ça on stocke tous les potins, et puis y'aura juste à aller les chercher quand nécessaire.</p>
+
+<p>Crée dans le dossier <code>lib</code> un fichier <code>gossip.rb</code> qui contiendra le code de la classe <code>Gossip</code>. Pour le moment, on va se focaliser sur le fichier <code>gossip.rb</code>, et puis quand il sera fonctionnel, on le branchera au controller.</p>
+
+<p>Dans le fichier <code>gossip.rb</code>, crée la classe <code>Gossip</code> et ajoute-lui une méthode <code>#save</code> qui sera vide pour l'instant.</p>
+
+<h5>2.3.2. Lien avec la base de données</h5>
+<p>Ce que nous voulons faire, c'est qu'une action comme <code>instance_de_la_classe_gossip.save</code> enregistre en base de données le potin. Nous pouvons le faire avec JSON, CSV, SQL, ou même Google Spreadsheet. Je vais te montrer comment le faire en CSV car c'est le plus simple de mon point de vue. Choisi l'option que tu préfères mais sache qu'à terme, nous utiliserons de vraies bases de données en SQL.</p>
+
+<p>Comme tu le sais, une base de données ça se ranger dans un dossier <code>db</code> à la racine de notre application. Ainsi, voici à quoi va ressembler l'arborescence de notre application :</p>
+
+<pre><code class="language-shell">the_gossip_project
+├── Gemfile
+├── Gemfile.lock
+├── config.ru
+├── db
+│   └── gossip.csv
+└── lib
+    ├── controller.rb
+    ├── gossip.rb
+    └── views
+        ├── index.erb
+        └── new_gossip.erb</code></pre>
+
+<p>Avec les connaissances acquises semaine passée, tu devrais savoir comment faire pour que <code>gossip.rb</code> puisse écrire sur un CSV. Il te suffit de partir de ça pour faire la méthode <code>#save</code> ! <br>
+Juste au cas où, je te mets quand même à quoi elle devrait ressembler : </p>
+
+<pre><code class="language-ruby">def save
+  CSV.open("./db/gossip.csv", "ab") do |csv|
+    csv << ["Mon super auteur", "Ma super description"]
+  end
+end</code></pre>
+
+<p>Pour rappel, ces lignes se lisent ainsi : <br>
+1) Nous ouvrons le CSV en mode écriture (<a href="http://ruby-doc.org/core-2.0.0/IO.html#method-c-new-label-IO+Open+Mode" target="_blank">ab</a>) (le CSV a le path <code>db/gossip.csv</code>). <br>
+2) Nous insérons dedans une ligne avec deux colonnes. La première colonne a pour entrée le string <code>Mon super auteur</code> et la seconde colonne a le string <code>Ma super description</code>.</p>
+
+<p>Tu peux tester la méthode save pour vérifier que l'ajout d'une ligne "Mon super auteur, Ma super description" fonctionne. Maintenant nous allons donc brancher ceci à notre fichier <code>controller.rb</code>.</p>
+
+
+<h5>2.3.3. Dans l'application</h5>
+<p>Maintenant il faut s'arranger pour que quand quelqu'un soumet le formulaire, notre programme appelle la méthode <code>save</code> de la classe Gossip. Pour ceci, ajoute la ligne <code>Gossip.new.save</code> à la route POST concernée de notre fichier <code>controller.rb</code>. Avec <code>Gossip.new</code> on crée un nouvel objet Gossip et avec <code>.save</code> on lui applique la méthode save</p>
+
+<p>Essaye maintenant de soumettre le formulaire : le programme va t'envoyer bouler en te disant que la classe gossip n'existe pas. C'est juste qu'on a oublié de lier les deux classes entre elles : ajoutes tout en haut du programme <code>controller.rb</code> la ligne <code>require 'gossip'</code>.</p>
+
+<p>A présent, si tu soumets le formulaire, cela devrait ajouter une ligne dans notre csv. C'est –presque– exactement ce que l'on cherchait à faire ! Youpi !</p>
+
+<h5>2.3.4. Enregistrer avec des paramêtres dynamiques</h5>
+<p>Bon, là tu dois te dire "c'est cool son programme, mais ça enregistre à chaque <code>submit</code> la même ligne <i>Mon super auteur</i> et <i>Ma super description</i> dans le CSV. C'est un peu bidon". C'est parce que nous n'avons pas pris en compte les infos saisies par l'utilisateur ! Il faut rendre tout cela paramétrable en faisant un truc du genre <code>Gossip.new(author, content).save</code> pour que cela écrive dans le CSV le <code>author</code> et le <code>content</code>.</p>
+
+<p>Si tu as bonne mémoire, tu peux définir des variables d'instance dans ta classe <code>Gossip</code>. Ajoute donc deux variables d'instance <code>@author</code> et <code>@content</code> en les passant en paramètres dans l'initializer. Remarque : pas besoin de <code>attr_accessor</code> pour le moment ! <br>
+A présent, il te faut modifier la méthode <code>#save</code> pour qu'elle écrive non plus <code>"Mon super auteur"</code> et <code>"Ma super description"</code> mais plutôt <code>@author</code> et <code>@content</code> dans le CSV. </p>
+
+<p>Je te laisse passer les modifications. Tu peux tester ton résultat en mettant quelque chose comme <code>Gossip.new("super_auteur", "super gossip").save</code> dans le fichier <code>controller.rb</code> et en soumettant le formulaire (sans le remplir. Juste pour activer la route POST). Si cela ajoute une ligne dans le fichier <code>gossip.csv</code> avec les colonnes <code>super_auteur</code> et <code>super gossip</code>, c'est que tu as réussi !</p>
+
+<p>Waow ! Tu as réussi à créer une base de données qui se met à jour toute seule comme une grande, dans une application faite à partir de rien. C'est quand même sacrément solide 😇 Bon maintenant, ce qui serait top, ce serait de récupérer le contenu du formulaire et de l'enregistrer en faisant <code>Gossip.new(info_formulaire_1, info_formulaire_2).save</code>. Et bien c'est ce que nous allons voir !</p>
+
+<h4>2.4. Ajouter un Gossip à partir du front</h4>
+<p>Dans cette partie, nous allons apprendre à récupérer l'information du formulaire, puis de l'ajouter en base dans notre base.</p>
+
+<h5>2.4.1. Params mon doux params</h5>
+<p>Quand on fait du web, y'a une variable assez ultime qui s'appelle <code>params</code>. En gros, params est un hash qui contient de l'information que nous envoie l'utilisateur. Cela peut être une information quand il fait un GET (avec par exemple une URL du genre <code>/facebook.com/username</code>), ou alors un formulaire qu'il nous soumet avec un POST.</p>
+
+<p>Fais donc un test en écrivant un truc du genre :</p>
+
+<pre><code class="language-ruby">post '/gossips/new/' do
+  puts "Salut, je suis dans le serveur"
+  puts "Ceci est mon super params : #{params}"
+  puts "Trop bien ! Et ceci est ce que l'utilisateur a passé dans le champ gossip_author : #{params["gossip_author"]}"
+  puts "De la bombe, et du coup ça ça doit être ce que l'utilisateur a passé dans le champ gossip_content : #{params["gossip_content"]}"
+  puts "Ça déchire sa mémé, bon allez je m'en vais du serveur, ciao les BGs !"
+end</code></pre>
+
+<p>Mets quelque chose dans le formulaire, et soumets-le. Va voir ton terminal et serveur, et hop, magie, y'a plein de phrases trop cool qui s'affichent ! J'ai mis plein de <code>puts</code> partout, mais c'est pour insister sur un point : "dans le doute, mets des puts partout", qui te permet de debugger bien facilement un programme.</p>
+
+<h5>2.4.2. Créer un gossip</h5>
+<p>Maintenant, on va devoir s'arranger pour récupérer les informations qui nous intéressent et utiliser le code <code>Gossip.new(truc_1, truc_2).save</code> pour l'enregistrer dans notre base de données custom.</p>
+
+<p>Pour ceci, je t'invite à prendre les infos de <code>params</code> qui t'intéressent, et de sauvegarder avec la commande <code>Gossip.new(truc_1, truc_2).save</code>.</p>
+
+<p>Tu peux tester ton code en soumettant le formulaire et en comparant le fichier <code>gossip.csv</code>, et/ou en mettant des puts partout. Une fois que tu as réussi à faire marcher cela, et bien bravo ! Tu sais créer un formulaire, et enregistrer en base de données les informations de ce formulaire.</p>
+
+<h5>2.4.3. Rediriger vers l'accueil</h5>
+<p>Ton formulaire quand il est soumis dit à l'application "hey, récupère les informations et crée un gossip avec ceci". C'est tip top. Cependant, l'utilisateur n'a aucun retour de ceci. Ce serait bien de pouvoir revenir sur la page d'accueil une fois que le gossip a été créé.</p>
+
+<p>Et bien il existe une super commande qui s'appelle <code>redirect</code> et qui dit à Sinatra "hey, redirige le user vers la route suivante". Ainsi, pour rediriger vers la route '/', il faudra écrire <code>redirect '/'</code>. Du coup, pour rediriger l'utilisateur après avoir sauvegardé le gossip, il faudra écrire :</p>
+
+<pre><code class="language-ruby">post '/gossips/new/' do
+  # ton super code qui enregistre un gossip en fonction des params
+  redirect '/'
+end</code></pre>
+
+<p>Et quand tu vas soumettre le formulaire, voici ce qui va se passer :</p>
+<ul>
+  <li>Le programme va récupérer les informations d'un formulaire avec <code>params</code></li>
+  <li>Il enregistre ces informations dans un fichier csv grâce à notre classe gossip</li>
+  <li>Il redirige l'utilisateur vers la page d'acceuil</li>
+</ul>
+
+<p>Tu auras fait du bon travail, et c'est génial. Je ne sais pas si tu te souviens, mais on avait dit que l'on aimerait bien afficher tous les potins sur la page d'index. Nous allons donc créer une méthode <code>#all</code> pour la classe gossip qui nous sort tous les gossips, bien rangés dans une array de gossips.</p>
+
+<h4>2.5. Afficher l'index des gossips</h4>
+<p>Ce qui serait top, ce serait de pouvoir faire <code>Gossip.all</code>, qui me ressortirait tous les potins dans une belle array. Puis dans la vue, je ferai un truc du genre <code>all_gossips.each { |gossip| bla }</code>, et puis à moi la gloire !</p>
+
+<h5>2.5.1. La méthode <code>#all</code></h5>
+<p>Une méthode <code>#all</code>, cest quand même pratique. Cela me sort tous les potins au format array, et je n'ai qu'à m'amuser avec. En gros, il me faudrait un truc du genre <code>[gossip_1, gossip_2, etc]</code> et puis pouvoir appeler leur auteur en faisant par exemple <code>array[0].author</code>. En gros, cette méthode va passer sur le fichier <code>gossip.csv</code>, puis enregistrer chacune des lignes au format Gossip, puis mettre ceci dans une belle array. Le pseudocode va donc ressembler à ceci :</p>
+
+<pre><code class="language-ruby">def self.all
+  all_gossips = []
+  # va chercher chacune des lignes du csv do
+    # crée un gossip avec la ligne
+    # all_gossips &lt;&lt; gossip qui vient d'être créé
+  # end
+  return all_gossips
+end</code></pre>
+
+<p>Nous utilisons CSV pour cet exemple, mais on aurait pu prendre JSON ou Google Spreadsheet même ! De toute façon nous allons voir SQL, qui est le langage parfait pour la gestion de base de données. Voici donc le code de la méthode <code>#all</code></p>
+
+<pre><code class="language-ruby">def self.all
+  all_gossips = []
+  CSV.read("./db/gossip.csv").each do |csv_line|
+    all_gossips << Gossip.new(csv_line[0], csv_line[1])
+  end
+  return all_gossips
+end</code></pre>
+
+<p>Et voilà, cette méthode va récupérer chacune des lignes de notre CSV, puis ressort une array avec tous nos potins. Maintenant il n'y a plus qu'à afficher nos potins dans notre site.</p>
+
+<h5>2.5.2. Afficher tous les gossips dans la vue</h5>
+<p>On a une belle array avec tous nos potins, ce qui est cool serait d'avoir un format html pour faire un truc du genre <code>all_gossips.each { |gossip| &lt;p> gossip.author &lt;/p>  }</code> pour afficher tous les gossips. Et bien figure-toi que c'est exactement ce à quoi servent les fichiers ERB : on peut conjuguer du ruby avec de l'HTML. De la bombe 💣</p>
+
+<h6>2.5.2.1. Passer la variable dans les routes</h6>
+
+<p>Pour ceci, il suffit d'utiliser une méthode <code>locals</code>, qui permet d'insérer dans notre fichier ERB des variables que l'on utilisera dans la vue. Voici ce à quoi devrait ressembler la route pour l'index : </p>
+
+<pre><code class="language-ruby">get '/' do
+  erb :index, locals: {gossips: Gossip.all}
+end</code></pre>
+
+<h6>2.5.2.3. Utiliser cette variable dans les vues</h6>
+<p>Quand tu joues avec un string, on peut insérer dans variable dans le string avec <code>#{}</code>. Et bien avec un fichier ERB, on peut faire ceci avec <code>&lt;% %></code>, ou <code>&lt;%= %></code>. Pour que tu comprennes la différence, voici comment afficher tous les potins dans notre vue :</p>
+
+<pre><code class="language-ruby">&lt;% gossips.each do |gossip| %>
+        &lt;p>
+          &lt;%= gossip.author %>&lt;br/>
+          &lt;%= gossip.content %>
+        &lt;/p>
+      <% end %></code></pre>
+
+<p>En fait, <code>&lt;% %></code> te sert à exécuter du code (un <code>#each</code> par exemple), tandis que <code>&lt;%= %></code> te sert à afficher ce qui est entre ces balises. C'est ultime pour afficher <code>user.first_name</code> pour saluer l'utilisateur par exemple !</p>
+
+
+<h4>2.6. La vue potins</h4>
+<h5>2.6.1. Ce que tu vas faire</h5>
+<p>Allons à la suite : réaliser tes premières URLs dynamiques. Cet exercice sera moins pas à pas que le précédent, et sera un peu plus dur. Mais avec les bonnes recherches et les bons indices, tu vas cartonner j'en suis sûr 😘</p>
+
+<p>Nous allons faire des pages <i>profil</i> pour nos potins, c'est à dire que nous allons créer une page pour chacun de nos potins en base. Et c'est là où l'on va découvrir l'intérêt d'un framework web, qui permet de créer des pages dynamiques.</p>
+
+<p>Nous voudrions faire en sorte que si l'on va sur <a href="http://localhost:4567/gossips/2/" target="_blank">http://localhost:4567/gossips/2/</a>, le site nous affiche la page <i>profil</i> du gossip n°2. Idem avec numéro 3, numéro 4, numéro 1, etc. Une personne maline pourrait rentrer toutes ces routes à la main. Une personne encore plus maline pourrait faire un <code>.each</code> sur tous les gossips pour faire les routes correspondantes. Nous allons utiliser les URLs dynamiques de Sinatra et ne rentrer qu'une seule route.</p>
+
+<p>Puis, nous allons récupérer dans notre base de données le bon potin, et enfin afficher ses données avec les variables de vues.</p>
+
+<p>Pour récapituler, nous allons :</p>
+<ul>
+  <li>Créer des routes dynamiques pour qu'à chaque fois qu'un utilisateur rentre <a href="http://localhost:4567/gossips/x/" target="_blank">http://localhost:4567/gossips/x/</a>, Sinatra comprendra que l'on parle du potin N°x que l'on a en base</li>
+  <li>Récupérer dans notre base le potin N°x avec une belle méthode <code>#find</code></li>
+  <li>Puis afficher sa page profil après l'avoir récupéré en base</li>
+</ul>
+
+<h5>2.6.2. Les routes dynamiques</h5>
+<p>Nous voudrions afficher la page profil de nos potins La savais-tu ? Mais au lieu de rentrer à la main une route pour chaque potin, il existe une méthode pour avoir des URLs dynamiques. Pour ceci, je t'invite à regarder <a href="http://sinatrarb.com/intro.html" target="_blank">la documentation d'introduction de Sinatra</a> qui explique comment faire ses routes. Il existe une partie qui va t'intéresser avec des URLs dynamiques.</p>
+
+<p>Pour le branchement des routes et voir si cela marche, mes conseils sont de "tester et foutre des puts partout". Aide-toi de la communauté et essaie les solutions qui te semblent bien. Le métier de développeur est ceci la plupart du temps : essayer des trucs, et voir si c'est ce que tu veux faire.</p>
+
+<p>L'exercice est simple : branche tes routes et mets des puts pour que quand tu ailles sur <a href="http://localhost:4567/gossips/2/" target="_blank">http://localhost:4567/gossips/2/</a>, le serveur Sinatra te dise : "Voici le numéro du potin que que tu veux : 2 !". Ce numéro sera enregistré dans une variable nommée <code>id</code>, qui nous servira à la suite.</p>
+
+<h5>2.6.3. Find</h5>
+<p>Maintenant que nous avons notre <code>id</code>, nous voudrions faire un truc comme <code>Gossip.find(id)</code> et cela nous ressortirait le bon gossip (celui qui est numéro <code>id</code> dans la base de données). Et bien je t'invite à ouvrir le fichier <code>gossip.rb</code> et d'ajouter une méthode <code>#find</code>, qui prend un paramètre, et qui ressort le gossip correspondant. La beauté du code n'a pas d'importance, étant donné que nous allons voir SQL très vite, et ce sera plus simple pour le faire.</p>
+
+<p>Une fois que, dans ton fichier <code>controller.rb</code>, le code <code>Gossip.find(id)</code> te ressort le bon potin, tu es prêt à l'afficher dans ta view !</p>
+
+<h5>2.6.4. La vue potin</h5>
+<p>Nous voudrions afficher une page du genre :</p>
+<pre><code class="language-ruby">PAGE POTIN
+Voici la page du potin n°X
+Son auteur : author
+Le contenu du potin : content
+
+Lien pour revenir à la page des potins</code></pre>
+
+<p>Pour ceci, pas de secret, maintenant que tu as une variable, tu n'as plus qu'à jouer avec les balises <code>&lt;%= %></code> et à toi la gloire ❤️</p>
+
+<h5>2.6.5. Le final : le lien</h5>
+<p>Pour finir, voici la dernière requête : dans la page d'index, ce serait bien d'avoir le lien pour chaque potin affiché. Voici les quelques conseils pour y arriver :</p>
+<ul>
+  <li><code>#each_with_index</code> est ton amie</li>
+  <li><code>&lt;%= %></code> pour les URLs aussi</li>
+</ul>
+
+<h4>2.7. Éditer un potin</h4>
+<p>Nos potins sont géniaux, mais ce serait bien de pouvoir les éditer. Nous allons donc faire ceci. Cette partie sera encore moins pas à pas que la précédent, mais tu es ultra en forme aujourd'hui, donc nous pouvons le faire sans soucis.</p>
+
+<p>Le concept : à partir de la view show, un utilisateur peut cliquer sur un lien "editer le potin" qui renvoie sur une view d'edit. Sur cette page d'edit, tu dois y mettre un formulaire qui permet d'éditer le potin. Ce formulaire va ensuite renvoyer sur une méthode update qui va mettre à jour le potin en base de données. </p>
+
+
+<h4>2.8. Les commentaires de potins</h4>
+<p>Allez, un petit dernier exercice avant de clôre la journée. Ce serait bien de pouvoir commenter les potins, via des commentaires. En gros, la page show du potin devra afficher les commentaires, qui seront juste des textes. Un potin peut avoir 0, 1, ou n commentaires. Un commentaire ne concerne qu'un seul potin, c'est à dire que la page show du potin ne devra afficher que les commentaires du potin concerné.</p>
+
+<p>De la vue show, il est possible créer un commentaire avec un simple formulaire.</p>
+
+<p>Cet exercice n'est pas facile, et il existe plein de solutions différentes. Je te laisse voir avec ton équipe laquelle vous allez opter. Je vous invite à réfléchir au comment, avant de partir tête baissée dans le code.</p>
+
+
+<h4>2.9. Et voilà !</h4>
+<p>Waow ! Tu as fait une application en ruby simple qui fait de belles choses ! C'est quand même impressionnant, surtout quand tu penses que y'a deux semaines, tes programmes lançaient des pyramides de Mario ! Évidemment, il y a toujours moyen d'aller plus loin dans l'application, et il y a encore un peu de chemin avant de faire le prochain Airbnb. Mais le début est là et tu as vu les bases pour comprendre comment une application web marche.</p>
+
+
+<h5>2.6.1. Les limites de tes compétences : la base de données</h5>
+<p>En faisant ce dernier exercice des commentaires, tu as pu voir les limites de notre petite application : il est particulièrement ardu de lier les commentaires au potin avec un CSV/JSON. Imaginons maintenant la galère que ce sera de lier les potins aux utilisateurs enregistrés dans l'application. Ainsi, demain, pour le reste de la semaine, nous allons voir ensemble comment faire des bases de données solides, en utilisant SQL, et ActiveRecords.</p>
+
+<p>Quand on fait une application, il est important de savoir constituer une base de données. Ainsi, nous allons bien nous attarder sur ce sujet, afin que tu puisses appréhender des sites complexes dans les meilleures conditions possibles.</p>
+
+
+<h5>2.6.2. Les limites de tes compétences : trop bas-niveau</h5>
+<p>Sinatra est un super langage pour comprendre, en venant de Ruby, comment une application simple marche. Son défaut est que c'est très bas-niveau, et tu te retrouves à faire pas mal de plomberie. Regarde tous les branchements que tu as du faire pour ton application, qui était pourtant très simple. C'est bien de tout maîtriser, mais c'est quand même bien de pouvoir avancer très vite.</p>
+
+<p>Ton fichier <code>controller.rb</code> va rapidement être trop grand, et tu vas te retrouver dans une panade à gérer. Idem pour le dossier <code>lib/</code> qui contient trop de fichiers différents. Sinatra est bien pour comprendre l'univers du web, mais quand on débute l'informatique, c'est bien d'avoir le contexte de Rails, qui t'assiste énormément sur les controllers de base.</p>
+
+<p>Ainsi, nous allons voir ensemble comment rails pourra t'aider dans ta quête de l'application propre et bien faite.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

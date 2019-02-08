@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":1,"applicationTime":135,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="6XsfdmCvbvjQgeTISyNCSDDqC3FO+wp5DA7Hvwsr06ZmBmUymQBwZcf7dy1dZtPxAFd3eXiI1e+Bt9GvVKZNFA==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Envoyer des emails</h2>
+      <h4 class="text-center">Programmation Orientée Objet</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Programmation Orientée Objet
+                <i class="fa fa-beer text-warning"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Envoyer des emails</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/3/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/3/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/3/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:480px;" href="/dashboard/weeks/3/days/4?locale=fr">
+                                        Jeu
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:600px;" data-toggle="tooltip" data-placement="top" title="Envoyer des emails" href="/dashboard/weeks/3/days/5?locale=fr">
+                                    Ven
+                                        <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Git branch et merge</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Tu dois commencer à être plutôt à l'aise avec Git après 3 semaines, mais sache que tu n'utilises qu'une partie de ses fonctionnalités ! Pour le moment, Git te sert surtout à 1) sauvegarder ton travail pour éventuellement revenir à un état antérieur de ton code et 2) push ton boulot sur GitHub pour le rendre disponible à d'autres personnes (ton binôme de pair-programming ou tes correcteurs). Mais la vraie puissance de Git réside ailleurs …</p>
+<p>Prenons l'exemple d'un programme informatique sur lequel <b>plusieurs personnes travaillent en même temps</b> : par exemple notre super scrappeur de l'autre jour. Pendant que Jean ajoute la fonctionnalité "<i>faire tourner le programme toutes les heures</i>" sur la partie cryptomonnaies, Marie travaille sur le scrappeur des e-mails de mairies. Chacun fait le taff sur son ordi mais à un moment donné, il va falloir fusionner les modifications (= des lignes de code ont été enlevées ou rajoutées). Vu qu'on parle de parties de code assez indépendantes, tu n'es pas étonné que Git soit capable de gérer cette fusion en comparant un "avant le passage de Marie/Jean" et un "après leur passage". <br>
+Maintenant imagine qu'un 3ème larron, Paula, décide de travailler aussi sur la partie crypto en rajoutant une fonctionnalité "<i>affichage du total_market_valuation</i>". Deux personnes travaillent en même temps sur le même fichier, chacun sur leur ordi et voudront ensuite push leurs modifications sur GitHub sans que le travail de l'un n'écrase celui de l'autre ! Si ça n'est pas l'enfer, ça y ressemble pas mal 😱. Pourtant, en entreprise, ce cas de figure arrive tous les jours.</p>
+
+
+<p>Heureusement, Git est là pour sauver la mise : il dispose de deux fonctionnalités qui permettent de faire cela sans se casser la MOINDRE dent:</p>
+<ul>
+  <li><b>La création de branche (<code>branch</code>)</b> : cela va permettre à un collaborateur d'isoler son travail pour mieux le fusionner ensuite ;</li>
+  <li><b>La fusion de 2 branches(<code>merge</code>)</b> : cela va permettre de prendre la branche contenant une nouvelle fonctionnalité et de rapatrier toutes les modifications qu'elle contient (ajouts et suppressions) sur la branche principale (celle qui contient tout le code à jour).</li>
+</ul>
+
+
+<h2>2. Historique</h2>
+<p>Git est un logiciel créé par Linus Torvalds (le fondateur de Linux) en 2005. Les fonctionnalités de branches et de merge sont en grande partie responsables de son succès auprès des développeurs. Aujourd'hui, Git est l'outil de référence pour travailler à plusieurs sur du code.</p>
+
+<h2>3. La ressource</h2>
+
+<h3>3.1. Créer une branche</h3>
+<p>Une branche, c'est une version de ton code copiée à un instant T et qui va "vivre" en parallèle de la branche principale (appelée <code>master</code> par convention) jusqu'à être fusionnée à nouveau dans cette dernière.</p>
+<p>L'objectif, quand on crée une branche Git sur notre programme, c'est de permettre à un développeur de travailler sur le code en toute liberté. Il va pouvoir passer toutes les modifications nécessaires, faire des tests, revenir en arrière et faire autant de commit qu'il veut <b>sans jamais interférer avec la branche principale du projet</b>. Cette branche principale est la référence pour toute l'équipe de développement, et c'est son code qui est utilisé au quotidien par les clients de l'entreprise : il est hors de question que tout le monde y mette les mains en même temps et prenne le risque d'introduire un bug voire de tout péter !</p>
+
+<p>Illustrons le work-flow type, entre développeurs travaillant sur un même programme, avec l'exemple du projet Google. Les moussaillons se sont réparti le travail : Jean va créer une branche nommée <i>popup_alert</i> et Marie une branche nommée <i>grid</i> sur lesquels ils vont travailler de manière indépendante. Une fois que chacun a fini de coder et a pu tester son taff, ils vont fusionner leur branches avec la branche principale : ça y est, le boulot est livré !</p>
+
+<p>Voici l'ordre des lignes de commandes à connaître pour manipuler les branches :</p>
+<ol>
+  <li><code>$ git checkout master</code> : pour s'assurer qu'on est bien sur la branche <code>master</code> sur son ordi.</li>
+  <li><code>$ git pull origin master</code> : pour récupérer de GitHub la dernière version de <code>master</code>.</li>
+  <li><code>$ git branch nom_de_ta_feature</code> : pour créer une branche nommée "nom_de_ta_feature" à partir de <code>master</code> qui est désormais à jour.</li>
+  <li><code>$ git checkout nom_de_ta_feature</code> : pour se positionner sur la branche "nom_de_ta_feature".</li>
+  <li>à partir de là, on se met à coder normalement. Chaque commit aura lieu uniquement sur la branche "nom_de_ta_feature". Pour cela, on utilise les classiques :
+    <ul>
+      <li><code>$ git add .</code> pour préparer à commit tous les fichiers ayant été modifiés</li>
+      <li><code>$ git commit -m "commentaire sur mon commit"</code> pour faire un commit</li>
+    </ul></li>
+</ol>
+
+<h3>3.2. Fusionner une branche</h3>
+<p>Quand le travail sur ta branche est terminé (c’est-à-dire <b>testé et fonctionnel</b>), il te faut le livrer en la fusionnant à la branche principale. Or, si on imagine que tu as mis 3 jours à coder tout ça, tu imagines bien que tes potes moussaillons ne se sont pas tourné les pouces pendant ce temps. La branche principale a donc évolué depuis que tu as créé ta branche personnelle "nom_de_ta_feature" et il ne faudrait pas qu'en fusionnant ton code (qui contient un mélange de vieux code et tes nouvelles fonctionnalités), tu écrases tout le super travail de tes collègues. Heureusement, Git est capable d'identifier les modifications qui ont eu lieu depuis la création de ta branche et les modifications que toi tu as apporté sur 3 jours… mais avec ses limites. <br>
+Parfois, Git va identifier une ligne de code qui a subit des modifications contradictoires : Jean et Marie ont tous les deux voulu changer la même ligne mais avec un résultat différent. Git va alors identifier un <b>conflit</b> qu'il va falloir résoudre. On va te présenter tout ça.</p>
+
+<h5>2.1. Fusionner</h5>
+<p>Pour fusionner la branche contenant ton travail, voici la marche à suivre, étape par étape : </p>
+<ol>
+  <li><code>$ git checkout master</code> : tu te remets sur la branche master en vue de la mettre à jour (ça fait 3 jours que tu ne l'as pas fait) ;</li>
+  <li><code>$ git pull origin master</code> : tu récupères de GitHub tout le travail qui a été effectué et mets la branche master à jour ;</li>
+  <li><code>$ git checkout nom_de_ta_feature</code> : tu te remets sur ta branche de feature en vue de la fusionner ;</li>
+  <li><code>$ git merge master</code> : cette commande demande à Git de <b>fusionner <code>master</code> dans ta branche</b>. L'ordre est important : c'est master qui va DANS ta branche et pas l'inverse. La branche master n'est pas modifiée pour le moment.
+    <ul>
+      <li><i>optionnel</i> : gestion de conflits (voir plus loin)</li>
+    </ul></li>
+  <li><code>$ git checkout master</code> : tu te remets sur master</li>
+  <li><code>$ git merge nom_de_ta_feature</code> : cette fois, on fait la fusion dans l'autre sens. On fusionne ta branche DANS master. La branche master est donc mise à jour.</li>
+    <ul>
+      <li><i>optionnel</i> : gestion de conflits (voir plus loin)</li>
+    </ul></li>
+  <li><code>$ git push origin master</code> : Maintenant que la fusion est faite, il faut mettre GitHub à jour pour que tous tes collègues aient l'info. Donc envoie la branche à jour sur Github 🙌</li>
+</ol>
+
+  <div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🤓 QUESTION RÉCURRENTE</h4>
+      <p class="card-text"><b>Mais Féfé, pourquoi on fait deux merge et pas juste un ?</b> C'est pas overkill de d'abord merge <code>master</code> dans la branche <code>nom_de_ta_feature</code> PUIS de faire l'inverse en re-fusionnant <code>nom_de_ta_feature</code> dans <code>master</code> ?</p>
+      <p>=> Disons que c'est une sécurité supplémentaire et une bonne pratique. Une première fusion de <code>master</code> vers ta branche permet de gérer 80 % des conflits <b>sans altérer <code>master</code></b>. Cette branche est utilisée par tout le monde (tes collègues et les clients) on te rappelle. Tu ne veux vraiment pas la pourrir par erreur.</p>
+      <p>Une fois que t'as réglé une bonne partie des conflits et que la fusion s'est bien passée dans un sens, tu peux enfin modifier <code>master</code> plus sereinement : ça passera crème.</p>
+    </div>
+  </div>
+</div>
+
+<h5>2.2. Gérer les conflits</h5>
+<p>Que se passe-t-il s'il y a des conflits à gérer ? Bah en soit pas grand-chose : juste quelques fichiers à changer et c'est tout 😊 Si jamais tu as un conflit, tu devrais avoir un message comme celui-là dans ton terminal, juste après un <code>git merge</code> :</p>
+
+<pre><code class="language-shell">$ git merge master
+Auto-merging foo.rb
+CONFLICT (content): Merge conflict in foo.rb
+CONFLICT (content): Merge conflict in bar.rb
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
+<p>Il te faut aller dans les fichiers identifiés par les lignes <code>CONFLICT (content)</code> et tu verras alors que Git les a modifiés en rajoutant des balises comme ceci :</p>
+<pre><code class="language-shell"><<<<<<<<< HEAD
+p "Kikou !" #version de code A
+============
+p "Hello !" #version de code B
+>>>>>>>>> la_branche
+</code></pre>
+
+<p>Ces balises te présentent les 2 versions de code entre lesquelles Git ne sait pas arbitrer. C'est à toi de savoir s'il faut garder celle du haut ou celle du bas : n'hésite pas à faire appel à la personne ayant codé l'autre ligne avant de tailler dans le vif comme un bourrin !</p>
+<p><b>Surtout, soit très rigoureux et n'oublie aucune balise !</b> Vu qu'elles sont au milieu de ton code, si tu en laisses, il va buguer très fort. Enlève bien sûr les <code>============</code>, <code>"><<<<<<<<< HEAD</code> et <code>>>>>>>>>> la_branche</code>.</p>
+
+<p>Une fois que tu auras conservé la partie qui t'intéresse, il faudra faire les commandes suivantes pour valider la résolution de tes conflits : </p>
+
+<ul>
+  <li><code>$ git add .</code> : ajoute les fichiers à commit</li>
+  <li><code>$ git commit</code> (sans le <code>-m "commentaire"</code>) : pour commiter les changements
+    <ul>
+      <li>À ce moment-là, le programme devrait envoyer un message chelou pour te demander de rajouter un commentaire et nommer ton conflit. Pas besoin de le gérer, tu peux quitter le programme en faisant <code>:x</code> puis <code>Enter</code> (la fenêtre qui s'est ouverte est un équivalent de Vim/Nano, donc pour quitter c'est comme dans ces softs 😎)</li>
+    </ul></li>
+</ul>
+
+
+<h2>4. Points importants à retenir</h2>
+
+<p>Pour coder à plusieurs sur un même programme, les règles de bonne gestion (appliquées par toutes les start-ups modernes) sont les suivantes :</p>
+<ul>
+  <li>On ne travaille JAMAIS directement sur la branche <code>master</code> ;</li>
+  <li>Quand un développeur code, il travaille sur une fonctionnalité <b>précise</b> et doit donc créer une branche dédiée à ce travail. Elle doit porter un nom en lien avec la fonctionnalité (pas le nom du développeur !). Ex : <code>scrapping_every_hour</code> ou <code>show_total_market_valuation</code> ;</li>
+  <li>On livre la fonctionnalité en fusionnant la branche dans <code>master</code> (en 2 merge, cf. ci-dessous);</li>
+  <li>Une fois la branche fusionnée, le développeur peut la supprimer de son ordinateur.</li>
+</ul>
+
+<p>Voici un résumé des commandes pratiques à utiliser pour manipuler les branches : </p>
+<ul>
+  <li><code>$ git branch</code> : affiche toutes les branches de ton repo Git, puis t'indique sur laquelle tu es actuellement</li>
+  <li><code>$ git branch nom_de_ta_feature</code> : créé une branche portant pour nom  "nom_de_ta_feature"</li>
+  <li><code>$ git checkout nom_de_ta_branche</code> : se positionne sur la branche qui s'appelle "nom_de_ta_branche"</li>
+  <li><code>$ git merge nom_de_ta_branche</code> : fusionne la branche "n"om_de_ta_branche" VERS la branche sur laquelle tu te trouves actuellement. Seule la branche <b>sur laquelle tu te trouves</b> sera altérée (pas l'autre).</li>
+</ul>
+
+<p>Enfin, si tu ne devais retenir qu'un seul truc de la leçon, voici les étapes de la gestion/fusion de branche. Si tu suis cette démarche, tu ne devrais pas avoir de souci 😉.</p>
+<ol>
+  <li>Se positionner sur master : <code>$ git checkout master</code></li>
+  <li>Mettre à jour master sur son ordi : <code>$ git pull origin master</code></li>
+  <li>Créer une branche, depuis master, pour travailler : <code>$ git branch nom_de_ta_feature</code></li>
+  <li>Se placer sur cette branche : <code>$ git checkout nom_de_ta_feature</code>   <br>
+  À partir de là, tu peux travailler sur ta branche OKLM, repasser d'une branche à l'autre avec <code>git checkout</code>, tout en n'oubliant pas de faire des commits (<code>git add .</code> et <code>$ git commit -m "this is what i did"</code>)</li>
+  <li>Fusionner sa branche dans master (en 2 étapes de merge) :
+    <ul>
+      <li><code>$ git checkout master</code></li>
+      <li><code>$ git pull origin master</code></li>
+      <li><code>$ git checkout nom_de_ta_feature</code></li>
+      <li><code>$ git merge master</code> + gérer les conflits si besoin</li>
+      <li><code>$ git checkout master</code></li>
+      <li><code>$ git merge nom_de_ta_feature</code> + gérer les conflits si besoin</li>
+      <li><code>$ git push origin master</code></li>
+    </ul></li>
+</ol>
+
+
+<h2>5. Pour aller plus loin</h2>
+
+<p>Pour aller plus loin, le cours <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github" target="_blank">Git/Github de Marc Gauthier sur OpenClassrooms</a> est l'un des meilleurs qui existe, et les trois parties sur les branches / fusions / conflits sont assez complémentaires à ce cours :
+<ul>
+  <li>La partie sur <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/creer-des-branches" target="_blank">les branches</a></li>
+  <li>La partie sur <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/fusionner-des-branches" target="_blank">les fusions</a></li>
+  <li>La partie sur <a href="https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/resoudre-un-conflit" target="_blank">les conflits</a></li>
+</ul>
+<p>Tu peux aussi aller voir <a href="https://www.youtube.com/watch?v=Z9fIBT2NBGY&t=372s">cette vidéo du Wagon</a>, un peu longue mais très complète.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Gem Gmail</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+
+<h2>1. Introduction</h2>
+<p>Dans cette ressource nous allons te présenter rapidement la gem Gmail qui permet d'utiliser le service Gmail de Google via tes programmes. Avec ceci, tu pourras créer des robots qui vont envoyer plein d’e-mails via un compte Gmail.</p>
+
+<h2>2. Historique</h2>
+<p>Avec l'essor de Rails, Google a mis à disposition de la communauté Ruby une gem dès 2010 afin de faciliter les échanges avec son API. C'est la preuve que même Google ne peut pas ignorer la super communauté des rubyistes !</p>
+
+<h2>3. La ressource</h2>
+<p>Découvre la <a href="https://developers.google.com/gmail/api/quickstart/ruby" target="_blank">gem gmail API</a> en Ruby. La doc de Google explique la marche à suivre pour obtenir une clé d'API et brancher la gem. <br>
+Pour envoyer des mails <a href="https://www.rubydoc.info/github/google/google-api-ruby-client/Google/Apis/GmailV1/GmailService#send_user_message-instance_method" target="_blank">la doc est ici</a>.</p>
+<p>Cette ressource est volontairement succincte car, en théorie, la documentation de Google doit être auto-porteuse… et il faut que tu prennes l'habitude de lire et comprendre une doc !</p>
+<p>Mais on va te donner quand même quelques lignes directrices : </p>
+<ul>
+  <li>Procède, comme d'hab, par étape: 1) essaie de te login (suis scrupuleusement le quickstart), et 2) envoie un premier e-mail.</li>
+  <li>Ne mets pas directement dans ton code ton login et password de compte Gmail (sinon, tu vas te les faire piquer !). Passe par la gem Dotenv qu'on a déjà vu.</li>
+  <li>Pour les petits explorateurs de Google, sachez que la gem <a href="https://github.com/gmailgem/gmail">"Gmail for Ruby"</a> n'est plus maintenue et ne fonctionnera bientôt plus. Ne l’utilisez pas.</li>
+</ul>
+<p>Bon, si tu galères trop avec la doc, on va quand même te donner un exemple de ce qu'il faut obtenir. Le code ci-dessous ne marche que si tu as bien pu faire fonctionner la méthode <code>authorize</code> qui t'es présentée dans le quickstart de Google.</p>
+<pre><code code class="language-ruby"># Initialisation de l'API
+service = Google::Apis::GmailV1::GmailService.new
+service.client_options.application_name = APPLICATION_NAME
+service.authorization = authorize
+
+# Création du contenu du message
+msg = Mail.new #msg est une instance de la classe « Mail ». On va définir ses variables d’instance
+msg.date = Time.now
+msg.subject = 'ceci est un test'
+msg.body = Text.new('coucou!', 'plain', 'charset' => 'us-ascii')
+msg.from = {'coucou@gmail.com' => 'Coucou Man'}
+msg.to   = {
+    'josé@valdoise.fr' => nil,
+}
+
+# Création de la requête, insertion du contenu dans la propriété `raw`
+#(https://developers.google.com/gmail/api/v1/reference/users/messages/send)
+message = Google::Apis::GmailV1::Message.new(raw: msg.to_s)
+
+service.send_user_message('me', message)</code></pre>
+
+<h2>4. Points importants à retenir</h2>
+<p>1 - La <a href="https://developers.google.com/gmail/api/quickstart/ruby" target="_blank">gem gmail</a> te permet d'envoyer des e-mails depuis un compte Gmail.</p>
+<p>2 - Les docs d'API, c'est souvent du chinois…</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Pour le moment pas besoin de plus !</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Envoi d&#39;emails en masse</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Dans ce projet tu vas mettre en pratique tes compétences de scrapping, d'enregistrement et d'envoi d’e-mail pour faire une application englobant tout ceci.</p>
+
+<p><a href="https://www.restosducoeur.org/" target="_blank">Les Restos du Cœur</a> sont une super association qui veut aider les gens dans le besoin. Nous trouvons qu'il n'y a pas assez de mairies pour appuyer leur démarche. Nous allons donc te demander de coder un super programme qui renseigne les mairies sur cette association qui œuvre pour changer le monde.</p>
+
+<h2>2. Le projet</h2>
+
+
+
+<h3>2.1. Note importante</h3>
+<p>Ce projet devra être fait en groupe complet ! C’est-à-dire que ton groupe entier devra participer en équipe au projet et chacun devra contribuer en faisant une partie bien précise. Le projet sera rendu via un repo GitHub commun à l'équipe.</p>
+
+<p>Ce type de projet vous permettra d'apprendre à travailler ensemble. C'est indispensable pour appréhender le monde du travail de développeur et c'est un excellent entraînement pour les projets plus conséquents de la formation. Comme il y a beaucoup à faire, il faudra bien vous répartir les tâches.</p>
+
+<h3>2.2. Résumé du projet</h3>
+<p>Ce projet sera un récapitulatif de tout ce que vous avez appris jusqu'à présent : vous allez scrapper, enregistrer dans un spreadsheet, puis envoyer des e-mails. Le tout dans un dossier Ruby bien rangé, en POO.</p>
+
+<p>Le projet consistera en gros à contacter toutes les mairies de France pour que ces dernières parlent des Restos du Cœur. Qui sait, peut-être que grâce à vous on aura les Restos du Cœur dans un village de la Creuse ❤️</p>
+
+<h3>2.3. Le projet, en détails</h3>
+<p>Le CEO de Get-Email Corp est vraiment ravi de ton travail. Il souhaite donc monter une équipe de hackers et en faire sa nouvelle filiale:  Send-Email Corp. Celle-ci vient de décrocher un financement public à 300k€ pour promouvoir Les Restos du Cœur. Votre mission est d'envoyer un email à toutes les mairies de trois départements de votre choix et de leur dire qu'ils devraient ouvrir un Resto du Cœur dans leur commune.</p>
+
+<p>⚠️Il est <b>INTERDIT</b> de le faire pour le département du Val d'Oise (ainsi que pour le 75 qui n'a pas assez de mairies). Le but est d'apprendre, pas de copier-coller 😉</p>
+
+<h4>2.3.1. Le scrappeur</h4>
+<p>Le programme de scrappeur devra récupérer les emails de trois départements choisis arbitrairement. Puis il devra enregistrer ces emails dans un fichier CSV ou JSON. Pour chaque mairie, il devra y stocker :</p>
+<ul>
+  <li>Le nom de la commune</li>
+  <li>l'email</li>
+  <li>Le département (numéro ou nom)</li>
+</ul>
+
+<h4>2.3.2. Envoyer les emails</h4>
+<p>Le programme d'envoi d'emails va reprendre chaque colonne de ton CSV/JSON et enverra un bel email à la mairie indiquée. Pour ceux qui ont peur d'utiliser leur adresse Gmail perso, vous êtes, bien entendu, libres de créer une adresse fake, par exemple "Théophile Coutaind". Évidemment, on vous conseille de tester les premiers envois d'emails avec des destinataires connus : cela permet de confirmer que le mail arrive bien et s'affiche correctement. ⛵️</p>
+<p>N'hésitez pas à tester les envois vers des adresses en <a href="http://www.yopmail.com/">Yopmail.com</a>. Ce site vous permet de créer des adresses emails dont les boites de réception sont accessibles facilement et par tous.</p>
+
+<p>Pour le contenu de l'email, tu peux rédiger un truc simple qui dit un truc du genre : </p>
+<pre><code class="language-shell">Bonjour,
+Je m'appelle [PRÉNOM] et je permets de contacter la mairie de [CITY_NAME] à propos du remarquable travail que font Les Restos du Coeur. Cette association répand le bien dans la France et aide les plus démunis à s'en tirer.
+
+Avez-vous pensé à travailler avec eux ? Soutenir Les Restos du Coeur, c'est important pour notre cohésion sociale : rejoignez le mouvement !
+
+Merci à vous</code></pre>
+
+<p>Note : si tu préfères parler de ta startup révolutionnaire, de THP, ou plutôt Emmaüs, fais comme tu le sens ! Tant que ce projet vous botte et que vous vous éclatez avec votre équipe ❤</p>
+
+<h4>2.3.3. Dotenv</h4>
+<p>Dans ce programme, vous allez manipuler des clés d'API et des login/mots de passe. Ces infos ne doivent JAMAIS être disponibles dans un repository GitHub. Pour ce programme, vous allez devoir passer par Dotenv et bien penser à mettre votre <code>.env</code> dans le gitignore.</p>
+
+<h2>3. Rendu attendu</h2>
+<p>Le rendu pour le projet sera un petit peu différent. Tout d'abord, toute l'équipe va devoir travailler sur <b>le même</b> repo GitHub, en faisant des branch, des merge, des pull, toussa.</p>
+
+<p>Pour présenter ton repo GitHub, rédige un joli README expliquant tout ce qui a été fait lors de cette journée de travail :</p>
+<ul>
+  <li>une introduction présentant de l'équipe, les grandes lignes du programme</li>
+  <li>une explication concernant l'arborescence du dossier et l'utilité de tous les programmes</li>
+  <li>une partie qui dit comment se servir du programme (<code>$ bundle install)</code>, et quelles sont les gems utilisées</li>
+  <li>une explication plus détaillée de ce que vous avez réalisé : l'email envoyé, le nombre de mairies touchées, etc.</li>
+</ul>
+<p>Il te faudra aussi respecter l'architecture habituelle d'un beau dossier Ruby.</p>
+
+<p>Ce sera un excellent exercice de synthèse : comme tu peux le voir sur Slack, bien se faire comprendre et expliquer ses choix stratégiques est une compétence très utile.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>

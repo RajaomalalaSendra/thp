@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":1,"applicationTime":134,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="2RgU7utl2NUgJiUkUD5/6dN0Yv5UEvUvqa5deanR7z5WZW6qEsrGSDdctsFGe+5Q48ke9mJhKrkkF0tp9lxxjA==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-214b310486bb8bf723e4.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Relations avancées</h2>
+      <h4 class="text-center">Initiation à Rails</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 24 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Initiation à Rails
+                <i class="fa fa-space-shuttle text-danger"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Relations avancées</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                                <li>
+                                    <a style="left:120px;" href="/dashboard/weeks/4/days/1?locale=fr">
+                                        Lun
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/4/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:360px;" href="/dashboard/weeks/4/days/3?locale=fr">
+                                        Mer
+                                            <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                            <li>
+                                <a class="selected" style="left:480px;" data-toggle="tooltip" data-placement="top" title="Relations avancées" href="/dashboard/weeks/4/days/4?locale=fr">
+                                    Jeu
+                                        <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+    <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:600px;" href="/dashboard/weeks/4/days/5?locale=fr">
+                                        Ven
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Associations entre models de BDD</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Hier tu as vu comment utiliser ActiveRecord pour mettre en place tes premières bases de données dans Rails. Aujourd'hui nous allons approfondir tes compétences en construction de bases de données, notamment la mise en place de la fameuse relation N-N.</p>
+
+<p>Avec les bonnes pratiques et astuces qu'on va te donner entre aujourd'hui et demain, tu vas être un pro et on pourra, sans remords, te lâcher dans la nature 😘</p>
+
+<h2>2. Historique</h2>
+<p>Quand tu conçois une relation 1-N entre 2 tables, on a vu qu'il suffisait qu'une des 2 tables héberge une <code>foreign key</code>, qui est la <code>primary key</code> (la référence d'une entrée en BDD) d'une table externe. Cette astuce est possible car, dans une relation 1-N, une des tables a ses éléments qui sont liés à <b>un seul</b> autre élément de la table externe : on a une seule <code>foreign_key</code> à héberger. <br>
+Ainsi, pour revenir à nos utilisateurs qui peuvent écrire des articles, la table <code>articles</code> aura une colonne qui représentera la <code>foreign key</code> de son unique auteur : le lien est alors évident. Côté table utilisateurs, inutile de stocker une <code>foreign key</code> : pour retrouver les articles d'un utilisateur, on a juste à chercher la référence de l'utilisateur du côté de la table des <code>articles</code>, directement dans la colonne des <code>foreign key</code>. La technique est très habile et permet de faire facilement des relations 1-N.</p>
+
+<p>Mais si on se penche sur le cas d'une relation N-N, chaque élément est lié à plusieurs autres (souvent en nombre variable). Peut-on insérer plusieurs <code>foreign key</code> dans une des tables ? En base de données, on ne peut pas héberger un array dans une colonne, ni définir un nombre de colonnes variable selon si un élément est lié à 1, 4, 30 ou 200 autres. Du coup, l'utilisation des <code>foreign key</code> dans une des deux tables est impossible.</p>
+
+<p>Comment concevoir une relation N-N alors ? Eh bien dans son modèle des bases de données relationnelles, Edgar Codd avait tout simplement imaginé créer une table intermédiaire entre les 2. Elle listerait les couples d'éléments qui sont liés et, par transitivité, on pourrait faire des relations N-N.</p>
+
+
+
+
+<h2>3. La ressource</h2>
+
+<p>Pour illustrer la création d'une table intermédiaire, rien de mieux qu'un bel exemple :</p>
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <p class="card-text">Prenons l'exemple issu de <a href="https://guides.rubyonrails.org/association_basics.html#the-has-many-through-association" target="_blank">la doc de Rails</a> et imaginons que tu veuilles concevoir le futur Doctolib.</p>
+      <p>Tu auras donc une table pour tes patients, et une table pour tes docteurs. Un patient peut avoir plusieurs docteurs (un généraliste, un ORL, un dentiste, un ophtalmo, etc.), et un docteur peut avoir plusieurs patients. Comment faire pour créer cette relation N-N ? Eh bien il suffit de créer une table intermédiaire !</p>
+      <p>Cette table intermédiaire ressemblerait à ça :</p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>id</th>
+            <th>doctor_id</th>
+            <th>patient_id</th>
+          </tr>
+          </thead>
+          <tr>
+            <th>1</th>
+            <th>42</th>
+            <th>55</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>42</th>
+            <th>66</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>42</th>
+            <th>89</th>
+          </tr>
+          <tr>
+            <th>4</th>
+            <th>36</th>
+            <th>55</th>
+          </tr>
+        </table>
+      </div>
+      <p>On voit par exemple que le docteur portant l'<code>id</code> 42 est lié aux patients portant les <code>id</code> 55, 66 et 89. Inversement, le patient à l'<code>id</code> 55 est lié à 2 docteurs: le 42 et le 36.</p>
+      <p>Cette table intermédiaire peut rester en l'état et ne faire que lister les liens patients-docteurs : on l'appelera alors <code>join_table_patients_doctors</code> avec un model <code>JoinTablePatientDoctor</code>.</p>
+      <p>Mais cette table peut devenir bien plus. On peut imaginer qu'elle héberge des informations additionnelles sur ce lien entre un patient et son docteur. Qu'est ce qui fait qu'un patient et un docteur sont liés ? => Le fait qu'ils aient un jour pris un RDV ! <br>
+      Cette table peut tout à fait héberger les informations du rendez-vous : un rendez-vous ne concerne qu'un seul patient et un seul docteur ; patients et docteurs peuvent avoir autant de rendez-vous que nécessaires. Donc, grâce aux rendez-vous, nous pouvons dire qu'un patient peut avoir plusieurs docteurs et un docteur plusieurs patients ! <br>
+      La table devient alors : </p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>id</th>
+            <th>doctor_id</th>
+            <th>patient_id</th>
+            <th>date</th>
+            <th>place</th>
+          </tr>
+          </thead>
+          <tr>
+            <th>1</th>
+            <th>42</th>
+            <th>55</th>
+            <th>2018-09-23T12:30:00+00:00</th>
+            <th>"5 rue du Bearn"</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>42</th>
+            <th>66</th>
+            <th>2018-12-15T17:30:00+00:00</th>
+            <th>"5 rue du Bearn"</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>42</th>
+            <th>89</th>
+            <th>2019-07-02T09:00:00+00:00</th>
+            <th>"18 rue des cagoles"</th>
+          </tr>
+          <tr>
+            <th>4</th>
+            <th>36</th>
+            <th>55</th>
+            <th>2019-03-17T10:00:00+00:00</th>
+            <th>"17 avenue des chouquettes"</th>
+          </tr>
+        </table>
+      </div>
+
+      <p>Finalement, on vient de créer un objet "appointment" à part entière, avec ses attributs <code>date</code> et <code>place</code> ! Les implications de cette idée sont nombreuses (nous les détaillerons plus bas) :</p>
+      <ul>
+        <li>On doit nommer la table en <code>appointments</code> et son model <code>Appointment</code> afin de pouvoir appeler et modifier, dans le code de ton app, ces RDV.</li>
+        <li>Chaque appointment est lié à un docteur mais un docteur peut avoir plusieurs appointments : il y a une relation 1-N entre <code>appointments</code> et <code>doctors</code> !</li>
+        <li>Symétriquement, chaque appointment est lié à un patient mais un patient peut avoir plusieurs appointments : il y a une relation 1-N entre <code>appointments</code> et <code>patients</code> !</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+</div>
+
+<p>En Rails, la relation N-N (dite "many to many") est représentée par ce que l'on appelle le <code>has_many through</code>. Nous allons voir comment implémenter ton premier has_many through.</p>
+
+
+<h3>3.1. has_many through</h3>
+<p>Restons sur l'exemple de nos docteurs et patients : nous aimerions bien réaliser une base de données qui enverrait Doctolib à l'hosto. Comme vu plus haut, pour lier deux tables en relation many-to-many, il faut une troisième table. Pour implémenter cette relation dans ton code, il y a deux choses à faire :</p>
+
+<ol>
+  <li>Faire la migration pour créer les trois tables (patients, doctors et la table intermédiaire), et insérer les foreign keys aux bons endroits ;</li>
+  <li>Créer les models et leur ajouter les liens grâce aux lignes has_many, belongs_to, etc.</li>
+</ol>
+
+<p>On peut générer les 3 models et les 3 migrations de création de table avec la commande habituelle <code>$ rails g model NomDuModel</code></p>
+
+<h4>3.1.1. D'abord les migrations</h4>
+<p>Pour les migrations, c'est plutôt simple : il faut créer trois tables et mettre les foreign keys dans la table intermédiaire (cf. notre exemple illustré pour comprendre pourquoi). Voici les lignes que la (ou les) migrations doivent contenir :</p>
+
+<pre><code class="language-ruby">def change
+  create_table :doctors do |t|
+    t.timestamps
+  end
+
+  create_table :patients do |t|
+    t.timestamps
+  end
+
+  create_table :appointments do |t|
+    t.belongs_to :doctor, index: true
+    t.belongs_to :patient, index: true
+    t.timestamps
+  end
+end</code></pre>
+
+<p>Si tes 3 tables existent déjà et que tu as juste besoin d'ajouter les foreign keys à la table des rendez-vous, voici ce que cela donnerait :</p>
+
+<pre><code class="language-ruby">def change
+  add_reference :appointments, :doctor, foreign_key: true
+  add_reference :appointments, :patient, foreign_key: true
+end</code></pre>
+
+<p>Une fois les trois tables créées et les foreign keys insérées, tu as juste à mettre les bonnes lignes dans les models.</p>
+
+<h4>3.1.2. Les models</h4>
+<p>Une fois les models générés, il n'y a plus qu'à les lier grâce à 6 lignes de code (2 par model). En résumé, ces lignes vont dire que :</p>
+
+<ul>
+  <li>Un rendez-vous appartient à un docteur</li>
+  <li>Un rendez-vous appartient à un patient</li>
+  <li>Un docteur peut avoir plusieurs rendez-vous</li>
+  <li>Un docteur peut avoir plusieurs patients, à travers les rendez-vous</li>
+  <li>Un patient peut avoir plusieurs rendez-vous</li>
+  <li>Un patient peut avoir plusieurs docteurs, à travers les rendez-vous</li>
+</ul>
+
+<p>6 lignes, 2 par model, c'est la base de la relation N-N. Voici donc les lignes pour chacun des models :</p>
+
+<ul>
+  <li>Les docteurs, dans le fichier <code>app/models/doctor.rb</code> :</li>
+<pre><code class="language-ruby">class Doctor < ApplicationRecord
+  has_many :appointments
+  has_many :patients, through: :appointments
+end</code></pre>
+
+  <li>Les patients, dans le fichier <code>app/models/patient.rb</code></li>
+<pre><code class="language-ruby">class Patient < ApplicationRecord
+  has_many :appointments
+  has_many :doctors, through: :appointments
+end</code></pre>
+
+  <li>Les rendez-vous, dans le fichier <code>app/models/appointment.rb</code></li>
+<pre><code class="language-ruby">class Appointment < ApplicationRecord
+  belongs_to :doctor
+  belongs_to :patient
+end</code></pre>
+</ul>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Pour implémenter un <code>has_many through</code>, l'ordre des lignes est primordial. En effet, on ne peut pas déclarer une relation <code>through: :trucs</code> sans que la relation à la table <code>trucs</code> ait été définie en premier par un <code>has_many :trucs</code>.</p>
+      <p>En gros, les lignes ci-dessous bugueraient :</p>
+<pre><code class="language-ruby">class Doctor < ApplicationRecord
+  has_many :patients, through: :appointments
+  has_many :appointments
+end</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE 2</h4>
+      <p class="card-text">Petit détail assez important : dans une relation de type 1-N, on met un "s" (pluriel) après le <code>has_many</code> (un docteur a plusieurs appointments : <code>has_many :appointments</code>).<br>
+      Par contre du côté du <code>belongs_to</code>, ça reste au singulier (un appointment n'a qu'un seul docteur : <code>belongs_to :doctor</code>).</p>
+      <p>Comment s'en rappeler ? Lisez-le comme si c'était une phrase, tout simplement ! <br>
+      <code>has_many :trucs</code> = "A plusieurs trucs", plusieurs donc au pluriel. <br>
+      <code>belongs_to :truc</code> = "Appartient à un truc", donc singulier.</p>
+    </div>
+  </div>
+</div>
+
+<p>Et voilà ! Avec ceci tu as réussi à créer une relation many-to-many ! Hyper tranquille ❤ On va voir comment tester le tout en console, c'est hyper important.</p>
+
+<h4>3.1.3. Tester en console</h4>
+<p>On ne le répétera jamais assez, mais la console est ta meilleure amie ! Elle te permet de vérifier que tes models sont bien créés, bien reliés entre eux, et surtout tester à la volée des lignes de code. Voici par exemple quelques lignes qui vont tester nos docteurs, patients, et rendez-vous :</p>
+
+<pre><code class="language-ruby">d = Doctor.create
+p = Patient.create
+a = Appointment.create(doctor: d, patient: p)
+#=> je crée une instance de chaque objet
+
+a.doctor
+#=> on devrait obtenir en retour le docteur "d" créé plus haut. Sinon c'est qu'on a fait une erreur
+
+a.patient
+#=> on devrait obtenir en retour le patient "p" créé plus haut. Sinon c'est qu'on a fait une erreur
+
+d.patients
+#=> on devrait obtenir en retour un array contenant le patient "p" créé plus haut. Sinon c'est qu'on a fait une erreur
+
+p.doctors
+#=> on devrait obtenir en retour un array contenant le doctor "d" créé plus haut. Sinon c'est qu'on a fait une erreur</code></pre>
+
+
+<h3>3.2. Rappels importants : les étapes indispensables pour faire une belle base de données en Rails</h3>
+<p>Oui on va se répéter mais si on le fait pas, ça rentrera pas ! Tu nous remercieras plus tard.</p>
+
+
+<h4>3.2.1. Toujours se poser SANS CODER pour modéliser sa BDD</h4>
+<p>Je commence par un dessin sur une feuille blanche où j’écris les différents modèles (sous forme de bulle) et la relation (1-1, 1-N, ou N-N) entre eux (sous forme de traits les reliant). Pour rappel :</p>
+
+<ul>
+  <li>Une relation 1-1, ça veut dire que les deux instances vont de pair mais sont des objets séparés. Par exemple dans un monde où on ne pourrait avoir qu’un seul numéro de téléphone, on aurait une relation 1-1 entre les personnes et leur numéro de mobile (un numéro correspond à une personne et cette personne n'a qu'un seul numéro).</li>
+  <li>Une relation 1-N, c’est quand une instance "possède" plusieurs instances d'un autre type et a l'exclusivité sur chacun. Exemple : sur mon compte Youtube, j’ai publié plein de vidéos, et toutes ses vidéos sont rattachées à mon compte Youtube et lui seulement.</li>
+  <li>Pour une relation N-N, pense à Doctolib : Il y a des docteurs et des patients. Chaque docteur peut avoir plusieurs patients, et un patient peut avoir plusieurs docteurs (le dentiste, le généraliste, etc.). Du coup on doit modéliser un objet intermédiaire, par exemple un RDV qui lie un docteur et un patient. En passant par la table RDV, on découpe la relation N-N en 2 relations 1-N (un docteur par RDV, un patient par RDV). 🤓</li>
+</ul>
+
+<h4>3.2.2. Toujours tester ses associations en console</h4>
+<p>Tester ses modèles en console c'est la base ! Comment vérifier si les associations ont été faites correctement ? Il faut avoir en tête le type de relation 1-N ou N-N. </p>
+<p><b>Pour des relations 1-N</b>, on est sur des modèles de type Author et Book. Un Author peut avoir un ou plusieurs books, mais un book ne peut correspondre qu'à un seul Author.
+
+<pre><code class="language-ruby">#On crée des instances en base 
+shakespeare = Author.create
+macbeth = Book.create(author: shakespeare)
+king_lear = Book.create(author: shakespeare)
+
+# on vérifie que le lien est OK:
+macbeth.author
+king_lear.author
+# => doivent retourner l'objet shakespeare
+
+shakespeare.books
+#=> doit retourner un array contenant les objets macbeth et king_lear</code></pre></p>
+
+<p>⚠️ Attention aux pluriels : Un auteur peut avoir plusieurs livres, on utilisera donc le pluriel en faisant <code>.books</code>.</p>
+
+<p><b>Pour des relations N-N</b>, on utilisera des pluriels sur les deux modèles.
+Prenons l'exemple d'un service de location de vélos (<code>bicycles</code>) pouvant être utilisé par plusieurs utilisateurs (<code>users</code>) au travers de locations (<code>rentals</code>). On va créer un vélo et lui attribuer un utilisateur :</p>
+
+<pre><code class="language-ruby">bicycle_234 = Bicycle.create
+bicycle_234.users << User.create(name: "Michel")</code></pre>
+
+<p>Ça signifie que Michel a utilisé le vélo avec l’ID 234. Les deux sont maintenant liés et d'ailleurs Rails a automatiquement créé un objet <code>rental</code> qui lie les deux ! On pourrait le vérifier en faisant <code>Rental.last</code>.<p>
+
+<p>Maintenant je peux rajouter d’autres utilisateurs à ce vélo. </p>
+<pre><code class="language-ruby">bicycle_234.users << User.create(name: "Jack")
+bicycle_234.users << User.create(name: "John")</code></pre>
+
+<p>La commande <code>bicycle_234.users</code> doit me retourner un array contenant un objet <code>user</code> par utilisateur du Vélo 234.<br>
+Pareillement, je peux associer plusieurs vélos à un user :</p>
+
+<pre><code class="language-ruby">bicycle_27 = Bicycle.create
+bicycle_74 = Bicycle.create
+michel = User.first
+michel.bicycles << bicycle_27
+michel.bicycles << bicycle_74</code></pre>
+<p>
+
+La commande <code>michel.bicycles</code> me donnera donc un array de tous les objets vélos empruntés par mon utilisateur !
+</p>
+
+
+<h2>4. Points importants à retenir</h2>
+<p>Pour modéliser une relation N-N, il y a deux choses à faire :</p>
+<ul>
+  <li>Créer les trois tables avec les foreign keys dans la table de jointure (ou table intermédiaire).</li>
+  <li>Ajouter deux lignes par model pour brancher les models entre eux.</li>
+</ul>
+
+<p>Au niveau code, voici comment marche chaque relation :</p>
+
+<ul>
+  <li>Si j’ai une relation 1-1, j’utilise un <code>has_one</code> pour les deux modèles (c’est une relation assez rare, il y a d’autres manières de le faire mais c’est pas très important)</li>
+  <li>Si j’ai une relation 1-N, une des tables héberge les <code>foreign key</code> de l'autre : son model <code>belongs_to</code>. Pour la classe qui a N (un docteur qui a N rendez-vous), son model <code>has_many</code>.</li>
+  <li>Si j’ai une relation N-N, j’utilise <code>has_many through</code> et je passe par une table (et un modèle) intermédiaire. Cette table intermédiaire est reliée aux 2 autres par une relation 1-N standard (<code>belongs_to</code> d'un côté et <code>has_many</code> de l'autre)</li>
+</ul>
+
+<p>Une fois une relation établie, il faut la tester dans la console Rails !</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Il est possible que tu entendes parler de la relation N-N utilisant un <code>has_and_belongs_to_many</code>. C'est une sorte de raccourci de la méthode <code>has_many through</code> où la table intermédiaire ne dispose pas de model : tu ne peux pas accéder à son contenu dans ton code. Les rubyistes seniors la déconseillent aux débutants car souvent, on l'implémente ("hop, j'ai juste besoin de savoir quel patient est lié à quel médecin") pour finalement se rendre compte que la table intermédiaire est un objet intéressant ("💩 ! En fait c'est utile pour mon app de savoir quand et où ils se voient. Je dois maintenant tout changer et en faire un objet "appointment" avec des attributs"). Donc dans le doute, fait toujours du <code>has_many through</code>, tu passeras au <code>has_and_belongs_to_many</code> avec un peu plus d'expérience. <br>
+Mais tu peux <a href="https://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association">aller voir la doc Rails sur le sujet</a> si tu es curieux ! </p>
+
+<p>Quelques autres ressources si tu veux continuer à creuser les BDD relationnelles :</p>
+<ul>
+  <li>SitePoint ont fait <a href=" https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/" target="_blank">un chouette tuto</a> sur les BDD relationnelles avancées.</li>
+  <li>Regarde-la <a href="https://www.grafikart.fr/formations/ruby-on-rails/models-associations" target="_blank">vidéo de Grafikart</a> sur les BDD relationnelles avancées. Il va super loin, mais explique bien les bases au début</li>
+  <li><a href="http://guides.rubyonrails.org/association_basics.html" target="_blank">La doc</a> te sera d'une grande utilité pour les projets de tout à l'heure</li>
+  <li>Nos amis de The Odin Project ont fait un cours pas mal du tout sur les associations avancées, <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/active-record-associations" target="_blank">voici le lien</a></li>
+</ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : Petites méthodes pratiques dans les bases de données</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Dans cette ressource, nous allons te donner quelques astuces pour pousser un peu plus loin les associations dans Rails :</p>
+
+<ul>
+  <li>Le <code>class_name</code> qui permet d'utiliser un nom d'association différent de celui du model ;</li>
+  <li>Le <code>optional</code> qui permet de rendre un belongs_to optionnel ;</li>
+  <li>Le <code>dependent</code> qui permet de rendre un model dépendant de l'autre.</li>
+</ul>
+
+<h2>2. Historique</h2>
+<p>Ces 3 fonctionnalités d'ActiveRecord permettent d'élargir les possibilités et de modéliser encore plus de cas particuliers.</p>
+
+<h2>3. La ressource</h2>
+
+<h3>3.1. Utiliser Class_name</h3>
+
+<p>La méthode <code>class_name</code> est réservée à ceux qui ont bien compris les bases de la modélisation de base de données, et qui veulent aller un niveau au-dessus. Vu que t'es au top, tu vas comprendre ça hyper rapidement.</p>
+
+<p>Imagine que tu veux mettre en place un model pour une application de messagerie. Tu veux que tes utilisateurs puissent envoyer des messages privés ET en recevoir. Tu auras donc, pour chaque message, un <code>sender</code> et un <code>recipient</code>, mais qui seront tous les deux du même type <code>User</code>. Si tu utilises tes connaissances actuelles, tu vas te retrouver avec un objet <code>message</code> avec des <code>users</code> qui lui sont liés sans pouvoir différencier l'expéditeur du destinataire : faire un <code>message.users</code> va pas t'aider… Ce serait bien de pouvoir faire <code>message.sender</code> ou <code>message.recipient</code>. Eh bien c’est justement l’intérêt de class_name, qui va te permettre de renommer tes méthodes d'association. Voyons comment ce serait implémenté.</p>
+
+<p>Imaginons que la table <code>users</code> existe déjà avec son model <code>User</code>. Pour rajouter les messages, on crée un model <code>PrivateMessage</code> avec une migration pour créer la table <code>private_messages</code> :</p>
+<pre><code class="language-ruby">class CreatePrivateMessages < ActiveRecord::Migration[5.2]
+  def change
+    create_table :private_messages do |t|
+      t.references :recipient, index: true
+      t.references :sender, index: true
+
+      t.timestamps
+    end
+  end
+end</code></pre>
+
+<p>Tu vois que, directement, on annonce que la table contient des foreign key de type <code>recipient</code> et <code>sender</code>… Seul petit problème : ces tables n'existent pas, car les destinataires et expéditeurs sont des utilisateurs avant tout !
+C'est là que la méthode class_name intervient. Pour l'implémenter, on va dans le model (fichier <code>private_message.rb</code>) et on fait :</p>
+
+<pre><code class="language-ruby">class PrivateMessage < ApplicationRecord
+  belongs_to :sender, class_name: "User"
+  belongs_to :recipient, class_name: "User"
+end</code></pre>
+
+<p>Et dans la classe User, tu mettras :</p>
+
+<pre><code class="language-ruby">class User < ApplicationRecord
+  has_many :sent_messages, foreign_key: 'sender_id', class_name: "PrivateMessage"
+  has_many :received_messages, foreign_key: 'recipient_id', class_name: "PrivateMessage"
+end</code></pre>
+
+<p>En gros, voici ce que tu as fait (si on se concentre sur le côté sender / sent_messages) :</p>
+<ul>
+  <li>Tu as fait une migration pour créer une table <code>private_messages</code> avec une référence <code>sender</code>. Comme la table senders n'existe pas, tu ne mets pas <code>foreign_key: true</code>, mais <code>index: true</code>. <b>La table <code>private_messages</code> a donc une colonne <code>sender_id</code></b>.</li>
+  <li>Dans le model <code>PrivateMessage</code>, tu dis que ce dernier appartient à un sender, <b>qui est en fait de la classe User</b></li>
+  <li>Dans le model <code>User</code>, tu dis que ce dernier has_many <code>sent_messages</code>. Ces messages envoyés correspondent à la colonne <code>sender_id</code> de la classe PrivateMessage</li>
+</ul>
+<p>Tu vas voir que le résultat est super cool car au lieu d'avoir des méthodes vagues <code>.users</code> et <code>.private_messages</code>, tu vas avoir des méthodes très explicites pour bien différencier la partie "envoi de message" (<code>.sender</code> et <code>.sent_messages</code>) de la partie "réception de message" (<code>.recipient</code> et <code>.received_messages</code>).</p>
+
+<p>On fait alors un tour en console pour illustrer tout ça et vérifier que ça fonctionne. Ça donne :</p>
+
+<pre><code class="language-ruby">#on crée deux users
+john = User.create
+alex = User.create
+
+#on crée un message
+pm = PrivateMessage.new
+
+#on indique qui est l'expéditeur et qui est le destinataire
+pm.sender = alex
+pm.recipient = john
+
+#maintenant on peut tester nos supers méthodes d'association
+
+john.received_messages
+#=> doit retourner un array contenant l'objet "pm"
+
+alex.sent_messages
+#=> doit retourner un array contenant l'objet "pm"
+
+pm.sender
+#=> evidemment, doit retourner l'objet "alex"
+pm.recipient
+#=> evidemment, doit retourner l'objet "john"</code></pre>
+
+
+<h3>3.2. Optional</h3>
+<p>Imaginons que tu veuilles une relation 1-N entre un author et un book mais avec la possibilité qu'un book soit créé sans author. En temps normal, impossible : ActiveRecords refuserait et te renverrait des gros <code>ROLLBACK</code>. <br>
+Pour remédier à ceci, <code>optional</code> est là pour toi ! Voici comment rendre un author optionnel pour un book :</p>
+
+<pre><code class="language-ruby">class Book < ApplicationRecord
+  belongs_to :author, optional: true
+end</code></pre>
+
+<p>Et voilà ! Maintenant tu peux faire en console <code>Book.create</code> sans avoir peur d'un <code>ROLLBACK</code> à la sauce claque de gitan.</p>
+
+<h3>3.3. Dependent</h3>
+<p>Dans certains cas, les associations entre tables de ta BDD sont très forts. Par là, je veux dire que si un objet disparaît, l'existence des objets qui lui sont liés n'a peut-être plus de sens et il serait préférable qu'ils disparaissent aussi pour ne pas polluer ta BDD. Un exemple ? Les RDV entre patients et docteurs. Si un docteur vient à demander à sortir de ta BDD, il faut probablement supprimer tous les appointments où il apparaît (et bien sûr prévenir les patients). C'est le rôle de <code>dependent: :destroy</code> d'effectuer cette suppression automatiquement.</p>
+
+<pre><code class="language-ruby">class Doctors < ApplicationRecord
+  has_many :appointments, dependent: :destroy
+end</code></pre>
+
+<p>Avec ces lignes, quand tu détruis un docteur, tu vas détruire les RDV qui lui sont liés. Dependent marche aussi avec belong_to.</p>
+
+<h2>4. Points importants à retenir</h2>
+<ul>
+  <li>Pour renommer tes méthodes d'association et ne pas leur donner le nom du model (ex: changer un <code>.users</code> en <code>.sender</code> ou <code>.recipient</code>), utilise <code>class_name</code></li>
+  <li>Pour rendre une association en <code>belongs_to</code> optionnelle, utilise <code>optional: :true</code></li>
+  <li>Pour faire des suppressions en chaine entre tables liées, utilise <code>dependent: :destroy</code></li>
+</ul>
+
+
+<h2>5. Pour aller plus loin</h2>
+<p>Tous ces exemples sont tirés de <a href="https://guides.rubyonrails.org/association_basics.html" target="_blank">la doc</a>, cette bible de Rails qui explique tout.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Petits sites de BDD relationnelles</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Pour ce projet, nous allons te demander de créer les models de plusieurs applications. Ce seront tes premières tables avancées, mais à ton niveau plus rien ne t'arrête.</p>
+<p>Pour tous ces sites, nous allons te demander de créer uniquement les modèles, pas de views / controller. ✌️<br>
+Par contre n'oublie pas qu'une fois ton travail validé en console, tu dois faire un joli seeds.rb pour que les autres moussaillons puissent te corriger facilement.</p>
+<p>Comme chaque projet chez THP, il faut le faire en pair-programming !</p>
+
+<h2>2. Le projet</h2>
+<h3>2.1. FreeDoc - Réserve ton docteur </h3>
+<h4>2.1.1. Le pitch</h4>
+<p>Allez, on va implémenter pour de vrai ce concurrent de Doctolib dont on te parle à longueur de ressource ! À toi d'être chirurgical 👩‍⚕️</p>
+
+<h4>2.1.2. Les models</h4>
+<p>Pour ce premier exercice, nous allons t'aider et te donner les models à créer :</p>
+
+<ul>
+  <li>un model <code>doctor</code>, qui a comme attributs :
+  <ul>
+    <li>un <code>first_name</code>, qui est un string</li>
+    <li>un <code>last_name</code>, qui est un string</li>
+    <li>un <code>specialty</code>, qui est un string</li>
+    <li>un <code>zip_code</code>, qui est un string</li>
+  </ul></li>
+  <li>un model <code>patient</code>, qui a comme attributs :
+  <ul>
+    <li>un <code>first_name</code>, qui est un string</li>
+    <li>un <code>last_name</code>, qui est un string</li>
+  </ul></li>
+  <li>un model <code>appointments</code>, qui a comme attributs :
+  <ul>
+    <li>un <code>date</code>, qui est un datetime</li>
+  </ul></li>
+</ul>
+
+<p>Une fois les attributs fixés, on s'attaque aux relations :</p>
+<ul>
+  <li>Un <code>appointment</code> ne peut avoir qu'un seul <code>doctor</code>, mais un <code>doctor</code> peut avoir plusieurs <code>appointment</code>.</li>
+  <li>Un <code>appointment</code> ne peut avoir qu'un seul <code>patient</code>, mais un <code>patient</code> peut avoir plusieurs <code>appointment</code>.</li>
+  <li>Un <code>doctor</code> peut avoir plusieurs <code>patient</code>, au travers des <code>appointments</code>, et vice versa.</li>
+</ul>
+
+<p>Je t'invite à créer les models et les migrations puis à les passer.</p>
+
+<h4>2.1.3. Tester</h4>
+<p>Pour tester, tu peux aller dans la console, créer des <code>doctor</code>, <code>patient</code>, et <code>appointment</code> à la volée, puis les lier.</p>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Comme les <code>doctor</code> et les <code>patient</code> sont liés en N-N, rappelle-toi qu'un <code>patients_list = doctor_instance.patients</code> va te retourner <b>un array</b> d'objets de class <code>Patient</code>. <br>
+      Si tu fais <code>patients_list.last_name</code> dessus, ça va te renverra une erreur car un array n'a pas de <code>last_name</code>. <br>
+      Par contre tu peux faire dessus un <code>patients_list.first.last_name</code> ou <code>patients_list[0].last_name</code> 😉.</p>
+    </div>
+  </div>
+</div>
+
+<p>Une fois que c'est bon, n'oublie pas le seeds.rb qui va bien.</p>
+
+<h4>2.1.4. Petit coup de boost</h4>
+<p>Ta startup de docteurs marche à merveille, tellement que tu aimerais ajouter plusieurs tables :</p>
+
+<ul>
+  <li><code>city</code>. Chaque docteur, patient, et rendez-vous est lié à une <code>city</code>. Une city peut avoir plusieurs docteurs, patients, et rendez-vous.</li>
+  <li>tu voudrais virer la ligne <code>specialty</code> de ta table <code>doctor</code> et la remplacer par un model à part entière : tu vas donc créer un model <code>specialty</code>. Un docteur aurait plusieurs <code>specialty</code> (DEAL_WITH_IT), et une <code>specialty</code> pourrait concerner plusieurs <code>doctor</code>.</li>
+</ul>
+<p>Comme d'hab tu vas tester et tu compléteras le seeds.rb pour prendre en compte ces changements.</p> 
+<p>Et voilà pour FreeDoc ! Doctolib est en PLS.</p>
+
+
+<h3>2.2. Le Airbnb des promenades de chiens</h3>
+<h4>2.2.1. Le pitch</h4>
+<p>En cours de "Bizness Growth Money Maker", on t'avait demandé de créer une entreprise à fort potentiel. À l'époque tu t'étais dit que ce serait une chouette idée de faire une plateforme où des personnes pourraient promener les chiens des autres, en échange de cash-money.</p>
+<p>C'est dingue comme idée : ça va mettre tous les VC aux abois. Allez, on le fait !</p>
+
+<h4>2.2.2. Les models</h4>
+<p>À priori, les models sont simples : il y a un model <code>dogsitter</code> et un model <code>dog</code> (on te laisse choisir au moins un attribut chacun). Un <code>dogsitter</code> peut promener plusieurs <code>dog</code> lors d'une <code>stroll</code> (promenade, en anglais) ; et un <code>dog</code> peut avoir plusieurs <code>dogsitter</code> via les <code>stroll</code>.</p>
+<p>Maintenant tu veux préciser la ville des promeneurs et des chiens pour faire un super algorithme de matching. Tu devras donc créer une table <code>City</code> avec comme attribut <code>city_name</code>. Chaque ville contient plusieurs promeneurs et plusieurs chiens mais un chien et un promeneur ne peuvent appartenir qu'a une ville.</p>
+
+<p>Cela ressemble beaucoup à notre schéma de docteurs tout ceci ! C'est fait exprès, rien de tel pour s'entraîner que de refaire les exercices. Tu vas dérouler tes prochains model grâce à ça.</p>
+
+<p>Comme la dernière fois : fait un seeds.rb et teste le tout en console.</p>
+
+<h3>2.3. The Gossip Project</h3>
+<h4>2.3.1 Le pitch</h4>
+
+<p>Allez, on va poser les bases de notre fameux Gossip Project pour le transcrire en Rails. Et comme je te l'ai expliqué, la première étape est la modélisation de sa BDD ! <br>
+Le parcours utilisateur est le suivant : sur ce super réseau social, un utilisateur va s'inscrire, renseigner son prénom et nom, son mail et son age, puis il précisera sa ville avec une recherche par code postal. <br>
+Il aura ensuite toutes les fonctionnalités qui feront de cette appli une future licorne de la Bitchin'Tech : </p>
+<ul>
+<li>Les utilisateurs peuvent créer des potins : "askip john est célib hihi"</li>
+<li>Les utilisateurs, en créant des potins, peuvent mettre un ou plusieurs tags sur les potins : #romance </li>
+<li>Les utilisateurs peuvent commenter des potins : "ahiii j'savé pa lol ptdr 💁‍♂️"</li>
+<li>Et puisque ton appli doit respecter les standards de l'industrie, on va faire en sorte qu'il soit possible aussi de commenter des commentaires.</li>
+<li>Les utilisateurs peuvent liker des potins.</li>
+<li>Les utilisateurs peuvent contacter leur commères favoris en MP pour obtenir des exclus mondiales.</li>
+</ul>
+
+<p>L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par date (plus récent ou plus ancien), par nombre de likes, par tags, pour trouver les potins les plus croustillants.</p>
+<p><b>Ça fait beaucoup ??</b> Oui clairement, y a de la fonctionnalité de déglingos là. Pas de panique. On va te guider ! Suis-nous.</p>
+
+<h4>2.3.2. Dessine-moi une BDD </h4>
+<p>Allez, feuille / tableau / ERD en main et hop! => Imagine les models qu'il faut pour cette app, les relations possibles, puis évidemment les attributs de chaque model. Toute l'architecture de la BDD doit tenir sur un dessin que vous allez faire en équipe. C'est un excellent entraînement au projet final 😇</p>
+
+<p>Une fois que c'est fait, on va te guider et tu vas pouvoir comparer ton schéma à notre pas à pas.</p>
+
+<h4>2.3.3. Les models</h4>
+
+<h5>a) LES BASES</h5>
+<p>Commence par créer une application Rails, puis mets les bonnes versions de Ruby et Rails dans le Gemfile.</p>
+
+<h5>b) LES USERS</h5>
+<p>Crée une classe <code>User</code>, qui aura comme attributs :</p>
+
+<ul>
+  <li>Un <code>first_name</code>, qui est un string</li>
+  <li>Un <code>last_name</code>, qui est un string</li>
+  <li>Un <code>description</code>, qui est un text</li>
+  <li>Un <code>email</code>, qui est un string</li>
+  <li>Un <code>age</code>, qui est un integer</li>
+</ul>
+
+<p>Tu vas faire 10 utilisateurs en base avec Faker.</p>
+
+<h5>c) LES VILLES</h5>
+<p>Crée une classe <code>City</code>, qui aura comme attributs :</p>
+
+<ul>
+  <li>Un <code>name</code>, qui est un string</li>
+  <li>Un <code>zip_code</code>, qui est un string</li>
+</ul>
+<p>Un utilisateur appartient à une seule ville mais une ville peut contenir plusieurs utilisateurs. <br>
+Tu vas faire 10 villes en base avec Faker et les lier avec les utilisateurs du seed.</p>
+
+<h5>d) LES GOSSIPS</h5>
+<p>Crée une classe <code>Gossip</code>, qui aura comme attributs :</p>
+
+<ul>
+  <li>Un <code>title</code>, qui est un string</li>
+  <li>Un <code>content</code>, qui est un text</li>
+</ul>
+<p>Un utilisateur peut écrire plusieurs gossips mais un gossip ne peut être écrit que par un seul utilisateur. <br>
+Tu vas faire 20 gossips en base avec Faker et les lier avec leur auteur.</p>
+
+<h5>e) LES TAGS</h5>
+<p>Crée une classe <code>Tag</code>, qui aura comme attributs :</p>
+<ul>
+  <li>Un <code>title</code>, qui est un string</li>
+</ul>
+<p>Un gossip peut avoir plusieurs tags et un tag peut être présent sur plusieurs gossip (genre #bromance). <br>
+Tu vas faire 10 tags en base avec Faker. Chaque gossip aura (au minimum) un tag.</p>
+
+<h5>f) LES MESSAGES PRIVÉS</h5>
+<p>Crée une classe <code>PrivateMessage</code>, qui aura comme attributs :</p>
+
+<ul>
+  <li>Un <code>content</code>, qui est un text</li>
+</ul>
+<p>Un PM aura un expéditeur et un (ou plusieurs) destinataires. <br>
+Tu vas faire quelques PM en base avec Faker et leur donner un expéditeur et un (ou plusieurs) destinataires.</p>
+
+<p>Bravo si t'es arrivé jusque-là ! <br>
+  <b>=== Les exercices ci-dessous sont optionnels et ne seront pas évalué ===</b></p>
+
+<h5>g) LES COMMENTAIRES</h5>
+<p>Crée une classe <code>comment</code>, qui aura comme attributs :</p>
+<ul>
+  <li>Un <code>content</code>, qui est un text</li>
+</ul>
+<p>Un gossip peut avoir plusieurs commentaires mais un commentaire ne peut correspondre qu'a un gossip précis. <br>
+Les utilisateurs peuvent écrire plusieurs commentaires mais un commentaire n'a qu'un seul auteur. <br>
+Tu vas faire 20 commentaires en base avec Faker et les lier avec leur auteur et le gossip associé.</p>
+
+<h5>h) LES LIKES</h5>
+<p>Crée une classe <code>like</code>, qui n'aura pas d'attributs. <br>
+Un utilisateur peut mettre des likes sur des gossips ou des commentaires. <br>
+Tu vas faire 20 likes en base avec Faker en les mettant à des commentaires ou des gossips au hasard. </p>
+<h5>i) LES COMMENTAIRES (BIS)</h5>
+<p>
+Pour les chauds de la BDD, vous pouvez faire du commentaire de commentaires. Indice <code>polymorphism</code>.
+Bien sûr, ton seed fera des commentaires de commentaires 🤓</p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>3 applications Rails, chacune dans un lien GitHub. <br>
+Les standards habituels sont à respecter (Gemfile, README) mais en plus on veut des jolis seeds.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>
