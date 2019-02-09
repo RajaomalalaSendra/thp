@@ -2,7 +2,7 @@
 <html class="loading" lang="fr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/thp/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../style/bootstrap.css">
     <title>The hacking project offline</title>
   </head>
   <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
@@ -15,13 +15,13 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/thp">Home</a>
+              <a class="nav-link" href="../../">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/thp/features">Features</a>
+              <a class="nav-link" href="../../features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/thp/about">About</a>
+              <a class="nav-link" href="../../about">About</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -32,11 +32,11 @@
       </nav>
 
 <div class="container">
-    <a type="button" class="btn btn-dark" href="/thp/semaine_1/">Semaine 1</a>
-    <a type="button" class="btn btn-dark btn-lg" href="/thp/semaine_2/">Semaine 2</a>
-    <a type="button" class="btn btn-dark" href="/thp/semaine_3/">Semaine 3</a>
-    <a type="button" class="btn btn-dark" href="/thp/semaine_4/">Semaine 4</a>
-    <a type="button" class="btn btn-dark" href="/thp/semaine_5/">Semaine 5</a>  
+    <a type="button" class="btn btn-dark" href="../../semaine_1/">Semaine 1</a>
+    <a type="button" class="btn btn-dark btn-lg" href="../../semaine_2/">Semaine 2</a>
+    <a type="button" class="btn btn-dark" href="../../semaine_3/">Semaine 3</a>
+    <a type="button" class="btn btn-dark" href="../../semaine_4/">Semaine 4</a>
+    <a type="button" class="btn btn-dark" href="../../semaine_5/">Semaine 5</a>  
 </div>
 
 <div class="app-content content">
@@ -51,23 +51,23 @@
   </div>
   <div class="card-body">
     <div class="text-center">
-    <a href="/thp/semaine_2">
+    <a href="../../semaine_2">
       <button class="btn btn-secondary btn-outline-dark btn mr-4">
         <i class="fa fa-terminal"></i>&nbsp;&nbsp;&nbsp;Lun
       </button>
-</a>    <a href="/thp/semaine_2/jour_2">
+</a>    <a href="../../semaine_2/jour_2">
       <button class="btn btn-secondary btn-outline-dark btn mr-4">
         <i class="fa fa-code"></i>&nbsp;&nbsp;&nbsp;Mar
       </button>
-</a>    <a href="/thp/semaine_2/jour_3">
+</a>    <a href="../../semaine_2/jour_3">
       <button class="btn btn-secondary btn-outline-dark btn-lg mr-4">
         <i class="fa fa-desktop"></i>&nbsp;&nbsp;&nbsp;Mer
       </button>
-</a>    <a href="/thp/semaine_2/jour_4">
+</a>    <a href="../../semaine_2/jour_4">
       <button class="btn btn-secondary btn-outline-dark btn mr-4">
       <i class="fa fa-folder-open"></i>&nbsp;&nbsp;&nbsp;Jeu
       </button>
-</a>    <a href="/thp/semaine_2/jour_5">
+</a>    <a href="../../semaine_2/jour_5">
       <button class="btn btn-secondary btn-outline-dark btn mr-4">
       <i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Ven
       </button>
@@ -363,7 +363,7 @@ puts ENV</code></pre>
       <p class="card-text">Ouiiiin, Dotenv ça marche paaaas ! 😭</p>
       <p>Voici les principales coquilles que les moussaillons font et qui empêchent la gem de bien faire son boulot :</p>
       <ul>
-        <li>Le fichier <code>.env</code> est mal nommé ou pas situé dans le même dossier que le fichier Ruby que tu exécutes. Dans ce cas, il te faut préciser à Dotenv où ton <code>.env</code> est situé. Par exemple pour lui dire ".env est un dossier plus haut que mon fichier Ruby", utilises la ligne <code>Dotenv.load('../.env')</code></li>
+        <li>Le fichier <code>.env</code> est mal nommé ou pas situé dans le même dossier que le fichier Ruby que tu exécutes. Dans ce cas, il te faut préciser à Dotenv où ton <code>.env</code> est situé. Par exemple pour lui dire ".env est un dossier plus haut que mon fichier Ruby", utilises la ligne <code>Dotenv.load('../../.env')</code></li>
         <li>Dans le fichier <code>.env</code>, les clés d'API ne sont pas définies comme des strings. Il faut les déclarer ainsi : <code>Nom_de_la_clef = "contenu de la clé"</code>. Si vous oubliez les guillemets, ça foire.</li>
         <li>Dans ton programme, la clé d’API n'est pas bien appelée. C'est un string à appeler sur le hash <code>ENV</code> pour en obtenir la valeur. Avec l'exemple précédent, je dois écrire <code>ENV['Nom_de_la_clef']</code> (encore une fois, n'oubliez pas les guillemets).</li>
         <li>Dans le doute, fais un <code>puts ENV['Nom_de_la_clef']</code> et vérifie que tu obtiens bien ta clef à l'écran !</li>
