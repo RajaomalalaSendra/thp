@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html class="loading" lang="fr">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ea4c9be856","applicationID":"130952841","transactionName":"IFYPQUNbWApXFE1WBRBRA1pQRlBJVgcbQUsQUQ5C","queueTime":2,"applicationTime":126,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Le tableau de bord | The Hacking Project</title>
+<meta name="description" content="Ici c&#39;est ton tableau de bord, tu y trouves les infos liés à ton compte, à ta progression dans la formation et a ta moyenne.">
+<meta property="og:site_name" content="The Hacking Project">
+<meta property="og:title" content="Le tableau de bord">
+<meta property="og:url" content="https://www.thehackingproject.org/">
+<meta property="og:description" content="The Hacking Project est une école en peer-learning gratuite, sans locaux, sans sélection. L&#39;enseignement est composé intégralement de projets en équipe.">
+<meta property="og:image" content="https://www.thehackingproject.org/assets/home-1-342ac3a7b4986c9b25b30b9dfc4b83dafeed398ee2bc61c660aa04f6e7cef81f.jpg">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GmjIlzKmixVxedTwO5AQ4NvFHCXgPHzS9Acn6svHhyQgm12JNrAs44OD2OTNJoyHiVUsxgtEf6EMQrn5dMFZfA==" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-c01aaccf467f7cc3d79bbce743d60779f5b833fdc4500cebd07a5e11a07a5c31.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-804b12d1c41c60fe721477b7c3b0a32811dc610580dd40ac92f1cc04cbd05ca4.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
+<link rel="manifest" href="/assets/favicon/manifest-cf975201fd8ac78a1f1a203357573d50031f1cc33436d099743df6428b8a38a2.json">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-8af1cfcf7525ccdccb490f9f5adad396653a4969b419e0a9a9d3a1088140a912.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon-cbf10361dc90b277565960736d4897fddef5468bff6299811ea9498459d56d21.ico">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-dab38db6040ef54ac56e91fdd77e3d7b06746a634e87b68c99b59b216cb8611a.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" media="screen" href="/packs/vendor-539cdbdee74ba7fbe9c2cefa4bf9abe2.css" />
+<link rel="stylesheet" media="screen" href="/packs/dashboard-20fb2c0f53a2b62c3efa7cf6f1e3e589.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105991867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-105991867-1');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '773401719499556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=773401719499556&ev=PageView
+    &noscript=1"/>
+    </noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("3a34a32946b2ebf5b2063d502374f392");</script>
+<!-- end Mixpanel -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:995310,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="ccedc1a9b6b946929d14dce625b51c035665d4ea12e846308ede0db968e93f42",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns  menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-primary-blue" data-col="2-columns">
+    <script src="/packs/manifest-f83a0093dcd4ded5722b.js"></script>
+    <script src="/packs/vendor-85ac0c8b61a10314edd0.js"></script>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light" style="padding:0;">
+                    <div class="navbar-wrapper">
+                      <div class="navbar-container content">
+                        <div class="collapse navbar-collapse show" id="navbar-mobile">
+                          <!-- Division Gauche -->
+                          <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                          </ul>
+                          <!-- Fin division Gauche -->
+
+                          <!-- Division Milieu-->
+
+                          <!-- Fin division Milieu-->
+
+                          <!-- Division droite -->
+                          <ul class="nav navbar-nav float-right">
+
+                           <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="avatar avatar-online">
+                                  
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                </span>
+
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                  <a class="dropdown-toggle nav-link dropdown-user-link" href="/users/6776?locale=fr">
+                                    <span class="avatar avatar-online pt-0">
+                                      
+<img alt="avatar" style="max-height: 40px!important; width: auto" class="rounded-circle img-border" src="/packs/packs/dashboard/images/profile/default_profile-a3318a5e66467f9958f16a172f9d15d6.jpg" />
+
+                                    </span>
+                                    <span class="user-name text-bold-700 ml-1 text-dark"> Sendra Andriampanjato</span>
+</a>                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/users/6776/edit?locale=fr">
+                                    <i class="ft-edit"></i> Edit. profil</a>
+</a>
+                                  <a class="dropdown-item" href="/dashboard/assignments?locale=fr&amp;sort=mine">
+                                     <i class="fa ft-award"></i> Mes missions
+</a>                                  <div class="dropdown-divider"></div>
+
+                                  <a class="dropdown-item" rel="nofollow" data-method="delete" href="/logout?locale=fr">
+                                     <i class="ft-power"></i> Déconnexion
+</a>
+
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <!-- Fin division Droite-->
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+          <!-- Fin division Milieu-->
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+  data-img="/packs/packs/dashboard/images/background/02-5c429c538031754c55530f38b4635d03.jpg">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="/fr">
+                  <h3 class="brand-text">The Hacking Project</h3>
+</a>             </li>
+            <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+          </ul>
+        </div>
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+              <a href="/dashboard?locale=fr">
+                <!-- rollback to past commit because this wasn't working att all  -->
+                <!--       link_to dashboard_week_day_path(Week.find_by_this_week(@session), Day.current_day_position)  do -->
+
+                <i class="ft-monitor"></i>
+                <span class="menu-title" data-i18n="">Aujourd'hui</span>
+</a>            </li>
+
+
+            <li class="nav-item">
+              <a href="#">
+                 <i class="fa ft-award"></i>
+                <span class="menu-title" data-i18n="">Missions</span>
+</a>                <ul class="menu-content">
+                </ul>
+              </li>
+
+            <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-users"></i>
+                <span class="menu-title" data-i18n="">Groupe</span>
+</a>                <ul class="menu-content">
+
+                </ul>
+              </li>
+              <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-camera"></i>
+                <span class="menu-title" data-i18n="">Trombinoscope</span>
+</a>                <ul class="menu-content">
+<!--
+                  <li><a class="menu-item" href="#">Ma promotion</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Mon parrain</a>
+                  </li> -->
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/dashboard/weeks?locale=fr">
+                  <i class="fa fa-book"></i>
+                  <span class="menu-title" data-i18n="">Programme</span>
+</a>                <ul class='menu-content'>
+                    <li><a href="/dashboard/weeks/1?locale=fr">Introduction au Code</a></li>
+                    <li><a href="/dashboard/weeks/2?locale=fr">Découverte de Ruby</a></li>
+                    <li><a href="/dashboard/weeks/3?locale=fr">Programmation Orientée Objet</a></li>
+                    <li><a href="/dashboard/weeks/4?locale=fr">Initiation à Rails</a></li>
+                    <li><a href="/dashboard/weeks/5?locale=fr">Rails intermédiaire</a></li>
+                    <li><a href="/dashboard/weeks/6?locale=fr">Rails avancé</a></li>
+                    <li><a href="/dashboard/weeks/7?locale=fr">HTML / CSS</a></li>
+                    <li><a href="/dashboard/weeks/8?locale=fr">JavaScript de front</a></li>
+                    <li><a href="/dashboard/weeks/9?locale=fr">Projet : boutique en ligne</a></li>
+                    <li><a href="/dashboard/weeks/10?locale=fr">Projet Final 1</a></li>
+                    <li><a href="/dashboard/weeks/11?locale=fr">Projet Final 2</a></li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                 <i class="fa fa-angle-down"></i>
+                <span class="menu-title" data-i18n="">Le cursus</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/cursus_submissions_guidelines?locale=fr">Contribuer au cursus ?</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/lessons?locale=fr">Ressources</a>
+                  </li>
+                  <li>
+                    <a href="/dashboard/projects?locale=fr">Projets</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-clipboard"></i>
+                <span class="menu-title" data-i18n="">Corrections</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/corrections?locale=fr">Mes corrections</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa ft-play"></i>
+                <span class="menu-title" data-i18n="">Projets Finaux</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects?locale=fr">Les Projets Finaux</a>
+                  </li>
+                </ul>
+                <ul class="menu-content">
+                  <li>
+                    <a href="/dashboard/final_projects/new?locale=fr">Proposer un projet final</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fa  fa-cogs"></i>
+                  <span class="menu-title">Liens Pratiques</span>
+</a>                <ul class="menu-content">
+                  <li>
+                    <a href="/fr/modalites">Modalités</a>
+                  </li>
+                  <li>
+                    <a href="https://blog.thehackingproject.org/2019/01/03/le-guide-de-survie-du-moussaillon/" target="_blank">Le guide de survie</a>
+                  </li>
+
+                </ul>
+              </li>
+              <!--
+              <li class=" nav-item">
+                <a href="#">
+                   <i class="ft-box"></i>Ressources
+</a>                <ul class="menu-content">
+                  <li><a class="menu-item" href="#">Ruby</a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Ressource 1</a>
+                        </li>
+                        <li><a class="menu-item" href="#">Ressource 2</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li><a class="menu-item" href="#">Rails</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Html &amp Css</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Javascript</a>
+                  </li>
+                  <li><a class="menu-item" href="#">Github</a>
+                  </li>
+
+                </ul>
+              </li> -->
+            <!-- <li class=" nav-item">
+              <a href="#">
+                 <i class="ft-zap"></i>
+                <span class="menu-title" data-i18n="">Dans ma ville</span>
+</a>                <ul class="menu-content">
+                    <li>
+                      <a class="menu-item" href="#">Où travailler ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Où décompresser ?</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#">Les autres mouss'</a>
+                    </li>
+                </ul>
+            </li> -->
+          </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    
+      
+<div class="content-body">
+      <h2 class="text-center">Mailer et événements</h2>
+      <h4 class="text-center">Rails avancé</h4>
+  <div class="row">
+     <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+              <i class="ft-calendar icon-opacity info font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+              <span class="d-block mb-1 font-medium-1"></span>
+              <h3 class="info mb-0">
+                 Jour 25 / 55</h3>
+          </div>
+        </div>
+        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="120">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        <div class="media d-flex">
+          <div class="align-self-top">
+            <i class="ft-heart icon-opacity danger font-large-4"></i>
+          </div>
+          <div class="media-body text-right align-self-bottom mt-3">
+            <span class="d-block mb-1 font-medium-1">Jokers restant</span>
+            <h3 class="danger mb-0">
+                3
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-flex">
+                    <div class="align-self-top">
+                        <a href="/dashboard/assignments?locale=fr">
+                           <i class="ft-fast-forward icon-opacity warning font-large-4"></i>
+</a>                    </div>
+                    <div class="media-body text-right align-self-bottom mt-3">
+                        <span class="d-block mb-1 font-medium-1">Missions</span>
+                            <div class="badge border-danger danger badge-border">Pas inscrit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="row">
+        <div class="container">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h1 >Rails avancé
+                <i class="fa fa-space-shuttle text-danger"></i>
+        </h1>
+        
+        </div>
+        <div class="card-content">
+        <div class="card-body">
+            <div class="card-text">
+            <h2 class="text-center">Mailer et événements</h2>
+            <div class="cd-horizontal-timeline loaded">
+                <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events" style="width: 1800px;">
+                    <ol>
+                            <li>
+                                <a class="selected" style="left:120px;" data-toggle="tooltip" data-placement="top" title="Mailer et événements" href="/dashboard/weeks/6/days/1?locale=fr">
+                                    Lun
+                                        <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+</a>                                </li>
+                                <li>
+                                    <a style="left:240px;" href="/dashboard/weeks/6/days/2?locale=fr">
+                                        Mar
+                                            <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+</a>                                </li>
+                                <li>
+                                <a href="#" style="left: 360px;">
+                                    Mer
+                                    <i class="fa fa-lock fa-margin" aria-hidden="true"></i>
+                                        <i class="fa fa-rocket text-danger" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Projet à rendre ce jour-là"></i>
+
+                                </a>
+                                </li>
+                                <li>
+                                <a href="#" style="left: 480px;">
+                                    Jeu
+                                    <i class="fa fa-lock fa-margin" aria-hidden="true"></i>
+                                        <i class="fa fa-pencil text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Corrections cette journée là" ></i>
+
+
+                                </a>
+                                </li>
+                                <li>
+                                <a href="#" style="left: 600px;">
+                                    Ven
+                                    <i class="fa fa-lock fa-margin" aria-hidden="true"></i>
+                                        <i class="fa fa-beer text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Rendez-vous pour boire un coup"></i>
+
+                                </a>
+                                </li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+<div>
+  </div>
+
+  <!-- Les fameuses corrections qui n'arrivnet que les jours concernés -->
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #5E66E5 " >
+          <h1>Cours : L&#39;Action Mailer</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          
+<h2>1. Introduction</h2>
+<p>Rails dispose d'un outil de gestion des envois d'e-mail plutôt bien conçu : Action Mailer. Grâce à lui, tu vas pouvoir automatiser l'envoi de certains e-mails selon les critères que tu définiras (actions de tes utilisateurs, événements ou alertes données, etc..). Nous allons donc t'apprendre à paramétrer Action Mailer et à l'utiliser de façon automatisée.</p>
+
+
+<h2>2. Historique et contexte</h2>
+<p>Les e-mails sont, de nos jours, partie intégrante de l'expérience utilisateur d'un site web moderne. Sans eux, impossible de garder le contact avec tes utilisateurs, leur faire changer de mot de passe ou encore les prévenir d'un évènement important lié à leurs comptes (nouveau commentaire ? nouveau message ?). Maintenant que tu sais poser les bases d'une application Rails complète (routes, models, views et controllers), on va lui ajouter les fonctionnalités additionnelles qui en feront un service fonctionnel et professionnel.</p>
+
+<h2>3. La ressource</h2>
+
+<h3>3.1. Les concepts de base de l'Action Mailer</h4>
+<p>L'Action Mailer est organisé en plusieurs éléments au sein d'une app Rails : </p>
+<ol>
+  <li><b>Des mailers</b>, qui sont ni plus ni moins que des sortes de controllers appliqués aux e-mails. Tout comme les controllers "normaux", ils contiennent des méthodes qui vont faire des appels à la BDD (via les models) et ensuite envoyer des e-mails (au lieu d'envoyer des pages web à des navigateurs). </li>
+  <li><b>Des views</b>, qui sont des sortes de templates des e-mails à envoyer. Tout comme les views de ton site, elles sont personnalisées grâce à du code Ruby inclus dedans (pour rajouter un nom, un e-mail, le contenu d'un objet récupéré en BDD, etc.). Il existe deux types de views : les <code>.text.erb</code> et les <code>.html.erb</code> car on peut envoyer des e-mails au format HTML comme au format text.</li>
+</ol>
+
+<p>Au final, il faut considérer qu'Action Mailer a un fonctionnement très proche du MVC classique de Rails sauf qu'au lieu d'afficher des pages HTML sur un navigateur, il envoie des fichiers HTML ou text par e-mail.</p>
+
+<h3>3.2. Mettre en place ton premier Action Mailer</h3>
+<p>Afin d'apprendre à te servir de ce service, on te propose de pratiquer directement.</p>
+
+<h4>3.2.1. Les bases pour bosser</h4>
+<p> Commence par préparer tout ce qu'il faut pour disposer d'une application de test : </p>
+<ul>
+  <li>Génère une application Rails <code>test_action_mailer</code> ;</li>
+  <li>Crée-lui un model <code>User</code> avec des champs <code>name</code> (string) et <code>email</code> (string) ;</li>
+  <li>Crée une BDD (si tu es en PostGre) et passe la migration.</li>
+</ul>
+
+<h4>3.2.2. Ton premier mailer</h4>
+<p>À présent, on va générer un mailer avec <code>$ rails g mailer UserMailer</code>. On l'a appelé <code>UserMailer</code> dans l'idée qu'à terme, il pourrait gérer tous les e-mails à destination des utilisateurs. On pourrait aussi avoir un <code>AdminMailer</code> qui enverrait les e-mails aux gestionnaires du site.</p>
+<p>Maintenant, jette un œil au mailer que tu viens de générer dans <code>app/mailers/user_mailer.rb</code> : il est vide mais hérite de <code>ApplicationMailer</code> que tu pourras retrouver à <code>app/mailers/application_mailer.rb</code>. </p>
+
+<p>On va éditer le mailer pour rajouter une méthode dont le rôle sera simple : envoyer un e-mail de bienvenue à tous les utilisateurs s'inscrivant sur notre site. Rajoute donc les lignes suivantes : </p>
+
+<pre><code class="language-ruby">class UserMailer < ApplicationMailer
+  default from: 'no-reply@monsite.fr'
+ 
+  def welcome_email(user)
+    #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
+    @user = user 
+
+    #on définit une variable @url qu'on utilisera dans la view d’e-mail
+    @url  = 'http://monsite.fr/login' 
+
+    # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
+    mail(to: @user.email, subject: 'Bienvenue chez nous !') 
+  end
+end</code></pre><br>
+
+<p>La première ligne permet de définir la valeur de <code>default[:from]</code>. Le hash <code>default</code> permet de définir tout un ensemble de valeurs par défaut : celles-ci sont écrasées si la méthode d'envoi d’e-mail défini une valeur autre. Ici, l'objectif est que nos e-mails affichent toujours une adresse d’e-mail d'envoi : soit celle définie par la méthode du mailer, soit, à défaut, <code>no-reply@monsite.fr</code>.</p>
+
+<h4>3.2.3. Ta première mailer view</h4>
+<p>On va créer le template de notre e-mail de bienvenue. <br>
+Pour ça, crée un fichier <code>welcome_email.html.erb</code> dans <code>app/views/user_mailer/</code>. Bien évidemment le nom est extrêmement important : il doit être identique à celui de la méthode <code>welcome_email</code> et placé dans le dossier <code>views/user_mailer/</code> qui contient tous les templates e-mails relatifs au mailer <code>UserMailer</code>. Le contenu du template sera le suivant :</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Salut <%= @user.name %> et bienvenue chez nous !&lt;/h1>
+    &lt;p>
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : <%= @user.email %>.<br>
+    &lt;/p>
+    &lt;p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    &lt;/p>
+    &lt;p> À très vite sur monsite.fr !</p>
+  &lt;/body>
+&lt;/html></code></pre>
+
+<p>On va aussi prévoir une version texte pour les utilisateurs qui n'aiment pas les e-mails en HTML. C'est toujours mieux de prévoir les deux ! Pour cela, crée également un fichier <code>welcome_email.text.erb</code> dans <code>app/views/user_mailer/</code> et son contenu sera le suivant :</p>
+
+<pre><code class="language-text">Salut <%= @user.name %> et bienvenue chez nous !
+==========================================================
+ 
+Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : <%= @user.email %>.
+ 
+Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+ 
+À très vite sur monsite.fr !</code></pre>
+
+<h4>3.2.4. Définir l'envoi automatique</h4>
+<p>Tout est prêt côté Action Mailer : il ne reste plus qu'à définir à quel moment notre app Rails doit effectuer l'envoi. Pour ceci, voici quelques exemples de cas :</p>
+
+<ul>
+  <Li>Si tu veux envoyer un email à la création d'un utilisateur, c'est un callback <code>after_create</code> dans le model User</Li>
+  <Li>Si tu veux envoyer un email quand un utilisateur vient de prendre un RDV sur Doctolib, c'est un callback <code>after_create</code> à la création d'un Appointment</Li>
+  <Li>Si tu veux envoyer une newsletter hebdomadaire, c'est un Service qui tourne de manière hebdomadaire (on verra comment faire des services cette semaine 😉)</Li>
+  <Li>Un email pour réinitialiser le mot de passe peut se mettre dans le controller</Li>
+</ul>
+
+
+
+<p>Dans notre cas, on veut envoyer un e-mail juste après la création d'un utilisateur : il serait logique que ce travail revienne au model car 1) c'est lui qui crée l'utilisateur donc autant qu'il fasse les 2 actions et 2) Fat model Skinny controller, duuuuuude ! 🕺 </p>
+
+<p>Du coup, va dans ton model <code>User</code> et rajoute la ligne suivante : </p>
+
+
+<pre><code class="language-ruby">class User < ApplicationRecord
+  after_create :welcome_send
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
+
+end</code></pre><br>
+
+<p>On a utilisé un callback qui permet <b>juste après</b> l'inscription en base d'un nouvel utilisateur, d'appeler la méthode d'instance <code>welcome_send</code>. Celle-ci ne fait qu'appeler le mailer <code>UserMailer</code> en lui faisant exécuter <code>welcome_email</code> avec, pour seule entrée, l'instance créée (d'où le <code>self</code>).</p>
+
+<p>À noter qu'on rajoute ensuite un <code>deliver_now</code> pour envoyer immédiatement l’e-mail. Il est possible d'utiliser un <code>deliver_later</code> mais son fonctionnement en production est moins évident : il faut savoir gérer les tâches asynchrones avec Active Job… On ne va pas rentrer là-dedans pour le moment.</p>
+
+<p>En résumé, nous venons de paramétrer la chaîne d'actions suivante : </p>
+<ol>
+  <li>Un utilisateur est créé en BDD par le model</li>
+  <li>Grâce au callback <code>after_create</code>, on exécute la méthode <code>welcome_send</code> sur l'instance qui vient d'être sauvée en BDD</li>
+  <li><code>welcome_send</code> dit, en résumé, "exécute NOW la méthode <code>welcome_email</code> située dans le mailer <code>UserMailer</code>" </li>
+  <li><code>welcome_email</code> va appeler 2 templates en leur mettant à disposition une instance <code>@user</code> qui est l'utilisateur créé et une variable <code>@url</code> qui est juste un string. Cette méthode enverra ensuite les 2 templates à <code>@user.email</code> avec comme sujet "Bienvenue chez nous".</li>
+  <li>Les 2 templates (un HTML et un text) sont personnalisés avec les entrées en Ruby (<code>@user.name</code>, <code>@user.email</code> et <code>@url</code>) avant d'être balancés par e-mail </li>
+  <li>Et voilà ! 👩‍🍳 </li>
+</ol>
+
+<p>Pourtant, si tu fais le test en créant en console un utilisateur, à part le template e-mail qui s'affiche dans le terminal, tu ne verras rien de très concret. En effet, Rails n'est pas en mesure d'envoyer comme ça des e-mails sans disposer d'un serveur SMTP configuré ! C'est notre prochaine étape.</p>
+
+<h3>3.3. Configurer les paramètres d'Action Mailer</h3>
+<p>Tu sais maintenant comment mettre en place un Action Mailer de base : il est temps de le paramétrer pour qu'il puisse envoyer des e-mails pour de vrai. Dans Rails, on peut définir les paramètres selon l'environnement dans lequel notre application tourne :</p>
+<ul>
+  <li>Si elle tourne <b>en environnement de développement</b> (c'est le mode par défaut quand tu lances le serveur sur ton ordi), tu veux pouvoir tester l'affichage de l’e-mail mais éviter de spammer les utilisateurs avec tes tests.</li>
+  <li>Si elle tourne <b>en environnement de production</b> (c'est le mode par défaut sur Heroku. Tu peux aussi le lancer depuis ton ordi), là tu veux que les e-mails soient envoyés pour de vrai.</li>
+</ul>
+
+<h4>3.3.1. La config en développement</h4>
+<p>Ici le cahier des charges serait le suivant : on veut pouvoir </p>
+<ul>
+  <li>vérifier que notre app Rails déclenche bien des envois d’e-mails (=> ça confirmerait que la chaîne entière d’Action Mailer est bien codée et sans bug) ;</li>
+  <li>vérifier la tronche des e-mails qu'on envoie ;</li>
+  <li>ne surtout pas envoyer des e-mails par erreur, histoire de ne pas prendre le risque de spammer de vrais clients pendant nos tests.</li>
+</ul> 
+
+<p>Pour ça on va utiliser une gem assez cool qui s'appelle <a href="https://github.com/ryanb/letter_opener" target="_blank" class="text-primary">Letter Opener</a>. Son fonctionnement ? Dès qu'un e-mail doit être envoyé par ton app Rails, celui-ci est automatiquement ouvert dans ton navigateur web. </p>
+<p>Testons-la immédiatement sur ton app <code>test_action_mailer</code> : </p>
+<ul>
+  <li>Mets <code>letter_opener</code> dans le groupe de développement de ton Gemfile puis bundle install</li>
+  <li>Maintenant va dans <code>config/environments/development.rb</code> (fichier contenant les paramètres de ton environnement de développement) et colle les lignes <code>config.action_mailer.delivery_method = :letter_opener</code> et <code>config.action_mailer.perform_deliveries = true</code></li>
+</ul>
+<p><b>Note importante</b> : la ligne avec <code>perform_deliveries = true</code> permet d'éteindre (en la passant à <code>false</code>) tout envoi d'email de la part de ton app Rails. C'est bon de savoir qu'elle existe !</p>
+
+<p>Maintenant que la gem est installée et configurée, va dans la console Rails et créé un utilisateur à la volée (par exemple : <code>User.create(name:"Féfé", email: "féfé@yopmail.com")</code>). Tu devrais voir un visuel de l’e-mail que tu as rédigé en HTML s'afficher dans ton navigateur ! Si ce n'est pas le cas, tu as raté une étape de mon pas à pas… </p>
+
+<h4>3.3.2. La config en production</h4>
+<h5>a) Choisir un service d'envoi</h5>
+<p>Ici, le cahier des charges est simple : on veut pouvoir envoyer des vrais e-mails. C'est tout.</p>
+
+<p>Pour le faire, tu as le choix entre plein de services différents : Mandrill by MailChimp, Postmark, Amazon SES, etc. Nous, on a une préférence pour <a href="https://www.mailjet.com/">MailJet</a> à THP (ils sont efficaces, pas chers et français 🇫🇷 🐓).</p>
+
+<p>Toutefois, pour des raisons de fiabilité d’envoi depuis des adresses gratuites ou fake, je vais te montrer comment passer par le leader du secteur : SendGrid. Commence par créer un compte sur <a href="https://signup.sendgrid.com/">https://signup.sendgrid.com/</a> : indique un site web bidon, précise que tu es développeur et dis que tu vas utiliser leur SMTP/API. Ensuite va sur <a href="https://app.sendgrid.com/guide/integrate/langs/smtp">https://app.sendgrid.com/guide/integrate/langs/smtp</a> et crée une clef API.</p>
+
+<h5>b) Sauver la clef d'API de façon sécurisée</h5>
+<p>Une fois cette clef en main, il faut la mettre en sécurité dans ton app Rails. Pour ça, rien de mieux que la gem dotenv appliquée à Rails ! Voici les étapes :</p>
+
+<ul>
+  <li>Crée un fichier <code>.env</code> à la racine de ton application.</li>
+  <li>Ouvre-le et écris dedans les informations suivantes : <code>SENDGRID_LOGIN='apikey'</code> et <code>
+SENDGRID_PWD='ta_clef_API'</code> en remplaçant bien sûr ta_clef_API par la clef que tu viens de générer. Elle est au format <code>SG.sXPeH0BMT6qwwwQ23W_ag.wyhNkzoQhNuGIwMrtaizQGYAbKN6vea99wc8</code>. N'oublie pas les guillemets !</li>
+  <li>Rajoute <code>gem 'dotenv-rails'</code> à ton Gemfile et fait le <code>$ bundle install</code></li>
+  <li>Et l'étape cruciale qu'on oublie trop souvent : ouvre le fichier <code>.gitignore</code> à la racine de ton app Rails et écris <code>.env</code> dedans.</li>
+</ul>
+
+<h5>c) Paramétrer le SMTP avec les infos de SendGrid</h5>
+<p>Parfait : tu as une clef API de SendGrid et tu es prêt à l'utiliser. Il ne te reste qu'à entrer les configurations SMTP de SendGrid dans ton app. Va dans <code>/config/environment.rb</code> et rajoute les lignes suivantes : </p>
+
+<pre><code class="language-ruby">ActionMailer::Base.smtp_settings = {
+  :user_name => ENV['SENDGRID_LOGIN'],
+  :password => ENV['SENDGRID_PWD'],
+  :domain => 'monsite.fr',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}</code></pre><br>
+
+<h5>d) Tester l'envoi</h5>
+<p>Tout est prêt à présent ! Si ton site web est déployé en production sur Heroku, tu peux faire un test en créant un nouvel utilisateur. Mais comme c'est un peu fastidieux, tu peux faire plus simple en testant une fois l'envoi directement depuis l'environnement de développement.</p>
+<ul>
+  <li>Enlève la ligne <code>config.action_mailer.delivery_method = :letter_opener</code> du fichier <code>config/environments/development.rb</code> ;</li>
+  <li>Va dans ta console Rails ;</li>
+  <li>Créé un utilisateur avec une adresse en @yopmail.com ;</li>
+  <li>Va vérifier que l’e-mail est bien arrivé sur <a href="http://www.yopmail.com/">http://www.yopmail.com/</a>.</li>
+</ul>
+
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Ces services d'envois en masse ont été conçus pour envoyer des e-mails <b>depuis des domaines propriétaires</b>. Si tu ne possèdes pas un nom de domaine (genre "thehackingprojet.org"), tu vas devoir utiliser un destinataire soit fake ("no-reply@monsite.fr") soit gratuit (@yahoo ou @gmail). Dans les deux cas, tes e-mails vont être vite considérés comme du spam et tout simplement rejetés par la majorité des serveurs e-mails…</p>
+      <p>Seule solution pour tester ton code : viser des adresses du genre @yopmail.com qui sont habituées à servir de poubelle et du coup, elles acceptent tout !</p>
+    </div>
+  </div>
+</div>
+
+<p>SendGrid propose une super interface pour visualiser le statut des e-mails que tu as envoyé via ton appli et à travers leur SMTP : <a href="https://app.sendgrid.com/email_activity">https://app.sendgrid.com/email_activity</a>. En cliquant sur "Search", tu peux lister e-mail par e-mail l'état de leur envoi et de leur réception. Parfait pour voir si ton app communique bien avec eux, même si tes e-mails se font rejeter comme étant du spam (ça ne devrait pas arriver en écrivant à une adresse en @yopmail.com).</p>
+
+<h5>e) Et si je veux envoyer des e-mails qui ne soient pas considérés comme du spam ? </h5>
+<p>Comme je te l'ai expliqué, la solution propre, c'est d'acheter un nom de domaine et de le paramétrer dans SendGrid…</p>
+
+<p>Une autre solution, qui n'est pas applicable pour une "vraie" société, est de ne pas passer par SendGrid mais directement par la configuration SMTP de ton adresse mail perso. Par exemple, pour envoyer des e-mails via ton adresse Gmail, il te faut remplacer la configuration SMTP de Sendgrid par les lignes suivantes dans <code>/config/environment.rb</code> </p>
+
+<pre><code class="language-ruby">ActionMailer::Base.smtp_settings =   {
+    :address            => 'smtp.gmail.com',
+    :port               => 587,
+    :domain             => 'gmail.com', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => ENV['GMAIL_LOGIN'],
+    :password           => ENV['GMAIL_PWD']
+  }</code></pre>
+
+<p>Évidemment, il faut que tu rajoutes dans ton fichier <code>.env</code> ton login Gmail et ton mot de passe sous la forme <code>ENV['GMAIL_LOGIN'] = 'jose@gmail.com'</code> et <code>ENV['GMAIL_PWD'] = 'p1rouette_KKouette'</code>.</p>
+
+<h2>4. Points importants à retenir</h2>
+<p>Action Mailer est un outil efficace et bien organisé d'envoi des e-mails via une app Rails.</p>
+<p>Il se base sur 2 éléments principaux : les <b>mailers</b> (sorte de controllers d'envoi d'e-mails) et les <b>mailer views</b> (sortes de template d'e-mails).</p>
+<p>Une fois un mailer <code>UserMailer</code>généré, on peut lui rajouter une méthode <code>welcome_email</code> qui déclenchera l'envoi de 2 templates : <code>app/views/user_mailer/welcome_email.html.erb</code> et <code>app/views/user_mailer/welcome_email.text.erb</code></p>
+<p>Reste à effectuer cet envoi depuis un model ou un controller (selon l'usage) grâce à, par exemple, <code>UserMailer.welcome_email(user).deliver_now</code></p>
+<p>En développement, on utilisera la <code>gem "letter_opener"</code> pour visualiser dans son navigateur le rendu visuel des e-mails envoyés.</p>
+<p>En production, il faudra paramétrer un serveur SMTP dans <code>/config/environment.rb</code> pour faire cet envoi. Idéalement via un service pro (Mailjet / SendGrid / etc.), ou sinon via une adresse perso dans le cas d'un projet THP.</p>
+
+<h2>5. Pour aller plus loin</h2>
+<p>Voici quelques ressources pour savoir se servir de l'Action Mailer</p>
+<ul>
+  <li>Tu peux regarder <a href="https://www.grafikart.fr/formations/ruby-on-rails/actionmailer" target="_blank" class="text-primary">la vidéo</a> de Grafikart à ce sujet. Comme d'hab, il va assez loin, mais c'est une bonne intro au sujet.</li>
+  <li><a href="http://guides.rubyonrails.org/action_mailer_basics.html" target="_blank" class="text-primary">La doc</a> a prévu une bonne explication de l'Action Mailer. D'ailleurs tu verras que mon pas à pas s'inspire largement de la doc 😇.</li>
+  <li>SitePoint ont fait un <a href="https://www.sitepoint.com/fun-sending-mail-rails/" target="_blank" class="text-primary">un bon tutoriel</a> qui va assez loin lui aussi.</li>
+</ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="border-top: 3px solid #FF4081 " >
+          <h1>Projet : Eventbrite : introduction et backend</h1>
+          <a class="heading-elements-toggle">
+          <i class="la la-ellipsis-v font-medium-3"></i>
+          </a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="tab-pane active" id="home1" role="tabpanel">
+          <h2>1. Introduction</h2>
+<p>Cette semaine tu vas faire projet fil rouge qui t'accompagneras tout du long. À la fin tu auras une application fonctionnelle en production, que tu pourras utiliser. L'application sera une version dans ta ville de Eventbrite : les utilisateurs pourront créer des événements, fixer un prix, mettre en ligne une photo de profil, puis les visiteurs de l'application pourront rejoindre les événements en payant le prix. Bien entendu, il y aura une gestion d'utilisateurs avec login / logout, et on a même prévu une interface administrateur pour valider les événements de l'application.</p>
+
+<h2>2. Le projet</h2>
+<h3>2.1. Specs du projet et agenda de la semaine</h3>
+<h4>2.1.1. Specs du projet</h4>
+<p>L'application sera une version minimaliste (mais fonctionnelle, c'est le plus important) d'<a href="https://www.eventbrite.fr/" target="_blank">Eventbrite</a>, un site qui propose plein d'événements que tu peux rejoindre. Les événements ne concernent qu'une seule ville, la ville où tu te trouves. Voici ce que tu peux faire :</p>
+
+<ul>
+  <li>En arrivant sur la page d'accueil, un visiteur a accès aux événements. Un header donne un lien d'accès aux pages importantes : accueil, créer un événement, s'inscrire / se connecter, mon profil</li>
+  <li>Il est possible de s'inscrire sur le site avec une adresse email</li>
+  <li>Une personne inscrite sur le site peut proposer un événement. Il renseignera le titre, une description, une date de début, une durée, un prix</li>
+  <li>Sur la page qui affiche les événements, tu verras les infos de l'événement (description, date, durée, prix, nombre de participants)</li>
+  <li>Une personne connectée peut rejoindre un événement. Elle va cliquer sur un lien pour accéder à un formulaire d'inscription à un événement. Sur ce formulaire on donnera son prénom, nom, et on mettra son numéro de carte bleue pour payer l'événement</li>
+  <li>Une personne qui a créé un événement peut accéder à une page qui affiche la liste des invités. À partir de cette page, ils peuvent accéder à une page pour éditer l'événement, voir avoir le bouton pour le supprimer</li>
+  <li>Chaque utilisateur aura une page profil, avec ses informations de base (prénom, nom, description). Si un utilisateur est sur <b>sa</b> page profil, il a accès à deux liens : un pour éditer ses informations primordiales (email, mot de passe) avec le bouton pour supprimer son compte, l'autre pour éditer les informations de profil telles que le prénom, le nom, ou la description</li>
+  <li>Actions impossibles à faire si la personne n'est pas connectée : rejoindre un événement, créer un événement, accéder à la page "mon profil"</li>
+</ul>
+
+<p>Voici l'application en détail. Nous verrons jeudi et vendredi comment ajouter une photo de profil aux événements et aux utilisateurs, ainsi qu'une interface administrateur pour valider ou pas les événements proposés par les utilisateurs. En gros c'est juste un scaffold dans un scaffold. Mais si tu sais bien les implémenter, tu auras un site fonctionnel et prêt à l'utilisation. Tu seras prêt à concurrence <a href="https://www.onvasortir.com/" target="_blank">OnVaSortir</a> !</p>
+
+
+<h4>2.1.2. Agenda de la semaine</h4>
+<p>Voici ce que nous attendrons de toi cette semaine :</p>
+
+<ul>
+  <li><b>Lundi</b> : avant de faire les champions des views, tu vas créer la base de données. Ensuite tu vas brancher un mailer pour avoir un système d'emails fonctionnel en production</li>
+  <li><b>Mardi</b> : nous allons mettre en place un système de gestion d'utilisateurs avec Devise (sessions, logins, inscription, etc), puis tu vas faire les premières views du site. En gros, tu feras en une journée ce que tu as mis une semaine à faire lors de The Gossip Project. Quel champion !</li>
+  <li><b>Mercredi</b> : tu vas rendre l'inscription à un événement possible, de plus, nous allons te montrer comment brancher une API avec le système de paiement de Stripe</li>
+  <li><b>Jeudi</b> : tu vas mettre un peu de front en voyant l'Asset Pipeline, puis nous allons te montrer comment faire des uploads de photo avec Active Storage</li>
+  <li><b>Vendredi</b> : pour finir cette semaine en beauté, tu mettras en place une interface administrateur où les administrateurs du site pourront faire des choses d'administrateur. Héhé.</li>
+</ul>
+
+
+
+<h3>2.2. Aujourd'hui : une base de données bien faite</h3>
+
+<h4>2.2.1. La base de données</h4>
+<p>Pour cette base de données, nous voyons trois models :</p>
+
+<ul>
+  <li>Un model <code>User</code>, qui réprésente les utilisateurs de notre site</li>
+  <li>Un model <code>Event</code>, qui représente les événements de notre site</li>
+  <li>Un model <code>Attendance</code>, qui réprésente la participation à un événement. C'est la table de jointure entre les événements et les participants à un événement (un peu comme les rendez-vous entre les docteurs et les patients)</li>
+</ul>
+
+<p>Pas besoin de plus.</p>
+
+<h5>2.2.1.1. Les utilisateurs</h5>
+<p>Un utilisateur aura comme attributs :</p>
+
+<ul>
+  <li>Un <code>email</code> (géré par la gem d'authentification que l'on verra demain)</li>
+  <li>Un <code>encrypted_password</code> (géré par la gem d'authentification que l'on verra demain)</li>
+  <li>Une <code>description</code>, qui est un <code>text</code></li>
+  <li>Un <code>first_name</code>, qui est un <code>string</code></li>
+  <li>Un <code>last_name</code>, qui est un <code>string</code></li>
+</ul>
+
+<p>Un utilisateur peut participer à plusieurs événements au travers des participations. Un utilisateur peut administré plusieurs événements.</p>
+
+<p>Étant donné que la gem d'authentification va gérer les validations importantes (email, mot de passe), pas besoin de validation pour les utilisateurs pour le moment.</p>
+
+
+<h5>2.2.1.2. Les événements</h5>
+<p>Les événements ont plusieurs attributs :</p>
+
+<ul>
+  <li>Une <code>start_date</code>, qui est un <code>datetime</code>. Sa présence est obligatoire, et il est impossible de créer ou modifier un événement dans le passé.</li>
+  <li>Une <code>duration</code>, qui est un <code>integer</code> représentant le nombre de minutes que cet événement va durer. Sa présence est obligatoire et le nombre de minutes doit être un multiple de 5, et est strictement positif</li>
+  <li>Un <code>title</code> qui est un <code>string</code>. Sa présence est obligatoire et doit faire au moins 5 caractères et maxi 140 caractères</li>
+  <li>Une <code>description</code> qui est un <code>text</code>. Sa présence est obligatoire et la description doit faire entre 20 et 1000 caractères</li>
+  <li>Un <code>price</code> qui est un <code>integer</code>. Ce price correspond au nombre d'euros que coûte l'événement. Sa présence est obligatoire et cet integer doit être compris entre 1 et 1000. (pas d'événement gratuit pour cette première version de l'application)</li>
+  <li>Une <code>location</code>, qui est un <code>string</code>. Sa présence est obligatoire</li>
+</ul>
+
+<p>Un événement a plusieurs participations, et plusieurs participants (utilisateurs) au travers des participations. Un événement appartient à un administrateur (utilisateur).</p>
+
+
+<h5>2.2.1.3. Les participations</h5>
+<p>Les participations ont un seul attribut :</p>
+
+<ul>
+  <li>Une <code>stripe_customer_id</code>, qui est un <code>string</code> et qui est l'identifiant unique donné par Stripe au payeur (pratique pour aller chercher ses informations)</li>
+</ul>
+
+
+<p>Une participation appartient à un utilisateur, et un événement.</p>
+
+
+<h5>2.2.1.4. Construction de la base de données</h5>
+<p>Maintenant que tu as toutes ces informations, construis la base de données. Tu dois faire :</p>
+
+<ul>
+  <li>Les trois models, avec leurs attributs</li>
+  <li>Les validations</li>
+  <li>Les tests unitaires de models</li>
+  <li>Un seed</li>
+</ul>
+
+<p>⚠ : info importante. Même si je parle en français sur le site, il est communément admis dans l'univers de la programmation de ne JAMAIS écrire en français dans le code. Ainsi, quand je parle des utilisateurs, je parle de la classe <code>User</code>, quand je parle des événements, je parle de la classe <code>Event</code>, quand je parle des participations, je parle de la classe <code>Attendance</code>. Il est donc <b>interdit</b> d'utiliser des classes, des attributs, ou des méthodes en français. Certains développeurs vont même jusqu'à interdire les commentaires en français, c'est dire si le français est banni dans les lignes de code.</p>
+
+
+<h4>2.2.2. Le mailer</h4>
+<p>Maintenant nous allons ajouter plusieurs mailers dans l'application. Ces emails doivent marcher en production, c'est à dire qu'ils doivent bien envoyer l'email comme convenu.</p>
+
+<h5>2.2.1. Un email à la création d'utilisateur</h5>
+<p>Quand un utilisateur est créé, envoie-lui un email de bienvenue (indice : <code>after_create</code>)</p>
+
+<h5>2.2.2. Un email quand quelqu'un participe à l'événement</h5>
+<p>Quand un participant participe à un événement, envoie un email au créateur de l'événement (indice : <code>after_create</code>).</p>
+
+<h2>3. Rendu attendu</h2>
+<p>Une application avec le backend fonctionnel. Les models sont testés, et le mailer marche en production.</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+    <script src="/packs/dashboard-031178fac0de4f91cbcc.js"></script>
+    
+
+    <script charset="utf-8">
+      $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+    </script>
+
+  </body>
+</html>
